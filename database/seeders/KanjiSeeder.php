@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Kanji;
 use App\Models\Lectura;
+use App\Models\Significado;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\File;
@@ -33,6 +34,14 @@ class KanjiSeeder extends Seeder
                         "kanji_id" => $newKanji->id,
                         "lectura" => $lectura["texto"],
                         "tipo" => $lectura["tipo"],
+                    ]);
+                }
+
+                //Añadir significados
+                foreach ($kanji["significados"] as $significado) {
+                    Significado::create([
+                        "kanji_id" => $newKanji->id,
+                        "significado" => $significado["texto"],
                     ]);
                 }
             }
