@@ -12,10 +12,10 @@ return new class extends Migration {
     {
         Schema::create("kanjis", function (Blueprint $table) {
             $table->id();
-            $table->string("literal");
-            $table->integer("grado");
-            $table->integer("trazos");
-            $table->integer("frecuencia")->nullable();
+            $table->char("literal", length: 1);
+            $table->tinyInteger("grado");
+            $table->tinyInteger("trazos");
+            $table->smallInteger("frecuencia")->nullable();
             $table->timestamps();
         });
     }
