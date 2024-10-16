@@ -15,7 +15,6 @@ return new class extends Migration {
             $table->id();
             $table->foreignIdFor(Kanji::class);
             $table->string("significado", length: 50);
-            $table->timestamps();
         });
     }
 

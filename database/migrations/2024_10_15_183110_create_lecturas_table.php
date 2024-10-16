@@ -16,7 +16,6 @@ return new class extends Migration {
             $table->foreignIdFor(Kanji::class);
             $table->string("lectura", length: 20);
             $table->enum("tipo", ["onyomi", "kunyomi"]);
-            $table->timestamps();
         });
     }
 

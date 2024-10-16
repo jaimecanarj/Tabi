@@ -16,7 +16,6 @@ return new class extends Migration {
             $table->tinyInteger("grado");
             $table->tinyInteger("trazos");
             $table->smallInteger("frecuencia")->nullable();
-            $table->timestamps();
         });
     }
 
