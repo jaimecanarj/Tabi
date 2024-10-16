@@ -2,10 +2,16 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Kanji extends Model
 {
-    use HasFactory;
+    public function lecturas()
+    {
+        return $this->hasMany(Lectura::class);
+    }
+    public function significados()
+    {
+        return $this->hasMany(Significado::class);
+    }
 }

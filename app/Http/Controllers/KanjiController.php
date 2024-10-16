@@ -17,6 +17,13 @@ class KanjiController extends Controller
     public function show($id)
     {
         $kanji = Kanji::find($id);
-        return Inertia::render("Kanji", ["kanji" => $kanji]);
+        $lecturas = Kanji::find($id)->lecturas;
+        $significados = Kanji::find($id)->significados;
+
+        return Inertia::render("Kanji", [
+            "kanji" => $kanji,
+            "lecturas" => $lecturas,
+            "significados" => $significados,
+        ]);
     }
 }

@@ -4,6 +4,22 @@ type Kanji = {
     grado: number;
     trazos: number;
     frecuencia?: number;
-    created_at: Date;
-    updated_at: Date;
+};
+
+enum tipoLectura {
+    onyomi = "onyomi",
+    kunyomi = "kunyomi",
+}
+
+type Lectura = {
+    id: number;
+    kanji_id: number;
+    lectura: string;
+    tipo: tipoLectura;
+};
+
+type Significado = {
+    id: number;
+    kanji_id: number;
+    significado: string;
 };
