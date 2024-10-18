@@ -15,4 +15,8 @@ class Kanji extends Model
     {
         return $this->hasMany(Significado::class);
     }
+    public function radicales()
+    {
+        return $this->belongsToMany(Radical::class);
+    }
 }
