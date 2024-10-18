@@ -16,7 +16,7 @@ class KanjiSeeder extends Seeder
      */
     public function run(): void
     {
-        $json = File::get("database/json/data.json");
+        $json = File::get("database/json/kanjis.json");
         $kanjis = collect(json_decode($json, true));
         $kanjis->each(
             callback: function ($kanji) {
@@ -30,7 +30,7 @@ class KanjiSeeder extends Seeder
 
                 //Añadir lecturas
                 foreach ($kanji["lecturas"] as $lectura) {
-                    Lectura::create([
+                    Lectura::insert([
                         "kanji_id" => $newKanji->id,
                         "lectura" => $lectura["texto"],
                         "tipo" => $lectura["tipo"],
@@ -39,7 +39,7 @@ class KanjiSeeder extends Seeder
 
                 //Añadir significados
                 foreach ($kanji["significados"] as $significado) {
-                    Significado::create([
+                    Significado::insert([
                         "kanji_id" => $newKanji->id,
                         "significado" => $significado["texto"],
                     ]);

@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Kanji extends Model
 {
+    public $timestamps = false;
     public function lecturas()
     {
         return $this->hasMany(Lectura::class);
