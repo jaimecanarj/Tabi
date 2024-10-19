@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import GuestLayout from '@/Layouts/GuestLayout.vue';
-import InputError from '@/Components/InputError.vue';
-import InputLabel from '@/Components/InputLabel.vue';
-import PrimaryButton from '@/Components/PrimaryButton.vue';
-import TextInput from '@/Components/TextInput.vue';
-import { Head, useForm } from '@inertiajs/vue3';
+import AuthLayout from "@/Layouts/AuthLayout.vue";
+import { Head, useForm } from "@inertiajs/vue3";
+import Label from "@/Components/ui/label/Label.vue";
+import Input from "@/Components/ui/input/Input.vue";
+import Button from "@/Components/ui/button/Button.vue";
 
 const props = defineProps<{
     email: string;
@@ -14,84 +13,87 @@ const props = defineProps<{
 const form = useForm({
     token: props.token,
     email: props.email,
-    password: '',
-    password_confirmation: '',
+    password: "",
+    password_confirmation: "",
 });
 
 const submit = () => {
-    form.post(route('password.store'), {
+    form.post(route("password.store"), {
         onFinish: () => {
-            form.reset('password', 'password_confirmation');
+            form.reset("password", "password_confirmation");
         },
     });
 };
 </script>
 
 <template>
-    <GuestLayout>
-        <Head title="Reset Password" />
+    <AuthLayout>
+        <Head title="Restablecer contraseña" />
 
         <form @submit.prevent="submit">
             <div>
-                <InputLabel for="email" value="Email" />
-
-                <TextInput
+                <Label for="email">Email</Label>
+                <Input
                     id="email"
                     type="email"
-                    class="mt-1 block w-full"
                     v-model="form.email"
                     required
                     autofocus
                     autocomplete="username"
                 />
 
-                <InputError class="mt-2" :message="form.errors.email" />
+                <p class="mt-2 text-sm text-red-600" v-show="form.errors.email">
+                    {{ form.errors.email }}
+                </p>
             </div>
 
             <div class="mt-4">
-                <InputLabel for="password" value="Password" />
-
-                <TextInput
+                <Label for="password">Contraseña</Label>
+                <Input
                     id="password"
                     type="password"
-                    class="mt-1 block w-full"
                     v-model="form.password"
                     required
+                    autofocus
                     autocomplete="new-password"
                 />
 
-                <InputError class="mt-2" :message="form.errors.password" />
+                <p
+                    class="mt-2 text-sm text-red-600"
+                    v-show="form.errors.password"
+                >
+                    {{ form.errors.password }}
+                </p>
             </div>
 
             <div class="mt-4">
-                <InputLabel
-                    for="password_confirmation"
-                    value="Confirm Password"
-                />
-
-                <TextInput
+                <Label for="password_confirmation">Confirmar contraseña</Label>
+                <Input
                     id="password_confirmation"
                     type="password"
-                    class="mt-1 block w-full"
                     v-model="form.password_confirmation"
                     required
+                    autofocus
                     autocomplete="new-password"
                 />
 
-                <InputError
-                    class="mt-2"
-                    :message="form.errors.password_confirmation"
-                />
+                <p
+                    class="mt-2 text-sm text-red-600"
+                    v-show="form.errors.password_confirmation"
+                >
+                    {{ form.errors.password_confirmation }}
+                </p>
             </div>
 
-            <div class="mt-4 flex items-center justify-end">
-                <PrimaryButton
+            <div class="flex items-center justify-end mt-4">
+                <Button
+                    variant="default"
                     :class="{ 'opacity-25': form.processing }"
                     :disabled="form.processing"
                 >
-                    Reset Password
-                </PrimaryButton>
+                    Restablecer contraseña
+                </Button>
             </div>
         </form>
-    </GuestLayout>
+    </AuthLayout>
 </template>
