@@ -13,11 +13,17 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create("historias", function (Blueprint $table) {
-            $table->id();
             $table->text("historia");
-            $table->foreignIdFor(Kanji::class);
-            $table->foreignIdFor(User::class);
+            $table
+                ->foreignIdFor(Kanji::class)
+                ->constrained()
+                ->cascadeOnDelete();
+            $table
+                ->foreignIdFor(User::class)
+                ->constrained()
+                ->cascadeOnDelete();
             $table->timestamps();
+            $table->primary(["kanji_id", "user_id"]);
         });
     }
 

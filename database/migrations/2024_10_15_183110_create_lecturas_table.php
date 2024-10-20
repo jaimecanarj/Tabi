@@ -13,7 +13,10 @@ return new class extends Migration {
     {
         Schema::create("lecturas", function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(Kanji::class);
+            $table
+                ->foreignIdFor(Kanji::class)
+                ->constrained()
+                ->cascadeOnDelete();
             $table->string("lectura", length: 20);
             $table->enum("tipo", ["onyomi", "kunyomi"]);
         });

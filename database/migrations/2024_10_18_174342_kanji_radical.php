@@ -13,8 +13,14 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create("kanji_radical", function (Blueprint $table) {
-            $table->foreignIdFor(Kanji::class);
-            $table->foreignIdFor(Radical::class);
+            $table
+                ->foreignIdFor(Kanji::class)
+                ->constrained()
+                ->cascadeOnDelete();
+            $table
+                ->foreignIdFor(Radical::class)
+                ->constrained()
+                ->cascadeOnDelete();
             $table->primary(["kanji_id", "radical_id"]);
         });
     }

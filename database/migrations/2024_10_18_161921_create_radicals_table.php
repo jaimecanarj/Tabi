@@ -12,7 +12,7 @@ return new class extends Migration {
     {
         Schema::create("radicals", function (Blueprint $table) {
             $table->id();
-            $table->char("radical", length: 1);
+            $table->char("literal", length: 1);
             $table->string("significado", length: 50);
             $table->tinyInteger("trazos");
         });

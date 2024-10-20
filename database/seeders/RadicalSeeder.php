@@ -19,7 +19,7 @@ class RadicalSeeder extends Seeder
         $radicals->each(
             callback: function ($radical) {
                 Radical::insert([
-                    "radical" => $radical["radical"],
+                    "literal" => $radical["literal"],
                     "significado" => $radical["significado"],
                     "trazos" => $radical["trazos"],
                 ]);

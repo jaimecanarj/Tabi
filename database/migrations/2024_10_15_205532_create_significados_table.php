@@ -13,7 +13,10 @@ return new class extends Migration {
     {
         Schema::create("significados", function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(Kanji::class);
+            $table
+                ->foreignIdFor(Kanji::class)
+                ->constrained()
+                ->cascadeOnDelete();
             $table->string("significado", length: 50);
         });
     }
