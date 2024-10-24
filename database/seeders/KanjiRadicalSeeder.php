@@ -26,7 +26,7 @@ class KanjiRadicalSeeder extends Seeder
                         "literal",
                         $relation["kanji"]
                     )->first()->id,
-                    "radical_id" => Radical::where("radical", $radical)->first()
+                    "radical_id" => Radical::where("literal", $radical)->first()
                         ->id,
                 ]);
             }
