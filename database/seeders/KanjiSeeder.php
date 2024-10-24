@@ -26,6 +26,9 @@ class KanjiSeeder extends Seeder
                     "grado" => $kanji["grado"],
                     "trazos" => $kanji["trazos"],
                     "frecuencia" => $kanji["frecuencia"] ?? null,
+                    "indice_escolar" => $kanji["indiceEscolar"],
+                    "indice_heisig" => $kanji["indiceHeisig"],
+                    "indice_wanikani" => $kanji["indiceWaniKani"],
                 ]);
 
                 //Añadir lecturas

@@ -16,6 +16,9 @@ return new class extends Migration {
             $table->tinyInteger("grado");
             $table->tinyInteger("trazos");
             $table->smallInteger("frecuencia")->nullable();
+            $table->smallInteger("indice_escolar")->nullable();
+            $table->smallInteger("indice_heisig")->nullable();
+            $table->smallInteger("indice_wanikani")->nullable();
         });
     }
 
