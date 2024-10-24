@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { LogOut, Search, Settings, User } from "lucide-vue-next";
+import { LogIn, LogOut, Settings, User, UserPlus } from "lucide-vue-next";
 import { Avatar, AvatarImage, AvatarFallback } from "@/Components/ui/avatar";
 import {
     DropdownMenu,
@@ -8,42 +8,33 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "@/Components/ui/dropdown-menu";
-import Input from "@/Components/ui/input/Input.vue";
 import NavigationMenu from "@/Components/Navbar/NavigationMenu.vue";
 import ToggleDarkMode from "@/Components/Navbar/ToggleDarkMode.vue";
+import SearchNav from "@/Components/Navbar/SearchNav.vue";
 import { Link } from "@inertiajs/vue3";
-import Button from "@/Components/ui/button/Button.vue";
 </script>
 
 <template>
-    <header class="border-b border-border">
+    <header>
         <div class="container flex items-center justify-between h-14">
             <NavigationMenu />
-            <div class="flex items-center gap-x-2">
-                <div class="relative items-center w-full max-w-sm">
-                    <Input
-                        id="search"
-                        type="text"
-                        placeholder="Buscar..."
-                        class="h-8 pl-10 bg-muted"
-                    />
-                    <span
-                        class="absolute inset-y-0 flex items-center justify-center px-2 start-0"
-                    >
-                        <Search class="size-6 text-muted-foreground" />
-                    </span>
-                </div>
+            <div class="flex items-center gap-x-1">
+                <SearchNav />
                 <ToggleDarkMode />
-                <DropdownMenu v-if="$page.props.auth.user">
+                <DropdownMenu>
                     <DropdownMenuTrigger as-child>
                         <Avatar class="mx-1 cursor-pointer h-9 w-9">
                             <AvatarImage
                                 src="https://avatars.cloudflare.steamstatic.com/e015a46d3104fa6951dd5a6cc3ee94311c710b1a_full.jpg"
                             />
-                            <AvatarFallback>KQ</AvatarFallback>
+                            <AvatarFallback><User /></AvatarFallback>
                         </Avatar>
                     </DropdownMenuTrigger>
-                    <DropdownMenuContent align="end" class="w-40">
+                    <DropdownMenuContent
+                        align="end"
+                        class="w-40"
+                        v-if="$page.props.auth.user"
+                    >
                         <DropdownMenuItem>
                             <User class="w-5 h-5 mr-1" /> Mi cuenta
                         </DropdownMenuItem>
@@ -52,16 +43,27 @@ import Button from "@/Components/ui/button/Button.vue";
                         </DropdownMenuItem>
                         <DropdownMenuSeparator />
                         <DropdownMenuItem>
-                            <LogOut class="w-5 h-5 mr-1" />
-                            <Link href="/logout" method="post"
-                                >Cerrar sesión</Link
-                            >
+                            <Link href="/logout" method="post" as="button">
+                                <LogOut class="inline w-5 h-5 mr-1" />
+                                Cerrar sesión
+                            </Link>
+                        </DropdownMenuItem>
+                    </DropdownMenuContent>
+                    <DropdownMenuContent align="end" class="w-40" v-else>
+                        <DropdownMenuItem>
+                            <Link href="/login">
+                                <LogIn class="inline w-5 h-5 mr-1" />
+                                Iniciar sesión
+                            </Link>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem>
+                            <Link href="/register">
+                                <UserPlus class="inline w-5 h-5 mr-1" />
+                                Registrarse
+                            </Link>
                         </DropdownMenuItem>
                     </DropdownMenuContent>
                 </DropdownMenu>
-                <Button variant="ghost" v-else
-                    ><Link href="/login">Iniciar sesión</Link></Button
-                >
             </div>
         </div>
     </header>
