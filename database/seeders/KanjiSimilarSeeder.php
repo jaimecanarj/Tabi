@@ -27,7 +27,7 @@ class KanjiSimilarSeeder extends Seeder
                                 "literal",
                                 $kanji["kanji"]
                             )->first()->id,
-                            "similar_id" => Kanji::where(
+                            "kanji_similar_id" => Kanji::where(
                                 "literal",
                                 $similar
                             )->first()->id,
