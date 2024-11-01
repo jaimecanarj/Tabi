@@ -1,9 +1,12 @@
-type Kanji = {
+export type Kanji = {
     id: number;
     literal: string;
     grado: number;
     trazos: number;
     frecuencia?: number;
+    indice_escolar: number;
+    indice_heisig: number;
+    indice_wanikani: number;
 };
 
 enum tipoLectura {
@@ -11,15 +14,22 @@ enum tipoLectura {
     kunyomi = "kunyomi",
 }
 
-type Lectura = {
+export type Lectura = {
     id: number;
     kanji_id: number;
     lectura: string;
     tipo: tipoLectura;
 };
 
-type Significado = {
+export type Significado = {
     id: number;
     kanji_id: number;
     significado: string;
+};
+
+export type Radical = {
+    id: number;
+    literal: string;
+    significado: string;
+    trazos: number;
 };
