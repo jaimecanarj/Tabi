@@ -37,26 +37,29 @@ import { Menu } from "lucide-vue-next";
         <!-- Vista estándar -->
     </nav>
     <nav class="hidden md:block">
-        <Button
-            variant="link"
-            class="font-semibold text-foreground hover:text-primary hover:no-underline"
-            size="xs"
-        >
-            <Link href="/home">Inicio</Link>
-        </Button>
-        <Button
-            variant="link"
-            class="font-semibold text-foreground hover:text-primary hover:no-underline"
-            size="xs"
-        >
-            <Link href="/kanjis">Kanjis</Link>
-        </Button>
-        <Button
-            variant="link"
-            class="font-semibold text-foreground hover:text-primary hover:no-underline"
-            size="xs"
-        >
-            <Link href="/stats">Estadísticas</Link>
-        </Button>
+        <Link href="/home">
+            <Button
+                variant="link"
+                class="font-semibold text-foreground hover:text-primary hover:no-underline"
+            >
+                Inicio
+            </Button>
+        </Link>
+        <Link href="/kanjis">
+            <Button
+                variant="link"
+                class="font-semibold text-foreground hover:text-primary hover:no-underline"
+            >
+                Kanjis
+            </Button>
+        </Link>
+        <Link href="/stats">
+            <Button
+                variant="link"
+                class="font-semibold text-foreground hover:text-primary hover:no-underline"
+            >
+                Estadísticas
+            </Button>
+        </Link>
     </nav>
 </template>
