@@ -45,7 +45,7 @@ const { literal, tipo, titulo } = props;
             <h2>{{ literal }}</h2>
         </div>
         <!-- Información -->
-        <div>
+        <div class="basis-3/5 xl:basis-2/3">
             <!-- Significado -->
             <h1 class="mb-3 text-6xl font-semibold capitalize">
                 {{ titulo }}
