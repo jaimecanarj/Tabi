@@ -14,29 +14,32 @@ const { literal, tipo, titulo } = props;
 </script>
 
 <template>
-    <Breadcrumb class="pl-6 mb-4">
-        <BreadcrumbList>
-            <BreadcrumbItem class="text-xl">
-                <BreadcrumbLink asChild
-                    ><Link href="/home"> Inicio </Link></BreadcrumbLink
-                >
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem class="text-xl capitalize">
-                <BreadcrumbLink asChild>
-                    <Link :href="`/${tipo}`">
-                        {{ tipo }}
-                    </Link>
-                </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem class="text-xl">
-                <BreadcrumbPage>{{ literal }}</BreadcrumbPage>
-            </BreadcrumbItem>
-        </BreadcrumbList>
-    </Breadcrumb>
+    <div class="flex justify-between pl-6 mb-4">
+        <Breadcrumb>
+            <BreadcrumbList>
+                <BreadcrumbItem class="text-xl">
+                    <BreadcrumbLink asChild
+                        ><Link href="/home"> Inicio </Link></BreadcrumbLink
+                    >
+                </BreadcrumbItem>
+                <BreadcrumbSeparator />
+                <BreadcrumbItem class="text-xl capitalize">
+                    <BreadcrumbLink asChild>
+                        <Link :href="`/${tipo}`">
+                            {{ tipo }}
+                        </Link>
+                    </BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator />
+                <BreadcrumbItem class="text-xl">
+                    <BreadcrumbPage>{{ literal }}</BreadcrumbPage>
+                </BreadcrumbItem>
+            </BreadcrumbList>
+        </Breadcrumb>
+        <slot name="boton" />
+    </div>
     <div
-        class="flex flex-col p-6 space-x-10 space-y-8 rounded-md md:flex-row lg:space-x-20 bg-card"
+        class="flex flex-col p-6 space-x-10 space-y-8 rounded-md md:space-y-0 md:flex-row lg:space-x-20 bg-card"
     >
         <!-- Literal -->
         <div
