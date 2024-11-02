@@ -25,12 +25,19 @@ import { Toaster } from "@/Components/ui/toast";
                 <ToggleDarkMode />
                 <DropdownMenu :key="$page.props.auth?.user?.email">
                     <DropdownMenuTrigger as-child>
-                        <Avatar class="mx-1 cursor-pointer h-9 w-9">
+                        <Avatar
+                            :class="[
+                                { 'bg-primary': $page.props.auth.user },
+                                'mx-1 cursor-pointer h-9 w-9',
+                            ]"
+                        >
                             <AvatarImage
-                                v-if="$page.props.auth.user"
+                                v-if="$page.props.auth.user?.avatar"
                                 :src="`/storage/${$page.props.auth.user.avatar}`"
                             />
-                            <AvatarFallback><User /></AvatarFallback>
+                            <AvatarFallback class="text-primary-foreground"
+                                ><User
+                            /></AvatarFallback>
                         </Avatar>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent
