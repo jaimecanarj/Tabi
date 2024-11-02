@@ -35,12 +35,16 @@ class RegisteredUserController extends Controller
             "email" =>
                 "required|string|lowercase|email|max:255|unique:" . User::class,
             "password" => ["required", "confirmed", Rules\Password::defaults()],
+            "index" => "required|in:escolar,heisig,wanikani",
+            "estudio_diario" => "required|integer|numeric|min:1|max:50",
         ]);
 
         $user = User::create([
             "name" => $request->name,
             "email" => $request->email,
             "password" => Hash::make($request->password),
+            "indice" => $request->index,
+            "estudio_diario" => $request->estudio_diario,
         ]);
 
         event(new Registered($user));

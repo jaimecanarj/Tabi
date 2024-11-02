@@ -4,12 +4,28 @@ import { Head, Link, useForm } from "@inertiajs/vue3";
 import Label from "@/Components/ui/label/Label.vue";
 import Input from "@/Components/ui/input/Input.vue";
 import Button from "@/Components/ui/button/Button.vue";
+import {
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+} from "@/Components/ui/select";
+import {
+    NumberField,
+    NumberFieldContent,
+    NumberFieldDecrement,
+    NumberFieldIncrement,
+    NumberFieldInput,
+} from "@/Components/ui/number-field";
 
 const form = useForm({
     name: "",
     email: "",
     password: "",
     password_confirmation: "",
+    index: "escolar",
+    estudio_diario: 10,
 });
 
 const submit = () => {
@@ -86,6 +102,48 @@ const submit = () => {
                     v-show="form.errors.password_confirmation"
                 >
                     {{ form.errors.password_confirmation }}
+                </p>
+            </div>
+
+            <div class="flex items-center mt-4">
+                <div>
+                    <Label for="index">Selecionar un índice</Label>
+                    <Select required name="index" v-model="form.index">
+                        <SelectTrigger>
+                            <SelectValue placeholder="Selecciona un índice" />
+                        </SelectTrigger>
+                        <SelectContent>
+                            <SelectItem value="escolar"> Escolar </SelectItem>
+                            <SelectItem value="heisig"> Heisig </SelectItem>
+                            <SelectItem value="wanikani"> WaniKani </SelectItem>
+                        </SelectContent>
+                    </Select>
+                </div>
+                <div class="w-32 ml-7">
+                    <Label>Estudio diario</Label>
+                    <NumberField
+                        v-model="form.estudio_diario"
+                        required
+                        :min="1"
+                        :max="50"
+                    >
+                        <NumberFieldContent>
+                            <NumberFieldDecrement />
+                            <NumberFieldInput />
+                            <NumberFieldIncrement />
+                        </NumberFieldContent>
+                    </NumberField>
+                </div>
+            </div>
+            <div>
+                <p class="mt-2 text-sm text-red-600" v-show="form.errors.index">
+                    {{ form.errors.index }}
+                </p>
+                <p
+                    class="mt-2 text-sm text-red-600"
+                    v-show="form.errors.estudio_diario"
+                >
+                    {{ form.errors.estudio_diario }}
                 </p>
             </div>
 
