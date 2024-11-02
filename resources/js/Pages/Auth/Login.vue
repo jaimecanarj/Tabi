@@ -65,6 +65,13 @@ const submit = () => {
                 >
                     {{ form.errors.password }}
                 </p>
+                <Link
+                    v-if="canResetPassword"
+                    :href="route('password.request')"
+                    class="text-sm underline rounded-md text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                >
+                    ¿Olvidó su contraseña?
+                </Link>
             </div>
 
             <div class="flex items-center gap-2 mt-4">
@@ -74,11 +81,10 @@ const submit = () => {
 
             <div class="flex items-center justify-end mt-4">
                 <Link
-                    v-if="canResetPassword"
-                    :href="route('password.request')"
+                    :href="route('register')"
                     class="text-sm underline rounded-md text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
                 >
-                    ¿Olvidó su contraseña?
+                    ¿No tiene cuenta?
                 </Link>
 
                 <Button

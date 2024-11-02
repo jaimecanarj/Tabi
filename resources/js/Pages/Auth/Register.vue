@@ -44,7 +44,9 @@ const submit = () => {
 
         <form @submit.prevent="submit">
             <div>
-                <Label for="name">Nombre</Label>
+                <Label for="name"
+                    >Nombre <span class="text-red-600">*</span></Label
+                >
                 <Input
                     id="name"
                     type="text"
@@ -59,7 +61,9 @@ const submit = () => {
             </div>
 
             <div class="mt-4">
-                <Label for="email">Email</Label>
+                <Label for="email"
+                    >Email <span class="text-red-600">*</span></Label
+                >
                 <Input
                     id="email"
                     type="email"
@@ -73,7 +77,9 @@ const submit = () => {
             </div>
 
             <div class="mt-4">
-                <Label for="password">Contraseña</Label>
+                <Label for="password"
+                    >Contraseña <span class="text-red-600">*</span></Label
+                >
                 <Input
                     id="password"
                     type="password"
@@ -90,7 +96,10 @@ const submit = () => {
             </div>
 
             <div class="mt-4">
-                <Label for="password_confirmation">Confirmar contraseña</Label>
+                <Label for="password_confirmation"
+                    >Confirmar contraseña
+                    <span class="text-red-600">*</span></Label
+                >
                 <Input
                     id="password_confirmation"
                     type="password"
@@ -123,7 +132,10 @@ const submit = () => {
 
             <div class="flex items-center mt-4">
                 <div>
-                    <Label for="index">Selecionar un índice</Label>
+                    <Label for="index"
+                        >Selecionar un índice
+                        <span class="text-red-600">*</span></Label
+                    >
                     <Select required name="index" v-model="form.index">
                         <SelectTrigger>
                             <SelectValue placeholder="Selecciona un índice" />
@@ -136,7 +148,10 @@ const submit = () => {
                     </Select>
                 </div>
                 <div class="w-32 ml-7">
-                    <Label>Estudio diario</Label>
+                    <Label
+                        >Estudio diario
+                        <span class="text-red-600">*</span></Label
+                    >
                     <NumberField
                         v-model="form.estudio_diario"
                         required
