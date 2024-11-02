@@ -113,18 +113,11 @@ const submit = () => {
                     type="file"
                     @input="form.avatar = $event.target.files[0]"
                 />
-                <progress
-                    v-if="form.progress"
-                    :value="form.progress.percentage"
-                    max="100"
-                >
-                    {{ form.progress.percentage }}%
-                </progress>
                 <p
                     class="mt-2 text-sm text-red-600"
                     v-show="form.errors.avatar"
                 >
-                    {{ form.errors.password_confirmation }}
+                    {{ form.errors.avatar }}
                 </p>
             </div>
 

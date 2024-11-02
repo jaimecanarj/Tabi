@@ -37,10 +37,11 @@ class RegisteredUserController extends Controller
             "password" => ["required", "confirmed", Rules\Password::defaults()],
             "index" => "required|in:escolar,heisig,wanikani",
             "estudio_diario" => "required|integer|numeric|min:1|max:50",
-            "avatar" => "image|max:2048",
+            "avatar" => "image|max:2048|nullable",
         ]);
 
         // Almacenar la imagen
+        $path = null;
         if ($request->hasFile("avatar")) {
             $file = $request->file("avatar");
             $path = $file->store("avatares", "public");
