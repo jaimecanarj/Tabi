@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import Button from "@/Components/ui/button/Button.vue";
+import { Link } from "@inertiajs/vue3";
+import { Menu } from "lucide-vue-next";
+import { Button } from "@/Components/ui/button";
 import {
     Sheet,
     SheetContent,
@@ -7,8 +9,6 @@ import {
     SheetTitle,
     SheetTrigger,
 } from "@/Components/ui/sheet";
-import { Link } from "@inertiajs/vue3";
-import { Menu } from "lucide-vue-next";
 </script>
 
 <template>

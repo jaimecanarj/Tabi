@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { Link } from "@inertiajs/vue3";
 import { Kanji, Lectura, Radical, Significado } from "@/lib/types";
-import Badge from "@/Components/ui/badge/Badge.vue";
-import Button from "@/Components/ui/button/Button.vue";
+import { Badge } from "@/Components/ui/badge";
+import { Button } from "@/Components/ui/button";
 
 const props = defineProps<{
     kanji: Kanji;

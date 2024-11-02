@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import MainLayout from "@/Layouts/MainLayout.vue";
 import { Head } from "@inertiajs/vue3";
 import { Kanji, Lectura, Significado, Radical } from "@/lib/types";
+import MainLayout from "@/Layouts/MainLayout.vue";
 import ItemDetailsCard from "@/Components/ItemDetailsCard.vue";
 import KanjiDetails from "@/Components/KanjiDetails.vue";
 import StoryDialog from "@/Components/StoryDialog.vue";

@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import MainLayout from "@/Layouts/MainLayout.vue";
 import { Head, Link } from "@inertiajs/vue3";
 import { Kanji, Radical } from "@/lib/types";
-import Button from "@/Components/ui/button/Button.vue";
+import MainLayout from "@/Layouts/MainLayout.vue";
+import { Button } from "@/Components/ui/button";
 import ItemDetailsCard from "@/Components/ItemDetailsCard.vue";
 
 defineProps<{

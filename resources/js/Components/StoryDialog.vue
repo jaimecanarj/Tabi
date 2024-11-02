@@ -2,8 +2,10 @@
 import { ref } from "vue";
 import { useForm, usePage } from "@inertiajs/vue3";
 import axios from "axios";
-import { Button } from "@/Components/ui/button";
 import { ScrollText } from "lucide-vue-next";
+import { Button } from "@/Components/ui/button";
+import { Textarea } from "@/Components/ui/textarea";
+import { useToast } from "@/Components/ui/toast";
 import {
     Dialog,
     DialogContent,
@@ -13,8 +15,6 @@ import {
     DialogTitle,
     DialogTrigger,
 } from "@/Components/ui/dialog";
-import { Textarea } from "@/Components/ui/textarea";
-import { useToast } from "@/Components/ui/toast";
 
 const page = usePage();
 const { toast } = useToast();

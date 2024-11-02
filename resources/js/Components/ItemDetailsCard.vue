@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Link } from "@inertiajs/vue3";
 import {
     Breadcrumb,
     BreadcrumbItem,
@@ -7,10 +8,8 @@ import {
     BreadcrumbPage,
     BreadcrumbSeparator,
 } from "@/Components/ui/breadcrumb/";
-import { Link } from "@inertiajs/vue3";
 
-const props = defineProps({ literal: String, tipo: String, titulo: String });
-const { literal, tipo, titulo } = props;
+defineProps({ literal: String, tipo: String, titulo: String });
 </script>
 
 <template>

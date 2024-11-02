@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { VisuallyHidden } from "radix-vue";
+import { Search } from "lucide-vue-next";
 import { Button } from "@/Components/ui/button";
+import { Input } from "@/Components/ui/input";
 import {
     Dialog,
     DialogContent,
@@ -7,9 +10,6 @@ import {
     DialogTitle,
     DialogTrigger,
 } from "@/Components/ui/dialog";
-import { Input } from "@/Components/ui/input";
-import { Search } from "lucide-vue-next";
-import { VisuallyHidden } from "radix-vue";
 </script>
 
 <template>
