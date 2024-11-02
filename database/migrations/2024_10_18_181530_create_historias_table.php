@@ -13,6 +13,7 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create("historias", function (Blueprint $table) {
+            $table->id();
             $table->text("historia");
             $table
                 ->foreignIdFor(Kanji::class)
@@ -23,7 +24,6 @@ return new class extends Migration {
                 ->constrained()
                 ->cascadeOnDelete();
             $table->timestamps();
-            $table->primary(["kanji_id", "user_id"]);
         });
     }
 

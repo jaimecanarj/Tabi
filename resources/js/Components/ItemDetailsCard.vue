@@ -14,8 +14,8 @@ const { literal, tipo, titulo } = props;
 </script>
 
 <template>
-    <div class="flex justify-between pl-6 mb-4">
-        <Breadcrumb>
+    <div class="flex flex-wrap items-center justify-between pl-6 mb-4">
+        <Breadcrumb class="mb-2 mr-2">
             <BreadcrumbList>
                 <BreadcrumbItem class="text-xl">
                     <BreadcrumbLink asChild

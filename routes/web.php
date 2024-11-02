@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HistoriaController;
 use App\Http\Controllers\KanjiController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RadicalController;
@@ -17,6 +18,13 @@ Route::get("/kanjis/{id}", [KanjiController::class, "show"]);
 // Radicales
 Route::get("/radicales", [RadicalController::class, "index"]);
 Route::get("/radicales/{id}", [RadicalController::class, "show"]);
+
+// Historias
+Route::get("/historia/{user_id}/{kanji_id}", [
+    HistoriaController::class,
+    "show",
+]);
+Route::post("/historia", [HistoriaController::class, "store"]);
 
 // Rutas legacy
 Route::middleware("auth")->group(function () {

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import MainLayout from "@/Layouts/MainLayout.vue";
-import { Head, useForm } from "@inertiajs/vue3";
+import { Head, useForm, usePage } from "@inertiajs/vue3";
 import { Kanji, Lectura, Significado, Radical } from "@/lib/types";
 import ItemDetailsCard from "@/Components/ItemDetailsCard.vue";
 import KanjiDetails from "@/Components/KanjiDetails.vue";
@@ -16,6 +16,7 @@ import {
     DialogTrigger,
 } from "@/Components/ui/dialog";
 import { Textarea } from "@/Components/ui/textarea";
+import axios from "axios";
 
 const props = defineProps<{
     kanji: Kanji;
@@ -25,18 +26,31 @@ const props = defineProps<{
     similares: Kanji[];
 }>();
 
+const page = usePage();
+
 const fetchHistoria = async () => {
-    //Obtenemos la historia del usuario si hay un usuario logueado
-    //La guardamos en form.historia
-    // Y mostramos el modal
+    // Mientras se ejecuta esto ponemos un cargando
+    if (page.props.auth.user) {
+        let historia = await axios.get(
+            `/historia/${page.props.auth.user.id}/${props.kanji.id}`,
+        );
+
+        if (historia.data) {
+            form.id = historia.data.id;
+            form.historia = historia.data.historia;
+        }
+    }
 };
 
 const form = useForm({
+    id: null,
     historia: "",
+    user_id: page.props.auth.user?.id,
+    kanji_id: props.kanji.id,
 });
 
 const submit = () => {
-    // form.post(route("/historia"));
+    form.post("/historia");
 };
 </script>
 
@@ -50,16 +64,19 @@ const submit = () => {
             :titulo="significados[0].significado"
         >
             <template #boton>
-                <Dialog>
+                <Dialog @update:open="fetchHistoria">
                     <DialogTrigger as-child>
-                        <Button variant="secondary" @click="fetchHistoria">
+                        <Button variant="secondary">
                             <ScrollText class="mr-2" />
                             Historia
                         </Button>
                     </DialogTrigger>
                     <DialogContent class="sm:max-w-[500px]">
                         <DialogHeader>
-                            <DialogTitle>Crear historia</DialogTitle>
+                            <DialogTitle v-if="form.id">
+                                Editar historia
+                            </DialogTitle>
+                            <DialogTitle v-else>Crear historia</DialogTitle>
                             <DialogDescription>
                                 Añade una historia a este kanji.
                             </DialogDescription>
