@@ -26,7 +26,7 @@ import { Link } from "@inertiajs/vue3";
                         <Avatar class="mx-1 cursor-pointer h-9 w-9">
                             <AvatarImage
                                 v-if="$page.props.auth.user"
-                                :src="`storage/${$page.props.auth.user.avatar}`"
+                                :src="`/storage/${$page.props.auth.user.avatar}`"
                             />
                             <AvatarFallback><User /></AvatarFallback>
                         </Avatar>
