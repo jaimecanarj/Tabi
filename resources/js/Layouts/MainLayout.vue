@@ -21,7 +21,7 @@ import { Link } from "@inertiajs/vue3";
             <div class="flex items-center gap-x-1">
                 <SearchNav />
                 <ToggleDarkMode />
-                <DropdownMenu>
+                <DropdownMenu :key="$page.props.auth?.user?.email">
                     <DropdownMenuTrigger as-child>
                         <Avatar class="mx-1 cursor-pointer h-9 w-9">
                             <AvatarImage
@@ -43,7 +43,12 @@ import { Link } from "@inertiajs/vue3";
                             <Settings class="w-5 h-5 mr-1" /> Opciones
                         </DropdownMenuItem>
                         <DropdownMenuSeparator />
-                        <Link href="/logout" method="post">
+                        <Link
+                            href="/logout"
+                            method="post"
+                            as="button"
+                            class="w-full"
+                        >
                             <DropdownMenuItem class="cursor-pointer">
                                 <LogOut class="inline w-5 h-5 mr-1" />
                                 Cerrar sesión
