@@ -38,7 +38,7 @@ defineProps({ literal: String, tipo: String, titulo: String });
         <slot name="boton" />
     </div>
     <div
-        class="flex flex-col p-6 space-x-10 space-y-8 rounded-md md:space-y-0 md:flex-row lg:space-x-20 bg-card"
+        class="flex flex-col p-6 mb-6 space-x-10 space-y-8 rounded-md shadow-xl md:space-y-0 md:flex-row lg:space-x-20 bg-card md:mb-0"
     >
         <!-- Literal -->
         <div

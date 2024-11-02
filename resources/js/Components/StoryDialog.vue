@@ -70,7 +70,7 @@ const submit = () => {
 <template>
     <Dialog :open="isOpen" @update:open="openDialog">
         <DialogTrigger as-child>
-            <Button variant="secondary">
+            <Button variant="secondary" class="shadow-md">
                 <ScrollText class="mr-2" />
                 Historia
             </Button>
