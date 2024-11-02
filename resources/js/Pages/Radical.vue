@@ -33,7 +33,7 @@ defineProps<{
                 <div class="flex flex-wrap overflow-x-scroll max-h-96">
                     <template v-for="kanji of kanjis">
                         <Link :href="`/kanjis/${kanji.id}`">
-                            <Button class="m-1 text-2xl text-foreground">{{
+                            <Button class="m-1 text-2xl">{{
                                 kanji.literal
                             }}</Button>
                         </Link>

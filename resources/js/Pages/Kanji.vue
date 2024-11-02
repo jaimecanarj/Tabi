@@ -98,7 +98,7 @@ const lecturasKunyomi = props.lecturas.filter(
                     </h3>
                     <template v-for="radical of radicales">
                         <Link :href="`/radicales/${radical.id}`">
-                            <Button class="m-1 text-2xl text-foreground">
+                            <Button class="m-1 text-2xl">
                                 <p>
                                     {{ radical.literal }}
                                 </p>
@@ -113,7 +113,7 @@ const lecturasKunyomi = props.lecturas.filter(
                     </h3>
                     <template v-for="similar of similares">
                         <Link :href="`/kanjis/${similar.id}`">
-                            <Button class="m-1 text-2xl text-foreground">
+                            <Button class="m-1 text-2xl">
                                 {{ similar.literal }}
                             </Button>
                         </Link>

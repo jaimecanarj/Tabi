@@ -40,7 +40,7 @@ const { literal, tipo, titulo } = props;
     >
         <!-- Literal -->
         <div
-            class="flex justify-center items-center rounded-lg text-[200px] font-bold bg-gradient-primary basis-2/5 xl:basis-1/3"
+            class="flex justify-center items-center rounded-lg text-[200px] font-bold bg-gradient-primary basis-2/5 xl:basis-1/3 text-primary-foreground"
         >
             <h2>{{ literal }}</h2>
         </div>
