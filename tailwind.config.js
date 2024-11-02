@@ -91,6 +91,9 @@ module.exports = {
                 "gradient-primary":
                     "linear-gradient(to top left, #4776e6, #8e54e9)",
             }),
+            fontFamily: {
+                sans: ['"Noto Sans JP","Noto Sans", "sans-serif"'],
+            },
         },
     },
     plugins: [animate],
