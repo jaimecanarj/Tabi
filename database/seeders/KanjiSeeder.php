@@ -44,7 +44,7 @@ class KanjiSeeder extends Seeder
                 foreach ($kanji["significados"] as $significado) {
                     Significado::insert([
                         "kanji_id" => $newKanji->id,
-                        "significado" => $significado["texto"],
+                        "significado" => $significado,
                     ]);
                 }
             }
