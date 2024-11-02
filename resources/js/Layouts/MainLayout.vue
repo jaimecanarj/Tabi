@@ -12,9 +12,11 @@ import NavigationMenu from "@/Components/Navbar/NavigationMenu.vue";
 import ToggleDarkMode from "@/Components/Navbar/ToggleDarkMode.vue";
 import SearchNav from "@/Components/Navbar/SearchNav.vue";
 import { Link } from "@inertiajs/vue3";
+import { Toaster } from "@/Components/ui/toast";
 </script>
 
 <template>
+    <Toaster />
     <header>
         <div class="container flex items-center justify-between h-14">
             <NavigationMenu />

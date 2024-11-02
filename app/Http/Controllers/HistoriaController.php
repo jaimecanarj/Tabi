@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Historia;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class HistoriaController extends Controller
 {
@@ -16,13 +17,19 @@ class HistoriaController extends Controller
 
     public function store(Request $request)
     {
-        // dd($request->all());
         $request->validate([
             "historia" => "required|string",
             "user_id" => "required|exists:users,id",
             "kanji_id" => "required|exists:kanjis,id",
         ]);
 
-        Historia::updateOrCreate(["id" => $request->id], $request->all());
+        $historia = Historia::updateOrCreate(
+            ["id" => $request->id],
+            $request->all()
+        );
+
+        return Redirect::back()->with([
+            "data" => "Something you want to pass to front-end",
+        ]);
     }
 }
