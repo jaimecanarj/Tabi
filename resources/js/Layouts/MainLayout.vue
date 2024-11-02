@@ -25,7 +25,8 @@ import { Link } from "@inertiajs/vue3";
                     <DropdownMenuTrigger as-child>
                         <Avatar class="mx-1 cursor-pointer h-9 w-9">
                             <AvatarImage
-                                src="https://avatars.cloudflare.steamstatic.com/e015a46d3104fa6951dd5a6cc3ee94311c710b1a_full.jpg"
+                                v-if="$page.props.auth.user"
+                                :src="`storage/${$page.props.auth.user.avatar}`"
                             />
                             <AvatarFallback><User /></AvatarFallback>
                         </Avatar>
