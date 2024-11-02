@@ -37,7 +37,14 @@ class RegisteredUserController extends Controller
             "password" => ["required", "confirmed", Rules\Password::defaults()],
             "index" => "required|in:escolar,heisig,wanikani",
             "estudio_diario" => "required|integer|numeric|min:1|max:50",
+            "avatar" => "image|max:2048",
         ]);
+
+        // Almacenar la imagen
+        if ($request->hasFile("avatar")) {
+            $file = $request->file("avatar");
+            $path = $file->store("avatares", "public");
+        }
 
         $user = User::create([
             "name" => $request->name,
@@ -45,6 +52,7 @@ class RegisteredUserController extends Controller
             "password" => Hash::make($request->password),
             "indice" => $request->index,
             "estudio_diario" => $request->estudio_diario,
+            "avatar" => $path,
         ]);
 
         event(new Registered($user));

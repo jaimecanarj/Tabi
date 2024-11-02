@@ -24,6 +24,7 @@ const form = useForm({
     email: "",
     password: "",
     password_confirmation: "",
+    avatar: "",
     index: "escolar",
     estudio_diario: 10,
 });
@@ -100,6 +101,28 @@ const submit = () => {
                 <p
                     class="mt-2 text-sm text-red-600"
                     v-show="form.errors.password_confirmation"
+                >
+                    {{ form.errors.password_confirmation }}
+                </p>
+            </div>
+
+            <div class="mt-4">
+                <Label for="avatar">Foto de perfil</Label>
+                <Input
+                    id="avatar"
+                    type="file"
+                    @input="form.avatar = $event.target.files[0]"
+                />
+                <progress
+                    v-if="form.progress"
+                    :value="form.progress.percentage"
+                    max="100"
+                >
+                    {{ form.progress.percentage }}%
+                </progress>
+                <p
+                    class="mt-2 text-sm text-red-600"
+                    v-show="form.errors.avatar"
                 >
                     {{ form.errors.password_confirmation }}
                 </p>

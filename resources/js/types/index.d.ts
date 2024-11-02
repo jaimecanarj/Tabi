@@ -2,7 +2,9 @@ export interface User {
     id: number;
     name: string;
     email: string;
-    email_verified_at?: string;
+    indice: string;
+    estudio_diario: number;
+    avatar: string;
 }
 
 export type PageProps<
