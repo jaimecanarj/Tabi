@@ -10,11 +10,20 @@ import {
     Dialog,
     DialogContent,
     DialogDescription,
-    DialogFooter,
     DialogHeader,
     DialogTitle,
     DialogTrigger,
 } from "@/Components/ui/dialog";
+import {
+    AlertDialog,
+    AlertDialogCancel,
+    AlertDialogContent,
+    AlertDialogDescription,
+    AlertDialogFooter,
+    AlertDialogHeader,
+    AlertDialogTitle,
+    AlertDialogTrigger,
+} from "@/Components/ui/alert-dialog";
 
 const page = usePage();
 const { toast } = useToast();
@@ -65,6 +74,19 @@ const submit = () => {
         },
     });
 };
+
+const deleteStory = () => {
+    form.delete("/historia", {
+        onSuccess: () => {
+            toast({
+                title: "Historia borrada",
+            });
+            form.id = null;
+            form.historia = "";
+            isOpen.value = false;
+        },
+    });
+};
 </script>
 
 <template>
@@ -83,18 +105,39 @@ const submit = () => {
                     Añade una historia a este kanji.
                 </DialogDescription>
             </DialogHeader>
-            <form @submit.prevent="submit">
+            <form id="submitStory" @submit.prevent="submit">
                 <Textarea v-model="form.historia" class="min-h-32" />
-                <p
-                    class="mt-2 text-sm text-red-600"
-                    v-show="form.errors.historia"
-                >
-                    {{ form.errors.historia }}
-                </p>
-                <DialogFooter class="mt-3">
-                    <Button type="submit"> Guardar cambios </Button>
-                </DialogFooter>
             </form>
+            <p class="mt-2 text-sm text-red-600" v-show="form.errors.historia">
+                {{ form.errors.historia }}
+            </p>
+            <div class="flex justify-end mt-3 space-x-2">
+                <AlertDialog v-if="form.id">
+                    <AlertDialogTrigger as-child>
+                        <Button variant="destructive"> Borrar </Button>
+                    </AlertDialogTrigger>
+                    <AlertDialogContent>
+                        <AlertDialogHeader>
+                            <AlertDialogTitle>
+                                ¿Estás seguro?
+                            </AlertDialogTitle>
+                            <AlertDialogDescription>
+                                Esta acción no puede ser deshecha. Tu historia
+                                será permanentemente borrada.
+                            </AlertDialogDescription>
+                        </AlertDialogHeader>
+                        <AlertDialogFooter>
+                            <AlertDialogCancel>Cancelar</AlertDialogCancel>
+                            <form @submit.prevent="deleteStory">
+                                <Button>Confirmar</Button>
+                            </form>
+                        </AlertDialogFooter>
+                    </AlertDialogContent>
+                </AlertDialog>
+                <Button form="submitStory" type="submit">
+                    Guardar cambios
+                </Button>
+            </div>
         </DialogContent>
     </Dialog>
 </template>

@@ -32,4 +32,13 @@ class HistoriaController extends Controller
             "data" => "Something you want to pass to front-end",
         ]);
     }
+
+    public function destroy(Request $request)
+    {
+        $request->validate([
+            "id" => "required|exists:historias",
+        ]);
+
+        Historia::where("id", $request->id)->delete();
+    }
 }

@@ -25,6 +25,7 @@ Route::get("/historia/{user_id}/{kanji_id}", [
     "show",
 ]);
 Route::post("/historia", [HistoriaController::class, "store"]);
+Route::delete("/historia", [HistoriaController::class, "destroy"]);
 
 // Rutas legacy
 Route::middleware("auth")->group(function () {
