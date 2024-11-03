@@ -34,7 +34,7 @@ const fetchPage = (page: number) => {
             <template v-for="kanji of data">
                 <Link :href="`/kanjis/${kanji.id}`">
                     <div
-                        class="flex rounded-md shadow-md bg-card hover:bg-secondary w-72 h-36"
+                        class="flex border rounded-md shadow-md bg-card hover:bg-secondary w-72 h-36"
                     >
                         <div
                             class="flex items-center p-4 rounded-l-md bg-primary"

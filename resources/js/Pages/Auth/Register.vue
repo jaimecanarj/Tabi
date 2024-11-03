@@ -60,7 +60,7 @@ const submit = () => {
                 </p>
             </div>
 
-            <div class="mt-4">
+            <div class="mt-2">
                 <Label for="email"
                     >Email <span class="text-red-600">*</span></Label
                 >
@@ -76,7 +76,7 @@ const submit = () => {
                 </p>
             </div>
 
-            <div class="mt-4">
+            <div class="mt-2">
                 <Label for="password"
                     >Contraseña <span class="text-red-600">*</span></Label
                 >
@@ -95,7 +95,7 @@ const submit = () => {
                 </p>
             </div>
 
-            <div class="mt-4">
+            <div class="mt-2">
                 <Label for="password_confirmation"
                     >Confirmar contraseña
                     <span class="text-red-600">*</span></Label
@@ -115,7 +115,7 @@ const submit = () => {
                 </p>
             </div>
 
-            <div class="mt-4">
+            <div class="mt-2">
                 <Label for="avatar">Foto de perfil</Label>
                 <Input
                     id="avatar"
@@ -130,7 +130,7 @@ const submit = () => {
                 </p>
             </div>
 
-            <div class="flex items-center mt-4">
+            <div class="flex items-center justify-between mt-2">
                 <div>
                     <Label for="index"
                         >Selecionar un índice
@@ -147,7 +147,7 @@ const submit = () => {
                         </SelectContent>
                     </Select>
                 </div>
-                <div class="w-32 ml-7">
+                <div class="w-32">
                     <Label
                         >Estudio diario
                         <span class="text-red-600">*</span></Label
@@ -178,7 +178,7 @@ const submit = () => {
                 </p>
             </div>
 
-            <div class="flex items-center justify-end mt-4">
+            <div class="flex items-center justify-end mt-2">
                 <Link
                     :href="route('login')"
                     class="text-sm underline rounded-md text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring"

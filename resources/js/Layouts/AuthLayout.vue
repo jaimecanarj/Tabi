@@ -17,7 +17,7 @@ const mode = useColorMode();
         </div>
 
         <div
-            class="w-full px-6 py-4 mt-6 overflow-hidden bg-card sm:max-w-md sm:rounded-lg"
+            class="w-full px-6 py-4 mt-6 overflow-hidden shadow-lg bg-card sm:max-w-md sm:rounded-lg"
         >
             <slot />
         </div>

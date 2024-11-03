@@ -79,7 +79,7 @@ const submit = () => {
                 <Label for="remember">Recordarme</Label>
             </div>
 
-            <div class="flex items-center justify-end mt-4">
+            <div class="flex items-center justify-end mt-2">
                 <Link
                     :href="route('register')"
                     class="text-sm underline rounded-md text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
