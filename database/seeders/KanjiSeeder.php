@@ -25,6 +25,7 @@ class KanjiSeeder extends Seeder
                     "literal" => $kanji["literal"],
                     "grado" => $kanji["grado"],
                     "trazos" => $kanji["trazos"],
+                    "significado" => $kanji["significados"][0],
                     "frecuencia" => $kanji["frecuencia"] ?? null,
                     "indice_escolar" => $kanji["indiceEscolar"],
                     "indice_heisig" => $kanji["indiceHeisig"],
@@ -41,11 +42,14 @@ class KanjiSeeder extends Seeder
                 }
 
                 //Añadir significados
-                foreach ($kanji["significados"] as $significado) {
-                    Significado::insert([
-                        "kanji_id" => $newKanji->id,
-                        "significado" => $significado,
-                    ]);
+                $significados = array_slice($kanji["significados"], 1);
+                if ($significados) {
+                    foreach ($significados as $significado) {
+                        Significado::insert([
+                            "kanji_id" => $newKanji->id,
+                            "significado" => $significado,
+                        ]);
+                    }
                 }
             }
         );

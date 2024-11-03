@@ -22,7 +22,7 @@ const props = defineProps<{
         <ItemDetailsCard
             :literal="kanji.literal"
             tipo="kanjis"
-            :titulo="significados[0].significado"
+            :titulo="kanji.significado"
         >
             <template #boton>
                 <StoryDialog

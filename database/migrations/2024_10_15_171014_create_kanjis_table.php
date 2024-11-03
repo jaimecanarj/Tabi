@@ -15,6 +15,7 @@ return new class extends Migration {
             $table->char("literal", length: 1);
             $table->tinyInteger("grado");
             $table->tinyInteger("trazos");
+            $table->string("significado", length: 50);
             $table->smallInteger("frecuencia")->nullable();
             $table->smallInteger("indice_escolar")->nullable();
             $table->smallInteger("indice_heisig")->nullable();

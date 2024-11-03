@@ -3,6 +3,7 @@ export type Kanji = {
     literal: string;
     grado: number;
     trazos: number;
+    significado: string;
     frecuencia?: number;
     indice_escolar: number;
     indice_heisig: number;

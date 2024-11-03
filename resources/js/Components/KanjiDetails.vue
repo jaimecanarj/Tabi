@@ -64,7 +64,7 @@ const lecturasKunyomi = props.lecturas.filter(
         </div>
     </div>
     <!-- Significados -->
-    <div class="mb-3">
+    <div class="mb-3" v-if="significados.length">
         <h3 class="text-lg font-semibold tracking-tight">Significados</h3>
         <Badge
             variant="secondary"
