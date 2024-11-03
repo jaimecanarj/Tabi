@@ -35,7 +35,11 @@ import { Toaster } from "@/Components/ui/toast";
                                 v-if="$page.props.auth.user?.avatar"
                                 :src="`/storage/${$page.props.auth.user.avatar}`"
                             />
-                            <AvatarFallback class="text-primary-foreground"
+                            <AvatarFallback
+                                :class="{
+                                    'text-primary-foreground':
+                                        $page.props.auth.user,
+                                }"
                                 ><User
                             /></AvatarFallback>
                         </Avatar>
