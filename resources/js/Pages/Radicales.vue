@@ -4,6 +4,7 @@ import { Radical } from "@/lib/types";
 import MainLayout from "@/Layouts/MainLayout.vue";
 import { Pencil } from "lucide-vue-next";
 import Pagination from "@/Components/Pagination.vue";
+import { Badge } from "@/Components/ui/badge";
 
 type Pagination = {
     data: Radical[];
@@ -33,22 +34,28 @@ const fetchPage = (page: number) => {
             <template v-for="radical of data">
                 <Link :href="`/radicales/${radical.id}`">
                     <div
-                        class="p-4 rounded-md shadow-md bg-card hover:bg-secondary w-72 h-36"
+                        class="flex rounded-md shadow-md bg-card hover:bg-secondary w-72 h-36"
                     >
-                        <div class="flex items-center gap-6">
-                            <h2 class="text-6xl">
+                        <div
+                            class="flex items-center p-4 rounded-l-md bg-primary"
+                        >
+                            <h2 class="text-6xl text-primary-foreground">
                                 {{ radical.literal }}
                             </h2>
+                        </div>
+                        <div class="flex flex-col justify-between px-4 py-2">
                             <p
-                                class="text-3xl font-semibold tracking-tight capitalize line-clamp-2 text-ellipsis"
+                                class="w-40 text-2xl font-semibold tracking-tight capitalize hyphens-auto line-clamp-2"
+                                lang="es"
                             >
                                 {{ radical.significado }}
                             </p>
-                        </div>
-                        <div class="flex gap-3 mt-4">
-                            <p>
-                                <Pencil class="inline" /> {{ radical.trazos }}
-                            </p>
+                            <div>
+                                <Badge variant="secondary">
+                                    <Pencil class="inline" />
+                                    {{ radical.trazos }}
+                                </Badge>
+                            </div>
                         </div>
                     </div>
                 </Link>
