@@ -53,6 +53,14 @@ import {
                 Kanjis
             </Button>
         </Link>
+        <Link href="/radicales">
+            <Button
+                variant="link"
+                class="font-semibold text-foreground hover:text-primary hover:no-underline"
+            >
+                Radicales
+            </Button>
+        </Link>
         <Link href="/stats">
             <Button
                 variant="link"

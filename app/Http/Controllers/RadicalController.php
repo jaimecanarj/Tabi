@@ -9,8 +9,8 @@ class RadicalController extends Controller
 {
     public function index()
     {
-        $radicales = Radical::all();
-        return Inertia::render("Radicales", ["radicales" => $radicales]);
+        $radicales = Radical::paginate(12);
+        return Inertia::render("Radicales", ["response" => $radicales]);
     }
 
     public function show($id)
