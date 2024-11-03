@@ -3,6 +3,12 @@ import { Link } from "@inertiajs/vue3";
 import { Kanji, Lectura, Radical, Significado } from "@/lib/types";
 import { Badge } from "@/Components/ui/badge";
 import { Button } from "@/Components/ui/button";
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger,
+} from "./ui/tooltip";
 
 const props = defineProps<{
     kanji: Kanji;
@@ -80,11 +86,22 @@ const lecturasKunyomi = props.lecturas.filter(
             <h3 class="text-lg font-semibold tracking-tight">Radicales</h3>
             <template v-for="radical of radicales">
                 <Link :href="`/radicales/${radical.id}`">
-                    <Button class="m-1 text-2xl">
-                        <p>
-                            {{ radical.literal }}
-                        </p>
-                    </Button>
+                    <TooltipProvider>
+                        <Tooltip>
+                            <TooltipTrigger as-child>
+                                <Button class="m-1 text-2xl">
+                                    <p>
+                                        {{ radical.literal }}
+                                    </p>
+                                </Button>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                                <p class="capitalize">
+                                    {{ radical.significado }}
+                                </p>
+                            </TooltipContent>
+                        </Tooltip>
+                    </TooltipProvider>
                 </Link>
             </template>
         </div>
@@ -95,9 +112,20 @@ const lecturasKunyomi = props.lecturas.filter(
             </h3>
             <template v-for="similar of similares">
                 <Link :href="`/kanjis/${similar.id}`">
-                    <Button class="m-1 text-2xl">
-                        {{ similar.literal }}
-                    </Button>
+                    <TooltipProvider>
+                        <Tooltip>
+                            <TooltipTrigger as-child>
+                                <Button class="m-1 text-2xl">
+                                    {{ similar.literal }}
+                                </Button>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                                <p class="capitalize">
+                                    {{ similar.significado }}
+                                </p>
+                            </TooltipContent>
+                        </Tooltip>
+                    </TooltipProvider>
                 </Link>
             </template>
         </div>

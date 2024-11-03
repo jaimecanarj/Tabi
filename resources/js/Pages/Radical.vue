@@ -4,6 +4,12 @@ import { Kanji, Radical } from "@/lib/types";
 import MainLayout from "@/Layouts/MainLayout.vue";
 import { Button } from "@/Components/ui/button";
 import ItemDetailsCard from "@/Components/ItemDetailsCard.vue";
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger,
+} from "@/Components/ui/tooltip";
 
 defineProps<{
     radical: Radical;
@@ -33,9 +39,20 @@ defineProps<{
                 <div class="flex flex-wrap overflow-x-scroll max-h-96">
                     <template v-for="kanji of kanjis">
                         <Link :href="`/kanjis/${kanji.id}`">
-                            <Button class="m-1 text-2xl">{{
-                                kanji.literal
-                            }}</Button>
+                            <TooltipProvider>
+                                <Tooltip>
+                                    <TooltipTrigger as-child>
+                                        <Button class="m-1 text-2xl">
+                                            {{ kanji.literal }}
+                                        </Button>
+                                    </TooltipTrigger>
+                                    <TooltipContent>
+                                        <p class="capitalize">
+                                            {{ kanji.significado }}
+                                        </p>
+                                    </TooltipContent>
+                                </Tooltip>
+                            </TooltipProvider>
                         </Link>
                     </template>
                 </div>
