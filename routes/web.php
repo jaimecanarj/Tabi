@@ -13,7 +13,8 @@ Route::inertia("/test", "Test");
 
 // Kanjis
 Route::get("/kanjis", [KanjiController::class, "index"]);
-Route::get("/kanjis/{id}", [KanjiController::class, "show"]);
+Route::get("/kanjis/{id}", [KanjiController::class, "show"])->name("kanji");
+Route::get("/search/{literal}", [KanjiController::class, "search"]);
 
 // Radicales
 Route::get("/radicales", [RadicalController::class, "index"]);

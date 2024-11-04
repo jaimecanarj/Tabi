@@ -32,4 +32,11 @@ class KanjiController extends Controller
             "similares" => $similares,
         ]);
     }
+
+    public function search(Request $request)
+    {
+        $literal = $request->kanji;
+        $id = Kanji::where("literal", $literal)->first()->id;
+        return redirect()->route("kanji", ["id" => $id]);
+    }
 }

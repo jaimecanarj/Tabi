@@ -10,6 +10,15 @@ import {
     DialogTitle,
     DialogTrigger,
 } from "@/Components/ui/dialog";
+import { router, useForm } from "@inertiajs/vue3";
+
+const form = useForm({
+    kanji: "",
+});
+
+const submit = () => {
+    form.get(`/search/${form.kanji}`);
+};
 </script>
 
 <template>
@@ -31,7 +40,9 @@ import {
                     Buscador de kanjis y radicales
                 </DialogDescription>
             </VisuallyHidden>
-            <Input id="name" placeholder="Buscar..." />
+            <form @submit.prevent="submit">
+                <Input v-model="form.kanji" placeholder="Buscar..." />
+            </form>
         </DialogContent>
     </Dialog>
 </template>
