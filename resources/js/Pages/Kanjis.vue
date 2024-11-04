@@ -51,7 +51,7 @@ const fetchPage = (page: number) => {
                                 {{ kanji.significado }}
                             </p>
                             <div>
-                                <Badge variant="secondary" class="space-x-2">
+                                <Badge variant="secondary" class="space-x-1">
                                     <p>
                                         <Pencil class="inline h-5" />
                                         {{ kanji.trazos }}
