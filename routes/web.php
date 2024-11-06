@@ -1,8 +1,8 @@
 <?php
 
+use App\Http\Controllers\EstudioController;
 use App\Http\Controllers\HistoriaController;
 use App\Http\Controllers\KanjiController;
-use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RadicalController;
 use Illuminate\Support\Facades\Route;
 
@@ -27,5 +27,8 @@ Route::get("/historia/{user_id}/{kanji_id}", [
 ]);
 Route::post("/historia", [HistoriaController::class, "store"]);
 Route::delete("/historia", [HistoriaController::class, "destroy"]);
+
+// Estudios
+Route::get("/estudiar", [EstudioController::class, "show"]);
 
 require __DIR__ . "/auth.php";
