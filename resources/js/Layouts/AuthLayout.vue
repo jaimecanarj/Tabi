@@ -13,7 +13,7 @@ const mode = useColorMode();
         <div>
             <Link href="/home" class="flex items-center">
                 <ApplicationLogo class="h-40 w-30" />
-                <p class="ml-3 font-semibold text-7xl">Tabi</p>
+                <p class="ml-3 text-7xl font-logo">Tabi</p>
             </Link>
         </div>
 

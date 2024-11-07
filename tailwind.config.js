@@ -94,6 +94,7 @@ export default {
                     "linear-gradient(to top left, #4776e6, #8e54e9)",
             }),
             fontFamily: {
+                logo: "Marmelad, sans-serif",
                 sans: ['"Noto Sans JP","Noto Sans", "sans-serif"'],
             },
         },
