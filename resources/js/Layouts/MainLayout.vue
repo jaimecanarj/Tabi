@@ -17,7 +17,7 @@ import { Toaster } from "@/Components/ui/toast";
 
 <template>
     <Toaster />
-    <header>
+    <header class="shadow-md">
         <div class="container flex items-center justify-between h-14">
             <NavigationMenu />
             <div class="flex items-center gap-x-1">

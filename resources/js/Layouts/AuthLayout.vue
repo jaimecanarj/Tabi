@@ -11,8 +11,9 @@ const mode = useColorMode();
         class="flex flex-col items-center min-h-screen pt-6 bg-background sm:justify-center sm:pt-0"
     >
         <div>
-            <Link href="/home">
-                <ApplicationLogo class="w-20 h-20 text-gray-500 fill-current" />
+            <Link href="/home" class="flex items-center">
+                <ApplicationLogo class="h-40 w-30" />
+                <p class="ml-3 font-semibold text-7xl">Tabi</p>
             </Link>
         </div>
 

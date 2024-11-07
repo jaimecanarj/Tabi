@@ -9,6 +9,7 @@ import {
     SheetTitle,
     SheetTrigger,
 } from "@/Components/ui/sheet";
+import ApplicationLogo from "@/Components/ApplicationLogo.vue";
 </script>
 
 <template>
@@ -36,13 +37,13 @@ import {
         </Sheet>
         <!-- Vista estándar -->
     </nav>
-    <nav class="hidden md:block">
+    <nav class="items-center hidden md:flex">
         <Link href="/home">
             <Button
                 variant="link"
                 class="font-semibold text-foreground hover:text-primary hover:no-underline"
             >
-                Inicio
+                <ApplicationLogo class="w-10 h-10" />
             </Button>
         </Link>
         <Link href="/kanjis">
