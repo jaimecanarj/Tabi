@@ -5,6 +5,7 @@ import { Kanji } from "@/lib/types";
 import MainLayout from "@/Layouts/MainLayout.vue";
 import StoryForm from "@/Components/StoryForm.vue";
 import { Button } from "@/Components/ui/button";
+import { Play } from "lucide-vue-next";
 
 const props = defineProps<{ kanjis: Kanji[] }>();
 
@@ -65,16 +66,21 @@ const toggleKanji = (id: number) => {
                 </div>
             </div>
         </div>
-        <!-- Selector de kanji -->
-        <div class="fixed bottom-0 flex justify-center w-full gap-2 mb-6">
-            <Button
-                v-for="(kanjiIndex, index) of kanjis"
-                class="text-2xl"
-                @click="toggleKanji(index)"
-            >
-                {{ kanjiIndex.literal }}
-            </Button>
-            <Button variant="primary-alt">Repasar</Button>
-        </div>
     </main>
+    <!-- Selector de kanji -->
+    <footer
+        class="sticky top-[100vh] flex flex-wrap justify-center gap-2 mt-10 mb-6"
+    >
+        <Button
+            v-for="(kanjiIndex, index) of kanjis"
+            class="text-2xl"
+            @click="toggleKanji(index)"
+        >
+            {{ kanjiIndex.literal }}
+        </Button>
+        <Button variant="primary-alt">
+            Repasar
+            <Play class="h-5" />
+        </Button>
+    </footer>
 </template>
