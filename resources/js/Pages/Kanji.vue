@@ -53,8 +53,8 @@ const toggleDialog = () => {
                             Historia
                         </Button>
                     </DialogTrigger>
-                    <DialogContent class="sm:max-w-[500px]">
-                        <DialogHeader>
+                    <DialogContent class="sm:max-w-[500px] gap-0">
+                        <DialogHeader class="mb-4">
                             <DialogTitle>Historia</DialogTitle>
                             <DialogDescription>
                                 Añade una historia a este kanji.

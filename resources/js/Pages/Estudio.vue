@@ -56,12 +56,11 @@ const toggleKanji = (id: number) => {
 
             <!-- Historia -->
             <div class="p-5 rounded-md shadow-md bg-card">
-                <h3 class="pb-2 text-4xl font-semibold">Historia</h3>
+                <h3 class="pb-1 text-4xl font-semibold">Historia</h3>
                 <div>
-                    <p class="text-muted-foreground">
+                    <p class="mb-3 text-muted-foreground">
                         Añade una historia a este kanji.
                     </p>
-                    <!-- Hacer que se recargue al guardar los cambios despues de emitir el cerrar para que no lo haga en dialog -->
                     <StoryForm :kanji_id="kanji.id" :key="kanji.id" />
                 </div>
             </div>

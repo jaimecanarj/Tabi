@@ -41,7 +41,7 @@ import ApplicationLogo from "@/Components/ApplicationLogo.vue";
         <Link href="/home">
             <Button
                 variant="link"
-                class="font-semibold text-foreground hover:text-primary hover:no-underline"
+                class="pr-0 font-semibold text-foreground hover:text-primary hover:no-underline"
             >
                 <ApplicationLogo class="w-10 h-10" />
             </Button>

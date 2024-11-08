@@ -81,7 +81,7 @@ onMounted(() => {
     <div class="flex justify-end gap-2 mt-3">
         <AlertDialog v-if="form.id">
             <AlertDialogTrigger as-child>
-                <Button variant="destructive"> Borrar </Button>
+                <Button class="mr-auto" variant="destructive"> Borrar </Button>
             </AlertDialogTrigger>
             <AlertDialogContent>
                 <AlertDialogHeader>
