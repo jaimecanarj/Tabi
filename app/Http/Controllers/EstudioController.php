@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Estudio;
 use App\Models\Kanji;
-use Illuminate\Http\Request;
 use Inertia\Inertia;
 
 class EstudioController extends Controller
@@ -15,13 +14,20 @@ class EstudioController extends Controller
         $userId = auth()->user()->id;
         $userIndex = "indice_" . auth()->user()->indice;
 
-        //Obtenemos último kanji estudiado
-        $lastKanji = Estudio::where("user_id", $userId)
+        //Obtenemos último kanji estudiado (1 intento con fecha más reciente)
+        $lastKanji = Estudio::where([
+            ["user_id", "=", $userId],
+            ["intentos", "=", 1],
+        ])
             ->orderBy("fecha")
             ->first();
-        $lastId = Kanji::find($lastKanji->kanji_id)->$userIndex;
 
-        // Obtenemos los kanjis a estudiar;
+        //Obtenemos el indice del último kanji estudiado, si existe
+        $lastKanji
+            ? ($lastId = Kanji::find($lastKanji->kanji_id)->$userIndex)
+            : ($lastId = 0);
+
+        // Obtenemos los kanjis a estudiar
         $kanjis = Kanji::where($userIndex, ">", $lastId)
             ->orderBy($userIndex)
             ->limit(10)

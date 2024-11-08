@@ -8,7 +8,7 @@ export type Kanji = {
     indice_escolar: number;
     indice_heisig: number;
     indice_wanikani: number;
-    radicales?: Radical;
+    radicales?: Radical[];
 };
 
 enum tipoLectura {

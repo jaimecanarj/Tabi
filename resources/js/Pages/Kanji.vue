@@ -1,10 +1,23 @@
 <script setup lang="ts">
+import { ref } from "vue";
 import { Head } from "@inertiajs/vue3";
 import { Kanji, Lectura, Significado, Radical } from "@/lib/types";
+import { ScrollText } from "lucide-vue-next";
 import MainLayout from "@/Layouts/MainLayout.vue";
+import {
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+} from "@/Components/ui/dialog";
+import { Button } from "@/Components/ui/button";
 import ItemDetailsCard from "@/Components/ItemDetailsCard.vue";
 import KanjiDetails from "@/Components/KanjiDetails.vue";
-import StoryDialog from "@/Components/StoryDialog.vue";
+import StoryForm from "@/Components/StoryForm.vue";
+
+let isOpen = ref(false);
 
 const props = defineProps<{
     kanji: Kanji;
@@ -13,6 +26,10 @@ const props = defineProps<{
     radicales: Radical[];
     similares: Kanji[];
 }>();
+
+const toggleDialog = () => {
+    isOpen.value = !isOpen.value;
+};
 </script>
 
 <template>
@@ -25,10 +42,27 @@ const props = defineProps<{
             :titulo="kanji.significado"
         >
             <template #boton>
-                <StoryDialog
+                <Dialog
                     v-if="$page.props.auth.user"
-                    :kanji_id="kanji.id"
-                />
+                    :open="isOpen"
+                    @update:open="toggleDialog"
+                >
+                    <DialogTrigger as-child>
+                        <Button variant="secondary" class="shadow-md">
+                            <ScrollText class="mr-2" />
+                            Historia
+                        </Button>
+                    </DialogTrigger>
+                    <DialogContent class="sm:max-w-[500px]">
+                        <DialogHeader>
+                            <DialogTitle>Historia</DialogTitle>
+                            <DialogDescription>
+                                Añade una historia a este kanji.
+                            </DialogDescription>
+                        </DialogHeader>
+                        <StoryForm :kanji_id="kanji.id" @close="toggleDialog" />
+                    </DialogContent>
+                </Dialog>
             </template>
             <KanjiDetails v-bind="props" />
         </ItemDetailsCard>
