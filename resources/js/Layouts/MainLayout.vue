@@ -1,5 +1,10 @@
 <script setup lang="ts">
+import { Link } from "@inertiajs/vue3";
 import { LogIn, LogOut, Settings, User, UserPlus } from "lucide-vue-next";
+import NavigationMenu from "@/Components/Navbar/NavigationMenu.vue";
+import ToggleDarkMode from "@/Components/Navbar/ToggleDarkMode.vue";
+import SearchNav from "@/Components/Navbar/SearchNav.vue";
+import { Toaster } from "@/Components/ui/toast";
 import { Avatar, AvatarImage, AvatarFallback } from "@/Components/ui/avatar";
 import {
     DropdownMenu,
@@ -8,11 +13,6 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "@/Components/ui/dropdown-menu";
-import NavigationMenu from "@/Components/Navbar/NavigationMenu.vue";
-import ToggleDarkMode from "@/Components/Navbar/ToggleDarkMode.vue";
-import SearchNav from "@/Components/Navbar/SearchNav.vue";
-import { Link } from "@inertiajs/vue3";
-import { Toaster } from "@/Components/ui/toast";
 </script>
 
 <template>
@@ -23,8 +23,10 @@ import { Toaster } from "@/Components/ui/toast";
             <div class="flex items-center gap-x-1">
                 <SearchNav />
                 <ToggleDarkMode />
+                <!-- Menú usuario -->
                 <DropdownMenu :key="$page.props.auth?.user?.email">
                     <DropdownMenuTrigger as-child>
+                        <!-- Avatar -->
                         <Avatar
                             :class="[
                                 { 'bg-primary': $page.props.auth.user },
@@ -44,6 +46,7 @@ import { Toaster } from "@/Components/ui/toast";
                             /></AvatarFallback>
                         </Avatar>
                     </DropdownMenuTrigger>
+                    <!-- Menú logueado -->
                     <DropdownMenuContent
                         align="end"
                         class="w-40"
@@ -68,6 +71,7 @@ import { Toaster } from "@/Components/ui/toast";
                             </DropdownMenuItem>
                         </Link>
                     </DropdownMenuContent>
+                    <!-- Menú desconectado -->
                     <DropdownMenuContent align="end" class="w-40" v-else>
                         <Link href="/login">
                             <DropdownMenuItem class="cursor-pointer">

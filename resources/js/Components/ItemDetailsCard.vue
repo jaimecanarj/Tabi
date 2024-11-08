@@ -14,6 +14,7 @@ defineProps({ literal: String, tipo: String, titulo: String });
 
 <template>
     <div class="flex flex-wrap items-center justify-between pl-6 mb-4">
+        <!-- Ruta -->
         <Breadcrumb class="mb-2 mr-2">
             <BreadcrumbList>
                 <BreadcrumbItem class="text-xl">
@@ -35,6 +36,7 @@ defineProps({ literal: String, tipo: String, titulo: String });
                 </BreadcrumbItem>
             </BreadcrumbList>
         </Breadcrumb>
+        <!-- Botón arriba a la derecha -->
         <slot name="boton" />
     </div>
     <div

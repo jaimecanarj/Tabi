@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Link } from "@inertiajs/vue3";
 import { Menu } from "lucide-vue-next";
+import ApplicationLogo from "@/Components/ApplicationLogo.vue";
 import { Button } from "@/Components/ui/button";
 import {
     Sheet,
@@ -9,12 +10,11 @@ import {
     SheetTitle,
     SheetTrigger,
 } from "@/Components/ui/sheet";
-import ApplicationLogo from "@/Components/ApplicationLogo.vue";
 </script>
 
 <template>
+    <!-- Vista móvil -->
     <nav class="md:hidden">
-        <!-- Vista móvil -->
         <Sheet>
             <SheetTrigger as-child>
                 <Button variant="ghost">
@@ -35,8 +35,8 @@ import ApplicationLogo from "@/Components/ApplicationLogo.vue";
                 </div>
             </SheetContent>
         </Sheet>
-        <!-- Vista estándar -->
     </nav>
+    <!-- Vista estándar -->
     <nav class="items-center hidden md:flex">
         <Link href="/home">
             <Button

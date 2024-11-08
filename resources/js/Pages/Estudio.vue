@@ -2,9 +2,9 @@
 import { ref } from "vue";
 import { Head, Link } from "@inertiajs/vue3";
 import { Kanji } from "@/lib/types";
-import { Button } from "@/Components/ui/button";
 import MainLayout from "@/Layouts/MainLayout.vue";
 import StoryForm from "@/Components/StoryForm.vue";
+import { Button } from "@/Components/ui/button";
 
 const props = defineProps<{ kanjis: Kanji[] }>();
 
@@ -65,7 +65,8 @@ const toggleKanji = (id: number) => {
                 </div>
             </div>
         </div>
-        <div class="flex items-end justify-center gap-2 mt-10">
+        <!-- Selector de kanji -->
+        <div class="fixed bottom-0 flex justify-center w-full gap-2 mb-6">
             <Button
                 v-for="(kanjiIndex, index) of kanjis"
                 class="text-2xl"

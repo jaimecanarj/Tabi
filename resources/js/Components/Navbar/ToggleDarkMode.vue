@@ -5,9 +5,7 @@ import { Sun, Moon } from "lucide-vue-next";
 import { Button } from "@/Components/ui/button";
 
 const { system, store } = useColorMode({ disableTransition: false });
-const mode = computed(() =>
-    store.value === "auto" ? system.value : store.value,
-);
+computed(() => (store.value === "auto" ? system.value : store.value));
 
 const changeTheme = () => {
     store.value = store.value == "light" ? "dark" : "light";

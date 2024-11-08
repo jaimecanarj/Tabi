@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import { nextTick, onMounted } from "vue";
+import { onMounted } from "vue";
 import axios from "axios";
 import { useForm, usePage } from "@inertiajs/vue3";
 import { Button } from "@/Components/ui/button";
 import { Textarea } from "@/Components/ui/textarea";
 import { useToast } from "@/Components/ui/toast";
-
 import {
     AlertDialog,
     AlertDialogCancel,
@@ -72,13 +71,17 @@ onMounted(() => {
 </script>
 
 <template>
+    <!-- Formulario -->
     <form id="submitStory" @submit.prevent="submit">
         <Textarea v-model="form.historia" class="min-h-32" />
     </form>
+    <!-- Error -->
     <p class="mt-2 text-sm text-red-600" v-show="form.errors.historia">
         {{ form.errors.historia }}
     </p>
+    <!-- Botones -->
     <div class="flex justify-end gap-2 mt-3">
+        <!-- Borrar -->
         <AlertDialog v-if="form.id">
             <AlertDialogTrigger as-child>
                 <Button class="mr-auto" variant="destructive"> Borrar </Button>
@@ -101,6 +104,7 @@ onMounted(() => {
                 </AlertDialogFooter>
             </AlertDialogContent>
         </AlertDialog>
+        <!-- Guardar -->
         <Button form="submitStory" :disabled="form.processing" type="submit">
             Guardar cambios
         </Button>

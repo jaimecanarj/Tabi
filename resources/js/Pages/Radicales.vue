@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { Head, Link, router } from "@inertiajs/vue3";
+import { Pencil } from "lucide-vue-next";
 import { Radical } from "@/lib/types";
 import MainLayout from "@/Layouts/MainLayout.vue";
-import { Pencil } from "lucide-vue-next";
 import Pagination from "@/Components/Pagination.vue";
 import { Badge } from "@/Components/ui/badge";
 
@@ -26,10 +26,12 @@ const fetchPage = (page: number) => {
     <Head title="Radicales" />
     <MainLayout />
     <main class="container mt-6">
+        <!-- Cabecera -->
         <div class="flex items-end justify-between pb-5 mb-3 border-b-2">
             <h1 class="text-6xl font-semibold">Radicales</h1>
             <p class="text-lg">{{ total }} radicales</p>
         </div>
+        <!-- Grid de radicales -->
         <div class="flex flex-wrap justify-center gap-4">
             <template v-for="radical of data">
                 <Link :href="`/radicales/${radical.id}`">
@@ -61,6 +63,7 @@ const fetchPage = (page: number) => {
                 </Link>
             </template>
         </div>
+        <!-- Paginación -->
         <div class="flex justify-center mt-6">
             <Pagination
                 :total="total"

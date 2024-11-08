@@ -1,9 +1,13 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { Head } from "@inertiajs/vue3";
-import { Kanji, Lectura, Significado, Radical } from "@/lib/types";
 import { ScrollText } from "lucide-vue-next";
+import { Kanji, Lectura, Significado, Radical } from "@/lib/types";
 import MainLayout from "@/Layouts/MainLayout.vue";
+import ItemDetailsCard from "@/Components/ItemDetailsCard.vue";
+import KanjiDetails from "@/Components/KanjiDetails.vue";
+import StoryForm from "@/Components/StoryForm.vue";
+import { Button } from "@/Components/ui/button";
 import {
     Dialog,
     DialogContent,
@@ -12,10 +16,6 @@ import {
     DialogTitle,
     DialogTrigger,
 } from "@/Components/ui/dialog";
-import { Button } from "@/Components/ui/button";
-import ItemDetailsCard from "@/Components/ItemDetailsCard.vue";
-import KanjiDetails from "@/Components/KanjiDetails.vue";
-import StoryForm from "@/Components/StoryForm.vue";
 
 let isOpen = ref(false);
 
@@ -36,11 +36,13 @@ const toggleDialog = () => {
     <Head :title="kanji.literal" />
     <MainLayout />
     <main class="container mt-6">
+        <!-- Tarjeta -->
         <ItemDetailsCard
             :literal="kanji.literal"
             tipo="kanjis"
             :titulo="kanji.significado"
         >
+            <!-- Botón de historia -->
             <template #boton>
                 <Dialog
                     v-if="$page.props.auth.user"
@@ -64,6 +66,7 @@ const toggleDialog = () => {
                     </DialogContent>
                 </Dialog>
             </template>
+            <!-- Detalles de la tarjeta -->
             <KanjiDetails v-bind="props" />
         </ItemDetailsCard>
     </main>

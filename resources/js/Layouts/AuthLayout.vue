@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import ApplicationLogo from "@/Components/ApplicationLogo.vue";
-import { Link } from "@inertiajs/vue3";
 import { useColorMode } from "@vueuse/core";
+import { Link } from "@inertiajs/vue3";
+import ApplicationLogo from "@/Components/ApplicationLogo.vue";
 
-const mode = useColorMode();
+useColorMode();
 </script>
 
 <template>

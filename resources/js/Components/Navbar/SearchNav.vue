@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { VisuallyHidden } from "radix-vue";
+import { useForm } from "@inertiajs/vue3";
 import { Search } from "lucide-vue-next";
 import { Button } from "@/Components/ui/button";
 import { Input } from "@/Components/ui/input";
@@ -10,7 +11,6 @@ import {
     DialogTitle,
     DialogTrigger,
 } from "@/Components/ui/dialog";
-import { router, useForm } from "@inertiajs/vue3";
 
 const form = useForm({
     kanji: "",

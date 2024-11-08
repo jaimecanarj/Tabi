@@ -2,8 +2,8 @@
 import { Head, Link } from "@inertiajs/vue3";
 import { Kanji, Radical } from "@/lib/types";
 import MainLayout from "@/Layouts/MainLayout.vue";
-import { Button } from "@/Components/ui/button";
 import ItemDetailsCard from "@/Components/ItemDetailsCard.vue";
+import { Button } from "@/Components/ui/button";
 import {
     Tooltip,
     TooltipContent,

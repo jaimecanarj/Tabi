@@ -34,7 +34,6 @@
 
 <style>
 .borde {
-    fill: #fafafb;
     stroke: hsl(var(--foreground));
     stroke-width: 3px;
 }
