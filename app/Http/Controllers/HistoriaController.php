@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Historia;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Redirect;
 
 class HistoriaController extends Controller
 {
@@ -23,14 +22,7 @@ class HistoriaController extends Controller
             "kanji_id" => "required|exists:kanjis,id",
         ]);
 
-        $historia = Historia::updateOrCreate(
-            ["id" => $request->id],
-            $request->all()
-        );
-
-        return Redirect::back()->with([
-            "data" => "Something you want to pass to front-end",
-        ]);
+        Historia::updateOrCreate(["id" => $request->id], $request->all());
     }
 
     public function destroy(Request $request)
