@@ -39,7 +39,7 @@ const fetchPage = (page: number) => {
                         class="flex border rounded-md shadow-md bg-card hover:bg-secondary w-72 h-36"
                     >
                         <div
-                            class="flex items-center p-4 rounded-l-md bg-primary"
+                            class="flex items-center justify-center w-1/3 p-4 rounded-l-md bg-primary"
                         >
                             <h2 class="text-6xl text-primary-foreground">
                                 {{ radical.literal }}

@@ -14,7 +14,7 @@ class RadicalSeeder extends Seeder
      */
     public function run(): void
     {
-        $json = File::get("database/json/radicals.json");
+        $json = File::get("database/json/radicales.json");
         $radicals = collect(json_decode($json, true));
         $radicals->each(
             callback: function ($radical) {

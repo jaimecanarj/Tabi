@@ -13,7 +13,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        User::create([
+            "email" => "prueba@mail.com",
+            "name" => "prueba",
+            "password" => "probando",
+            "indice" => "escolar",
+            "estudio_diario" => 10,
+        ]);
 
         $this->call([
             KanjiSeeder::class,

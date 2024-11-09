@@ -16,18 +16,21 @@ class KanjiRadicalSeeder extends Seeder
      */
     public function run(): void
     {
-        $json = File::get("database/json/kanjiRadicals.json");
+        $json = File::get("database/json/kanjiRadicales.json");
         $relations = collect(json_decode($json, true));
 
         $relations->each(function ($relation) {
-            foreach ($relation["radicals"] as $radical) {
+            foreach ($relation["radicales"] as $radical) {
                 DB::table("kanji_radical")->insert([
                     "kanji_id" => Kanji::where(
                         "literal",
                         $relation["kanji"]
                     )->first()->id,
-                    "radical_id" => Radical::where("literal", $radical)->first()
-                        ->id,
+                    "radical_id" => Radical::where(
+                        "literal",
+                        "like",
+                        $radical
+                    )->first()->id,
                 ]);
             }
         });

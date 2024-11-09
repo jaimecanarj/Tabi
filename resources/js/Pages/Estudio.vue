@@ -15,6 +15,7 @@ let kanji = ref(props.kanjis[id]);
 const changeKanji = (change: string | number) => {
     //Cambiar según paginación
     if (typeof change == "number") {
+        id = change;
         kanji.value = props.kanjis[change];
     }
     //Cambiar según botón anterior y siguiente
