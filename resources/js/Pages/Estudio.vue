@@ -1,25 +1,37 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { Head, Link } from "@inertiajs/vue3";
+import { ChevronLeft, ChevronRight, Play } from "lucide-vue-next";
 import { Kanji } from "@/lib/types";
 import MainLayout from "@/Layouts/MainLayout.vue";
 import StoryForm from "@/Components/StoryForm.vue";
 import { Button } from "@/Components/ui/button";
-import { Play } from "lucide-vue-next";
 
 const props = defineProps<{ kanjis: Kanji[] }>();
 
-let kanji = ref(props.kanjis[0]);
+let id = 0;
+let kanji = ref(props.kanjis[id]);
 
-const toggleKanji = (id: number) => {
-    kanji.value = props.kanjis[id];
+const changeKanji = (change: string | number) => {
+    //Cambiar según paginación
+    if (typeof change == "number") {
+        kanji.value = props.kanjis[change];
+    }
+    //Cambiar según botón anterior y siguiente
+    else if (change == "next") {
+        id++;
+        kanji.value = props.kanjis[id];
+    } else if (change == "prev") {
+        id--;
+        kanji.value = props.kanjis[id];
+    }
 };
 </script>
 
 <template>
     <Head title="Estudio" />
     <MainLayout />
-    <main class="container mt-12">
+    <main class="container relative mt-12">
         <!-- Tarjeta -->
         <div class="flex flex-col mb-10 shadow-xl">
             <div
@@ -66,6 +78,25 @@ const toggleKanji = (id: number) => {
                 </div>
             </div>
         </div>
+        <!-- Botón anterior y siguiente kanji -->
+        <Button
+            class="absolute shadow-md left-2 top-1/2"
+            variant="secondary"
+            size="icon"
+            @click="changeKanji('prev')"
+            :disabled="id == 0"
+        >
+            <ChevronLeft />
+        </Button>
+        <Button
+            class="absolute shadow-md right-2 top-1/2"
+            variant="secondary"
+            size="icon"
+            @click="changeKanji('next')"
+            :disabled="id == kanjis.length - 1"
+        >
+            <ChevronRight />
+        </Button>
     </main>
     <!-- Selector de kanji -->
     <footer
@@ -74,7 +105,7 @@ const toggleKanji = (id: number) => {
         <Button
             v-for="(kanjiIndex, index) of kanjis"
             class="text-2xl"
-            @click="toggleKanji(index)"
+            @click="changeKanji(index)"
         >
             {{ kanjiIndex.literal }}
         </Button>
