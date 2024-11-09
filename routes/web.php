@@ -6,10 +6,9 @@ use App\Http\Controllers\KanjiController;
 use App\Http\Controllers\RadicalController;
 use Illuminate\Support\Facades\Route;
 
-// Rutas temporales
+// Rutas básicas
 Route::inertia("/", "Welcome");
-Route::inertia("/home", "Home")->name("home");
-Route::inertia("/test", "Test");
+Route::inertia("/inicio", "Home")->name("home");
 
 // Kanjis
 Route::get("/kanjis", [KanjiController::class, "index"]);
