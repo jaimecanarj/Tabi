@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 import { Head, Link } from "@inertiajs/vue3";
 import { ChevronLeft, ChevronRight, Play } from "lucide-vue-next";
 import { Kanji } from "@/lib/types";
@@ -19,13 +19,23 @@ const changeKanji = (change: string | number) => {
     }
     //Cambiar según botón anterior y siguiente
     else if (change == "next") {
+        if (id == props.kanjis.length - 1) return;
         id++;
         kanji.value = props.kanjis[id];
     } else if (change == "prev") {
+        if (id == 0) return;
         id--;
         kanji.value = props.kanjis[id];
     }
 };
+
+onMounted(() => {
+    //Cambiar de kanji usando las flechas del teclado
+    window.addEventListener("keydown", (event) => {
+        if (event.key == "ArrowLeft") changeKanji("prev");
+        else if (event.key == "ArrowRight") changeKanji("next");
+    });
+});
 </script>
 
 <template>
@@ -109,9 +119,11 @@ const changeKanji = (change: string | number) => {
         >
             {{ kanjiIndex.literal }}
         </Button>
-        <Button variant="primary-alt">
-            Repasar
-            <Play class="h-5" />
-        </Button>
+        <Link href="/repasar">
+            <Button variant="primary-alt">
+                Repasar
+                <Play class="h-5" />
+            </Button>
+        </Link>
     </footer>
 </template>

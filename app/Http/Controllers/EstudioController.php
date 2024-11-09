@@ -10,6 +10,35 @@ class EstudioController extends Controller
 {
     public function show()
     {
+        $kanjis = EstudioController::getStudyKanjis();
+
+        return Inertia::render("Estudio", [
+            "kanjis" => $kanjis,
+        ]);
+    }
+
+    public function review()
+    {
+        //Comprobamos si venimos de estudiar u otro lugar
+        $urlArray = explode("/", url()->previous());
+        $lastUrl = end($urlArray);
+        if ($lastUrl == "estudiar") {
+            //Obtenemos los kanjis a repasar de la misma forma que en show
+            $kanjis = EstudioController::getStudyKanjis();
+
+            return Inertia::render("Repaso", [
+                "kanjis" => $kanjis,
+            ]);
+        }
+
+        //Obtenemos los kanjis de la tabla estudios
+        //Devolvemos todos aquellos que el usuario haya estudiado
+        //Pero solo el último registro de cada kanji estudiado
+        //En js hacemos el filtro de cuales mostrar primero
+    }
+
+    private function getStudyKanjis()
+    {
         //Obtenemos información del usuario
         $userId = auth()->user()->id;
         $userIndex = "indice_" . auth()->user()->indice;
@@ -36,8 +65,6 @@ class EstudioController extends Controller
         //Les añadimos sus radicales
         $kanjis->load("radicales");
 
-        return Inertia::render("Estudio", [
-            "kanjis" => $kanjis,
-        ]);
+        return $kanjis;
     }
 }

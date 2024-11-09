@@ -31,6 +31,7 @@ Route::delete("/historia", [HistoriaController::class, "destroy"]);
 // Estudios
 Route::middleware("auth")->group(function () {
     Route::get("/estudiar", [EstudioController::class, "show"]);
+    Route::get("/repasar", [EstudioController::class, "review"]);
 });
 
 require __DIR__ . "/auth.php";
