@@ -38,7 +38,7 @@ import {
     </nav>
     <!-- Vista estándar -->
     <nav class="items-center hidden md:flex">
-        <Link href="/home">
+        <Link href="/inicio">
             <Button
                 variant="link"
                 class="pr-0 font-semibold text-foreground hover:text-primary hover:no-underline"
