@@ -10,8 +10,8 @@ import KanjiFilters from "@/Components/KanjiFilters.vue";
 const props = defineProps<{
     response: PaginationType;
     filters: Filters;
-    trazos: string[];
-    grados: string[];
+    trazos: number[];
+    grados: number[];
 }>();
 
 const kanjis = computed(() => props.response.data as Kanji[]);

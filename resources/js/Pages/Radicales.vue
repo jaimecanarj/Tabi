@@ -10,7 +10,7 @@ import Pagination from "@/Components/Pagination.vue";
 const props = defineProps<{
     response: PaginationType;
     filters: Filters;
-    trazos: string[];
+    trazos: number[];
 }>();
 
 const radicales = computed(() => props.response.data as Radical[]);
