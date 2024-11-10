@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, watch } from "vue";
 import { Button } from "@/Components/ui/button";
 import {
     Pagination,
@@ -17,6 +17,7 @@ const props = defineProps<{
     current_page: number;
     per_page: number;
 }>();
+defineEmits(["update:page"]);
 
 let page = ref(props.current_page);
 </script>
@@ -29,7 +30,7 @@ let page = ref(props.current_page);
         :default-page="current_page"
         :items-per-page="per_page"
         v-model:page="page"
-        @update:page="$emit('changePage', page)"
+        @update:page="$emit('update:page', page)"
     >
         <PaginationList v-slot="{ items }" class="flex items-center gap-1">
             <PaginationFirst />

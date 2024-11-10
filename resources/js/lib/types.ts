@@ -35,3 +35,19 @@ export type Radical = {
     significado: string;
     trazos: number;
 };
+
+export type Pagination = {
+    data: Kanji[];
+    current_page: number;
+    per_page: number;
+    total: number;
+};
+
+export type KanjiFilters = {
+    page?: number;
+    search?: string;
+    strokes?: string;
+    grade?: string;
+    sortCategory?: string;
+    sortOrder?: string;
+};
