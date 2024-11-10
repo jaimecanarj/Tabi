@@ -15,8 +15,8 @@ import {
 
 const props = defineProps<{
     filters: Filters;
-    trazos: string[];
-    grados: string[];
+    trazos: number[];
+    grados: number[];
 }>();
 const emit = defineEmits(["change"]);
 
@@ -86,8 +86,8 @@ watch(
                 <SelectContent>
                     <SelectLabel>Trazos</SelectLabel>
                     <SelectItem value="0">Todos</SelectItem>
-                    <SelectItem v-for="trazo in trazos" :value="trazo">
-                        {{ `${trazo} trazo${trazo != "1" ? "s" : ""} ` }}
+                    <SelectItem v-for="trazo in trazos" :value="String(trazo)">
+                        {{ `${trazo} trazo${trazo != 1 ? "s" : ""} ` }}
                     </SelectItem>
                 </SelectContent>
             </Select>
@@ -99,8 +99,8 @@ watch(
                 <SelectContent>
                     <SelectLabel>Grado</SelectLabel>
                     <SelectItem value="0">Todos</SelectItem>
-                    <SelectItem v-for="grado in grados" :value="grado">
-                        {{ grades[Number(grado) - 1] }}
+                    <SelectItem v-for="grado in grados" :value="String(grado)">
+                        {{ grades[grado - 1] }}
                     </SelectItem>
                 </SelectContent>
             </Select>

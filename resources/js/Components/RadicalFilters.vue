@@ -13,7 +13,7 @@ import {
     SelectValue,
 } from "@/Components/ui/select";
 
-const props = defineProps<{ filters: Filters; trazos: string[] }>();
+const props = defineProps<{ filters: Filters; trazos: number[] }>();
 const emit = defineEmits(["change"]);
 
 const filters = reactive({
@@ -68,8 +68,8 @@ watch(
                 <SelectContent>
                     <SelectLabel>Trazos</SelectLabel>
                     <SelectItem value="0">Todos</SelectItem>
-                    <SelectItem v-for="trazo in trazos" :value="trazo">
-                        {{ `${trazo} trazo${trazo != "1" ? "s" : ""} ` }}
+                    <SelectItem v-for="trazo in trazos" :value="String(trazo)">
+                        {{ `${trazo} trazo${trazo != 1 ? "s" : ""} ` }}
                     </SelectItem>
                 </SelectContent>
             </Select>
