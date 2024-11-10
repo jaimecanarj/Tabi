@@ -37,13 +37,13 @@ export type Radical = {
 };
 
 export type Pagination = {
-    data: Kanji[];
+    data: Kanji[] | Radical[];
     current_page: number;
     per_page: number;
     total: number;
 };
 
-export type KanjiFilters = {
+export type Filters = {
     page?: number;
     search?: string;
     strokes?: string;
