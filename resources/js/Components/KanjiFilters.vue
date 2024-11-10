@@ -13,8 +13,22 @@ import {
     SelectValue,
 } from "@/Components/ui/select";
 
-const props = defineProps<{ filters: Filters }>();
+const props = defineProps<{
+    filters: Filters;
+    trazos: string[];
+    grados: string[];
+}>();
 const emit = defineEmits(["change"]);
+
+const grades = [
+    "Primero",
+    "Segundo",
+    "Tercero",
+    "Cuarto",
+    "Quinto",
+    "Sexto",
+    "Séptimo",
+];
 
 const filters = reactive({
     page: props.filters.page,
@@ -72,10 +86,9 @@ watch(
                 <SelectContent>
                     <SelectLabel>Trazos</SelectLabel>
                     <SelectItem value="0">Todos</SelectItem>
-                    <SelectItem value="1">1 trazo</SelectItem>
-                    <SelectItem value="2">2 trazos</SelectItem>
-                    <SelectItem value="3">3 trazos</SelectItem>
-                    <SelectItem value="4">4 trazos</SelectItem>
+                    <SelectItem v-for="trazo in trazos" :value="trazo">
+                        {{ `${trazo} trazo${trazo != "1" ? "s" : ""} ` }}
+                    </SelectItem>
                 </SelectContent>
             </Select>
             <!-- Grado -->
@@ -86,13 +99,9 @@ watch(
                 <SelectContent>
                     <SelectLabel>Grado</SelectLabel>
                     <SelectItem value="0">Todos</SelectItem>
-                    <SelectItem value="1">Primero</SelectItem>
-                    <SelectItem value="2">Segundo</SelectItem>
-                    <SelectItem value="3">Tercero</SelectItem>
-                    <SelectItem value="4">Cuarto</SelectItem>
-                    <SelectItem value="5">Quinto</SelectItem>
-                    <SelectItem value="6">Sexto</SelectItem>
-                    <SelectItem value="8">Séptimo</SelectItem>
+                    <SelectItem v-for="grado in grados" :value="grado">
+                        {{ grades[Number(grado) - 1] }}
+                    </SelectItem>
                 </SelectContent>
             </Select>
         </div>

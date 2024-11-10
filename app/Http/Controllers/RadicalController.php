@@ -10,16 +10,26 @@ class RadicalController extends Controller
 {
     public function index()
     {
-        $radicales = Radical::query()
-            //Filtro de trazos
-            ->when(Request::input("strokes"), function ($query, $strokes) {
-                $query->where("trazos", "=", $strokes);
-            })
-            //Filtro de buscador
-            ->when(Request::input("search"), function ($query, $search) {
+        //Filtro de buscador
+        $data = Radical::query()->when(Request::input("search"), function (
+            $query,
+            $search
+        ) {
+            $query->where(function ($query) use ($search) {
                 $query
                     ->where("significado", "like", "%{$search}%")
                     ->orWhere("literal", "=", $search);
+            });
+        });
+
+        //Datos filtro de trazos
+        $strokes = $data->get()->pluck("trazos")->unique()->sort()->values();
+
+        //Paginación
+        $radicales = $data
+            //Filtro de trazos
+            ->when(Request::input("strokes"), function ($query, $strokes) {
+                $query->where("trazos", "=", $strokes);
             })
             //Ordenación
             ->orderBy(
@@ -31,6 +41,7 @@ class RadicalController extends Controller
         return Inertia::render("Radicales", [
             "response" => $radicales,
             "filters" => Request::only(["strokes"]),
+            "trazos" => $strokes,
         ]);
     }
 

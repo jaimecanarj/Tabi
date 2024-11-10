@@ -10,6 +10,7 @@ import Pagination from "@/Components/Pagination.vue";
 const props = defineProps<{
     response: PaginationType;
     filters: Filters;
+    trazos: string[];
 }>();
 
 const radicales = computed(() => props.response.data as Radical[]);
@@ -36,10 +37,18 @@ const fetchResults = (filters: Filters) => {
         <!-- Cabecera -->
         <div class="flex items-end justify-between pb-5 mb-3 border-b-2">
             <h1 class="text-6xl font-semibold">Radicales</h1>
-            <p class="text-lg">{{ response.total }} radicales</p>
+            <p class="text-lg">
+                {{
+                    `${response.total} radical${response.total != 1 ? "es" : ""}`
+                }}
+            </p>
         </div>
         <!-- Formulario de búsqueda -->
-        <RadicalFilters :filters="filters" @change="fetchResults" />
+        <RadicalFilters
+            :filters="filters"
+            :trazos="trazos"
+            @change="fetchResults"
+        />
         <!-- Grid de radicales -->
         <div class="flex flex-wrap justify-center gap-4">
             <RadicalGrid :radicales="radicales" />

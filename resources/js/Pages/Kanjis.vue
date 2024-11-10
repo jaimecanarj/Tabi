@@ -10,6 +10,8 @@ import KanjiFilters from "@/Components/KanjiFilters.vue";
 const props = defineProps<{
     response: PaginationType;
     filters: Filters;
+    trazos: string[];
+    grados: string[];
 }>();
 
 const kanjis = computed(() => props.response.data as Kanji[]);
@@ -37,10 +39,17 @@ const fetchResults = (filters: Filters) => {
         <!-- Cabecera -->
         <div class="flex items-end justify-between pb-5 mb-3 border-b-2">
             <h1 class="text-6xl font-semibold">Kanjis</h1>
-            <p class="text-lg">{{ response.total }} kanjis</p>
+            <p class="text-lg">
+                {{ `${response.total} kanji${response.total != 1 ? "s" : ""}` }}
+            </p>
         </div>
         <!-- Formulario de búsqueda -->
-        <KanjiFilters :filters="filters" @change="fetchResults" />
+        <KanjiFilters
+            :filters="filters"
+            :trazos="trazos"
+            :grados="grados"
+            @change="fetchResults"
+        />
         <!-- Grid de kanjis -->
         <div class="flex flex-wrap justify-center gap-4">
             <KanjiGrid :kanjis="kanjis" />

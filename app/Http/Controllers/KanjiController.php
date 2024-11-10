@@ -17,8 +17,42 @@ class KanjiController extends Controller
             $index = "indice_" . auth()->user()->indice;
         }
 
-        //Obtenemos los kanjis
-        $kanjis = Kanji::query()
+        //Filtro de texto
+        $data = Kanji::query()->when(QueryRequest::input("search"), function (
+            $query,
+            $search
+        ) {
+            $query->where(function ($query) use ($search) {
+                $query
+                    ->where("significado", "like", "%{$search}%")
+                    ->orWhere("literal", "=", $search);
+            });
+        });
+
+        //Datos filtro de trazos
+        $strokes = (clone $data)
+            ->when(QueryRequest::input("grade"), function ($query, $grade) {
+                $query->where("grado", "=", $grade);
+            })
+            ->get()
+            ->pluck("trazos")
+            ->unique()
+            ->sort()
+            ->values();
+
+        //Datos filtro de grados
+        $grades = (clone $data)
+            ->when(QueryRequest::input("strokes"), function ($query, $strokes) {
+                $query->where("trazos", "=", $strokes);
+            })
+            ->get()
+            ->pluck("grado")
+            ->unique()
+            ->sort()
+            ->values();
+
+        //Paginación
+        $kanjis = $data
             //Filtro de trazos
             ->when(QueryRequest::input("strokes"), function ($query, $strokes) {
                 $query->where("trazos", "=", $strokes);
@@ -26,12 +60,6 @@ class KanjiController extends Controller
             //Filtro de grado
             ->when(QueryRequest::input("grade"), function ($query, $grade) {
                 $query->where("grado", "=", $grade);
-            })
-            //Filtro de buscador
-            ->when(QueryRequest::input("search"), function ($query, $search) {
-                $query
-                    ->where("significado", "like", "%{$search}%")
-                    ->orWhere("literal", "=", $search);
             })
             //Ordenación
             ->orderBy(
@@ -49,6 +77,8 @@ class KanjiController extends Controller
                 "sortCategory",
                 "sortOrder",
             ]),
+            "trazos" => $strokes,
+            "grados" => $grades,
         ]);
     }
 
