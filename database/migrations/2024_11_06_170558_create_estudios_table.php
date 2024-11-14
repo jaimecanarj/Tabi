@@ -22,7 +22,7 @@ return new class extends Migration {
                 ->foreignIdFor(User::class)
                 ->constrained()
                 ->cascadeOnDelete();
-            $table->dateTime("fecha");
+            $table->timestamp("fecha");
             $table->double("tiempo");
             $table->double("betaA");
             $table->double("betaB");

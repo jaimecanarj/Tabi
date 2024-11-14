@@ -62,12 +62,12 @@ import {
                 Radicales
             </Button>
         </Link>
-        <Link href="/stats">
+        <Link href="/progreso">
             <Button
                 variant="link"
                 class="font-semibold text-foreground hover:text-primary hover:no-underline"
             >
-                Estadísticas
+                Tu progreso
             </Button>
         </Link>
     </nav>

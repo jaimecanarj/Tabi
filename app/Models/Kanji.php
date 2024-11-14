@@ -30,4 +30,9 @@ class Kanji extends Model
             "kanji_similar_id"
         );
     }
+
+    public function estudio()
+    {
+        return $this->hasOne(Estudio::class);
+    }
 }

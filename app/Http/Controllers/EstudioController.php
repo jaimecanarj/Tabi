@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Estudio;
 use App\Models\Kanji;
+use Carbon\Carbon;
 use Inertia\Inertia;
+use Illuminate\Http\Request;
 
 class EstudioController extends Controller
 {
@@ -22,8 +24,8 @@ class EstudioController extends Controller
         //Comprobamos si venimos de estudiar u otro lugar
         $urlArray = explode("/", url()->previous());
         $lastUrl = end($urlArray);
+        //De estudiar
         if ($lastUrl == "estudiar") {
-            //Obtenemos los kanjis a repasar de la misma forma que en show
             $kanjis = EstudioController::getStudyKanjis();
 
             return Inertia::render("Repaso", [
@@ -31,10 +33,47 @@ class EstudioController extends Controller
             ]);
         }
 
-        //Obtenemos los kanjis de la tabla estudios
-        //Devolvemos todos aquellos que el usuario haya estudiado
-        //Pero solo el último registro de cada kanji estudiado
-        //En js hacemos el filtro de cuales mostrar primero
+        //De repasar
+        $userId = auth()->user()->id;
+
+        $kanjis = Kanji::whereIn("id", function ($query) use ($userId) {
+            $query
+                ->select("kanji_id")
+                ->from("estudios")
+                ->where("user_id", "=", $userId);
+        })->get();
+
+        //Obtener último estudio de cada kanji
+        $kanjis->load([
+            "estudio" => function ($query) use ($userId) {
+                $query
+                    ->where("user_id", "=", $userId)
+                    ->orderBy("fecha", "desc");
+            },
+            "radicales",
+        ]);
+
+        // dd(Estudio::where("user_id", "=", "1")->get());
+
+        return Inertia::render("Repaso", [
+            "kanjis" => $kanjis,
+        ]);
+    }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            "kanji_id" => "required|string",
+            "user_id" => "required|string",
+            "tiempo" => "required|numeric",
+            "betaA" => "required|numeric",
+            "betaB" => "required|numeric",
+            "respuesta" => "required|boolean",
+            "aciertos" => "required|numeric",
+            "intentos" => "required|numeric",
+        ]);
+
+        Estudio::create([...$request->all(), "fecha" => Carbon::now()]);
     }
 
     private function getStudyKanjis()
@@ -43,21 +82,13 @@ class EstudioController extends Controller
         $userId = auth()->user()->id;
         $userIndex = "indice_" . auth()->user()->indice;
 
-        //Obtenemos último kanji estudiado (1 intento con fecha más reciente)
-        $lastKanji = Estudio::where([
-            ["user_id", "=", $userId],
-            ["intentos", "=", 1],
-        ])
-            ->orderBy("fecha")
-            ->first();
-
-        //Obtenemos el indice del último kanji estudiado, si existe
-        $lastKanji
-            ? ($lastId = Kanji::find($lastKanji->kanji_id)->$userIndex)
-            : ($lastId = 0);
-
         // Obtenemos los kanjis a estudiar
-        $kanjis = Kanji::where($userIndex, ">", $lastId)
+        $kanjis = Kanji::whereNotIn("id", function ($query) use ($userId) {
+            $query
+                ->select("kanji_id")
+                ->from("estudios")
+                ->where("user_id", "=", $userId);
+        })
             ->orderBy($userIndex)
             ->limit(10)
             ->get();

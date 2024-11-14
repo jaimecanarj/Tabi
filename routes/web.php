@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\EstadisticasController;
 use App\Http\Controllers\EstudioController;
 use App\Http\Controllers\HistoriaController;
 use App\Http\Controllers\KanjiController;
+use App\Http\Controllers\ProgresoController;
 use App\Http\Controllers\RadicalController;
 use Illuminate\Support\Facades\Route;
 
@@ -31,6 +33,8 @@ Route::delete("/historia", [HistoriaController::class, "destroy"]);
 Route::middleware("auth")->group(function () {
     Route::get("/estudiar", [EstudioController::class, "show"]);
     Route::get("/repasar", [EstudioController::class, "review"]);
+    Route::post("/repasar", [EstudioController::class, "store"]);
+    Route::get("/progreso", [ProgresoController::class, "index"]);
 });
 
 require __DIR__ . "/auth.php";

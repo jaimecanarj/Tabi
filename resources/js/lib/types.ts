@@ -9,6 +9,7 @@ export type Kanji = {
     indice_heisig: number;
     indice_wanikani: number;
     radicales?: Radical[];
+    estudio?: Estudio;
 };
 
 enum tipoLectura {
@@ -50,4 +51,23 @@ export type Filters = {
     grade?: string;
     sortCategory?: string;
     sortOrder?: string;
+};
+
+export type Question = {
+    answer: string;
+    answered: boolean;
+    answerResult: boolean | undefined;
+};
+
+export type Estudio = {
+    id: number;
+    kanji_id: number;
+    user_id: number;
+    fecha: string;
+    tiempo: number;
+    betaA: number;
+    betaB: number;
+    respuesta: number;
+    aciertos: number;
+    intentos: number;
 };
