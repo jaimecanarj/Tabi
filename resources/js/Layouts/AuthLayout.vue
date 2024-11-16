@@ -8,17 +8,17 @@ useColorMode();
 
 <template>
     <div
-        class="flex flex-col items-center min-h-screen pt-6 bg-background sm:justify-center sm:pt-0"
+        class="flex min-h-screen flex-col items-center bg-background pt-6 sm:justify-center sm:pt-0"
     >
         <div>
-            <Link href="/home" class="flex items-center">
-                <ApplicationLogo class="h-40 w-30" />
-                <p class="ml-3 text-7xl font-logo">Tabi</p>
+            <Link href="/inicio" class="flex items-center">
+                <ApplicationLogo class="w-30 h-40" />
+                <p class="ml-3 font-logo text-7xl">Tabi</p>
             </Link>
         </div>
 
         <div
-            class="w-full px-6 py-4 mt-6 overflow-hidden shadow-lg bg-card sm:max-w-md sm:rounded-lg"
+            class="mt-6 w-full overflow-hidden bg-card px-6 py-4 shadow-lg sm:max-w-md sm:rounded-lg"
         >
             <slot />
         </div>

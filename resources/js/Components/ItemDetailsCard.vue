@@ -13,13 +13,13 @@ defineProps({ literal: String, tipo: String, titulo: String });
 </script>
 
 <template>
-    <div class="flex flex-wrap items-center justify-between pl-6 mb-4">
+    <div class="mb-4 flex flex-wrap items-center justify-between pl-6">
         <!-- Ruta -->
         <Breadcrumb class="mb-2 mr-2">
             <BreadcrumbList>
                 <BreadcrumbItem class="text-xl">
                     <BreadcrumbLink asChild
-                        ><Link href="/home"> Inicio </Link></BreadcrumbLink
+                        ><Link href="/inicio"> Inicio </Link></BreadcrumbLink
                     >
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
@@ -40,11 +40,11 @@ defineProps({ literal: String, tipo: String, titulo: String });
         <slot name="boton" />
     </div>
     <div
-        class="flex flex-col p-6 mb-6 space-x-10 space-y-8 rounded-md shadow-xl md:space-y-0 md:flex-row lg:space-x-20 bg-card md:mb-0"
+        class="mb-6 flex flex-col space-x-10 space-y-8 rounded-md bg-card p-6 shadow-xl md:mb-0 md:flex-row md:space-y-0 lg:space-x-20"
     >
         <!-- Literal -->
         <div
-            class="flex justify-center items-center rounded-lg text-[200px] font-bold bg-gradient-primary basis-2/5 xl:basis-1/3 text-primary-foreground"
+            class="flex basis-2/5 items-center justify-center rounded-lg bg-gradient-primary text-[200px] font-bold text-primary-foreground xl:basis-1/3"
         >
             <h2>{{ literal }}</h2>
         </div>

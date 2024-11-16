@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref, watch } from "vue";
+import { onMounted, onUnmounted, ref } from "vue";
+import { breakpointsTailwind, useBreakpoints } from "@vueuse/core";
 import { Button } from "@/Components/ui/button";
 import {
     Pagination,
@@ -11,7 +12,6 @@ import {
     PaginationNext,
     PaginationPrev,
 } from "@/Components/ui/pagination";
-import { breakpointsTailwind, useBreakpoints } from "@vueuse/core";
 
 const breakpoints = useBreakpoints(breakpointsTailwind);
 
@@ -61,7 +61,7 @@ const setSiblings = () => {
                     as-child
                 >
                     <Button
-                        class="w-10 h-10 p-0"
+                        class="h-10 w-10 p-0"
                         :variant="item.value === page ? 'default' : 'outline'"
                     >
                         {{ item.value }}

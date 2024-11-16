@@ -130,7 +130,7 @@ const submit = () => {
                 </p>
             </div>
 
-            <div class="flex items-center justify-between mt-2">
+            <div class="mt-2 flex items-center justify-between">
                 <div>
                     <Label for="index"
                         >Selecionar un índice
@@ -155,8 +155,9 @@ const submit = () => {
                     <NumberField
                         v-model="form.estudio_diario"
                         required
-                        :min="1"
+                        :min="10"
                         :max="50"
+                        :step="10"
                     >
                         <NumberFieldContent>
                             <NumberFieldDecrement />
@@ -178,10 +179,10 @@ const submit = () => {
                 </p>
             </div>
 
-            <div class="flex items-center justify-end mt-2">
+            <div class="mt-2 flex items-center justify-end">
                 <Link
                     :href="route('login')"
-                    class="text-sm underline rounded-md text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                    class="rounded-md text-sm text-muted-foreground underline hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
                 >
                     ¿Ya tienes cuenta?
                 </Link>
