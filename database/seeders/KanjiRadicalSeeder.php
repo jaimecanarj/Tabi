@@ -6,7 +6,6 @@ use App\Models\Kanji;
 use App\Models\Radical;
 use DB;
 use File;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class KanjiRadicalSeeder extends Seeder

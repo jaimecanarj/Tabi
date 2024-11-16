@@ -20,7 +20,7 @@ import { Badge } from "@/Components/ui/badge";
                     <span class="text-lg font-semibold underline">10</span>
                     kanjis
                 </p>
-                <Link href="/repasar">
+                <Link href="/estudiar">
                     <Button
                         class="w-full mt-2 bg-secondary hover:bg-secondary-foreground/90 text-primary"
                         >Empezar</Button
@@ -42,7 +42,7 @@ import { Badge } from "@/Components/ui/badge";
                     <span class="text-lg font-semibold underline">15</span>
                     kanjis
                 </p>
-                <Link href="/estudiar">
+                <Link href="/repasar">
                     <Button
                         class="w-full mt-2 bg-secondary hover:bg-secondary-foreground/90 text-primary-alt"
                     >

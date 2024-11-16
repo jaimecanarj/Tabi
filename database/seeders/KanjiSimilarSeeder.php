@@ -5,7 +5,6 @@ namespace Database\Seeders;
 use App\Models\Kanji;
 use DB;
 use File;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class KanjiSimilarSeeder extends Seeder

@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Kanji;
-use Illuminate\Http\Request;
-use Request as QueryRequest;
+use Request;
 use Inertia\Inertia;
+use Inertia\Response;
 
 class KanjiController extends Controller
 {
-    public function index()
+    public function index(): Response
     {
         //Ordenamos los kanjis por su índice si está logueado
         $index = "indice_escolar";
@@ -18,20 +18,20 @@ class KanjiController extends Controller
         }
 
         //Filtro de texto
-        $data = Kanji::query()->when(QueryRequest::input("search"), function (
+        $data = Kanji::query()->when(Request::input("search"), function (
             $query,
             $search
         ) {
             $query->where(function ($query) use ($search) {
                 $query
-                    ->where("significado", "like", "%{$search}%")
+                    ->where("significado", "like", "%$search%")
                     ->orWhere("literal", "=", $search);
             });
         });
 
         //Datos filtro de trazos
         $strokes = (clone $data)
-            ->when(QueryRequest::input("grade"), function ($query, $grade) {
+            ->when(Request::input("grade"), function ($query, $grade) {
                 $query->where("grado", "=", $grade);
             })
             ->get()
@@ -42,7 +42,7 @@ class KanjiController extends Controller
 
         //Datos filtro de grados
         $grades = (clone $data)
-            ->when(QueryRequest::input("strokes"), function ($query, $strokes) {
+            ->when(Request::input("strokes"), function ($query, $strokes) {
                 $query->where("trazos", "=", $strokes);
             })
             ->get()
@@ -54,23 +54,23 @@ class KanjiController extends Controller
         //Paginación
         $kanjis = $data
             //Filtro de trazos
-            ->when(QueryRequest::input("strokes"), function ($query, $strokes) {
+            ->when(Request::input("strokes"), function ($query, $strokes) {
                 $query->where("trazos", "=", $strokes);
             })
             //Filtro de grado
-            ->when(QueryRequest::input("grade"), function ($query, $grade) {
+            ->when(Request::input("grade"), function ($query, $grade) {
                 $query->where("grado", "=", $grade);
             })
             //Ordenación
             ->orderBy(
-                QueryRequest::input("sortCategory") ?? $index,
-                QueryRequest::input("sortOrder") ?? "asc"
+                Request::input("sortCategory") ?? $index,
+                Request::input("sortOrder") ?? "asc"
             )
             ->paginate(12);
 
         return Inertia::render("Kanjis", [
             "response" => $kanjis,
-            "filters" => QueryRequest::only([
+            "filters" => Request::only([
                 "search",
                 "strokes",
                 "grade",
@@ -82,7 +82,7 @@ class KanjiController extends Controller
         ]);
     }
 
-    public function show($id)
+    public function show($id): Response
     {
         $kanji = Kanji::find($id);
         $lecturas = Kanji::find($id)->lecturas;
@@ -99,10 +99,10 @@ class KanjiController extends Controller
         ]);
     }
 
-    public function search(Request $request)
-    {
-        $literal = $request->kanji;
-        $id = Kanji::where("literal", $literal)->first()->id;
-        return redirect()->route("kanji", ["id" => $id]);
-    }
+//    public function search(Request $request)
+//    {
+//        $literal = $request->kanji;
+//        $id = Kanji::where("literal", $literal)->first()->id;
+//        return redirect()->route("kanji", ["id" => $id]);
+//    }
 }

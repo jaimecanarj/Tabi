@@ -7,10 +7,11 @@ use App\Models\Kanji;
 use Carbon\Carbon;
 use Inertia\Inertia;
 use Illuminate\Http\Request;
+use Inertia\Response;
 
 class EstudioController extends Controller
 {
-    public function show()
+    public function show(): Response
     {
         $kanjis = EstudioController::getStudyKanjis();
 
@@ -19,7 +20,7 @@ class EstudioController extends Controller
         ]);
     }
 
-    public function review()
+    public function review(): Response
     {
         //Comprobamos si venimos de estudiar u otro lugar
         $urlArray = explode("/", url()->previous());
@@ -60,7 +61,7 @@ class EstudioController extends Controller
         ]);
     }
 
-    public function store(Request $request)
+    public function store(Request $request): void
     {
         $request->validate([
             "kanji_id" => "required|string",
@@ -76,7 +77,7 @@ class EstudioController extends Controller
         Estudio::create([...$request->all(), "fecha" => Carbon::now()]);
     }
 
-    private function getStudyKanjis()
+    private function getStudyKanjis(): array|\LaravelIdea\Helper\App\Models\_IH_Kanji_C
     {
         //Obtenemos información del usuario
         $userId = auth()->user()->id;

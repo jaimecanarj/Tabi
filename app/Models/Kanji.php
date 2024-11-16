@@ -4,19 +4,21 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Kanji extends Model
 {
     public $timestamps = false;
-    public function lecturas()
+    public function lecturas(): HasMany
     {
         return $this->hasMany(Lectura::class);
     }
-    public function significados()
+    public function significados(): HasMany
     {
         return $this->hasMany(Significado::class);
     }
-    public function radicales()
+    public function radicales(): BelongsToMany
     {
         return $this->belongsToMany(Radical::class);
     }
@@ -31,7 +33,7 @@ class Kanji extends Model
         );
     }
 
-    public function estudio()
+    public function estudio(): HasOne
     {
         return $this->hasOne(Estudio::class);
     }

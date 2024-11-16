@@ -5,10 +5,11 @@ namespace App\Http\Controllers;
 use App\Models\Radical;
 use Inertia\Inertia;
 use Request;
+use Inertia\Response;
 
 class RadicalController extends Controller
 {
-    public function index()
+    public function index(): Response
     {
         //Filtro de buscador
         $data = Radical::query()->when(Request::input("search"), function (
@@ -17,7 +18,7 @@ class RadicalController extends Controller
         ) {
             $query->where(function ($query) use ($search) {
                 $query
-                    ->where("significado", "like", "%{$search}%")
+                    ->where("significado", "like", "%$search%")
                     ->orWhere("literal", "=", $search);
             });
         });
@@ -45,7 +46,7 @@ class RadicalController extends Controller
         ]);
     }
 
-    public function show($id)
+    public function show($id): Response
     {
         $radical = Radical::find($id);
         $kanjis = Radical::find($id)->kanjis;

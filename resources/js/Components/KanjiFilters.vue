@@ -129,7 +129,7 @@ watch(
             </Select>
             <Button variant="outline" size="sm" @click="updateSort">
                 <ArrowDownWideNarrow v-if="filters.sortOrder == 'desc'" />
-                <ArrowUpNarrowWide v-else="filters.sortOrder == 'asc'" />
+                <ArrowUpNarrowWide v-else />
             </Button>
         </div>
     </div>

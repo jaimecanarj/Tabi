@@ -5,7 +5,6 @@ namespace Database\Seeders;
 use App\Models\Kanji;
 use App\Models\Lectura;
 use App\Models\Significado;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\File;
 

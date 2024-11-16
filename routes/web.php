@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\EstadisticasController;
 use App\Http\Controllers\EstudioController;
 use App\Http\Controllers\HistoriaController;
 use App\Http\Controllers\KanjiController;

@@ -18,7 +18,7 @@ return new class extends Migration {
                 ->cascadeOnDelete();
             $table
                 ->foreignIdFor(Kanji::class, "kanji_similar_id")
-                ->constrained("kanjis", "id")
+                ->constrained("kanjis")
                 ->cascadeOnDelete();
             $table->primary(["kanji_id", "kanji_similar_id"]);
         });
