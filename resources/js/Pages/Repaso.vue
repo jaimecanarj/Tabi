@@ -1,18 +1,16 @@
 <script setup lang="ts">
-//Si no hay más kanjis en kanjisToAnswer, acabar la sesión
-//Al fallar, mostrar de alguna manera la solución
-//Hacer storeStudy dinámico para que meta los datos basados en updateRecall
+//TODO: Si no hay más kanjis en kanjisToAnswer, acabar la sesión
+//TODO: Al fallar, mostrar de alguna manera la solución
+//TODO: Hacer storeStudy dinámico para que meta los datos basados en updateRecall
 import { ref } from "vue";
-import { Head, Link, usePage } from "@inertiajs/vue3";
+import { Head, usePage } from "@inertiajs/vue3";
 import axios from "axios";
 import moment from "moment";
 import * as ebisu from "ebisu-js";
 import { ChevronRight } from "lucide-vue-next";
+import EstudioLayout from "@/Layouts/EstudioLayout.vue";
 import { Kanji, Question } from "@/lib/types";
-import MainLayout from "@/Layouts/MainLayout.vue";
-import StoryForm from "@/Components/StoryForm.vue";
 import { Input } from "@/Components/ui/input";
-import { Button } from "@/Components/ui/button";
 
 const page = usePage();
 const props = defineProps<{ kanjis: Kanji[] }>();
@@ -139,15 +137,8 @@ const storeStudy = async () => {
 
 <template>
     <Head title="Estudio" />
-    <MainLayout />
-    <main class="container relative mt-12">
-        <!-- Tarjeta -->
-        <div class="flex flex-col mb-10 shadow-xl">
-            <div
-                class="flex justify-center items-center rounded-t-md text-[200px] font-bold bg-gradient-primary text-primary-foreground leading-tight"
-            >
-                <h2>{{ kanji.literal }}</h2>
-            </div>
+    <EstudioLayout :kanji="kanji" :showData="question.answered">
+        <template #significado>
             <form @submit.prevent="handleForm" class="relative">
                 <Input
                     v-model="question.answer"
@@ -169,42 +160,13 @@ const storeStudy = async () => {
                     />
                 </button>
             </form>
-        </div>
-        <div v-if="question.answered" class="grid gap-10 lg:grid-cols-2">
-            <!-- Radicales -->
-            <div class="p-5 rounded-md shadow-md bg-card">
-                <h3 class="pb-2 text-4xl font-semibold">Radicales</h3>
-                <p class="text-muted-foreground">
-                    Este kanji está compuesto de:
-                </p>
-                <div class="flex flex-wrap mt-3 gap-7">
-                    <Link
-                        v-for="radical of kanji.radicales"
-                        :href="`/radicales/${radical.id}`"
-                    >
-                        <Button class="text-2xl">
-                            {{ radical.literal }}
-                        </Button>
-                        <span class="ml-2 text-xl capitalize">
-                            {{ radical.significado }}
-                        </span>
-                    </Link>
-                </div>
-            </div>
-
-            <!-- Historia -->
-            <div class="p-5 rounded-md shadow-md bg-card">
-                <h3 class="pb-1 text-4xl font-semibold">Historia</h3>
-                <div>
-                    <p class="mb-3 text-muted-foreground">
-                        Añade una historia a este kanji.
-                    </p>
-                    <StoryForm :kanji_id="kanji.id" :key="kanji.id" />
-                </div>
-            </div>
-        </div>
-    </main>
-    <div class="sticky top-[100vh] text-xl flex justify-center mt-10 mb-6">
-        {{ kanjisAnswered }} de 10
-    </div>
+        </template>
+        <template #footer>
+            <footer
+                class="sticky top-[100vh] text-xl flex justify-center mt-10 mb-6"
+            >
+                {{ kanjisAnswered }} de 10
+            </footer>
+        </template>
+    </EstudioLayout>
 </template>
