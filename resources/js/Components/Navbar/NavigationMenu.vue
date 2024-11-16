@@ -23,15 +23,40 @@ import {
             </SheetTrigger>
             <SheetContent side="left" class="w-[200px]">
                 <SheetHeader class="mt-4 sm:text-center">
-                    <SheetTitle>Logo</SheetTitle>
+                    <Link href="/inicio">
+                        <SheetTitle
+                            class="flex items-center hover:text-primary"
+                        >
+                            <ApplicationLogo class="w-10 h-12" />
+                            <p class="font-logo text-3xl ml-2">Tabi</p>
+                        </SheetTitle>
+                    </Link>
                 </SheetHeader>
-                <div class="flex flex-col">
-                    <Button
-                        variant="link"
-                        class="justify-start text-foreground hover:text-primary hover:no-underline"
-                    >
-                        Kanjis
-                    </Button>
+                <div class="flex flex-col mt-4">
+                    <Link href="/kanjis">
+                        <Button
+                            variant="link"
+                            class="text-xl justify-start text-foreground hover:text-primary hover:no-underline"
+                        >
+                            Kanjis
+                        </Button>
+                    </Link>
+                    <Link href="/radicales">
+                        <Button
+                            variant="link"
+                            class="text-xl justify-start text-foreground hover:text-primary hover:no-underline"
+                        >
+                            Radicales
+                        </Button>
+                    </Link>
+                    <Link href="/progreso">
+                        <Button
+                            variant="link"
+                            class="text-xl justify-start text-foreground hover:text-primary hover:no-underline"
+                        >
+                            Tu progreso
+                        </Button>
+                    </Link>
                 </div>
             </SheetContent>
         </Sheet>
