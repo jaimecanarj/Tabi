@@ -17,6 +17,7 @@ const props = defineProps<{ kanjis: Kanji[] }>();
 
 let kanjisToAnswer: Kanji[] = [];
 
+//Obtener kanjis a repasar
 if (props.kanjis[0].estudio) {
     //Ordenar por posibilidad de olvidarse
     kanjisToAnswer = props.kanjis
@@ -49,8 +50,8 @@ if (props.kanjis[0].estudio) {
     kanjisToAnswer = props.kanjis.toSorted(() => Math.random() - 0.5);
 }
 
-let kanjisAnswered: number = 1;
-let kanji = ref(kanjisToAnswer[0]);
+let kanjisAnswered: number = 1; //Contador
+let kanji = ref(kanjisToAnswer[0]); //Kanji a repasar
 
 const question = ref<Question>({
     answer: "",
@@ -60,24 +61,25 @@ const question = ref<Question>({
 
 const handleForm = () => {
     if (question.value.answered) {
-        kanji.value = kanjisToAnswer[0];
+        kanji.value = kanjisToAnswer[0]; //Actualizar kanji
+        if (kanjisToAnswer.length + kanjisAnswered == 10) kanjisAnswered++; //Actualizar contador
         //Reiniciar formulario
         question.value.answer = "";
         question.value.answered = false;
-        if (kanjisToAnswer.length + kanjisAnswered == 10) kanjisAnswered++; //Actualizar contador
         question.value.answerResult = undefined;
     } else {
         checkAnswer();
     }
 };
-
 const checkAnswer = () => {
     if (
         //Compruebo resultado sin mayúsculas ni tildes
         kanji.value.significado.localeCompare(
             question.value.answer,
             undefined,
-            { sensitivity: "base" },
+            {
+                sensitivity: "base",
+            },
         ) == 0
     ) {
         question.value.answerResult = true; //Respueta correcta
@@ -144,26 +146,26 @@ const storeStudy = async () => {
                     v-model="question.answer"
                     :class="[
                         {
-                            '!bg-emerald-500 !border-emerald-500':
+                            '!border-emerald-500 !bg-emerald-500':
                                 question.answerResult,
-                            '!bg-destructive !border-destructive':
+                            '!border-destructive !bg-destructive':
                                 question.answerResult == false,
                         },
-                        'h-20 p-4 text-3xl sm:text-4xl lg:text-5xl text-center rounded-t-none focus-visible:ring-0 focus-visible:ring-offset-0 bg-card rounded-b-md',
+                        'h-20 rounded-b-md rounded-t-none bg-card p-4 px-10 text-center text-3xl focus-visible:ring-0 focus-visible:ring-offset-0 sm:text-4xl lg:text-5xl',
                     ]"
                     placeholder="Tu respuesta"
                 />
-                <button class="absolute top-2 -right-2">
+                <button class="absolute -right-2 top-2">
                     <ChevronRight
                         :stroke-width="1"
-                        class="w-16 h-16 hover:text-primary"
+                        class="h-16 w-16 hover:text-primary"
                     />
                 </button>
             </form>
         </template>
         <template #footer>
             <footer
-                class="sticky top-[100vh] text-xl flex justify-center mt-10 mb-6"
+                class="sticky top-[100vh] mb-6 mt-10 flex justify-center text-xl"
             >
                 {{ kanjisAnswered }} de 10
             </footer>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { onMounted, onUnmounted, ref, watch } from "vue";
 import { Button } from "@/Components/ui/button";
 import {
     Pagination,
@@ -11,6 +11,9 @@ import {
     PaginationNext,
     PaginationPrev,
 } from "@/Components/ui/pagination";
+import { breakpointsTailwind, useBreakpoints } from "@vueuse/core";
+
+const breakpoints = useBreakpoints(breakpointsTailwind);
 
 const props = defineProps<{
     total: number;
@@ -20,13 +23,27 @@ const props = defineProps<{
 defineEmits(["update:page"]);
 
 let page = ref(props.current_page);
+const siblings = ref(breakpoints.isSmaller("sm"));
+
+onMounted(() => {
+    window.addEventListener("resize", setSiblings);
+});
+
+onUnmounted(() => {
+    window.removeEventListener("resize", setSiblings);
+});
+
+//Definir números en paginación en base al tamaño de pantalla
+const setSiblings = () => {
+    siblings.value = breakpoints.isSmaller("sm");
+};
 </script>
 
 <template>
     <Pagination
         v-slot="{ page }"
         :total="total"
-        :sibling-count="2"
+        :sibling-count="siblings ? 1 : 2"
         :default-page="current_page"
         :items-per-page="per_page"
         v-model:page="page"

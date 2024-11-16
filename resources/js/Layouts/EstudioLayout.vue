@@ -10,7 +10,7 @@ defineProps<{ kanji: Kanji; showData: boolean }>();
 
 <template>
     <MainLayout />
-    <main class="container relative mt-12">
+    <main class="container mt-12">
         <!-- Tarjeta -->
         <div class="flex flex-col mb-10 shadow-xl">
             <div

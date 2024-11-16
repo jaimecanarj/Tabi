@@ -8,6 +8,7 @@ use Carbon\Carbon;
 use Inertia\Inertia;
 use Illuminate\Http\Request;
 use Inertia\Response;
+use Illuminate\Database\Eloquent\Collection;
 
 class EstudioController extends Controller
 {
@@ -54,8 +55,6 @@ class EstudioController extends Controller
             "radicales",
         ]);
 
-        // dd(Estudio::where("user_id", "=", "1")->get());
-
         return Inertia::render("Repaso", [
             "kanjis" => $kanjis,
         ]);
@@ -77,7 +76,7 @@ class EstudioController extends Controller
         Estudio::create([...$request->all(), "fecha" => Carbon::now()]);
     }
 
-    private function getStudyKanjis(): array|\LaravelIdea\Helper\App\Models\_IH_Kanji_C
+    private function getStudyKanjis(): Collection
     {
         //Obtenemos información del usuario
         $userId = auth()->user()->id;

@@ -35,9 +35,11 @@ const fetchResults = (filters: Filters) => {
     <MainLayout />
     <main class="container mt-6">
         <!-- Cabecera -->
-        <div class="flex items-end justify-between pb-5 mb-3 border-b-2">
+        <div
+            class="flex flex-wrap items-end justify-between pb-5 mb-3 border-b-2 gap-y-3"
+        >
             <h1 class="text-6xl font-semibold">Radicales</h1>
-            <p class="text-lg">
+            <p class="text-lg ml-3">
                 {{
                     `${response.total} radical${response.total != 1 ? "es" : ""}`
                 }}

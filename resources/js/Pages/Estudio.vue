@@ -72,7 +72,7 @@ onMounted(() => {
         <template #footer>
             <!-- Selector de kanji -->
             <footer
-                class="sticky top-[100vh] flex flex-wrap justify-center gap-2 mt-10 mb-6"
+                class="sticky top-[100vh] flex flex-wrap justify-center gap-2 mt-10 mb-6 mx-8"
             >
                 <Button
                     v-for="(kanjiIndex, index) of kanjis"
