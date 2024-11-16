@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { reactive, watch } from "vue";
+import { reactive } from "vue";
+import { watchDebounced } from "@vueuse/core";
 import { ArrowDownWideNarrow, ArrowUpNarrowWide } from "lucide-vue-next";
 import { Filters } from "@/lib/types";
 import { Button } from "@/Components/ui/button";
@@ -28,7 +29,7 @@ const updateSort = () => {
     filters.sortOrder = filters.sortOrder == "asc" ? "desc" : "asc";
 };
 
-watch(
+watchDebounced(
     () => ({ ...filters }),
     (newValue, oldValue) => {
         const filters = { ...newValue };
@@ -45,7 +46,7 @@ watch(
         }
         emit("change", filters);
     },
-    { deep: true },
+    { deep: true, debounce: 500 },
 );
 </script>
 
