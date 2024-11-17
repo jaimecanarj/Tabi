@@ -84,11 +84,21 @@ class KanjiController extends Controller
 
     public function show($id): Response
     {
+        $userId = auth()->user()?->id;
+
         $kanji = Kanji::find($id);
         $lecturas = Kanji::find($id)->lecturas;
         $significados = Kanji::find($id)->significados;
         $radicales = Kanji::find($id)->radicales;
         $similares = Kanji::find($id)->similares;
+
+        if (isset($userId)) {
+            $kanji->load(["estudios" => function ($query) use ($userId) {
+                $query
+                    ->where("user_id", "=", $userId)
+                    ->orderBy("fecha", "desc");
+            }]);
+        }
 
         return Inertia::render("Kanji", [
             "kanji" => $kanji,

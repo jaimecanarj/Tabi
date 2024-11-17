@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { Head } from "@inertiajs/vue3";
+import { Head, usePage } from "@inertiajs/vue3";
 import { ScrollText } from "lucide-vue-next";
 import { Kanji, Lectura, Significado, Radical } from "@/lib/types";
 import MainLayout from "@/Layouts/MainLayout.vue";
 import ItemDetailsCard from "@/Components/ItemDetailsCard.vue";
 import KanjiDetails from "@/Components/KanjiDetails.vue";
+import KanjiProgress from "@/Components/KanjiProgress.vue";
 import StoryForm from "@/Components/StoryForm.vue";
 import { Button } from "@/Components/ui/button";
 import {
@@ -17,7 +18,7 @@ import {
     DialogTrigger,
 } from "@/Components/ui/dialog";
 
-let isOpen = ref(false);
+const page = usePage();
 
 const props = defineProps<{
     kanji: Kanji;
@@ -26,6 +27,8 @@ const props = defineProps<{
     radicales: Radical[];
     similares: Kanji[];
 }>();
+
+let isOpen = ref(false);
 
 const toggleDialog = () => {
     isOpen.value = !isOpen.value;
@@ -55,7 +58,7 @@ const toggleDialog = () => {
                             Historia
                         </Button>
                     </DialogTrigger>
-                    <DialogContent class="sm:max-w-[500px] gap-0">
+                    <DialogContent class="gap-0 sm:max-w-[500px]">
                         <DialogHeader class="mb-4">
                             <DialogTitle>Historia</DialogTitle>
                             <DialogDescription>
@@ -69,5 +72,10 @@ const toggleDialog = () => {
             <!-- Detalles de la tarjeta -->
             <KanjiDetails v-bind="props" />
         </ItemDetailsCard>
+        <!-- Progreso del usuario -->
+        <KanjiProgress
+            v-if="page.props.auth.user"
+            :estudios="kanji.estudios!"
+        />
     </main>
 </template>

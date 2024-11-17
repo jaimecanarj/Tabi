@@ -37,4 +37,9 @@ class Kanji extends Model
     {
         return $this->hasOne(Estudio::class);
     }
+
+    public function estudios(): HasMany
+    {
+        return $this->hasMany(Estudio::class);
+    }
 }

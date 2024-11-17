@@ -41,8 +41,8 @@ if (props.kanjis[0].estudio) {
                 "hours",
             );
             return (
-                ebisu.predictRecall(kanjiAModel, kanjiATime, true) -
-                ebisu.predictRecall(kanjiBModel, kanjiBTime, true)
+                ebisu.predictRecall(kanjiAModel, kanjiATime) -
+                ebisu.predictRecall(kanjiBModel, kanjiBTime)
             );
         })
         .slice(0, 10);
@@ -120,8 +120,12 @@ const storeStudy = async () => {
             moment(kanji.value.estudio.fecha, "YYYY-MM-DD HH:mm:ss"),
             "hours",
         );
-        model = ebisu.updateRecall(model, correctAnswers, attempts, newTime);
-        console.log(model);
+        model = ebisu.updateRecall(
+            model,
+            question.value.answerResult ? 1 : 0,
+            1,
+            newTime,
+        );
     }
 
     await axios.post("/repasar", {

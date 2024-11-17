@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class HistoriaController extends Controller
 {
-    public function show($user_id, $kanji_id): Historia
+    public function show($user_id, $kanji_id): ?Historia
     {
         return Historia::where("user_id", $user_id)
             ->where("kanji_id", $kanji_id)
