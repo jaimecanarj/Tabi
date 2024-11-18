@@ -11,7 +11,7 @@ const series = [
     {
         name: "Horas",
         data: props.estudios
-            .map((estudio) => Math.round(estudio.tiempo))
+            .map((estudio) => parseFloat((estudio.tiempo / 24).toFixed(2)))
             .reverse(),
     },
 ];
@@ -63,10 +63,10 @@ const chartOptions = {
         </div>
 
         <!-- Con datos -->
-        <div v-else class="flex flex-col justify-around md:flex-row">
+        <div v-else class="flex flex-col justify-around lg:flex-row">
             <!-- Datos -->
             <div
-                class="mb-4 flex flex-col justify-between gap-5 sm:flex-row md:w-2/5 md:flex-col lg:w-3/5 lg:flex-row"
+                class="mb-4 flex flex-col justify-between gap-5 sm:flex-row lg:w-3/5"
             >
                 <!-- Resumen -->
                 <div class="flex flex-col gap-5">
@@ -136,7 +136,7 @@ const chartOptions = {
                 </div>
             </div>
             <!-- Gráfica -->
-            <div class="md:w-3/5 lg:w-2/5">
+            <div class="lg:w-2/5">
                 <VueApexCharts
                     :options="chartOptions"
                     :series="series"
