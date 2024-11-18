@@ -59,6 +59,13 @@ export default {
                     DEFAULT: "hsl(var(--card))",
                     foreground: "hsl(var(--card-foreground))",
                 },
+                levels: {
+                    learner: "hsl(var(--learner))",
+                    educated: "hsl(var(--primary))",
+                    proficient: "hsl(var(--primary-alt))",
+                    expert: "hsl(var(--expert))",
+                    master: "hsl(var(--master))",
+                },
             },
             borderRadius: {
                 xl: "calc(var(--radius) + 4px)",
