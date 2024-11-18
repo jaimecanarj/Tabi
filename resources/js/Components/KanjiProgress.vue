@@ -1,15 +1,38 @@
 <script setup lang="ts">
+import { computed, watch } from "vue";
 import moment from "moment/moment";
-import { CircleCheck, CircleX, Dice1 } from "lucide-vue-next";
-import { Estudio } from "@/lib/types";
+import "moment/locale/es";
 import VueApexCharts from "vue3-apexcharts";
+import { useColorMode } from "@vueuse/core";
+import {
+    CircleCheck,
+    CircleX,
+    CircleEqual,
+    Clock,
+    Dice1,
+} from "lucide-vue-next";
+import { Estudio } from "@/lib/types";
 import { ScrollArea } from "@/Components/ui/scroll-area";
 
 const props = defineProps<{ estudios: Estudio[] }>();
 
+const mode = useColorMode({ disableTransition: false });
+
+const nextStudy = computed(() => {
+    let result = moment(props.estudios[0].fecha)
+        .add(props.estudios[0].tiempo, "hours")
+        .from(moment());
+    console.log(result);
+    return result.includes("hace") ? "disponible" : result;
+});
+
+watch(mode, (mode) => {
+    chartOptions["theme"].mode = mode;
+});
+
 const series = [
     {
-        name: "Horas",
+        name: "Días",
         data: props.estudios
             .map((estudio) => parseFloat((estudio.tiempo / 24).toFixed(2)))
             .reverse(),
@@ -20,6 +43,7 @@ const chartOptions = {
     chart: {
         height: 300,
         type: "area",
+        background: "transparent",
         zoom: {
             enabled: false,
         },
@@ -28,15 +52,6 @@ const chartOptions = {
         },
     },
     colors: ["#4752e6"],
-    fill: {
-        type: "gradient",
-        gradient: {
-            shadeIntensity: 1,
-            opacityFrom: 0.7,
-            opacityTo: 0.9,
-            stops: [0, 100],
-        },
-    },
     dataLabels: {
         enabled: false,
     },
@@ -50,6 +65,14 @@ const chartOptions = {
     yaxis: {
         min: Math.min(...series[0].data) - 1,
         max: Math.max(...series[0].data) + 1,
+    },
+    theme: {
+        mode: mode.value,
+    },
+    tooltip: {
+        x: {
+            formatter: (value: number) => `${value} Intentos`,
+        },
     },
 };
 </script>
@@ -78,28 +101,42 @@ const chartOptions = {
                             <Dice1 />
                             Aprendiz
                         </div>
-                        <p>
-                            Aciertos:
-                            <span class="font-semibold">{{
-                                estudios[0].aciertos
-                            }}</span>
-                        </p>
-                        <p>
-                            Fallos:
-                            <span class="font-semibold">{{
-                                estudios[0].intentos - estudios[0].aciertos
-                            }}</span>
-                        </p>
-                        <p>
-                            Intentos:
-                            <span class="font-semibold">{{
-                                estudios[0].intentos
-                            }}</span>
-                        </p>
-                        <p>
-                            Siguiente repaso:
-                            <span class="font-semibold">6</span> horas
-                        </p>
+                        <div class="flex items-center gap-2">
+                            <CircleCheck class="text-emerald-500" />
+                            <p>
+                                <span class="font-semibold">{{
+                                    estudios[0].aciertos
+                                }}</span>
+                                Aciertos
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <CircleX class="text-rose-400" />
+                            <p>
+                                <span class="font-semibold">{{
+                                    estudios[0].intentos - estudios[0].aciertos
+                                }}</span>
+                                Fallos
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <CircleEqual class="text-foreground/70" />
+                            <p>
+                                <span class="font-semibold">{{
+                                    estudios[0].intentos
+                                }}</span>
+                                Intentos
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <Clock class="text-primary-alt" />
+                            <p>
+                                Repaso
+                                <span class="font-semibold">
+                                    {{ nextStudy }}
+                                </span>
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <!-- Histórico -->
@@ -119,16 +156,17 @@ const chartOptions = {
                                 v-if="index < estudios.length - 1"
                                 class="absolute left-[0.7rem] top-8 h-2/3 w-0.5 bg-muted"
                             ></span>
-                            <p>
+                            <p class="capitalize">
                                 <CircleCheck
                                     v-if="estudio.respuesta"
                                     class="inline text-emerald-500"
                                 />
                                 <CircleX v-else class="inline text-rose-400" />
                                 {{
-                                    moment(estudio.fecha).format(
-                                        "DD MMM YYYY HH:mm",
-                                    )
+                                    moment
+                                        .utc(estudio.fecha)
+                                        .local()
+                                        .format("DD MMM YYYY HH:mm")
                                 }}
                             </p>
                         </div>
@@ -138,6 +176,7 @@ const chartOptions = {
             <!-- Gráfica -->
             <div class="lg:w-2/5">
                 <VueApexCharts
+                    :key="mode"
                     :options="chartOptions"
                     :series="series"
                 ></VueApexCharts>
