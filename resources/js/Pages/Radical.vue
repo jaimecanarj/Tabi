@@ -4,6 +4,7 @@ import { Kanji, Radical } from "@/lib/types";
 import MainLayout from "@/Layouts/MainLayout.vue";
 import ItemDetailsCard from "@/Components/ItemDetailsCard.vue";
 import { Button } from "@/Components/ui/button";
+import { ScrollArea } from "@/Components/ui/scroll-area";
 import {
     Tooltip,
     TooltipContent,
@@ -28,7 +29,7 @@ defineProps<{
         >
             <!-- Trazos -->
             <div class="mb-3">
-                <h3 class="inline mr-1 text-lg">Trazos:</h3>
+                <h3 class="mr-1 inline text-lg">Trazos:</h3>
                 <span class="text-lg font-semibold">{{ radical.trazos }}</span>
             </div>
             <!-- Kanjis donde aparece -->
@@ -36,7 +37,11 @@ defineProps<{
                 <h3 class="mb-1 text-lg font-semibold tracking-tight">
                     Kanjis donde aparece
                 </h3>
-                <div class="flex flex-wrap overflow-x-scroll max-h-96">
+                <ScrollArea
+                    class="flex flex-wrap"
+                    height-class="md:max-h-72"
+                    type="always"
+                >
                     <template v-for="kanji of kanjis">
                         <Link :href="`/kanjis/${kanji.id}`">
                             <TooltipProvider>
@@ -55,7 +60,7 @@ defineProps<{
                             </TooltipProvider>
                         </Link>
                     </template>
-                </div>
+                </ScrollArea>
             </div>
         </ItemDetailsCard>
     </main>

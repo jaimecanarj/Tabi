@@ -10,7 +10,7 @@ defineProps<{ estudios: Estudio[] }>();
 <template>
     <div class="mt-3 lg:mr-24">
         <h2 class="mb-3 text-2xl font-semibold lg:px-3">Histórico</h2>
-        <ScrollArea class="h-60 w-48 lg:px-3">
+        <ScrollArea class="w-48 lg:px-3" height-class="max-h-60">
             <div
                 :class="[{ 'mb-6': index < estudios.length - 1 }, 'relative']"
                 v-for="(estudio, index) of estudios"

@@ -1,6 +1,6 @@
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
-import { Dice1, Dice2, Dice3, Dice4, Dice5 } from "lucide-vue-next";
+import { Club, Crown, Diamond, Heart, Spade } from "lucide-vue-next";
 
 export function cn(...inputs: ClassValue[]) {
     return twMerge(clsx(inputs));
@@ -8,26 +8,31 @@ export function cn(...inputs: ClassValue[]) {
 
 export const kanjiLevels = [
     {
-        icon: Dice1,
+        icon: Spade,
         title: "Aprendiz",
         color: "bg-levels-learner",
         threshold: 5,
     },
     {
-        icon: Dice2,
+        icon: Heart,
         title: "Conocedor",
         color: "bg-levels-educated",
         threshold: 10,
     },
     {
-        icon: Dice3,
+        icon: Club,
         title: "Versado",
         color: "bg-levels-proficient",
         threshold: 30,
     },
-    { icon: Dice4, title: "Experto", color: "bg-levels-expert", threshold: 90 },
     {
-        icon: Dice5,
+        icon: Diamond,
+        title: "Experto",
+        color: "bg-levels-expert",
+        threshold: 90,
+    },
+    {
+        icon: Crown,
         title: "Maestro",
         color: "bg-levels-master",
         threshold: Infinity,
