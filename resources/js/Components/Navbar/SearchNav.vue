@@ -18,6 +18,7 @@ import { ScrollArea } from "@/Components/ui/scroll-area";
 import { Link } from "@inertiajs/vue3";
 
 const query = ref("");
+const fetched = ref(false);
 const results = ref<{ kanjis: Kanji[]; radicales: Radical[] }>({
     kanjis: [],
     radicales: [],
@@ -26,6 +27,7 @@ const results = ref<{ kanjis: Kanji[]; radicales: Radical[] }>({
 const submit = () => {
     axios.get(`/search/${query.value}`).then((res) => {
         results.value = res.data;
+        fetched.value = true;
     });
 };
 </script>
@@ -39,7 +41,7 @@ const submit = () => {
         </DialogTrigger>
         <DialogContent
             noClose
-            class="border-0 bg-transparent shadow-none sm:max-w-[425px]"
+            class="top-0 -translate-y-0 border-0 bg-transparent shadow-none sm:max-w-[425px]"
         >
             <VisuallyHidden asChild>
                 <DialogTitle>Buscador</DialogTitle>
@@ -114,6 +116,12 @@ const submit = () => {
                         </Link>
                     </ScrollArea>
                 </div>
+            </div>
+            <div
+                v-else-if="fetched"
+                class="-mt-[20px] rounded-b-sm bg-background px-4 py-2"
+            >
+                <h2 class="font-semibold">No hay resultados</h2>
             </div>
         </DialogContent>
     </Dialog>

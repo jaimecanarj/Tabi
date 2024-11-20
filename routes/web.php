@@ -1,12 +1,12 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EstudioController;
 use App\Http\Controllers\HistoriaController;
 use App\Http\Controllers\KanjiController;
 use App\Http\Controllers\ProgresoController;
 use App\Http\Controllers\RadicalController;
 use App\Http\Controllers\HomeController;
-use Illuminate\Support\Facades\Route;
 
 // Rutas básicas
 Route::inertia("/", "Welcome");
@@ -38,4 +38,4 @@ Route::middleware("auth")->group(function () {
     Route::get("/progreso", [ProgresoController::class, "index"]);
 });
 
-require __DIR__ . "/auth.php";
+require_once __DIR__ . "/auth.php";
