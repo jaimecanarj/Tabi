@@ -5,11 +5,13 @@ use App\Http\Controllers\HistoriaController;
 use App\Http\Controllers\KanjiController;
 use App\Http\Controllers\ProgresoController;
 use App\Http\Controllers\RadicalController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 // Rutas básicas
 Route::inertia("/", "Welcome");
 Route::inertia("/inicio", "Home")->name("home");
+Route::get("/search/{query}", [HomeController::class, "search"]);
 
 // Kanjis
 Route::get("/kanjis", [KanjiController::class, "index"]);
