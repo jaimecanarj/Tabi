@@ -6,7 +6,7 @@ import { Kanji, Lectura, Significado, Radical, Estudio } from "@/lib/types";
 import MainLayout from "@/Layouts/MainLayout.vue";
 import ItemDetailsCard from "@/Components/ItemDetailsCard.vue";
 import KanjiDetails from "@/Components/KanjiDetails.vue";
-import KanjiProgress from "@/Components/KanjiProgress.vue";
+import KanjiProgress from "@/Components/KanjiProgress/KanjiProgress.vue";
 import StoryForm from "@/Components/StoryForm.vue";
 import { Button } from "@/Components/ui/button";
 import {

@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { Estudio } from "@/lib/types";
-import KanjiProgressChart from "@/Components/KanjiProgressChart.vue";
-import KanjiProgressResume from "@/Components/KanjiProgressResume.vue";
-import KanjiProgressHistoric from "@/Components/KanjiProgressHistoric.vue";
+import KanjiProgressChart from "@/Components/KanjiProgress/KanjiProgressChart.vue";
+import KanjiProgressResume from "@/Components/KanjiProgress/KanjiProgressResume.vue";
+import KanjiProgressHistoric from "@/Components/KanjiProgress/KanjiProgressHistoric.vue";
 
 defineProps<{ estudios: Estudio[] }>();
 </script>

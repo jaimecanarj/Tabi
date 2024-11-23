@@ -3,9 +3,9 @@ import { computed, ref } from "vue";
 import { Head, router } from "@inertiajs/vue3";
 import { Kanji, Pagination as PaginationType, Filters } from "@/lib/types";
 import MainLayout from "@/Layouts/MainLayout.vue";
-import KanjiGrid from "@/Components/KanjiGrid.vue";
+import KanjiGrid from "@/Components/Kanjis/KanjiGrid.vue";
 import Pagination from "@/Components/Pagination.vue";
-import KanjiFilters from "@/Components/KanjiFilters.vue";
+import KanjiFilters from "@/Components/Kanjis/KanjiFilters.vue";
 
 const props = defineProps<{
     response: PaginationType;
@@ -37,7 +37,7 @@ const fetchResults = (filters: Filters) => {
     <MainLayout />
     <main class="container mt-6">
         <!-- Cabecera -->
-        <div class="flex items-end justify-between pb-5 mb-3 border-b-2">
+        <div class="mb-3 flex items-end justify-between border-b-2 pb-5">
             <h1 class="text-6xl font-semibold">Kanjis</h1>
             <p class="text-lg">
                 {{ `${response.total} kanji${response.total != 1 ? "s" : ""}` }}
@@ -56,7 +56,7 @@ const fetchResults = (filters: Filters) => {
         </div>
     </main>
     <!-- Paginación -->
-    <footer class="sticky top-[100vh] flex justify-center mt-10 mb-6">
+    <footer class="sticky top-[100vh] mb-6 mt-10 flex justify-center">
         <Pagination
             :key="response.current_page"
             :total="response.total"

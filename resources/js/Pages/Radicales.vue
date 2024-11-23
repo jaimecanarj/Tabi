@@ -3,8 +3,8 @@ import { computed, ref } from "vue";
 import { Head, router } from "@inertiajs/vue3";
 import { Radical, Pagination as PaginationType, Filters } from "@/lib/types";
 import MainLayout from "@/Layouts/MainLayout.vue";
-import RadicalFilters from "@/Components/RadicalFilters.vue";
-import RadicalGrid from "@/Components/RadicalGrid.vue";
+import RadicalFilters from "@/Components/Radicals/RadicalFilters.vue";
+import RadicalGrid from "@/Components/Radicals/RadicalGrid.vue";
 import Pagination from "@/Components/Pagination.vue";
 
 const props = defineProps<{
@@ -36,10 +36,10 @@ const fetchResults = (filters: Filters) => {
     <main class="container mt-6">
         <!-- Cabecera -->
         <div
-            class="flex flex-wrap items-end justify-between pb-5 mb-3 border-b-2 gap-y-3"
+            class="mb-3 flex flex-wrap items-end justify-between gap-y-3 border-b-2 pb-5"
         >
             <h1 class="text-6xl font-semibold">Radicales</h1>
-            <p class="text-lg ml-3">
+            <p class="ml-3 text-lg">
                 {{
                     `${response.total} radical${response.total != 1 ? "es" : ""}`
                 }}
@@ -57,7 +57,7 @@ const fetchResults = (filters: Filters) => {
         </div>
     </main>
     <!-- Paginación -->
-    <footer class="sticky top-[100vh] flex justify-center mt-10 mb-6">
+    <footer class="sticky top-[100vh] mb-6 mt-10 flex justify-center">
         <Pagination
             :total="response.total"
             :current_page="response.current_page"

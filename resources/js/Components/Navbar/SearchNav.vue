@@ -66,7 +66,7 @@ const submit = () => {
                     <div class="bg-card px-4 py-2">
                         <h2 class="font-semibold">Kanjis</h2>
                     </div>
-                    <ScrollArea height-class="max-h-40">
+                    <ScrollArea height-class="max-h-36">
                         <Link
                             :href="`/kanjis/${kanji.id}`"
                             v-for="kanji of results.kanjis"
@@ -93,7 +93,7 @@ const submit = () => {
                     <div class="mt-2 bg-card px-4 py-2">
                         <h2 class="font-semibold">Radicales</h2>
                     </div>
-                    <ScrollArea height-class="max-h-40" class="mb-2">
+                    <ScrollArea height-class="max-h-36" class="mb-2">
                         <Link
                             :href="`/radicales/${radical.id}`"
                             v-for="radical of results.radicales"
