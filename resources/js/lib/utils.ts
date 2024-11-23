@@ -8,6 +8,12 @@ export function cn(...inputs: ClassValue[]) {
 
 export const kanjiLevels = [
     {
+        icon: Spade, //Sin uso
+        title: "Nuevos",
+        color: "bg-zinc-500",
+        threshold: 0,
+    },
+    {
         icon: Spade,
         title: "Aprendiz",
         color: "bg-levels-learner",
