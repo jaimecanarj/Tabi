@@ -1,20 +1,20 @@
 <script setup lang="ts">
 import { Link } from "@inertiajs/vue3";
-import { Kanji } from "@/lib/types";
+import { Kanji, Radical } from "@/lib/types";
 import MainLayout from "@/Layouts/MainLayout.vue";
 import StoryForm from "@/Components/StoryForm.vue";
 import { Button } from "@/Components/ui/button";
 
-defineProps<{ kanji: Kanji; showData: boolean }>();
+defineProps<{ kanji: Kanji & { radicales: Radical[] }; showData: boolean }>();
 </script>
 
 <template>
     <MainLayout />
     <main class="container mt-12">
         <!-- Tarjeta -->
-        <div class="flex flex-col mb-10 shadow-xl">
+        <div class="mb-10 flex flex-col shadow-xl">
             <div
-                class="flex justify-center items-center rounded-t-md text-[200px] font-bold bg-gradient-primary text-primary-foreground leading-tight"
+                class="flex items-center justify-center rounded-t-md bg-gradient-primary text-[200px] font-bold leading-tight text-primary-foreground"
             >
                 <h2>{{ kanji.literal }}</h2>
             </div>
@@ -22,12 +22,12 @@ defineProps<{ kanji: Kanji; showData: boolean }>();
         </div>
         <div v-if="showData" class="grid gap-10 lg:grid-cols-2">
             <!-- Radicales -->
-            <div class="p-5 rounded-md shadow-md bg-card">
+            <div class="rounded-md bg-card p-5 shadow-md">
                 <h3 class="pb-2 text-4xl font-semibold">Radicales</h3>
                 <p class="text-muted-foreground">
                     Este kanji está compuesto de:
                 </p>
-                <div class="flex flex-wrap mt-3 gap-7">
+                <div class="mt-3 flex flex-wrap gap-7">
                     <Link
                         v-for="radical of kanji.radicales"
                         :href="`/radicales/${radical.id}`"
@@ -43,7 +43,7 @@ defineProps<{ kanji: Kanji; showData: boolean }>();
             </div>
 
             <!-- Historia -->
-            <div class="p-5 rounded-md shadow-md bg-card">
+            <div class="rounded-md bg-card p-5 shadow-md">
                 <h3 class="pb-1 text-4xl font-semibold">Historia</h3>
                 <div>
                     <p class="mb-3 text-muted-foreground">

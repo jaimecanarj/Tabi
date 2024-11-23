@@ -2,7 +2,7 @@
 import { ref } from "vue";
 import { Head, usePage } from "@inertiajs/vue3";
 import { ScrollText } from "lucide-vue-next";
-import { Kanji, Lectura, Significado, Radical } from "@/lib/types";
+import { Kanji, Lectura, Significado, Radical, Estudio } from "@/lib/types";
 import MainLayout from "@/Layouts/MainLayout.vue";
 import ItemDetailsCard from "@/Components/ItemDetailsCard.vue";
 import KanjiDetails from "@/Components/KanjiDetails.vue";
@@ -21,7 +21,7 @@ import {
 const page = usePage();
 
 const props = defineProps<{
-    kanji: Kanji;
+    kanji: Kanji & { estudios: Estudio[] };
     lecturas: Lectura[];
     significados: Significado[];
     radicales: Radical[];

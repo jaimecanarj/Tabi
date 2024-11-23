@@ -9,11 +9,11 @@ import moment from "moment";
 import * as ebisu from "ebisu-js";
 import { ChevronRight } from "lucide-vue-next";
 import EstudioLayout from "@/Layouts/EstudioLayout.vue";
-import { Kanji, Question } from "@/lib/types";
+import { Kanji, Estudio, Question } from "@/lib/types";
 import { Input } from "@/Components/ui/input";
 
 const page = usePage();
-const props = defineProps<{ kanjis: Kanji[] }>();
+const props = defineProps<{ kanjis: (Kanji & { estudio: Estudio })[] }>();
 
 let kanjisToAnswer: Kanji[] = [];
 
