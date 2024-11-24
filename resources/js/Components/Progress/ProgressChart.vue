@@ -1,7 +1,15 @@
 <script setup lang="ts">
+import { watch } from "vue";
 import VueApexCharts from "vue3-apexcharts";
 import { useColorMode } from "@vueuse/core";
-import { watch } from "vue";
+import moment from "moment/moment";
+import "moment/locale/es";
+import { Estudio, Kanji } from "@/lib/types";
+import { kanjiLevels } from "@/lib/utils";
+
+const props = defineProps<{
+    kanjis: (Kanji & { estudios: Estudio[] })[];
+}>();
 
 const mode = useColorMode({ disableTransition: false });
 
@@ -9,63 +17,84 @@ watch(mode, (mode) => {
     chartOptions["theme"].mode = mode;
 });
 
-const series = [
-    {
-        name: "Aprendiz",
-        data: [
-            { x: "02-10-2017 GMT", y: 34 },
-            { x: "02-11-2017 GMT", y: 59 },
-            { x: "02-12-2017 GMT", y: 84 },
-            { x: "02-13-2017 GMT", y: 110 },
-            { x: "02-14-2017 GMT", y: 130 },
-            { x: "02-15-2017 GMT", y: 160 },
-        ],
-    },
-    {
-        name: "Conocedor",
-        data: [
-            { x: "02-10-2017 GMT", y: 44 },
-            { x: "02-11-2017 GMT", y: 72 },
-            { x: "02-12-2017 GMT", y: 95 },
-            { x: "02-13-2017 GMT", y: 118 },
-            { x: "02-14-2017 GMT", y: 142 },
-            { x: "02-15-2017 GMT", y: 167 },
-        ],
-    },
-    {
-        name: "Versado",
-        data: [
-            { x: "02-10-2017 GMT", y: 44 },
-            { x: "02-11-2017 GMT", y: 72 },
-            { x: "02-12-2017 GMT", y: 96 },
-            { x: "02-13-2017 GMT", y: 121 },
-            { x: "02-14-2017 GMT", y: 141 },
-            { x: "02-15-2017 GMT", y: 173 },
-        ],
-    },
-    {
-        name: "Experto",
-        data: [
-            { x: "02-10-2017 GMT", y: 44 },
-            { x: "02-11-2017 GMT", y: 76 },
-            { x: "02-12-2017 GMT", y: 100 },
-            { x: "02-13-2017 GMT", y: 124 },
-            { x: "02-14-2017 GMT", y: 145 },
-            { x: "02-15-2017 GMT", y: 175 },
-        ],
-    },
-    {
-        name: "Maestro",
-        data: [
-            { x: "02-10-2017 GMT", y: 44 },
-            { x: "02-11-2017 GMT", y: 73 },
-            { x: "02-12-2017 GMT", y: 98 },
-            { x: "02-13-2017 GMT", y: 122 },
-            { x: "02-14-2017 GMT", y: 145 },
-            { x: "02-15-2017 GMT", y: 174 },
-        ],
-    },
-];
+type SeriesType = { name: string; data: { x: string; y: number }[] };
+
+//Creador de series
+const createEmptySeries = (name: string): SeriesType => ({ name, data: [] });
+
+//Inicializar datos
+const updatesByDay: Record<string, SeriesType> = {
+    Aprendiz: createEmptySeries("Aprendiz"),
+    Conocedor: createEmptySeries("Conocedor"),
+    Versado: createEmptySeries("Versado"),
+    Experto: createEmptySeries("Experto"),
+    Maestro: createEmptySeries("Maestro"),
+};
+
+//Actualizar o crear serie en base a fecha
+const updateSeriesData = (
+    series: SeriesType,
+    date: string,
+    increment: number,
+) => {
+    const existingEntry = series.data.find((entry) => entry.x === date);
+    if (existingEntry) {
+        existingEntry.y += increment;
+    } else {
+        series.data.push({ x: date, y: increment });
+    }
+};
+
+//Obtengo las actualizaciones por día de cada nivel
+props.kanjis.forEach((kanji) => {
+    if (kanji.estudios.length) {
+        let currentLevel = "";
+
+        for (const estudio of [...kanji.estudios].reverse()) {
+            // Obtener nivel del estudio
+            let newLevel = kanjiLevels.find((levelData) => {
+                return estudio.tiempo / 24 < levelData.threshold;
+            });
+            //Fecha del estudio
+            const date = estudio.fecha.split(" ")[0];
+
+            // Primera iteración
+            if (!currentLevel) {
+                updateSeriesData(updatesByDay.Aprendiz, date, 1);
+            }
+            // Si cambia de nivel
+            else if (newLevel.title !== currentLevel) {
+                updateSeriesData(updatesByDay[currentLevel], date, -1);
+                updateSeriesData(updatesByDay[newLevel.title], date, 1);
+            }
+            //Añadir fecha a todas las series
+            kanjiLevels.forEach((level) => {
+                if (level.title == "Nuevos") return;
+                updateSeriesData(updatesByDay[level.title], date, 0);
+            });
+            // Actualizar nivel
+            currentLevel = newLevel.title;
+        }
+    }
+});
+
+const series = Object.values(updatesByDay);
+
+//Ordeno las series por fecha
+series.forEach((series) => {
+    series.data.sort((a, b) => {
+        return new Date(a.x).getTime() - new Date(b.x).getTime();
+    });
+});
+
+//Calculo el sumatorio
+series.forEach((serie) => {
+    let counter = 0;
+    serie.data = serie.data.map((row) => {
+        counter += row.y;
+        return { ...row, y: counter };
+    });
+});
 
 const chartOptions = {
     chart: {
@@ -74,7 +103,6 @@ const chartOptions = {
         stacked: true,
         background: "transparent",
         parentHeightOffset: 0,
-
         toolbar: {
             show: false,
         },
@@ -89,12 +117,19 @@ const chartOptions = {
     fill: {
         type: "gradient",
         gradient: {
-            opacityFrom: 0.6,
-            opacityTo: 0.8,
+            shadeIntensity: 1,
+            opacityFrom: 0.7,
+            opacityTo: 0.9,
+            stops: [0, 90, 100],
         },
     },
     xaxis: {
         type: "datetime",
+        labels: {
+            formatter: function (val: string) {
+                return moment(val).format("DD MMM");
+            },
+        },
     },
     yaxis: { show: false },
     grid: { padding: { top: 0, right: 0, bottom: 0, left: 0 } },

@@ -1,30 +1,20 @@
 <script setup lang="ts">
-import type { DateRange } from "radix-vue";
+import { DateFormatter, getLocalTimeZone } from "@internationalized/date";
+import { Calendar as CalendarIcon } from "lucide-vue-next";
+import { cn } from "@/lib/utils";
 import { Button } from "@/Components/ui/button";
-
+import { RangeCalendar } from "@/Components/ui/range-calendar";
 import {
     Popover,
     PopoverContent,
     PopoverTrigger,
 } from "@/Components/ui/popover";
-import { RangeCalendar } from "@/Components/ui/range-calendar";
-import { cn } from "@/lib/utils";
-import {
-    CalendarDate,
-    DateFormatter,
-    getLocalTimeZone,
-} from "@internationalized/date";
-import { Calendar as CalendarIcon } from "lucide-vue-next";
-import { type Ref, ref } from "vue";
 
 const df = new DateFormatter("es-ES", {
     dateStyle: "medium",
 });
 
-const value = ref({
-    start: new CalendarDate(2024, 12, 1),
-    end: new CalendarDate(2024, 12, 1).add({ days: 20 }),
-}) as Ref<DateRange>;
+const value = defineModel();
 </script>
 
 <template>

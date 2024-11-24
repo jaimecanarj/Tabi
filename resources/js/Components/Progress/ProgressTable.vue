@@ -19,7 +19,7 @@ const getLevelBackground = (kanji: Kanji & { estudios: Estudio[] }) => {
 </script>
 
 <template>
-    <div class="kanji-grid mt-10 grid gap-0.5">
+    <div class="kanji-grid mt-10 grid gap-1">
         <div
             v-for="kanji in kanjis"
             :class="[
