@@ -10,7 +10,7 @@ use App\Http\Controllers\HomeController;
 
 // Rutas básicas
 Route::inertia("/", "Welcome");
-Route::inertia("/inicio", "Home")->name("home");
+Route::get("/inicio", [HomeController::class, "index"])->name("home");
 Route::get("/search/{query}", [HomeController::class, "search"]);
 
 // Kanjis

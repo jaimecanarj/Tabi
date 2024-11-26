@@ -1,3 +1,6 @@
+import { FunctionalComponent } from "vue";
+import { LucideProps } from "lucide-vue-next";
+
 export type Kanji = {
     id: number;
     literal: string;
@@ -68,4 +71,11 @@ export type Estudio = {
     respuesta: number;
     aciertos: number;
     intentos: number;
+};
+
+export type KanjiLevel = {
+    icon: FunctionalComponent<LucideProps, {}, any, {}>;
+    name: string;
+    color: string;
+    threshold: number;
 };
