@@ -39,7 +39,7 @@ props.estudios.map((estudio) => {
             <div v-for="study in wrongAnswers">
                 <Link :href="`/kanjis/${study.kanji_id}`">
                     <div
-                        class="w-14 rounded bg-secondary p-2 text-center text-2xl font-semibold text-primary-foreground"
+                        class="w-14 rounded bg-secondary p-2 text-center text-2xl font-semibold"
                     >
                         {{ study.kanji.literal }}
                     </div>

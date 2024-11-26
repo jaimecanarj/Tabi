@@ -51,14 +51,14 @@ props.kanjis.forEach((kanji) => {
     >
         <div
             v-for="level in levels"
-            :key="level.title"
+            :key="level.name"
             :class="[
                 level.color,
                 'flex h-40 min-w-40 grow flex-col items-center justify-center',
             ]"
         >
             <p class="text-5xl font-bold">{{ level.kanjis }}</p>
-            <p>{{ level.title }}</p>
+            <p>{{ level.name }}</p>
         </div>
     </div>
 </template>

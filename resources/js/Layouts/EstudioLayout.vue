@@ -5,7 +5,10 @@ import MainLayout from "@/Layouts/MainLayout.vue";
 import StoryForm from "@/Components/StoryForm.vue";
 import { Button } from "@/Components/ui/button";
 
-defineProps<{ kanji: Kanji & { radicales: Radical[] }; showData: boolean }>();
+defineProps<{
+    kanji: Kanji & { radicales: Radical[] };
+    showData: boolean;
+}>();
 </script>
 
 <template>

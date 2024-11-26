@@ -54,7 +54,7 @@ props.kanjis.forEach((kanji) => {
             // Obtener nivel del estudio
             let newLevel = kanjiLevels.find((levelData) => {
                 return estudio.tiempo / 24 < levelData.threshold;
-            });
+            })!;
             //Fecha del estudio
             const date = estudio.fecha.split(" ")[0];
 
@@ -63,17 +63,17 @@ props.kanjis.forEach((kanji) => {
                 updateSeriesData(updatesByDay.Aprendiz, date, 1);
             }
             // Si cambia de nivel
-            else if (newLevel.title !== currentLevel) {
+            else if (newLevel.name !== currentLevel) {
                 updateSeriesData(updatesByDay[currentLevel], date, -1);
-                updateSeriesData(updatesByDay[newLevel.title], date, 1);
+                updateSeriesData(updatesByDay[newLevel.name], date, 1);
             }
             //Añadir fecha a todas las series
             kanjiLevels.forEach((level) => {
-                if (level.title == "Nuevos") return;
-                updateSeriesData(updatesByDay[level.title], date, 0);
+                if (level.name == "Nuevos") return;
+                updateSeriesData(updatesByDay[level.name], date, 0);
             });
             // Actualizar nivel
-            currentLevel = newLevel.title;
+            currentLevel = newLevel.name;
         }
     }
 });

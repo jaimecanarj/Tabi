@@ -63,18 +63,13 @@ import {
     </nav>
     <!-- Vista estándar -->
     <nav class="hidden items-center md:flex">
-        <Link href="/inicio">
-            <Button
-                variant="link"
-                class="pr-0 font-semibold text-foreground hover:text-primary hover:no-underline"
-            >
-                <ApplicationLogo class="h-10 w-10" />
-            </Button>
-        </Link>
         <Link href="/kanjis">
             <Button
                 variant="link"
-                class="font-semibold text-foreground hover:text-primary hover:no-underline"
+                class="mx-2 border-b-4 border-transparent px-0 text-xl text-foreground hover:text-primary hover:no-underline"
+                :class="{
+                    'border-primary': /^\/kanjis(\/.*)?$/.test($page.url),
+                }"
             >
                 Kanjis
             </Button>
@@ -82,7 +77,10 @@ import {
         <Link href="/radicales">
             <Button
                 variant="link"
-                class="font-semibold text-foreground hover:text-primary hover:no-underline"
+                class="mx-2 border-b-4 border-transparent px-0 text-xl text-foreground hover:text-primary hover:no-underline"
+                :class="{
+                    'border-primary': /^\/radicales(\/.*)?$/.test($page.url),
+                }"
             >
                 Radicales
             </Button>
@@ -90,7 +88,8 @@ import {
         <Link href="/progreso">
             <Button
                 variant="link"
-                class="font-semibold text-foreground hover:text-primary hover:no-underline"
+                class="mx-2 border-b-4 border-transparent px-0 text-xl text-foreground hover:text-primary hover:no-underline"
+                :class="{ 'border-primary': $page.url == '/progreso' }"
             >
                 Tu progreso
             </Button>

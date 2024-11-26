@@ -35,7 +35,7 @@ const level = computed(() => {
                 ]"
             >
                 <component :is="level.icon" />
-                {{ level.title }}
+                {{ level.name }}
             </div>
             <div class="flex items-center gap-2">
                 <CircleCheck class="text-emerald-500" />

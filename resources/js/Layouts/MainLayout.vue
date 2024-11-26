@@ -4,7 +4,9 @@ import { LogIn, LogOut, Settings, User, UserPlus } from "lucide-vue-next";
 import NavigationMenu from "@/Components/Navbar/NavigationMenu.vue";
 import ToggleDarkMode from "@/Components/Navbar/ToggleDarkMode.vue";
 import SearchNav from "@/Components/Navbar/SearchNav.vue";
+import ApplicationLogo from "@/Components/ApplicationLogo.vue";
 import { Toaster } from "@/Components/ui/toast";
+import { Button } from "@/Components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/Components/ui/avatar";
 import {
     DropdownMenu,
@@ -18,7 +20,16 @@ import {
 <template>
     <Toaster />
     <header class="shadow-md">
-        <div class="container flex items-center justify-between h-14">
+        <div class="container flex h-14 items-center justify-between">
+            <Link href="/inicio">
+                <Button
+                    variant="link"
+                    class="pr-0 font-semibold text-foreground hover:text-primary hover:no-underline"
+                >
+                    <ApplicationLogo class="h-10 w-10" />
+                    <p class="ml-2 font-logo text-2xl">Tabi</p>
+                </Button>
+            </Link>
             <NavigationMenu />
             <div class="flex items-center gap-x-1">
                 <SearchNav />
@@ -30,7 +41,7 @@ import {
                         <Avatar
                             :class="[
                                 { 'bg-primary': $page.props.auth.user },
-                                'mx-1 cursor-pointer h-9 w-9',
+                                'mx-1 h-9 w-9 cursor-pointer',
                             ]"
                         >
                             <AvatarImage
@@ -53,10 +64,10 @@ import {
                         v-if="$page.props.auth.user"
                     >
                         <DropdownMenuItem>
-                            <User class="w-5 h-5 mr-1" /> Mi cuenta
+                            <User class="mr-1 h-5 w-5" /> Mi cuenta
                         </DropdownMenuItem>
                         <DropdownMenuItem>
-                            <Settings class="w-5 h-5 mr-1" /> Opciones
+                            <Settings class="mr-1 h-5 w-5" /> Opciones
                         </DropdownMenuItem>
                         <DropdownMenuSeparator />
                         <Link
@@ -66,7 +77,7 @@ import {
                             class="w-full"
                         >
                             <DropdownMenuItem class="cursor-pointer">
-                                <LogOut class="inline w-5 h-5 mr-1" />
+                                <LogOut class="mr-1 inline h-5 w-5" />
                                 Cerrar sesión
                             </DropdownMenuItem>
                         </Link>
@@ -75,13 +86,13 @@ import {
                     <DropdownMenuContent align="end" class="w-40" v-else>
                         <Link href="/login">
                             <DropdownMenuItem class="cursor-pointer">
-                                <LogIn class="inline w-5 h-5 mr-1" />
+                                <LogIn class="mr-1 inline h-5 w-5" />
                                 Iniciar sesión
                             </DropdownMenuItem>
                         </Link>
                         <Link href="/register">
                             <DropdownMenuItem class="cursor-pointer">
-                                <UserPlus class="inline w-5 h-5 mr-1" />
+                                <UserPlus class="mr-1 inline h-5 w-5" />
                                 Registrarse
                             </DropdownMenuItem>
                         </Link>
