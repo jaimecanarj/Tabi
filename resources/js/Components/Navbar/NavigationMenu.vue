@@ -14,7 +14,7 @@ import {
 
 <template>
     <!-- Vista móvil -->
-    <nav class="md:hidden">
+    <nav class="md:hidden" aria-label="Menu">
         <Sheet>
             <SheetTrigger as-child>
                 <Button variant="ghost">
@@ -27,16 +27,16 @@ import {
                         <SheetTitle
                             class="flex items-center hover:text-primary"
                         >
-                            <ApplicationLogo class="w-10 h-12" />
-                            <p class="font-logo text-3xl ml-2">Tabi</p>
+                            <ApplicationLogo class="h-12 w-10" />
+                            <p class="ml-2 font-logo text-3xl">Tabi</p>
                         </SheetTitle>
                     </Link>
                 </SheetHeader>
-                <div class="flex flex-col mt-4">
+                <div class="mt-4 flex flex-col">
                     <Link href="/kanjis">
                         <Button
                             variant="link"
-                            class="text-xl justify-start text-foreground hover:text-primary hover:no-underline"
+                            class="justify-start text-xl text-foreground hover:text-primary hover:no-underline"
                         >
                             Kanjis
                         </Button>
@@ -44,7 +44,7 @@ import {
                     <Link href="/radicales">
                         <Button
                             variant="link"
-                            class="text-xl justify-start text-foreground hover:text-primary hover:no-underline"
+                            class="justify-start text-xl text-foreground hover:text-primary hover:no-underline"
                         >
                             Radicales
                         </Button>
@@ -52,7 +52,7 @@ import {
                     <Link href="/progreso">
                         <Button
                             variant="link"
-                            class="text-xl justify-start text-foreground hover:text-primary hover:no-underline"
+                            class="justify-start text-xl text-foreground hover:text-primary hover:no-underline"
                         >
                             Tu progreso
                         </Button>
@@ -62,13 +62,13 @@ import {
         </Sheet>
     </nav>
     <!-- Vista estándar -->
-    <nav class="items-center hidden md:flex">
+    <nav class="hidden items-center md:flex">
         <Link href="/inicio">
             <Button
                 variant="link"
                 class="pr-0 font-semibold text-foreground hover:text-primary hover:no-underline"
             >
-                <ApplicationLogo class="w-10 h-10" />
+                <ApplicationLogo class="h-10 w-10" />
             </Button>
         </Link>
         <Link href="/kanjis">

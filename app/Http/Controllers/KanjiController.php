@@ -93,11 +93,13 @@ class KanjiController extends Controller
         $similares = Kanji::find($id)->similares;
 
         if (isset($userId)) {
-            $kanji->load(["estudios" => function ($query) use ($userId) {
-                $query
-                    ->where("user_id", "=", $userId)
-                    ->orderBy("fecha", "desc");
-            }]);
+            $kanji->load([
+                "estudios" => function ($query) use ($userId) {
+                    $query
+                        ->where("user_id", "=", $userId)
+                        ->orderBy("fecha", "desc");
+                },
+            ]);
         }
 
         return Inertia::render("Kanji", [
@@ -108,11 +110,4 @@ class KanjiController extends Controller
             "similares" => $similares,
         ]);
     }
-
-//    public function search(Request $request)
-//    {
-//        $literal = $request->kanji;
-//        $id = Kanji::where("literal", $literal)->first()->id;
-//        return redirect()->route("kanji", ["id" => $id]);
-//    }
 }

@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 use App\Models\Estudio;
 use App\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Database\Factories\EstudioFactory;
 use Illuminate\Database\Seeder;
 

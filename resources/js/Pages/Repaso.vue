@@ -2,6 +2,7 @@
 //TODO: Si no hay más kanjis en kanjisToAnswer, acabar la sesión
 //TODO: Al fallar, mostrar de alguna manera la solución
 //TODO: Hacer storeStudy dinámico para que meta los datos basados en updateRecall
+//TODO: Mostrar si kanji ha cambiado de nivel
 import { ref } from "vue";
 import { Head, usePage } from "@inertiajs/vue3";
 import axios from "axios";
