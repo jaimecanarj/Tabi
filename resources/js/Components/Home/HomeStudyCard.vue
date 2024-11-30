@@ -67,25 +67,25 @@ if (typeStudy) {
         <div class="flex justify-between">
             <div class="ml-1 flex flex-col justify-evenly">
                 <div
-                    class="mb-3 flex items-end gap-2 text-2xl font-semibold text-primary-foreground sm:text-3xl"
+                    class="mb-3 flex items-end gap-2 text-2xl font-semibold text-light sm:text-3xl"
                 >
                     {{ typeStudy ? "Estudiar" : "Repasar" }}
                     <Badge
                         variant="secondary"
                         :class="[
                             typeStudy ? 'text-primary' : 'text-primary-alt',
-                            'min-w-10 justify-center bg-primary-foreground text-base text-primary hover:bg-primary-foreground',
+                            'min-w-10 justify-center bg-light text-base text-primary shadow-sm hover:bg-light',
                         ]"
                     >
                         {{ kanjisToStudy }}
                     </Badge>
                 </div>
                 <div class="flex flex-col leading-8 sm:flex-row xl:flex-col">
-                    <p class="mr-1 inline text-primary-foreground">
+                    <p class="mr-1 inline text-light">
                         Hoy has
                         {{ typeStudy ? "estudiado" : "repasado" }}
                     </p>
-                    <p class="inline text-primary-foreground">
+                    <p class="inline text-light">
                         <span class="text-xl font-semibold underline">
                             {{ kanjisStudied }}
                         </span>
@@ -98,7 +98,7 @@ if (typeStudy) {
                     :src="
                         typeStudy
                             ? '/assets/Viajero%20con%20pergamino.webp'
-                            : '/assets/Viajero.webp'
+                            : '/assets/Viajero%20repaso.webp'
                     "
                     alt="aah"
                     class="w-32 sm:w-40"
@@ -108,7 +108,7 @@ if (typeStudy) {
         <Link :href="typeStudy ? '/estudiar' : '/repasar'">
             <Button
                 variant="secondary"
-                class="mt-2 w-full bg-primary-foreground text-xl text-primary hover:bg-primary-foreground"
+                class="mt-4 w-full bg-light text-xl text-primary shadow-md transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:bg-light hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl active:shadow-none"
             >
                 <p>Empezar a {{ typeStudy ? "estudiar" : "repasar" }}</p>
                 <ChevronRight :size="28" class="mt-1.5" />
