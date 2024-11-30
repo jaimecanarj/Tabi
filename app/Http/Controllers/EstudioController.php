@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Estudio;
 use App\Models\Kanji;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Validator;
 use Inertia\Inertia;
 use Illuminate\Http\Request;
 use Inertia\Response;
@@ -62,19 +63,24 @@ class EstudioController extends Controller
 
     public function store(Request $request): void
     {
-        //        dd($request);
-        //        $request->validate([
-        //            "kanji_id" => "required|string",
-        //            "user_id" => "required|string",
-        //            "tiempo" => "required|numeric",
-        //            "betaA" => "required|numeric",
-        //            "betaB" => "required|numeric",
-        //            "respuesta" => "required|boolean",
-        //            "aciertos" => "required|numeric",
-        //            "intentos" => "required|numeric",
-        //        ]);
-        //
-        //        Estudio::create([...$request->all(), "fecha" => Carbon::now()]);
+        foreach ($request->studys as $study) {
+            $validator = Validator::make($study, [
+                "kanji_id" => "required|numeric",
+                "user_id" => "required|numeric",
+                "tiempo" => "required|numeric",
+                "betaA" => "required|numeric",
+                "betaB" => "required|numeric",
+                "respuesta" => "required|boolean",
+                "aciertos" => "required|numeric",
+                "intentos" => "required|numeric",
+            ]);
+
+            if ($validator->fails()) {
+                dd($validator->errors());
+            }
+
+            Estudio::create([...$study, "fecha" => Carbon::now()]);
+        }
     }
 
     private function getStudyKanjis(): Collection

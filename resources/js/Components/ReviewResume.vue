@@ -78,7 +78,6 @@ const storeStudys = async () => {
     });
 };
 
-//TODO: Actualizar método en backend
 storeStudys();
 
 const kanjis = ref<
