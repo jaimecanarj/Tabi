@@ -24,7 +24,7 @@ const getLevelBackground = (kanji: Kanji & { estudios: Estudio[] }) => {
             v-for="kanji in kanjis"
             :class="[
                 getLevelBackground(kanji),
-                'w-12 rounded-md p-1 text-center text-2xl text-primary-foreground',
+                'text-light w-12 rounded-md p-1 text-center text-2xl',
             ]"
         >
             <h2 class="font-semibold">{{ kanji.literal }}</h2>

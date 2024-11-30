@@ -32,7 +32,7 @@ switch (true) {
         <div
             class="flex flex-col items-center gap-12 lg:flex-row lg:gap-32 xl:gap-40"
         >
-            <div class="text-primary-foreground">
+            <div class="text-light">
                 <h2
                     class="text-center text-6xl leading-tight sm:text-8xl lg:text-start lg:text-7xl xl:text-8xl"
                 >

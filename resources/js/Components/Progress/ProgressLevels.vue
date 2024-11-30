@@ -47,7 +47,7 @@ props.kanjis.forEach((kanji) => {
 
 <template>
     <div
-        class="grid grid-cols-2 text-primary-foreground shadow-lg sm:grid-cols-3 lg:grid-cols-6"
+        class="text-light grid grid-cols-2 shadow-lg sm:grid-cols-3 lg:grid-cols-6"
     >
         <div
             v-for="level in levels"

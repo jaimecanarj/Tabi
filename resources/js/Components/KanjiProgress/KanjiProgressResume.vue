@@ -30,7 +30,7 @@ const level = computed(() => {
         <div class="flex flex-col gap-2 text-lg">
             <div
                 :class="[
-                    'flex items-center justify-center gap-2 rounded-md p-2 font-semibold text-primary-foreground',
+                    'text-light flex items-center justify-center gap-2 rounded-md p-2 font-semibold',
                     level.color,
                 ]"
             >

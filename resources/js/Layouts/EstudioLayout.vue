@@ -17,7 +17,7 @@ defineProps<{
         <!-- Tarjeta -->
         <div class="mb-10 flex flex-col shadow-xl">
             <div
-                class="flex items-center justify-center rounded-t-md bg-gradient-primary text-[200px] font-bold leading-tight text-primary-foreground"
+                class="text-light flex items-center justify-center rounded-t-md bg-gradient-primary text-[200px] font-bold leading-tight"
             >
                 <h2>{{ kanji.literal }}</h2>
             </div>

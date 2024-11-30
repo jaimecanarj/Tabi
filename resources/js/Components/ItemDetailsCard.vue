@@ -44,7 +44,7 @@ defineProps({ literal: String, tipo: String, titulo: String });
     >
         <!-- Literal -->
         <div
-            class="flex basis-2/5 items-center justify-center rounded-lg bg-gradient-primary text-[200px] font-bold text-primary-foreground xl:basis-1/3"
+            class="text-light flex basis-2/5 items-center justify-center rounded-lg bg-gradient-primary text-[200px] font-bold xl:basis-1/3"
         >
             <h2>{{ literal }}</h2>
         </div>

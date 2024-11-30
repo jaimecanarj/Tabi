@@ -45,7 +45,7 @@ defineProps<{
                         >
                             <div
                                 :class="[
-                                    'flex w-24 items-center justify-center gap-1 rounded-sm p-1 text-sm font-semibold text-primary-foreground',
+                                    'text-light flex w-24 items-center justify-center gap-1 rounded-sm p-1 text-sm font-semibold',
                                     kanji.oldLevel.color,
                                 ]"
                             >
@@ -59,7 +59,7 @@ defineProps<{
                         </template>
                         <div
                             :class="[
-                                'flex w-24 items-center justify-center gap-1 rounded-sm p-1 text-sm font-semibold text-primary-foreground',
+                                'text-light flex w-24 items-center justify-center gap-1 rounded-sm p-1 text-sm font-semibold',
                                 kanji.newLevel.color,
                             ]"
                         >
