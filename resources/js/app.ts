@@ -5,6 +5,8 @@ import { createInertiaApp } from "@inertiajs/vue3";
 import { resolvePageComponent } from "laravel-vite-plugin/inertia-helpers";
 import { createApp, DefineComponent, h } from "vue";
 import { ZiggyVue } from "ziggy-js";
+import Particles from "@tsparticles/vue3";
+import { loadFull } from "tsparticles";
 
 const appName = import.meta.env.VITE_APP_NAME || "Laravel";
 
@@ -19,6 +21,11 @@ createInertiaApp({
         createApp({ render: () => h(App, props) })
             .use(plugin)
             .use(ZiggyVue)
+            .use(Particles, {
+                init: async (engine) => {
+                    await loadFull(engine);
+                },
+            })
             .mount(el);
     },
     progress: {

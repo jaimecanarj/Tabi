@@ -24,7 +24,7 @@ import {
             <Link href="/inicio">
                 <Button
                     variant="link"
-                    class="pr-0 font-semibold text-foreground hover:text-primary hover:no-underline"
+                    class="pr-0 text-foreground hover:text-primary hover:no-underline"
                 >
                     <ApplicationLogo class="h-10 w-10" />
                     <p class="ml-2 font-logo text-2xl">Tabi</p>

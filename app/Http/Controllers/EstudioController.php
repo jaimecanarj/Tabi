@@ -62,18 +62,19 @@ class EstudioController extends Controller
 
     public function store(Request $request): void
     {
-        $request->validate([
-            "kanji_id" => "required|string",
-            "user_id" => "required|string",
-            "tiempo" => "required|numeric",
-            "betaA" => "required|numeric",
-            "betaB" => "required|numeric",
-            "respuesta" => "required|boolean",
-            "aciertos" => "required|numeric",
-            "intentos" => "required|numeric",
-        ]);
-
-        Estudio::create([...$request->all(), "fecha" => Carbon::now()]);
+        //        dd($request);
+        //        $request->validate([
+        //            "kanji_id" => "required|string",
+        //            "user_id" => "required|string",
+        //            "tiempo" => "required|numeric",
+        //            "betaA" => "required|numeric",
+        //            "betaB" => "required|numeric",
+        //            "respuesta" => "required|boolean",
+        //            "aciertos" => "required|numeric",
+        //            "intentos" => "required|numeric",
+        //        ]);
+        //
+        //        Estudio::create([...$request->all(), "fecha" => Carbon::now()]);
     }
 
     private function getStudyKanjis(): Collection

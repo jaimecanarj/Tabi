@@ -54,8 +54,8 @@ export type Filters = {
     sortOrder?: string;
 };
 
-export type Question = {
-    answer: string;
+export type Answer = {
+    userAnswer: string;
     answered: boolean;
     answerResult: boolean | undefined;
 };
