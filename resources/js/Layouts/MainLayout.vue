@@ -15,19 +15,24 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "@/Components/ui/dropdown-menu";
+import { useBreakpoints, breakpointsTailwind } from "@vueuse/core";
+
+const breakpoints = useBreakpoints(breakpointsTailwind);
+
+const showLogo = breakpoints.greater("md");
 </script>
 
 <template>
     <Toaster />
     <header class="shadow-md">
         <div class="container flex h-14 items-center justify-between">
-            <Link href="/inicio">
+            <Link href="/inicio" v-if="showLogo">
                 <Button
                     variant="link"
-                    class="pr-0 text-foreground hover:text-primary hover:no-underline"
+                    class="text-foreground hover:text-primary hover:no-underline"
                 >
                     <ApplicationLogo class="h-10 w-10" />
-                    <p class="ml-2 font-logo text-2xl">Tabi</p>
+                    <p class="ml-1 font-logo text-2xl">Tabi</p>
                 </Button>
             </Link>
             <NavigationMenu />
