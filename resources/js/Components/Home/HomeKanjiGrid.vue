@@ -19,9 +19,7 @@ defineProps<{ studys: (Estudio & { kanji: Kanji; level: KanjiLevel })[] }>();
         >
             <slot name="title" />
         </h2>
-        <div
-            class="home-grid mt-4 grid max-h-40 gap-2 overflow-hidden sm:max-h-28"
-        >
+        <div class="home-grid mt-4 grid max-h-40 gap-2 overflow-hidden sm:h-28">
             <HoverCard
                 v-for="study in studys"
                 :open-delay="500"
@@ -38,13 +36,15 @@ defineProps<{ studys: (Estudio & { kanji: Kanji; level: KanjiLevel })[] }>();
                 </HoverCardTrigger>
                 <HoverCardContent class="w-fit">
                     <div class="flex items-center justify-between gap-1">
-                        <div class="text-xl font-semibold capitalize">
+                        <div
+                            class="text-xl font-semibold first-letter:capitalize"
+                        >
                             {{ study.kanji.significado }}
                         </div>
                         <div
                             :class="[
                                 'w-fit rounded-sm p-1 font-semibold text-light',
-                                study.level.color,
+                                study.level.bgColor,
                             ]"
                         >
                             <component :is="study.level.icon" :size="20" />

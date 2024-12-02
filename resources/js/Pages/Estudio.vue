@@ -1,12 +1,19 @@
 <script setup lang="ts">
+//TODO: Cambiar estilo de botones footer
+//TODO: Cambiar diseño radicales
 import { onMounted, ref } from "vue";
 import { Head, Link } from "@inertiajs/vue3";
-import { ChevronLeft, ChevronRight, Play } from "lucide-vue-next";
-import { Kanji } from "@/lib/types";
+import {
+    ChevronLeft,
+    ChevronRight,
+    CircleArrowRight,
+    Play,
+} from "lucide-vue-next";
+import { Kanji, Radical } from "@/lib/types";
 import EstudioLayout from "@/Layouts/EstudioLayout.vue";
 import { Button } from "@/Components/ui/button";
 
-const props = defineProps<{ kanjis: Kanji[] }>();
+const props = defineProps<{ kanjis: (Kanji & { radicales: Radical[] })[] }>();
 
 let id = 0;
 let kanji = ref(props.kanjis[id]);
@@ -42,8 +49,8 @@ onMounted(() => {
     <Head title="Estudio" />
     <EstudioLayout :kanji="kanji" :showData="true">
         <template #significado>
-            <div class="flex justify-center bg-card rounded-b-md">
-                <p class="p-4 text-6xl font-semibold capitalize">
+            <div class="flex justify-center rounded-b-md bg-card">
+                <p class="p-4 text-6xl font-semibold first-letter:capitalize">
                     {{ kanji.significado }}
                 </p>
             </div>
@@ -51,7 +58,7 @@ onMounted(() => {
         <template #absolute>
             <!-- Botón anterior y siguiente kanji -->
             <Button
-                class="absolute shadow-md left-2 top-1/2"
+                class="absolute left-2 top-1/2 shadow-md"
                 variant="secondary"
                 size="icon"
                 @click="changeKanji('prev')"
@@ -60,7 +67,7 @@ onMounted(() => {
                 <ChevronLeft />
             </Button>
             <Button
-                class="absolute shadow-md right-2 top-1/2"
+                class="absolute right-2 top-1/2 shadow-md"
                 variant="secondary"
                 size="icon"
                 @click="changeKanji('next')"
@@ -72,19 +79,20 @@ onMounted(() => {
         <template #footer>
             <!-- Selector de kanji -->
             <footer
-                class="sticky top-[100vh] flex flex-wrap justify-center gap-2 mt-10 mb-6 mx-8"
+                class="sticky top-[100vh] mx-8 mb-6 mt-10 flex flex-wrap justify-center gap-2"
             >
                 <Button
                     v-for="(kanjiIndex, index) of kanjis"
-                    class="text-2xl"
+                    variant="secondaryGradient"
+                    size="gradient"
                     @click="changeKanji(index)"
                 >
                     {{ kanjiIndex.literal }}
                 </Button>
                 <Link href="/repasar">
-                    <Button variant="primary-alt">
-                        Repasar
-                        <Play class="h-5" />
+                    <Button class="h-12">
+                        <p>Repasar</p>
+                        <CircleArrowRight :size="24" class="ml-1" />
                     </Button>
                 </Link>
             </footer>

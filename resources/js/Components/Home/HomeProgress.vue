@@ -32,9 +32,11 @@ props.estudios.forEach((estudio) => {
                 <Crown :size="32" />Tu progreso
             </h2>
         </Link>
-        <div class="mt-2 flex justify-between text-light">
-            <div class="text-5xl">
-                <span class="text-8xl font-semibold">{{
+        <div
+            class="mt-2 flex flex-col justify-between gap-3 text-light sm:flex-row"
+        >
+            <div class="text-3xl sm:text-5xl">
+                <span class="text-7xl font-semibold sm:text-8xl">{{
                     kanjisStudied.length
                 }}</span>
                 kanjis

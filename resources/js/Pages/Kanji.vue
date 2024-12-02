@@ -58,7 +58,7 @@ const toggleDialog = () => {
                             Historia
                         </Button>
                     </DialogTrigger>
-                    <DialogContent class="gap-0 sm:max-w-[500px]">
+                    <DialogContent class="gap-0 bg-card sm:max-w-[500px]">
                         <DialogHeader class="mb-4">
                             <DialogTitle>Historia</DialogTitle>
                             <DialogDescription>

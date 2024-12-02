@@ -2,7 +2,12 @@
 import { computed } from "vue";
 import moment from "moment/moment";
 import "moment/locale/es";
-import { CircleCheck, CircleEqual, CircleX, Clock } from "lucide-vue-next";
+import {
+    SquareSigma,
+    SquareCheck,
+    SquareX,
+    CalendarClock,
+} from "lucide-vue-next";
 import { Estudio } from "@/lib/types";
 import { kanjiLevels } from "@/lib/utils";
 
@@ -30,42 +35,42 @@ const level = computed(() => {
         <div class="flex flex-col gap-2 text-lg">
             <div
                 :class="[
-                    'text-light flex items-center justify-center gap-2 rounded-md p-2 font-semibold',
-                    level.color,
+                    'flex items-center justify-center gap-2 rounded-md p-2 font-semibold text-light',
+                    level.bgColor,
                 ]"
             >
                 <component :is="level.icon" />
                 {{ level.name }}
             </div>
-            <div class="flex items-center gap-2">
-                <CircleCheck class="text-emerald-500" />
+            <div class="mx-2 mt-6 flex items-center gap-2">
+                <SquareSigma />
                 <p>
-                    <span class="font-semibold">
-                        {{ estudios[0].aciertos }}
-                    </span>
-                    Aciertos
-                </p>
-            </div>
-            <div class="flex items-center gap-2">
-                <CircleX class="text-rose-400" />
-                <p>
-                    <span class="font-semibold">
-                        {{ estudios[0].intentos - estudios[0].aciertos }}
-                    </span>
-                    Fallos
-                </p>
-            </div>
-            <div class="flex items-center gap-2">
-                <CircleEqual class="text-foreground/70" />
-                <p>
-                    <span class="font-semibold">
+                    <span class="text-xl font-semibold">
                         {{ estudios[0].intentos }}
                     </span>
                     Intentos
                 </p>
             </div>
-            <div class="flex items-center gap-2">
-                <Clock class="text-primary-alt" />
+            <div class="mx-2 flex items-center gap-2">
+                <SquareCheck class="text-emerald-500" />
+                <p>
+                    <span class="text-xl font-semibold">
+                        {{ estudios[0].aciertos }}
+                    </span>
+                    Aciertos
+                </p>
+            </div>
+            <div class="mx-2 flex items-center gap-2">
+                <SquareX class="text-rose-500" />
+                <p>
+                    <span class="text-xl font-semibold">
+                        {{ estudios[0].intentos - estudios[0].aciertos }}
+                    </span>
+                    Fallos
+                </p>
+            </div>
+            <div class="mx-2 flex items-center gap-2">
+                <CalendarClock />
                 <p>
                     Repaso
                     <span class="font-semibold">

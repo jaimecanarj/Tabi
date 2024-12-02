@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import {
-    CircleCheck,
-    CircleEqual,
-    CirclePercent,
-    CircleX,
+    SquareSigma,
+    SquareCheck,
+    SquareX,
+    SquarePercent,
 } from "lucide-vue-next";
 import { Estudio, Kanji } from "@/lib/types";
 import { computed } from "vue";
@@ -47,29 +47,7 @@ let studyPercentage = computed(() =>
             class="mt-5 flex flex-col justify-evenly gap-2 text-lg md:text-xl xl:text-2xl"
         >
             <div class="flex items-center gap-2">
-                <CircleCheck class="text-emerald-500" :size="32" />
-                <p>
-                    <span
-                        class="text-2xl font-semibold md:text-3xl xl:text-4xl"
-                    >
-                        {{ studyCorrect }}
-                    </span>
-                    Aciertos
-                </p>
-            </div>
-            <div class="flex items-center gap-2">
-                <CircleX class="text-rose-500" :size="32" />
-                <p>
-                    <span
-                        class="text-2xl font-semibold md:text-3xl xl:text-4xl"
-                    >
-                        {{ studyWrong }}
-                    </span>
-                    Fallos
-                </p>
-            </div>
-            <div class="flex items-center gap-2">
-                <CircleEqual class="text-foreground/70" :size="32" />
+                <SquareSigma :size="32" />
                 <p>
                     <span
                         class="text-2xl font-semibold md:text-3xl xl:text-4xl"
@@ -80,7 +58,29 @@ let studyPercentage = computed(() =>
                 </p>
             </div>
             <div class="flex items-center gap-2">
-                <CirclePercent class="text-foreground/70" :size="32" />
+                <SquareCheck class="text-emerald-500" :size="32" />
+                <p>
+                    <span
+                        class="text-2xl font-semibold md:text-3xl xl:text-4xl"
+                    >
+                        {{ studyCorrect }}
+                    </span>
+                    Aciertos
+                </p>
+            </div>
+            <div class="flex items-center gap-2">
+                <SquareX class="text-rose-500" :size="32" />
+                <p>
+                    <span
+                        class="text-2xl font-semibold md:text-3xl xl:text-4xl"
+                    >
+                        {{ studyWrong }}
+                    </span>
+                    Fallos
+                </p>
+            </div>
+            <div class="flex items-center gap-2">
+                <SquarePercent :size="32" />
                 <p>
                     <span
                         class="text-2xl font-semibold md:text-3xl xl:text-4xl"

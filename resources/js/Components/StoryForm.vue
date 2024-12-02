@@ -80,11 +80,15 @@ onMounted(() => {
         {{ form.errors.historia }}
     </p>
     <!-- Botones -->
-    <div class="flex justify-end gap-2 mt-3">
+    <div class="mt-3 flex items-center justify-end gap-2">
         <!-- Borrar -->
         <AlertDialog v-if="form.id">
             <AlertDialogTrigger as-child>
-                <Button class="mr-auto" variant="destructive"> Borrar </Button>
+                <div
+                    class="ml-3 mr-auto cursor-pointer rounded-md border-2 border-transparent px-4 py-2 transition hover:border-destructive hover:text-destructive"
+                >
+                    Borrar
+                </div>
             </AlertDialogTrigger>
             <AlertDialogContent>
                 <AlertDialogHeader>

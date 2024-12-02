@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { ChevronRight } from "lucide-vue-next";
+import { ChevronRight, CircleAlert } from "lucide-vue-next";
 import { Kanji, Answer } from "@/lib/types";
 import { Input } from "@/Components/ui/input";
 
@@ -58,5 +58,18 @@ const checkAnswer = () => {
                 class="h-16 w-16 hover:text-primary"
             />
         </button>
+        <div
+            v-show="answer.answerResult == false"
+            class="absolute left-1/2 right-1/2 mt-2 flex animate-pulse justify-center"
+        >
+            <div
+                class="flex items-center gap-2 rounded-md bg-accent px-4 py-2 shadow-md"
+            >
+                <CircleAlert />
+                <p class="text-nowrap text-2xl first-letter:capitalize">
+                    {{ kanji.significado }}
+                </p>
+            </div>
+        </div>
     </form>
 </template>

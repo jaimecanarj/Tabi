@@ -77,5 +77,6 @@ export type KanjiLevel = {
     icon: FunctionalComponent<LucideProps, {}, any, {}>;
     name: string;
     color: string;
+    bgColor: string;
     threshold: number;
 };

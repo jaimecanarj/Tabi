@@ -1,4 +1,5 @@
 <script setup lang="ts">
+//TODO: Cambiar diseño kanjis a vista más detallada debajo
 import { Head, Link } from "@inertiajs/vue3";
 import { Kanji, Radical } from "@/lib/types";
 import MainLayout from "@/Layouts/MainLayout.vue";
@@ -40,7 +41,7 @@ defineProps<{
                 <ScrollArea
                     class="flex flex-wrap"
                     height-class="md:max-h-72"
-                    type="always"
+                    type="auto"
                 >
                     <template v-for="kanji of kanjis">
                         <Link :href="`/kanjis/${kanji.id}`">

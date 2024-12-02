@@ -44,14 +44,14 @@ defineProps({ literal: String, tipo: String, titulo: String });
     >
         <!-- Literal -->
         <div
-            class="text-light flex basis-2/5 items-center justify-center rounded-lg bg-gradient-primary text-[200px] font-bold xl:basis-1/3"
+            class="flex basis-2/5 items-center justify-center rounded-lg bg-gradient-primary text-[200px] font-bold text-light xl:basis-1/3"
         >
             <h2>{{ literal }}</h2>
         </div>
         <!-- Información -->
         <div class="basis-3/5 xl:basis-2/3">
             <!-- Significado -->
-            <h1 class="mb-3 text-6xl font-semibold capitalize">
+            <h1 class="mb-3 text-6xl font-semibold first-letter:capitalize">
                 {{ titulo }}
             </h1>
             <slot />

@@ -12,16 +12,15 @@ class RadicalController extends Controller
     public function index(): Response
     {
         //Filtro de buscador
-        $data = Radical::query()->when(Request::input("search"), function (
-            $query,
-            $search
-        ) {
-            $query->where(function ($query) use ($search) {
-                $query
-                    ->where("significado", "like", "%$search%")
-                    ->orWhere("literal", "=", $search);
+        $data = Radical::query()
+            ->withCount("kanjis")
+            ->when(Request::input("search"), function ($query, $search) {
+                $query->where(function ($query) use ($search) {
+                    $query
+                        ->where("significado", "like", "%$search%")
+                        ->orWhere("literal", "=", $search);
+                });
             });
-        });
 
         //Datos filtro de trazos
         $strokes = $data->get()->pluck("trazos")->unique()->sort()->values();

@@ -34,7 +34,7 @@ switch (true) {
         >
             <div class="text-light">
                 <h2
-                    class="text-center text-6xl leading-tight sm:text-8xl lg:text-start lg:text-7xl xl:text-8xl"
+                    class="text-center text-6xl sm:text-8xl lg:text-start lg:text-7xl lg:leading-tight xl:text-8xl"
                 >
                     {{ title }}
                 </h2>
@@ -48,9 +48,13 @@ switch (true) {
                 class="w-96"
             />
         </div>
-        <div class="mt-12 flex gap-3">
-            <Link href="/repasar">
-                <Button size="lg" variant="secondary" class="w-full lg:w-80">
+        <div class="mt-5 flex lg:mt-0">
+            <Link href="/repasar" class="w-full">
+                <Button
+                    size="lg"
+                    variant="secondary"
+                    class="mt-4 w-full bg-light text-xl text-primary shadow-md transition-all duration-300 hover:translate-x-[4px] hover:translate-y-[-4px] hover:rounded-md hover:bg-light hover:shadow-[-4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl active:shadow-none lg:w-80"
+                >
                     Seguir repasando
                 </Button>
             </Link>

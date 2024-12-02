@@ -103,31 +103,34 @@ const chartOptions = {
         stacked: true,
         background: "transparent",
         parentHeightOffset: 0,
+        zoom: {
+            autoScaleYaxis: true,
+        },
         toolbar: {
             show: false,
         },
     },
-    colors: ["#4777E6", "#4752E6", "#7C54E9", "#AD54E9", "#E3AF35"],
+    colors: ["#7A9CED", "#7A82ED", "#A084EF", "#C284EF", "#E8C471"],
     dataLabels: {
         enabled: false,
     },
     legend: {
         show: false,
     },
+    stroke: {
+        colors: ["#4777E6", "#4752E6", "#7C54E9", "#AD54E9", "#E3AF35"],
+    },
     fill: {
-        type: "gradient",
-        gradient: {
-            shadeIntensity: 1,
-            opacityFrom: 0.7,
-            opacityTo: 0.9,
-            stops: [0, 90, 100],
-        },
+        type: "solid",
     },
     xaxis: {
         type: "datetime",
         labels: {
             formatter: function (val: string) {
                 return moment(val).format("DD MMM");
+            },
+            style: {
+                fontSize: "16px",
             },
         },
     },

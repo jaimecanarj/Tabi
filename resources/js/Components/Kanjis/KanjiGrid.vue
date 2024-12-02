@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Link } from "@inertiajs/vue3";
-import { ChartLine, Pencil, School } from "lucide-vue-next";
+import { Library, PencilLine, TrendingUp } from "lucide-vue-next";
 import { Kanji } from "@/lib/types";
 import { Badge } from "@/Components/ui/badge";
 
@@ -10,36 +10,38 @@ defineProps<{ kanjis: Kanji[] }>();
 <template>
     <Link v-for="kanji of kanjis" :href="`/kanjis/${kanji.id}`">
         <div
-            class="flex border rounded-md shadow-md bg-card hover:bg-secondary w-72 h-36"
+            class="group flex h-60 w-56 flex-col rounded-md border bg-card shadow-md hover:shadow-lg xl:w-48"
         >
-            <div class="flex items-center p-4 rounded-l-md bg-primary">
-                <h2 class="text-6xl text-primary-foreground">
+            <div
+                class="flex justify-center rounded-t-md bg-gradient-to-br from-primary/70 to-primary p-4 group-hover:via-primary/70 group-hover:to-primary dark:bg-gradient-to-tl"
+            >
+                <h2 class="text-8xl text-primary-foreground">
                     {{ kanji.literal }}
                 </h2>
             </div>
-            <div class="flex flex-col justify-between px-4 py-2">
+            <div class="flex h-full flex-col justify-between px-4 py-2">
                 <p
-                    class="w-40 text-2xl font-semibold tracking-tight capitalize hyphens-auto line-clamp-2"
-                    lang="es"
+                    class="line-clamp-2 text-2xl font-semibold tracking-tight first-letter:capitalize"
                 >
                     {{ kanji.significado }}
                 </p>
-                <div>
-                    <Badge variant="secondary" class="space-x-1">
-                        <p>
-                            <Pencil class="inline h-5" />
-                            {{ kanji.trazos }}
-                        </p>
-                        <p>
-                            <School class="inline h-5" />
-                            {{ kanji.grado }}
-                        </p>
-                        <p v-if="kanji.frecuencia">
-                            <ChartLine class="inline h-5" />
-                            {{ kanji.frecuencia }}
-                        </p>
-                    </Badge>
-                </div>
+                <Badge
+                    variant="secondary"
+                    class="flex w-full justify-evenly gap-1"
+                >
+                    <p>
+                        <PencilLine class="inline h-5" />
+                        {{ kanji.trazos }}
+                    </p>
+                    <p>
+                        <Library class="inline h-5" />
+                        {{ kanji.grado }}
+                    </p>
+                    <p v-if="kanji.frecuencia">
+                        <TrendingUp class="inline h-5" />
+                        {{ kanji.frecuencia }}
+                    </p>
+                </Badge>
             </div>
         </div>
     </Link>

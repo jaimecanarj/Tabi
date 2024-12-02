@@ -68,7 +68,7 @@ import {
                 variant="link"
                 class="mx-2 border-b-4 border-transparent px-0 text-xl text-foreground hover:text-primary hover:no-underline"
                 :class="{
-                    'border-primary': /^\/kanjis(\/.*)?$/.test($page.url),
+                    'border-primary': /^\/kanjis(.*)?$/.test($page.url),
                 }"
             >
                 Kanjis
@@ -79,7 +79,7 @@ import {
                 variant="link"
                 class="mx-2 border-b-4 border-transparent px-0 text-xl text-foreground hover:text-primary hover:no-underline"
                 :class="{
-                    'border-primary': /^\/radicales(\/.*)?$/.test($page.url),
+                    'border-primary': /^\/radicales(.*)?$/.test($page.url),
                 }"
             >
                 Radicales
@@ -89,7 +89,9 @@ import {
             <Button
                 variant="link"
                 class="mx-2 border-b-4 border-transparent px-0 text-xl text-foreground hover:text-primary hover:no-underline"
-                :class="{ 'border-primary': $page.url == '/progreso' }"
+                :class="{
+                    'border-primary': /^\/progreso(.*)?$/.test($page.url),
+                }"
             >
                 Tu progreso
             </Button>

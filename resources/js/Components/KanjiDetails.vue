@@ -9,6 +9,11 @@ import {
     TooltipProvider,
     TooltipTrigger,
 } from "./ui/tooltip";
+import {
+    HoverCard,
+    HoverCardContent,
+    HoverCardTrigger,
+} from "@/Components/ui/hover-card";
 
 const props = defineProps<{
     kanji: Kanji;
@@ -28,17 +33,17 @@ const lecturasKunyomi = props.lecturas.filter(
 
 <template>
     <!-- Datos básicos -->
-    <div class="flex flex-col mb-3 sm:space-x-3 sm:flex-row">
+    <div class="mb-3 flex flex-col sm:flex-row sm:space-x-3">
         <div>
-            <h3 class="inline mr-1 text-lg">Trazos:</h3>
+            <h3 class="mr-1 inline text-lg">Trazos:</h3>
             <span class="text-lg font-semibold">{{ kanji.trazos }}</span>
         </div>
         <div>
-            <h3 class="inline mr-1 text-lg">Grado:</h3>
+            <h3 class="mr-1 inline text-lg">Grado:</h3>
             <span class="text-lg font-semibold">{{ kanji.grado }}</span>
         </div>
         <div v-if="kanji.frecuencia">
-            <h3 class="inline mr-1 text-lg">Frecuencia:</h3>
+            <h3 class="mr-1 inline text-lg">Frecuencia:</h3>
             <span class="text-lg font-semibold">{{ kanji.frecuencia }}</span
             ><span> de 2500</span>
         </div>
@@ -48,7 +53,7 @@ const lecturasKunyomi = props.lecturas.filter(
         <h3 class="text-lg font-semibold tracking-tight">Lecturas</h3>
         <div class="flex flex-col flex-wrap lg:flex-row">
             <div class="mr-6">
-                <h4 class="inline mr-2 tracking-tight">Onyomi:</h4>
+                <h4 class="mr-2 inline tracking-tight">Onyomi:</h4>
                 <Badge
                     variant="secondary"
                     class="m-1 text-base"
@@ -58,7 +63,7 @@ const lecturasKunyomi = props.lecturas.filter(
                 </Badge>
             </div>
             <div v-if="lecturasKunyomi.length">
-                <h4 class="inline mr-2 tracking-tight">Kunyomi:</h4>
+                <h4 class="mr-2 inline tracking-tight">Kunyomi:</h4>
                 <Badge
                     variant="secondary"
                     class="m-1 text-base"
@@ -74,7 +79,7 @@ const lecturasKunyomi = props.lecturas.filter(
         <h3 class="text-lg font-semibold tracking-tight">Significados</h3>
         <Badge
             variant="secondary"
-            class="m-1 text-base capitalize"
+            class="m-1 text-base first-letter:capitalize"
             v-for="significado of significados"
         >
             {{ significado.significado }}
@@ -86,22 +91,24 @@ const lecturasKunyomi = props.lecturas.filter(
             <h3 class="text-lg font-semibold tracking-tight">Radicales</h3>
             <template v-for="radical of radicales">
                 <Link :href="`/radicales/${radical.id}`">
-                    <TooltipProvider>
-                        <Tooltip>
-                            <TooltipTrigger as-child>
-                                <Button class="m-1 text-2xl">
-                                    <p>
-                                        {{ radical.literal }}
-                                    </p>
-                                </Button>
-                            </TooltipTrigger>
-                            <TooltipContent>
-                                <p class="capitalize">
-                                    {{ radical.significado }}
+                    <HoverCard>
+                        <HoverCardTrigger asChild>
+                            <Button
+                                variant="secondaryGradient"
+                                size="gradient"
+                                class="m-1"
+                            >
+                                <p>
+                                    {{ radical.literal }}
                                 </p>
-                            </TooltipContent>
-                        </Tooltip>
-                    </TooltipProvider>
+                            </Button>
+                        </HoverCardTrigger>
+                        <HoverCardContent class="w-fit max-w-48">
+                            <p class="capitalize">
+                                {{ radical.significado }}
+                            </p>
+                        </HoverCardContent>
+                    </HoverCard>
                 </Link>
             </template>
         </div>
@@ -112,20 +119,22 @@ const lecturasKunyomi = props.lecturas.filter(
             </h3>
             <template v-for="similar of similares">
                 <Link :href="`/kanjis/${similar.id}`">
-                    <TooltipProvider>
-                        <Tooltip>
-                            <TooltipTrigger as-child>
-                                <Button class="m-1 text-2xl">
-                                    {{ similar.literal }}
-                                </Button>
-                            </TooltipTrigger>
-                            <TooltipContent>
-                                <p class="capitalize">
-                                    {{ similar.significado }}
-                                </p>
-                            </TooltipContent>
-                        </Tooltip>
-                    </TooltipProvider>
+                    <HoverCard>
+                        <HoverCardTrigger asChild>
+                            <Button
+                                variant="secondaryGradient"
+                                size="gradient"
+                                class="m-1"
+                            >
+                                {{ similar.literal }}
+                            </Button>
+                        </HoverCardTrigger>
+                        <HoverCardContent class="w-fit max-w-48">
+                            <p class="capitalize">
+                                {{ similar.significado }}
+                            </p>
+                        </HoverCardContent>
+                    </HoverCard>
                 </Link>
             </template>
         </div>

@@ -43,10 +43,22 @@ const chartOptions = {
     xaxis: {
         name: "Intento",
         categories: props.estudios.map((estudio) => estudio.intentos).reverse(),
+        labels: {
+            style: {
+                fontSize: "14px",
+            },
+        },
     },
     yaxis: {
-        min: Math.min(...series[0].data) - 1,
+        min: 0,
         max: Math.max(...series[0].data) + 1,
+        forceNiceScale: true,
+        decimalsInFloat: 0,
+        labels: {
+            style: {
+                fontSize: "14px",
+            },
+        },
     },
     theme: {
         mode: mode.value,

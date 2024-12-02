@@ -1,37 +1,43 @@
 <script setup lang="ts">
 import { Radical } from "@/lib/types";
 import { Link } from "@inertiajs/vue3";
-import { Pencil } from "lucide-vue-next";
+import { Hash, PencilLine } from "lucide-vue-next";
 import { Badge } from "@/Components/ui/badge";
 
-defineProps<{ radicales: Radical[] }>();
+defineProps<{ radicales: (Radical & { kanjis_count: number })[] }>();
 </script>
 
 <template>
     <Link v-for="radical of radicales" :href="`/radicales/${radical.id}`">
         <div
-            class="flex border rounded-md shadow-md bg-card hover:bg-secondary w-72 h-36"
+            class="group flex h-60 w-56 flex-col rounded-md border bg-card shadow-md hover:shadow-lg xl:w-48"
         >
             <div
-                class="flex items-center justify-center w-1/3 p-4 rounded-l-md bg-primary"
+                class="flex justify-center rounded-t-md bg-gradient-to-br from-primary/70 to-primary p-4 group-hover:via-primary/70 group-hover:to-primary dark:bg-gradient-to-tl"
             >
-                <h2 class="text-6xl text-primary-foreground">
+                <h2 class="text-8xl text-primary-foreground">
                     {{ radical.literal }}
                 </h2>
             </div>
-            <div class="flex flex-col justify-between px-4 py-2">
+            <div class="flex h-full flex-col justify-between px-4 py-2">
                 <p
-                    class="w-40 text-2xl font-semibold tracking-tight capitalize hyphens-auto line-clamp-2"
-                    lang="es"
+                    class="line-clamp-2 text-2xl font-semibold tracking-tight first-letter:capitalize"
                 >
                     {{ radical.significado }}
                 </p>
-                <div>
-                    <Badge variant="secondary">
-                        <Pencil class="inline" />
+                <Badge
+                    variant="secondary"
+                    class="flex w-full justify-evenly gap-1"
+                >
+                    <p>
+                        <PencilLine class="inline h-5" />
                         {{ radical.trazos }}
-                    </Badge>
-                </div>
+                    </p>
+                    <p>
+                        <Hash class="inline h-5" />
+                        {{ radical.kanjis_count }}
+                    </p>
+                </Badge>
             </div>
         </div>
     </Link>

@@ -55,11 +55,13 @@ let answers: (Answer & { kanji: Kanji; estudio?: Estudio })[] = [];
 
 const handleRound = (answer: Answer) => {
     if (answer.answered) {
-        answers.push({
-            ...answer,
-            kanji: kanji.value,
-            estudio: kanji.value.estudio,
-        });
+        if (kanji.value.estudio || answer.answerResult) {
+            answers.push({
+                ...answer,
+                kanji: kanji.value,
+                estudio: kanji.value.estudio,
+            });
+        }
         kanji.value = kanjisToAnswer[0]; //Actualizar kanji
         if (kanjisToAnswer.length + kanjisAnswered == 10) kanjisAnswered++; //Actualizar contador
         showData.value = false;

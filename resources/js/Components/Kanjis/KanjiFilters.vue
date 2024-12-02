@@ -70,9 +70,9 @@ watchDebounced(
 
 <template>
     <div
-        class="flex flex-col items-center justify-between gap-2 p-2 mb-6 rounded-sm lg:flex-row bg-card"
+        class="mb-6 flex flex-col items-center justify-between gap-2 rounded-sm bg-card p-2 shadow-md lg:flex-row"
     >
-        <div class="inline-flex flex-col gap-2 md:flex-row w-min">
+        <div class="inline-flex w-min flex-col gap-2 md:flex-row">
             <!-- Literal o significado -->
             <Input
                 v-model="filters.search"
@@ -106,7 +106,7 @@ watchDebounced(
                 </SelectContent>
             </Select>
         </div>
-        <div class="inline-flex items-center gap-3 w-min">
+        <div class="inline-flex w-min items-center gap-3">
             <!-- Orden -->
             <Select v-model="filters.sortCategory">
                 <SelectTrigger class="w-40">
