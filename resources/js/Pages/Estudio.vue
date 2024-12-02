@@ -1,14 +1,7 @@
 <script setup lang="ts">
-//TODO: Cambiar estilo de botones footer
-//TODO: Cambiar diseño radicales
 import { onMounted, ref } from "vue";
 import { Head, Link } from "@inertiajs/vue3";
-import {
-    ChevronLeft,
-    ChevronRight,
-    CircleArrowRight,
-    Play,
-} from "lucide-vue-next";
+import { ChevronLeft, ChevronRight, CircleArrowRight } from "lucide-vue-next";
 import { Kanji, Radical } from "@/lib/types";
 import EstudioLayout from "@/Layouts/EstudioLayout.vue";
 import { Button } from "@/Components/ui/button";

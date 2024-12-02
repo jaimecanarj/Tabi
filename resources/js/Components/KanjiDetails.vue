@@ -4,12 +4,6 @@ import { Kanji, Lectura, Radical, Significado } from "@/lib/types";
 import { Badge } from "@/Components/ui/badge";
 import { Button } from "@/Components/ui/button";
 import {
-    Tooltip,
-    TooltipContent,
-    TooltipProvider,
-    TooltipTrigger,
-} from "./ui/tooltip";
-import {
     HoverCard,
     HoverCardContent,
     HoverCardTrigger,

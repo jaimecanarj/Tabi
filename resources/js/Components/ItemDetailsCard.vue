@@ -18,9 +18,9 @@ defineProps({ literal: String, tipo: String, titulo: String });
         <Breadcrumb class="mb-2 mr-2">
             <BreadcrumbList>
                 <BreadcrumbItem class="text-xl">
-                    <BreadcrumbLink asChild
-                        ><Link href="/inicio"> Inicio </Link></BreadcrumbLink
-                    >
+                    <BreadcrumbLink asChild>
+                        <Link href="/inicio"> Inicio </Link>
+                    </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem class="text-xl capitalize">

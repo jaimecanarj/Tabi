@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { Link } from "@inertiajs/vue3";
-import { CircleAlert } from "lucide-vue-next";
 import { Kanji, Radical } from "@/lib/types";
 import MainLayout from "@/Layouts/MainLayout.vue";
 import StoryForm from "@/Components/StoryForm.vue";
