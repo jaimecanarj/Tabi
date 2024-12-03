@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Link } from "@inertiajs/vue3";
+import { Link, usePage } from "@inertiajs/vue3";
 import { Menu } from "lucide-vue-next";
 import ApplicationLogo from "@/Components/ApplicationLogo.vue";
 import { Button } from "@/Components/ui/button";
@@ -10,6 +10,8 @@ import {
     SheetTitle,
     SheetTrigger,
 } from "@/Components/ui/sheet";
+
+const page = usePage();
 </script>
 
 <template>
@@ -49,7 +51,7 @@ import {
                             Radicales
                         </Button>
                     </Link>
-                    <Link href="/progreso">
+                    <Link href="/progreso" v-if="page.props.auth.user">
                         <Button
                             variant="link"
                             class="justify-start text-xl text-foreground hover:text-primary hover:no-underline"
@@ -85,7 +87,7 @@ import {
                 Radicales
             </Button>
         </Link>
-        <Link href="/progreso">
+        <Link href="/progreso" v-if="page.props.auth.user">
             <Button
                 variant="link"
                 class="mx-2 border-b-4 border-transparent px-0 text-xl text-foreground hover:text-primary hover:no-underline"

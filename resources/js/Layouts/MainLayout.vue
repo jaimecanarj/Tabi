@@ -19,7 +19,7 @@ import { useBreakpoints, breakpointsTailwind } from "@vueuse/core";
 
 const breakpoints = useBreakpoints(breakpointsTailwind);
 
-const showLogo = breakpoints.greater("md");
+const showLogo = breakpoints.greaterOrEqual("md");
 </script>
 
 <template>

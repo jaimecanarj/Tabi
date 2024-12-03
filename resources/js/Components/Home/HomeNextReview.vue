@@ -75,7 +75,10 @@ kanjisToStudy.forEach((date) => {
             <CalendarClock :size="32" />Repasos
         </h2>
         <div class="flex flex-col pb-5">
-            <ScrollArea height-class="h-[720px] lg:h-[1167px] xl:h-[910px]">
+            <ScrollArea
+                height-class="h-[720px] lg:h-[1167px] xl:h-[910px]"
+                type="auto"
+            >
                 <Accordion type="single" class="w-full px-6" collapsible>
                     <AccordionItem v-for="date in dates" :value="date.fecha">
                         <AccordionTrigger
