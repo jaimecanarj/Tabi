@@ -17,6 +17,9 @@ class KanjiController extends Controller
             $index = "indice_" . auth()->user()->indice;
         }
 
+        $strokesFilter = Request::input("strokes");
+        $gradeFilter = Request::input("grade");
+
         //Filtro de texto
         $data = Kanji::query()->when(Request::input("search"), function (
             $query,
@@ -31,7 +34,7 @@ class KanjiController extends Controller
 
         //Datos filtro de trazos
         $strokes = (clone $data)
-            ->when(Request::input("grade"), function ($query, $grade) {
+            ->when($gradeFilter, function ($query, $grade) {
                 $query->where("grado", "=", $grade);
             })
             ->get()
@@ -40,9 +43,14 @@ class KanjiController extends Controller
             ->sort()
             ->values();
 
+        if ($strokesFilter && !$strokes->contains($strokesFilter)) {
+            $strokes->push($strokesFilter);
+            $strokes = $strokes->unique()->sort()->values();
+        }
+
         //Datos filtro de grados
         $grades = (clone $data)
-            ->when(Request::input("strokes"), function ($query, $strokes) {
+            ->when($strokesFilter, function ($query, $strokes) {
                 $query->where("trazos", "=", $strokes);
             })
             ->get()
@@ -51,14 +59,19 @@ class KanjiController extends Controller
             ->sort()
             ->values();
 
+        if ($gradeFilter && !$grades->contains($gradeFilter)) {
+            $grades->push($gradeFilter);
+            $grades = $grades->unique()->sort()->values();
+        }
+
         //Paginación
         $kanjis = $data
             //Filtro de trazos
-            ->when(Request::input("strokes"), function ($query, $strokes) {
+            ->when($strokesFilter, function ($query, $strokes) {
                 $query->where("trazos", "=", $strokes);
             })
             //Filtro de grado
-            ->when(Request::input("grade"), function ($query, $grade) {
+            ->when($gradeFilter, function ($query, $grade) {
                 $query->where("grado", "=", $grade);
             })
             //Ordenación

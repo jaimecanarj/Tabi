@@ -11,6 +11,8 @@ class RadicalController extends Controller
 {
     public function index(): Response
     {
+        $strokesFilter = Request::input("strokes");
+
         //Filtro de buscador
         $data = Radical::query()
             ->withCount("kanjis")
@@ -25,10 +27,15 @@ class RadicalController extends Controller
         //Datos filtro de trazos
         $strokes = $data->get()->pluck("trazos")->unique()->sort()->values();
 
+        if ($strokesFilter && !$strokes->contains($strokesFilter)) {
+            $strokes->push($strokesFilter);
+            $strokes = $strokes->unique()->sort()->values();
+        }
+
         //Paginación
         $radicales = $data
             //Filtro de trazos
-            ->when(Request::input("strokes"), function ($query, $strokes) {
+            ->when($strokesFilter, function ($query, $strokes) {
                 $query->where("trazos", "=", $strokes);
             })
             //Ordenación
