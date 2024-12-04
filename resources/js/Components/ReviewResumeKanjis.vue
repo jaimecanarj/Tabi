@@ -17,7 +17,7 @@ defineProps<{
     <div class="mt-12 flex flex-wrap justify-center gap-4">
         <div
             v-for="kanji of kanjis"
-            class="group flex h-80 w-60 flex-col rounded-md bg-card shadow-md hover:shadow-lg"
+            class="group flex h-[300px] w-60 flex-col rounded-md bg-card shadow-md hover:shadow-lg"
         >
             <Link :href="`/kanjis/${kanji.id}`">
                 <h2

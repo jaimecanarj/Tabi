@@ -15,7 +15,7 @@ let lastStudies = props.estudios.slice(0, 24).map((estudio) => {
 </script>
 
 <template>
-    <HomeKanjiGrid :studys="lastStudies">
+    <HomeKanjiGrid :studys="lastStudies" type="last">
         <template #title><BookType :size="32" />Últimos repasados</template>
     </HomeKanjiGrid>
 </template>

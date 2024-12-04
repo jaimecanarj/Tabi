@@ -9,7 +9,21 @@ import {
     HoverCardTrigger,
 } from "@/Components/ui/hover-card";
 
-defineProps<{ studys: (Estudio & { kanji: Kanji; level: KanjiLevel })[] }>();
+const props = defineProps<{
+    studys: (Estudio & { kanji: Kanji; level: KanjiLevel })[];
+    type: string;
+}>();
+
+let message: string;
+
+switch (props.type) {
+    case "wrong":
+        message = "fallado";
+        break;
+    case "last":
+        message = "estudiado";
+        break;
+}
 </script>
 
 <template>
@@ -19,7 +33,13 @@ defineProps<{ studys: (Estudio & { kanji: Kanji; level: KanjiLevel })[] }>();
         >
             <slot name="title" />
         </h2>
-        <div class="home-grid mt-4 grid max-h-40 gap-2 overflow-hidden sm:h-28">
+        <h2 v-if="!studys.length" class="pl-3 pt-5 text-2xl">
+            Aún no has {{ message }} ningún kanji.
+        </h2>
+        <div
+            v-else
+            class="home-grid mt-4 grid max-h-40 gap-2 overflow-hidden sm:h-28"
+        >
             <HoverCard
                 v-for="study in studys"
                 :open-delay="500"

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Estudio;
 use App\Models\Kanji;
+use Carbon\Carbon;
 use Inertia\Inertia;
 use Inertia\Response;
 use Request;
@@ -46,10 +47,15 @@ class ProgresoController extends Controller
             //Obtenemos primera y última fecha de estudio
             $startDate = Estudio::where("user_id", $userId)
                 ->oldest("fecha")
-                ->first()->fecha;
+                ->first()?->fecha;
             $endDate = Estudio::where("user_id", $userId)
                 ->latest("fecha")
-                ->first()->fecha;
+                ->first()?->fecha;
+        }
+
+        if (is_null($startDate) && is_null($endDate)) {
+            $startDate = Carbon::now();
+            $endDate = Carbon::now();
         }
 
         return Inertia::render("Progreso", [

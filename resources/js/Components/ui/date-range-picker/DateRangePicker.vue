@@ -49,7 +49,7 @@ const value = defineModel();
                 :fixed-weeks="true"
                 locale="es"
                 initial-focus
-                :number-of-months="2"
+                :number-of-months="1"
                 @update:start-value="(startDate) => (value.start = startDate)"
             />
         </PopoverContent>

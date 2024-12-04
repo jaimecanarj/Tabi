@@ -29,7 +29,7 @@ props.estudios.map((estudio) => {
 </script>
 
 <template>
-    <HomeKanjiGrid :studys="wrongAnswers">
+    <HomeKanjiGrid :studys="wrongAnswers" type="wrong">
         <template #title> <BookX :size="32" /> Últimos fallos </template>
     </HomeKanjiGrid>
 </template>
