@@ -3,11 +3,13 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Estudio;
 use App\Models\User;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Inertia\Inertia;
@@ -61,5 +63,39 @@ class RegisteredUserController extends Controller
         Auth::login($user);
 
         return redirect(route("home", absolute: false));
+    }
+
+    public function show($id)
+    {
+        //Obtener información del usuario
+        $user = User::find($id);
+
+        //Obtener numero de repasos de este usuario donde kanji es unico
+        $data = Estudio::select("estudios.*")
+            ->where("user_id", $id)
+            ->join(
+                DB::raw(
+                    "(SELECT MAX(id) as max_id FROM estudios WHERE user_id = " .
+                        $id .
+                        " GROUP BY kanji_id) as latest"
+                ),
+                "estudios.id",
+                "=",
+                "latest.max_id"
+            )
+            ->orderBy("estudios.id", "desc")
+            ->get();
+
+        $studyCount = count($data);
+
+        //Obtener ultimos 10 repasos
+        $studys = $data->take(10);
+        $studys->load("kanji");
+
+        return Inertia::render("Usuario", [
+            "user" => $user,
+            "studyCount" => $studyCount,
+            "studys" => $studys,
+        ]);
     }
 }

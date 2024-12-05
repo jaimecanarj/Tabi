@@ -73,6 +73,17 @@ export type Estudio = {
     intentos: number;
 };
 
+export type Usuario = {
+    id: number;
+    name: string;
+    email: string;
+    indice: string;
+    estudio_diario: number;
+    avatar: string;
+    created_at: string;
+    updated_at: string;
+};
+
 export type KanjiLevel = {
     icon: FunctionalComponent<LucideProps, {}, any, {}>;
     name: string;

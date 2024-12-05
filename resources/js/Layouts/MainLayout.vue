@@ -68,9 +68,11 @@ const showLogo = breakpoints.greaterOrEqual("md");
                         class="w-40"
                         v-if="$page.props.auth.user"
                     >
-                        <DropdownMenuItem>
-                            <User class="mr-1 h-5 w-5" /> Mi cuenta
-                        </DropdownMenuItem>
+                        <Link :href="`/usuario/${$page.props.auth.user.id}`">
+                            <DropdownMenuItem class="cursor-pointer">
+                                <User class="mr-1 h-5 w-5" /> Mi cuenta
+                            </DropdownMenuItem>
+                        </Link>
                         <DropdownMenuItem>
                             <Settings class="mr-1 h-5 w-5" /> Opciones
                         </DropdownMenuItem>

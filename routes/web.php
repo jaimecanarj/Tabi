@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\RegisteredUserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EstudioController;
 use App\Http\Controllers\HistoriaController;
@@ -12,6 +13,7 @@ use App\Http\Controllers\HomeController;
 Route::inertia("/", "Welcome");
 Route::get("/inicio", [HomeController::class, "index"])->name("home");
 Route::get("/search/{query}", [HomeController::class, "search"]);
+Route::get("/usuario/{id}", [RegisteredUserController::class, "show"]);
 
 // Kanjis
 Route::get("/kanjis", [KanjiController::class, "index"]);
