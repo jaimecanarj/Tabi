@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Link } from "@inertiajs/vue3";
-import moment from "moment";
+import moment from "moment/moment";
 import { Clock } from "lucide-vue-next";
 import { Estudio, Kanji, KanjiLevel } from "@/lib/types";
 import {

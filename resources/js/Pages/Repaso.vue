@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { Head } from "@inertiajs/vue3";
-import moment from "moment";
+import moment from "moment/moment";
 import * as ebisu from "ebisu-js";
 import EstudioLayout from "@/Layouts/EstudioLayout.vue";
 import { Kanji, Estudio, Answer, Radical } from "@/lib/types";

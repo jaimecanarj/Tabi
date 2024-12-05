@@ -12,7 +12,6 @@ const getLevelBackground = (kanji: Kanji & { estudios: Estudio[] }) => {
         )!;
         return `bg-gradient-${level.color}`;
     } else {
-        let color = kanjiLevels[0].color;
         return "bg-gradient-levels-new";
     }
 };
