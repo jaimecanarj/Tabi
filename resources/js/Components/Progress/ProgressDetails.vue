@@ -36,7 +36,7 @@ let studyPercentage = computed(() =>
         class="flex w-full flex-col items-center justify-between sm:flex-row lg:flex-col xl:mt-5"
     >
         <div
-            class="flex items-baseline bg-gradient-primary bg-clip-text text-transparent"
+            class="bg-gradient-primary-to-alt flex items-baseline bg-clip-text text-transparent"
         >
             <span class="text-7xl font-semibold sm:text-8xl md:text-9xl">
                 {{ kanjisStudied }}

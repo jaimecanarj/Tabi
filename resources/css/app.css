@@ -17,6 +17,7 @@
         --border: 236 12.3% 89.52%;
         --input: 236 12.3% 89.52%;
         --primary: 236 76% 59%;
+        --primary-light: 235.83 76.16% 70.39%;
         --primary-foreground: 236 7.6% 97.95%;
         --secondary: 236 3.65% 95.65%;
         --secondary-foreground: 236 5.38% 11.3%;
@@ -28,6 +29,7 @@
         --radius: 0.5rem;
         --primary-alt: 256 77.2% 62.2%;
         --learner: 222 76% 59%;
+        --learner-light: 222 76.16% 70.39%;
         --expert: 276 77.2% 62.2%;
         --master: 42 76% 55%;
     }
@@ -71,4 +73,36 @@
 
 .home-grid{
     grid-template-columns: repeat(auto-fill, minmax(56px, 1fr));
+}
+
+.bg-gradient-primary{
+    @apply bg-gradient-to-br from-primary-light to-primary;
+}
+
+.bg-gradient-secondary{
+    @apply bg-gradient-to-br from-secondary dark:from-30% hover:via-secondary dark:hover:via-70%;
+}
+
+.bg-gradient-levels-new{
+    @apply bg-gradient-to-br from-zinc-500/70 to-zinc-500 hover:via-zinc-500/70 hover:to-zinc-500;
+}
+
+.bg-gradient-levels-learner{
+    @apply bg-gradient-to-br from-levels-learner/70 to-levels-learner hover:via-levels-learner/70 hover:to-levels-learner;
+}
+
+.bg-gradient-levels-educated{
+    @apply bg-gradient-to-br from-levels-educated-light to-levels-educated hover:via-levels-educated-light hover:to-levels-educated;
+}
+
+.bg-gradient-levels-proficient{
+    @apply bg-gradient-to-br from-levels-proficient/70 to-levels-proficient hover:via-levels-proficient/70 hover:to-levels-proficient;
+}
+
+.bg-gradient-levels-expert{
+    @apply bg-gradient-to-br from-levels-expert/70 to-levels-expert hover:via-levels-expert/70 hover:to-levels-expert;
+}
+
+.bg-gradient-levels-master{
+    @apply bg-gradient-to-br from-levels-master/70 to-levels-master hover:via-levels-master/70 hover:to-levels-master;
 }

@@ -24,7 +24,7 @@ props.estudios.forEach((estudio) => {
 </script>
 
 <template>
-    <section class="mt-10 rounded-xl bg-gradient-primary p-6 shadow-md">
+    <section class="bg-gradient-primary-to-alt mt-10 rounded-xl p-6 shadow-md">
         <Link href="/progreso">
             <h2
                 class="inline-flex items-center gap-2 text-3xl font-bold text-light"

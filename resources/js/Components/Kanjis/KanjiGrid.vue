@@ -13,7 +13,7 @@ defineProps<{ kanjis: Kanji[] }>();
             class="group flex h-60 w-56 flex-col rounded-md border bg-card shadow-md hover:shadow-lg xl:w-48"
         >
             <div
-                class="flex justify-center rounded-t-md bg-gradient-to-br from-primary/70 to-primary p-4 group-hover:via-primary/70 group-hover:to-primary dark:bg-gradient-to-tl"
+                class="bg-gradient-primary flex justify-center rounded-t-md p-4 group-hover:via-primary-light group-hover:to-primary"
             >
                 <h2 class="text-8xl text-primary-foreground">
                     {{ kanji.literal }}

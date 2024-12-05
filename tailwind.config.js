@@ -34,6 +34,7 @@ export default {
                     DEFAULT: "hsl(var(--primary))",
                     foreground: "hsl(var(--primary-foreground))",
                     alt: "hsl(var(--primary-alt))",
+                    light: "hsl(var(--primary-light))",
                 },
                 secondary: {
                     DEFAULT: "hsl(var(--secondary))",
@@ -98,7 +99,7 @@ export default {
                 "collapsible-up": "collapsible-up 0.2s ease-in-out",
             },
             backgroundImage: () => ({
-                "gradient-primary":
+                "gradient-primary-to-alt":
                     "linear-gradient(to top left, #4776e6, #8e54e9)",
             }),
             fontFamily: {

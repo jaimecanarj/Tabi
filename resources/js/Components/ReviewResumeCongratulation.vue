@@ -28,7 +28,7 @@ switch (true) {
 
 <template>
     <ReviewConfetti />
-    <div class="rounded-md bg-gradient-primary p-12">
+    <div class="bg-gradient-primary-to-alt rounded-md p-12">
         <div
             class="flex flex-col items-center gap-12 lg:flex-row lg:gap-32 xl:gap-40"
         >

@@ -48,7 +48,7 @@ switch (props.type) {
                 <HoverCardTrigger asChild>
                     <Link :href="`/kanjis/${study.kanji_id}`">
                         <div
-                            class="w-14 rounded bg-gradient-to-br from-secondary p-2 text-center text-2xl font-semibold shadow-sm hover:via-secondary hover:shadow-md"
+                            class="bg-gradient-secondary w-14 rounded p-2 text-center text-2xl font-semibold shadow-sm hover:shadow-md"
                         >
                             {{ study.kanji.literal }}
                         </div>
