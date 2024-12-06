@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { Container } from "@tsparticles/engine";
-
 const options = {
     fullScreen: {
         zIndex: 1,
@@ -99,7 +97,7 @@ const options = {
         },
         life: {
             duration: {
-                value: 200 / 60,
+                value: 3,
             },
             count: 1,
         },
@@ -111,18 +109,8 @@ const options = {
         },
     },
 };
-
-// const particlesLoaded = async (container: Container) => {
-//     setTimeout(() => {
-//         container.stop();
-//     }, 3000);
-// };
 </script>
 
 <template>
-    <vue-particles
-        id="tsparticles"
-        :options="options"
-        @particles-loaded="particlesLoaded"
-    />
+    <vue-particles id="tsparticles" :options="options" />
 </template>
