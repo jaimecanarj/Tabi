@@ -71,7 +71,7 @@ const studysWithLevel = computed(() => {
                     class="mt-10 flex flex-col sm:flex-row sm:items-center sm:gap-2 md:mt-20"
                 >
                     <p class="flex items-center gap-1 lg:text-lg">
-                        <Calendar />Fecha de registro:
+                        <Calendar strokeWidth="1.25" />Fecha de registro:
                     </p>
                     <p
                         class="mb-2 ml-8 text-lg font-semibold sm:m-0 sm:ml-0 lg:text-xl"
@@ -83,7 +83,7 @@ const studysWithLevel = computed(() => {
                 </div>
                 <div class="flex flex-col sm:flex-row sm:items-center sm:gap-2">
                     <p class="flex items-center gap-1 lg:text-lg">
-                        <BookMarked />Índice:
+                        <BookMarked strokeWidth="1.25" />Índice:
                     </p>
                     <p
                         class="mb-2 ml-8 text-lg font-semibold capitalize sm:m-0 lg:text-xl"
@@ -93,7 +93,7 @@ const studysWithLevel = computed(() => {
                 </div>
                 <div class="flex flex-col sm:flex-row sm:items-center sm:gap-2">
                     <p class="flex items-center gap-1 lg:text-lg">
-                        <SquareSigma />Total estudiados:
+                        <SquareSigma strokeWidth="1.25" />Total estudiados:
                     </p>
                     <p
                         class="mb-2 ml-8 text-lg font-semibold sm:m-0 lg:text-xl"
@@ -103,7 +103,7 @@ const studysWithLevel = computed(() => {
                 </div>
                 <div class="flex flex-col sm:flex-row sm:items-center sm:gap-2">
                     <p class="flex items-center gap-1 lg:text-lg">
-                        <CalendarClock />Último repaso:
+                        <CalendarClock strokeWidth="1.25" />Último repaso:
                     </p>
                     <p
                         class="mb-2 ml-8 text-lg font-semibold sm:m-0 lg:text-xl"

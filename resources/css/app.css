@@ -92,7 +92,7 @@
 }
 
 .bg-gradient-levels-educated{
-    @apply bg-gradient-to-br from-levels-educated-light to-levels-educated hover:via-levels-educated-light hover:to-levels-educated;
+    @apply bg-gradient-to-br from-levels-educated/70 to-levels-educated hover:via-levels-educated/70 hover:to-levels-educated;
 }
 
 .bg-gradient-levels-proficient{

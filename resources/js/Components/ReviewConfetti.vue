@@ -97,21 +97,26 @@ const options = {
                 max: 15,
             },
         },
+        life: {
+            duration: {
+                value: 200 / 60,
+            },
+            count: 1,
+        },
     },
     emitters: {
         life: {
-            count: 10,
-            duration: 0.1,
-            delay: 0.1,
+            duration: 3,
+            count: 1,
         },
     },
 };
 
-const particlesLoaded = async (container: Container) => {
-    setTimeout(() => {
-        container.stop();
-    }, 3000);
-};
+// const particlesLoaded = async (container: Container) => {
+//     setTimeout(() => {
+//         container.stop();
+//     }, 3000);
+// };
 </script>
 
 <template>

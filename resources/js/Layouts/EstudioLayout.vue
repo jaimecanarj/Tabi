@@ -4,6 +4,7 @@ import { Kanji, Radical } from "@/lib/types";
 import MainLayout from "@/Layouts/MainLayout.vue";
 import StoryForm from "@/Components/StoryForm.vue";
 import { Button } from "@/Components/ui/button";
+import { Separator } from "@/Components/ui/separator";
 
 defineProps<{
     kanji: Kanji & { radicales: Radical[] };
@@ -17,16 +18,16 @@ defineProps<{
         <!-- Tarjeta -->
         <div class="mb-10 flex flex-col shadow-xl">
             <div
-                class="bg-gradient-primary-to-alt flex items-center justify-center rounded-t-md text-[200px] font-bold leading-tight text-light"
+                class="flex items-center justify-center rounded-t-md bg-gradient-primary-to-alt text-[200px] font-bold leading-tight text-light"
             >
                 <h2>{{ kanji.literal }}</h2>
             </div>
             <slot name="significado" />
         </div>
         <template v-if="showData">
-            <div class="grid gap-10 lg:grid-cols-2">
+            <div class="grid gap-10 lg:grid-cols-[1fr_auto_1fr]">
                 <!-- Radicales -->
-                <div class="rounded-md bg-card p-5 shadow-md">
+                <div class="m-5">
                     <h3 class="pb-2 text-4xl font-semibold">Radicales</h3>
                     <p class="text-muted-foreground">
                         Este kanji está compuesto de:
@@ -52,9 +53,9 @@ defineProps<{
                         </Link>
                     </div>
                 </div>
-
+                <Separator orientation="vertical" />
                 <!-- Historia -->
-                <div class="rounded-md bg-card p-5 shadow-md">
+                <div class="m-5">
                     <h3 class="pb-1 text-4xl font-semibold">Historia</h3>
                     <div>
                         <p class="mb-3 text-muted-foreground">

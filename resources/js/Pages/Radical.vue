@@ -1,5 +1,4 @@
 <script setup lang="ts">
-//TODO: Cambiar diseño kanjis a vista más detallada debajo
 import { Head, Link } from "@inertiajs/vue3";
 import { Kanji, Radical } from "@/lib/types";
 import MainLayout from "@/Layouts/MainLayout.vue";
@@ -7,11 +6,11 @@ import ItemDetailsCard from "@/Components/ItemDetailsCard.vue";
 import { Button } from "@/Components/ui/button";
 import { ScrollArea } from "@/Components/ui/scroll-area";
 import {
-    Tooltip,
-    TooltipContent,
-    TooltipProvider,
-    TooltipTrigger,
-} from "@/Components/ui/tooltip";
+    HoverCard,
+    HoverCardContent,
+    HoverCardTrigger,
+} from "@/Components/ui/hover-card";
+import { Badge } from "@/Components/ui/badge";
 
 defineProps<{
     radical: Radical;
@@ -37,6 +36,9 @@ defineProps<{
             <div class="mb-3">
                 <h3 class="mb-1 text-lg font-semibold tracking-tight">
                     Kanjis donde aparece
+                    <Badge variant="secondary" class="ml-1 text-base">{{
+                        kanjis.length
+                    }}</Badge>
                 </h3>
                 <ScrollArea
                     class="flex flex-wrap"
@@ -45,20 +47,22 @@ defineProps<{
                 >
                     <template v-for="kanji of kanjis">
                         <Link :href="`/kanjis/${kanji.id}`">
-                            <TooltipProvider>
-                                <Tooltip>
-                                    <TooltipTrigger as-child>
-                                        <Button class="m-1 text-2xl">
-                                            {{ kanji.literal }}
-                                        </Button>
-                                    </TooltipTrigger>
-                                    <TooltipContent>
-                                        <p class="capitalize">
-                                            {{ kanji.significado }}
-                                        </p>
-                                    </TooltipContent>
-                                </Tooltip>
-                            </TooltipProvider>
+                            <HoverCard>
+                                <HoverCardTrigger asChild>
+                                    <Button
+                                        variant="secondaryGradient"
+                                        size="gradient"
+                                        class="m-1"
+                                    >
+                                        {{ kanji.literal }}
+                                    </Button>
+                                </HoverCardTrigger>
+                                <HoverCardContent class="w-fit max-w-48">
+                                    <p class="capitalize">
+                                        {{ kanji.significado }}
+                                    </p>
+                                </HoverCardContent>
+                            </HoverCard>
                         </Link>
                     </template>
                 </ScrollArea>

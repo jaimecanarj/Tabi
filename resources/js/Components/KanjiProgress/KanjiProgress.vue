@@ -3,6 +3,7 @@ import { Estudio } from "@/lib/types";
 import KanjiProgressChart from "@/Components/KanjiProgress/KanjiProgressChart.vue";
 import KanjiProgressResume from "@/Components/KanjiProgress/KanjiProgressResume.vue";
 import KanjiProgressHistoric from "@/Components/KanjiProgress/KanjiProgressHistoric.vue";
+import { Separator } from "@/Components/ui/separator";
 
 defineProps<{ estudios: Estudio[] }>();
 </script>
@@ -19,10 +20,11 @@ defineProps<{ estudios: Estudio[] }>();
         <div v-else class="flex flex-col justify-around lg:flex-row">
             <!-- Datos -->
             <div
-                class="mb-4 flex flex-col justify-between gap-5 sm:flex-row lg:w-3/5"
+                class="mb-4 flex flex-col justify-between gap-5 sm:h-80 sm:flex-row lg:w-3/5"
             >
                 <!-- Resumen -->
                 <KanjiProgressResume :estudios="estudios" />
+                <Separator orientation="vertical" />
                 <!-- Histórico -->
                 <KanjiProgressHistoric :estudios="estudios" />
             </div>
