@@ -7,7 +7,7 @@ import ProgressLevels from "@/Components/Progress/ProgressLevels.vue";
 import ProgressTable from "@/Components/Progress/ProgressTable.vue";
 import ProgressDetails from "@/Components/Progress/ProgressDetails.vue";
 import DateRangePicker from "@/Components/ui/date-range-picker/DateRangePicker.vue";
-import { ref, watch } from "vue";
+import { Ref, ref, watch } from "vue";
 import { CalendarDate } from "@internationalized/date";
 import type { DateRange } from "radix-vue";
 
@@ -19,17 +19,18 @@ const props = defineProps<{
 let fechaInicio = props.fechas.inicio.split("-");
 let fechaFin = props.fechas.fin.split("-");
 
-const dates = ref<DateRange>({
+//Definido as any porque typescript no entiende bien el tipo
+const dates: Ref<DateRange> = ref({
     start: new CalendarDate(
         parseInt(fechaInicio[0]),
         parseInt(fechaInicio[1]),
         parseInt(fechaInicio[2]),
-    ),
+    ) as any,
     end: new CalendarDate(
         parseInt(fechaFin[0]),
         parseInt(fechaFin[1]),
         parseInt(fechaFin[2]),
-    ),
+    ) as any,
 });
 
 watch(dates, (newValue) => {

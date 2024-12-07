@@ -9,12 +9,13 @@ import {
     PopoverContent,
     PopoverTrigger,
 } from "@/Components/ui/popover";
+import { DateRange } from "radix-vue";
 
 const df = new DateFormatter("es-ES", {
     dateStyle: "medium",
 });
 
-const value = defineModel();
+const value = defineModel<DateRange>({ required: true });
 </script>
 
 <template>
