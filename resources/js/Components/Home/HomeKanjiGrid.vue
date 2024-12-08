@@ -29,7 +29,7 @@ switch (props.type) {
 <template>
     <section class="mt-10 rounded-xl bg-card p-6 shadow-md">
         <h2
-            class="flex items-center gap-2 border-b-4 border-secondary pb-2 text-3xl font-semibold"
+            class="flex items-center gap-2 border-b-4 pb-2 text-3xl font-semibold"
         >
             <slot name="title" />
         </h2>

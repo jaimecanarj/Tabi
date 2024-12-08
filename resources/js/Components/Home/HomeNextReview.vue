@@ -70,7 +70,7 @@ kanjisToStudy.forEach((date) => {
 <template>
     <section class="mt-10 rounded-xl bg-card shadow-md lg:mt-0">
         <h2
-            class="mx-3 flex items-center gap-2 border-b-4 border-secondary p-3 pb-2 pt-6 text-3xl font-semibold"
+            class="mx-3 flex items-center gap-2 border-b-4 p-3 pb-2 pt-6 text-3xl font-semibold"
         >
             <CalendarClock :size="32" />Repasos
         </h2>

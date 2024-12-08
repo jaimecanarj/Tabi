@@ -73,7 +73,10 @@ onMounted(() => {
 <template>
     <!-- Formulario -->
     <form id="submitStory" @submit.prevent="submit">
-        <Textarea v-model="form.historia" class="min-h-32 bg-card" />
+        <Textarea
+            v-model="form.historia"
+            class="min-h-32 border-border bg-card"
+        />
     </form>
     <!-- Error -->
     <p class="mt-2 text-sm text-red-600" v-show="form.errors.historia">
