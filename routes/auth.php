@@ -51,4 +51,15 @@ Route::middleware("auth")->group(function () {
         AuthenticatedSessionController::class,
         "destroy",
     ])->name("logout");
+
+    Route::get("/opciones", [RegisteredUserController::class, "edit"]);
+    Route::post("/profile-settings", [
+        RegisteredUserController::class,
+        "update",
+    ]);
+    Route::post("/reset-progress", [
+        RegisteredUserController::class,
+        "resetProgress",
+    ]);
+    Route::delete("/user", [RegisteredUserController::class, "destroy"]);
 });

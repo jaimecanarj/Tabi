@@ -58,8 +58,6 @@ class RegisteredUserController extends Controller
             "avatar" => $path,
         ]);
 
-        event(new Registered($user));
-
         Auth::login($user);
 
         return redirect(route("home", absolute: false));
@@ -97,5 +95,54 @@ class RegisteredUserController extends Controller
             "studyCount" => $studyCount,
             "studys" => $studys,
         ]);
+    }
+
+    public function edit()
+    {
+        return Inertia::render("Opciones");
+    }
+
+    public function update(Request $request)
+    {
+        $request->validate([
+            "name" => "required|string|max:255",
+            "index" => "required|in:escolar,heisig,wanikani",
+            "estudio_diario" => "required|integer|numeric|min:1|max:50",
+            "avatar" => "image|max:2048|nullable",
+        ]);
+
+        $user = User::find(Auth::id());
+
+        // Almacenar la imagen
+        if ($request->hasFile("avatar")) {
+            // Si ya existe un avatar, elimínalo
+            if ($user->avatar) {
+                \Storage::disk("public")->delete($user->avatar);
+            }
+
+            //Sube el nuevo avatar
+            $file = $request->file("avatar");
+            $path = $file->store("avatares", "public");
+            $user->update(["avatar" => $path]);
+        }
+
+        $user->update([
+            "name" => $request->name,
+            "indice" => $request->index,
+            "estudio_diario" => $request->estudio_diario,
+        ]);
+    }
+
+    public function resetProgress()
+    {
+        Estudio::where("user_id", Auth::id())->delete();
+    }
+
+    public function destroy()
+    {
+        Auth::logout();
+        User::destroy(Auth::id());
+
+        return redirect(route("home", absolute: false));
     }
 }

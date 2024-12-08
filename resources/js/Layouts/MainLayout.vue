@@ -73,9 +73,11 @@ const showLogo = breakpoints.greaterOrEqual("md");
                                 <User class="mr-1 h-5 w-5" /> Mi cuenta
                             </DropdownMenuItem>
                         </Link>
-                        <DropdownMenuItem>
-                            <Settings class="mr-1 h-5 w-5" /> Opciones
-                        </DropdownMenuItem>
+                        <Link href="/opciones">
+                            <DropdownMenuItem class="cursor-pointer">
+                                <Settings class="mr-1 h-5 w-5" /> Opciones
+                            </DropdownMenuItem>
+                        </Link>
                         <DropdownMenuSeparator />
                         <Link
                             href="/logout"
