@@ -28,7 +28,7 @@ switch (true) {
 
 <template>
     <ReviewConfetti />
-    <div class="bg-gradient-primary-to-alt rounded-md p-12">
+    <div class="rounded-md bg-gradient-primary-to-alt p-12">
         <div
             class="flex flex-col items-center gap-12 lg:flex-row lg:gap-32 xl:gap-40"
         >
@@ -49,7 +49,7 @@ switch (true) {
             />
         </div>
         <div class="mt-5 flex lg:mt-0">
-            <Link href="/repasar" class="w-full">
+            <Link href="/repasar" class="w-full lg:w-auto">
                 <Button
                     size="lg"
                     variant="secondary"

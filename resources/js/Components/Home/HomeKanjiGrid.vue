@@ -38,7 +38,7 @@ switch (props.type) {
         </h2>
         <div
             v-else
-            class="home-grid mt-4 grid max-h-40 gap-2 overflow-hidden sm:h-28"
+            class="mt-4 grid max-h-40 grid-cols-[repeat(auto-fill,_minmax(56px,_1fr))] gap-2 overflow-hidden sm:h-28"
         >
             <HoverCard
                 v-for="study in studys"

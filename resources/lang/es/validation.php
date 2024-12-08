@@ -1,6 +1,5 @@
 <?php
 return [
-    //TODO: terminar validaciones
     /*
     |--------------------------------------------------------------------------
     | Validation Language Lines

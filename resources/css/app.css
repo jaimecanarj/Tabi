@@ -67,14 +67,6 @@
     min-height: 100vh;
 }
 
-.kanji-grid{
-    grid-template-columns: repeat(auto-fill, minmax(48px, 1fr));
-}
-
-.home-grid{
-    grid-template-columns: repeat(auto-fill, minmax(56px, 1fr));
-}
-
 .bg-gradient-primary{
     @apply bg-gradient-to-br from-primary-light to-primary;
 }
@@ -84,25 +76,49 @@
 }
 
 .bg-gradient-levels-new{
-    @apply bg-gradient-to-br from-zinc-500/70 to-zinc-500 hover:via-zinc-500/70 hover:to-zinc-500;
+    @apply
+    bg-gradient-to-br from-zinc-500/70 to-zinc-500
+    hover:via-zinc-500/70 hover:to-zinc-500
+    dark:bg-gradient-to-tl
+    dark:hover:via-zinc-500 dark:hover:to-zinc-500;
 }
 
 .bg-gradient-levels-learner{
-    @apply bg-gradient-to-br from-levels-learner/70 to-levels-learner hover:via-levels-learner/70 hover:to-levels-learner;
+    @apply
+    bg-gradient-to-br from-levels-learner/70 to-levels-learner
+    hover:via-levels-learner/70 hover:to-levels-learner
+    dark:bg-gradient-to-tl
+    dark:hover:via-levels-learner dark:hover:to-levels-learner;
 }
 
 .bg-gradient-levels-educated{
-    @apply bg-gradient-to-br from-levels-educated/70 to-levels-educated hover:via-levels-educated/70 hover:to-levels-educated;
+    @apply
+    bg-gradient-to-br from-levels-educated/70 to-levels-educated
+    hover:via-levels-educated/70 hover:to-levels-educated
+    dark:bg-gradient-to-tl
+    dark:hover:via-levels-educated dark:hover:to-levels-educated;
 }
 
 .bg-gradient-levels-proficient{
-    @apply bg-gradient-to-br from-levels-proficient/70 to-levels-proficient hover:via-levels-proficient/70 hover:to-levels-proficient;
+    @apply
+    bg-gradient-to-br from-levels-proficient/70 to-levels-proficient
+    hover:via-levels-proficient/70 hover:to-levels-proficient
+    dark:bg-gradient-to-tl
+    dark:hover:via-levels-proficient dark:hover:to-levels-proficient;
 }
 
 .bg-gradient-levels-expert{
-    @apply bg-gradient-to-br from-levels-expert/70 to-levels-expert hover:via-levels-expert/70 hover:to-levels-expert;
+    @apply
+    bg-gradient-to-br from-levels-expert/70 to-levels-expert
+    hover:via-levels-expert/70 hover:to-levels-expert
+    dark:bg-gradient-to-tl
+    dark:hover:via-levels-expert dark:hover:to-levels-expert;
 }
 
 .bg-gradient-levels-master{
-    @apply bg-gradient-to-br from-levels-master/70 to-levels-master hover:via-levels-master/70 hover:to-levels-master;
+    @apply
+    bg-gradient-to-br from-levels-master/70 to-levels-master
+    hover:via-levels-master/70 hover:to-levels-master
+    dark:bg-gradient-to-tl
+    dark:hover:via-levels-master dark:hover:to-levels-master;
 }

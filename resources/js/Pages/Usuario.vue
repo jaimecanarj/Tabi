@@ -77,7 +77,7 @@ const studysWithLevel = computed(() => {
                         class="mb-2 ml-8 text-lg font-semibold sm:m-0 sm:ml-0 lg:text-xl"
                     >
                         {{
-                            moment(user.created_at).format("d [de] MMMM, YYYY")
+                            moment(user.created_at).format("D [de] MMMM, YYYY")
                         }}
                     </p>
                 </div>
@@ -98,7 +98,7 @@ const studysWithLevel = computed(() => {
                     <p
                         class="mb-2 ml-8 text-lg font-semibold sm:m-0 lg:text-xl"
                     >
-                        {{ studyCount }} kanji{{ studyCount > 1 && "s" }}
+                        {{ studyCount }} kanji{{ studyCount > 1 ? "s" : "" }}
                     </p>
                 </div>
                 <div class="flex flex-col sm:flex-row sm:items-center sm:gap-2">
@@ -106,11 +106,18 @@ const studysWithLevel = computed(() => {
                         <CalendarClock strokeWidth="1.25" />Último repaso:
                     </p>
                     <p
+                        v-if="studyCount > 0"
                         class="mb-2 ml-8 text-lg font-semibold sm:m-0 lg:text-xl"
                     >
                         {{
                             moment(studys[0].fecha).format("d [de] MMMM, YYYY")
                         }}
+                    </p>
+                    <p
+                        v-else
+                        class="mb-2 ml-8 text-lg font-semibold sm:m-0 lg:text-xl"
+                    >
+                        Sin estudios
                     </p>
                 </div>
             </div>

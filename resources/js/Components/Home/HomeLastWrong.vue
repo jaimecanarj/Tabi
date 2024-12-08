@@ -10,15 +10,15 @@ const props = defineProps<{ estudios: (Estudio & { kanji: Kanji })[] }>();
 const oneMonthAgo = moment().subtract(1, "months");
 const wrongAnswers: (Estudio & { kanji: Kanji; level: KanjiLevel })[] = [];
 
-//Obtener los últimos 10 kanjis fallados
+//Obtener los últimos 28 kanjis fallados
 props.estudios.map((estudio) => {
     //Compruebo que es respuesta errónea,
     if (
         !estudio.respuesta &&
         //Compruebo que fue en el último mes
         moment(estudio.fecha).isSameOrAfter(oneMonthAgo) &&
-        //Compruebo que todavía no hay 10 resultados
-        wrongAnswers.length < 24
+        //Compruebo que todavía no hay 28 resultados
+        wrongAnswers.length < 28
     ) {
         let level = kanjiLevels.find(
             (level) => estudio.tiempo / 24 < level.threshold,
