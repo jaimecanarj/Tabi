@@ -3,10 +3,10 @@ import { ref } from "vue";
 import { Head } from "@inertiajs/vue3";
 import moment from "moment/moment";
 import * as ebisu from "ebisu-js";
-import EstudioLayout from "@/Layouts/EstudioLayout.vue";
 import { Kanji, Estudio, Answer, Radical } from "@/lib/types";
-import ReviewAnswer from "@/Components/ReviewAnswer.vue";
-import ReviewResume from "@/Components/ReviewResume.vue";
+import EstudioLayout from "@/Layouts/EstudioLayout.vue";
+import ReviewAnswer from "@/Components/Review/ReviewAnswer.vue";
+import ReviewResume from "@/Components/Review/ReviewResume.vue";
 
 const props = defineProps<{
     kanjis: (Kanji & { radicales: Radical[]; estudio?: Estudio })[];

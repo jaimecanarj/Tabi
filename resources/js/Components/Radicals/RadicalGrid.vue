@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { Radical } from "@/lib/types";
 import { Link } from "@inertiajs/vue3";
 import { Hash, PencilLine } from "lucide-vue-next";
+import { Radical } from "@/lib/types";
 import { Badge } from "@/Components/ui/badge";
 
 defineProps<{ radicales: (Radical & { kanjis_count: number })[] }>();

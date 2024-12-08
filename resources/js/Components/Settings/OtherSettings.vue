@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { Button } from "@/Components/ui/button";
+import { router } from "@inertiajs/vue3";
 import axios from "axios";
 import { toast } from "@/Components/ui/toast";
-import { router } from "@inertiajs/vue3";
 import {
     AlertDialog,
     AlertDialogTrigger,

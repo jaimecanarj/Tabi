@@ -1,4 +1,11 @@
 <script setup lang="ts">
+import { ref } from "vue";
+import { useForm, usePage } from "@inertiajs/vue3";
+import { BookMarked, CaseSensitive, Calendar1, User } from "lucide-vue-next";
+import { toast } from "@/Components/ui/toast";
+import { Label } from "@/Components/ui/label";
+import { Button } from "@/Components/ui/button";
+import { Input } from "@/Components/ui/input";
 import {
     Select,
     SelectContent,
@@ -6,10 +13,6 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/Components/ui/select";
-import { Label } from "@/Components/ui/label";
-import { BookMarked, CaseSensitive, Calendar1, User } from "lucide-vue-next";
-import Button from "../ui/button/Button.vue";
-import { Input } from "@/Components/ui/input";
 import {
     NumberField,
     NumberFieldContent,
@@ -17,9 +20,6 @@ import {
     NumberFieldIncrement,
     NumberFieldInput,
 } from "@/Components/ui/number-field";
-import { useForm, usePage } from "@inertiajs/vue3";
-import { toast } from "@/Components/ui/toast";
-import { ref } from "vue";
 
 const page = usePage();
 const user = page.props.auth.user!;

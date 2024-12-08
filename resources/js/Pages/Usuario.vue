@@ -1,17 +1,17 @@
 <script setup lang="ts">
+import { computed } from "vue";
 import { Head, Link } from "@inertiajs/vue3";
-import { User } from "lucide-vue-next";
+import moment from "moment/moment";
 import {
+    User,
     Calendar,
     CalendarClock,
     BookMarked,
     SquareSigma,
 } from "lucide-vue-next";
-import MainLayout from "@/Layouts/MainLayout.vue";
 import { Estudio, Kanji, Usuario } from "@/lib/types";
-import moment from "moment/moment";
 import { kanjiLevels, momentLocale } from "@/lib/utils";
-import { computed } from "vue";
+import MainLayout from "@/Layouts/MainLayout.vue";
 
 const props = defineProps<{
     user: Usuario;
@@ -144,7 +144,10 @@ const studysWithLevel = computed(() => {
                     <component
                         :is="study.level.icon"
                         :size="24"
-                        :class="[study.level.bgColor, 'rounded-md p-1']"
+                        :class="[
+                            study.level.bgColor,
+                            'rounded-md p-1 text-light',
+                        ]"
                     />
                     {{ study.level.name }}
                 </div>

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import { Head, router, Link } from "@inertiajs/vue3";
+import { Info, PencilLine, Hash } from "lucide-vue-next";
 import { Radical, Pagination as PaginationType, Filters } from "@/lib/types";
 import MainLayout from "@/Layouts/MainLayout.vue";
 import RadicalFilters from "@/Components/Radicals/RadicalFilters.vue";
@@ -11,7 +12,6 @@ import {
     HoverCardContent,
     HoverCardTrigger,
 } from "@/Components/ui/hover-card";
-import { Info, PencilLine, Hash } from "lucide-vue-next";
 
 const props = defineProps<{
     response: PaginationType;

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import AuthLayout from "@/Layouts/AuthLayout.vue";
 import { Head, useForm } from "@inertiajs/vue3";
+import AuthLayout from "@/Layouts/AuthLayout.vue";
 import Label from "@/Components/ui/label/Label.vue";
 import Input from "@/Components/ui/input/Input.vue";
 import Button from "@/Components/ui/button/Button.vue";
@@ -22,7 +22,7 @@ const submit = () => {
     <AuthLayout>
         <Head title="Olvidó contraseña" />
 
-        <div class="pr-6 mb-4 text-sm text-muted-foreground">
+        <div class="mb-4 pr-6 text-sm text-muted-foreground">
             ¿Olvidó su contraseña? <br />
             Escriba su correo electrónico y le enviaremos un enlace para
             restablecer su contraseña y elegir una nueva.
@@ -48,7 +48,7 @@ const submit = () => {
                 </p>
             </div>
 
-            <div class="flex items-center justify-end mt-4">
+            <div class="mt-4 flex items-center justify-end">
                 <Button
                     variant="default"
                     :class="{ 'opacity-25': form.processing }"

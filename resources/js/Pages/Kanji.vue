@@ -5,7 +5,7 @@ import { ScrollText } from "lucide-vue-next";
 import { Kanji, Lectura, Significado, Radical, Estudio } from "@/lib/types";
 import MainLayout from "@/Layouts/MainLayout.vue";
 import ItemDetailsCard from "@/Components/ItemDetailsCard.vue";
-import KanjiDetails from "@/Components/KanjiDetails.vue";
+import KanjiDetails from "@/Components/Kanjis/KanjiDetails.vue";
 import KanjiProgress from "@/Components/KanjiProgress/KanjiProgress.vue";
 import StoryForm from "@/Components/StoryForm.vue";
 import { Button } from "@/Components/ui/button";

@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import { watch } from "vue";
 import VueApexCharts from "vue3-apexcharts";
 import { useColorMode } from "@vueuse/core";
-import { watch } from "vue";
 import { Estudio } from "@/lib/types";
 
 const props = defineProps<{ estudios: Estudio[] }>();

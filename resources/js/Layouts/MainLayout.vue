@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Link } from "@inertiajs/vue3";
+import { useBreakpoints, breakpointsTailwind } from "@vueuse/core";
 import { LogIn, LogOut, Settings, User, UserPlus } from "lucide-vue-next";
 import NavigationMenu from "@/Components/Navbar/NavigationMenu.vue";
 import ToggleDarkMode from "@/Components/Navbar/ToggleDarkMode.vue";
@@ -15,7 +16,6 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "@/Components/ui/dropdown-menu";
-import { useBreakpoints, breakpointsTailwind } from "@vueuse/core";
 
 const breakpoints = useBreakpoints(breakpointsTailwind);
 

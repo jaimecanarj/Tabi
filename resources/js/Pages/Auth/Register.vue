@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import AuthLayout from "@/Layouts/AuthLayout.vue";
 import { Head, Link, useForm } from "@inertiajs/vue3";
+import AuthLayout from "@/Layouts/AuthLayout.vue";
 import Label from "@/Components/ui/label/Label.vue";
 import Input from "@/Components/ui/input/Input.vue";
 import Button from "@/Components/ui/button/Button.vue";

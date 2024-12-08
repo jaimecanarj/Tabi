@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import { useForm } from "@inertiajs/vue3";
 import { Input } from "@/Components/ui/input";
 import { Label } from "@/Components/ui/label";
-import { useForm } from "@inertiajs/vue3";
 import { toast } from "@/Components/ui/toast";
 import { Button } from "@/Components/ui/button";
 

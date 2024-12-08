@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import moment from "moment/moment";
 import { CircleCheck, CircleX } from "lucide-vue-next";
-import { ScrollArea } from "@/Components/ui/scroll-area";
 import { Estudio } from "@/lib/types";
 import { momentLocale } from "@/lib/utils";
+import { ScrollArea } from "@/Components/ui/scroll-area";
 
 defineProps<{ estudios: Estudio[] }>();
 

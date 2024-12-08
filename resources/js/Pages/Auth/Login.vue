@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import AuthLayout from "@/Layouts/AuthLayout.vue";
 import { Head, Link, useForm } from "@inertiajs/vue3";
+import AuthLayout from "@/Layouts/AuthLayout.vue";
 import Label from "@/Components/ui/label/Label.vue";
 import Input from "@/Components/ui/input/Input.vue";
 import Checkbox from "@/Components/ui/checkbox/Checkbox.vue";
@@ -68,21 +68,21 @@ const submit = () => {
                 <Link
                     v-if="canResetPassword"
                     :href="route('password.request')"
-                    class="text-sm underline rounded-md text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                    class="rounded-md text-sm text-muted-foreground underline hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
                 >
                     ¿Olvidó su contraseña?
                 </Link>
             </div>
 
-            <div class="flex items-center gap-2 mt-4">
+            <div class="mt-4 flex items-center gap-2">
                 <Checkbox id="remember" v-model:checked="form.remember" />
                 <Label for="remember">Recordarme</Label>
             </div>
 
-            <div class="flex items-center justify-end mt-2">
+            <div class="mt-2 flex items-center justify-end">
                 <Link
                     :href="route('register')"
-                    class="text-sm underline rounded-md text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                    class="rounded-md text-sm text-muted-foreground underline hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
                 >
                     ¿No tiene cuenta?
                 </Link>

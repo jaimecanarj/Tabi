@@ -3,6 +3,7 @@ import moment from "moment/moment";
 import "moment/locale/es";
 import { CalendarClock } from "lucide-vue-next";
 import { Estudio, Kanji } from "@/lib/types";
+import { hourIcons } from "@/lib/utils";
 import { ScrollArea } from "@/Components/ui/scroll-area";
 import {
     Accordion,
@@ -10,7 +11,6 @@ import {
     AccordionTrigger,
     AccordionContent,
 } from "@/Components/ui/accordion";
-import { hourIcons } from "@/lib/utils";
 
 const props = defineProps<{ estudios: (Estudio & { kanji: Kanji })[] }>();
 

@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { Ref, ref, watch } from "vue";
 import { Head, router } from "@inertiajs/vue3";
+import type { DateRange } from "radix-vue";
+import { CalendarDate } from "@internationalized/date";
 import { Estudio, Kanji } from "@/lib/types";
 import MainLayout from "@/Layouts/MainLayout.vue";
 import ProgressChart from "@/Components/Progress/ProgressChart.vue";
@@ -7,9 +10,6 @@ import ProgressLevels from "@/Components/Progress/ProgressLevels.vue";
 import ProgressTable from "@/Components/Progress/ProgressTable.vue";
 import ProgressDetails from "@/Components/Progress/ProgressDetails.vue";
 import DateRangePicker from "@/Components/ui/date-range-picker/DateRangePicker.vue";
-import { Ref, ref, watch } from "vue";
-import { CalendarDate } from "@internationalized/date";
-import type { DateRange } from "radix-vue";
 
 const props = defineProps<{
     kanjis: (Kanji & { estudios: Estudio[] })[];

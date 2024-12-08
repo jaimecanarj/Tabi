@@ -5,12 +5,12 @@ import MainLayout from "@/Layouts/MainLayout.vue";
 import ItemDetailsCard from "@/Components/ItemDetailsCard.vue";
 import { Button } from "@/Components/ui/button";
 import { ScrollArea } from "@/Components/ui/scroll-area";
+import { Badge } from "@/Components/ui/badge";
 import {
     HoverCard,
     HoverCardContent,
     HoverCardTrigger,
 } from "@/Components/ui/hover-card";
-import { Badge } from "@/Components/ui/badge";
 
 defineProps<{
     radical: Radical;

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed } from "vue";
 import {
     SquareSigma,
     SquareCheck,
@@ -6,7 +7,6 @@ import {
     SquarePercent,
 } from "lucide-vue-next";
 import { Estudio, Kanji } from "@/lib/types";
-import { computed } from "vue";
 
 const props = defineProps<{ kanjis: (Kanji & { estudios: Estudio[] })[] }>();
 
@@ -36,7 +36,7 @@ let studyPercentage = computed(() =>
         class="flex w-full flex-col items-center justify-between sm:flex-row lg:flex-col xl:mt-5"
     >
         <div
-            class="bg-gradient-primary-to-alt flex items-baseline bg-clip-text text-transparent"
+            class="flex items-baseline bg-gradient-primary-to-alt bg-clip-text text-transparent"
         >
             <span class="text-7xl font-semibold sm:text-8xl md:text-9xl">
                 {{ kanjisStudied }}

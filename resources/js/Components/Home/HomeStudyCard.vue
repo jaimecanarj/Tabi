@@ -3,7 +3,7 @@ import { Link, usePage } from "@inertiajs/vue3";
 import moment from "moment/moment";
 import { ChevronRight } from "lucide-vue-next";
 import { Estudio, Kanji } from "@/lib/types";
-import Button from "@/Components/ui/button/Button.vue";
+import { Button } from "@/Components/ui/button";
 import { Badge } from "@/Components/ui/badge";
 
 const page = usePage();

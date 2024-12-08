@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import { Link } from "@inertiajs/vue3";
+import { VisuallyHidden } from "radix-vue";
 import axios from "axios";
 import { Pencil, Search } from "lucide-vue-next";
-import { VisuallyHidden } from "radix-vue";
 import { Kanji, Radical } from "@/lib/types";
 import { Button } from "@/Components/ui/button";
 import { Input } from "@/Components/ui/input";
+import { Badge } from "@/Components/ui/badge";
+import { ScrollArea } from "@/Components/ui/scroll-area";
 import {
     Dialog,
     DialogContent,
@@ -13,9 +16,6 @@ import {
     DialogTitle,
     DialogTrigger,
 } from "@/Components/ui/dialog";
-import { Badge } from "@/Components/ui/badge";
-import { ScrollArea } from "@/Components/ui/scroll-area";
-import { Link } from "@inertiajs/vue3";
 
 const query = ref("");
 const fetched = ref(false);

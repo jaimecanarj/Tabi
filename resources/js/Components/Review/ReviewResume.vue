@@ -5,11 +5,11 @@ import * as ebisu from "ebisu-js";
 import moment from "moment/moment";
 import "moment/locale/es";
 import axios from "axios";
-import MainLayout from "@/Layouts/MainLayout.vue";
 import { Answer, Estudio, Kanji, KanjiLevel } from "@/lib/types";
-import ReviewResumeKanjis from "@/Components/ReviewResumeKanjis.vue";
-import ReviewResumeCongratulation from "@/Components/ReviewResumeCongratulation.vue";
 import { kanjiLevels } from "@/lib/utils";
+import MainLayout from "@/Layouts/MainLayout.vue";
+import ReviewResumeKanjis from "@/Components/Review/ReviewResumeKanjis.vue";
+import ReviewResumeCongratulation from "@/Components/Review/ReviewResumeCongratulation.vue";
 
 const page = usePage();
 

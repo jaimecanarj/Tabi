@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Link } from "@inertiajs/vue3";
-import ReviewConfetti from "@/Components/ReviewConfetti.vue";
+import ReviewConfetti from "@/Components/Review/ReviewConfetti.vue";
 import { Button } from "@/Components/ui/button";
 
 const props = defineProps<{ answersCorrect: number }>();
