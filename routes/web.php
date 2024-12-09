@@ -12,6 +12,7 @@ use App\Http\Controllers\HomeController;
 // Rutas básicas
 Route::inertia("/", "Welcome");
 Route::get("/inicio", [HomeController::class, "index"])->name("home");
+Route::inertia("/about", "About");
 Route::get("/search/{query}", [HomeController::class, "search"]);
 Route::get("/usuario/{id}", [RegisteredUserController::class, "show"]);
 

@@ -1,7 +1,15 @@
 <script setup lang="ts">
 import { Link } from "@inertiajs/vue3";
 import { useBreakpoints, breakpointsTailwind } from "@vueuse/core";
-import { LogIn, LogOut, Settings, User, UserPlus } from "lucide-vue-next";
+import {
+    LogIn,
+    LogOut,
+    Settings,
+    User,
+    UserPlus,
+    Info,
+    Search,
+} from "lucide-vue-next";
 import NavigationMenu from "@/Components/Navbar/NavigationMenu.vue";
 import ToggleDarkMode from "@/Components/Navbar/ToggleDarkMode.vue";
 import SearchNav from "@/Components/Navbar/SearchNav.vue";
@@ -39,6 +47,9 @@ const showLogo = breakpoints.greaterOrEqual("md");
             <div class="flex items-center gap-x-1">
                 <SearchNav />
                 <ToggleDarkMode />
+                <Link href="/about">
+                    <Button variant="ghost" size="icon"> <Info /> </Button>
+                </Link>
                 <!-- Menú usuario -->
                 <DropdownMenu :key="$page.props.auth?.user?.email">
                     <DropdownMenuTrigger as-child>

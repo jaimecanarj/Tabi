@@ -13,6 +13,7 @@ import {
     Clock7,
     Clock8,
     Clock9,
+    Asterisk,
     Club,
     Crown,
     Diamond,
@@ -39,7 +40,7 @@ export const momentLocale = () => {
 
 export const kanjiLevels: KanjiLevel[] = [
     {
-        icon: Spade, //Sin uso
+        icon: Asterisk,
         name: "Nuevos",
         color: "zinc-500",
         bgColor: "bg-zinc-500",
