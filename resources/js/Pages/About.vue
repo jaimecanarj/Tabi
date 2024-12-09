@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import { Head, Link } from "@inertiajs/vue3";
+import { Head } from "@inertiajs/vue3";
 import { ChevronRight, Hash } from "lucide-vue-next";
 import MainLayout from "@/Layouts/MainLayout.vue";
 import { Button } from "@/Components/ui/button";
-import { Badge } from "@/Components/ui/badge";
 import { kanjiLevels } from "@/lib/utils";
 </script>
 
@@ -89,8 +88,11 @@ import { kanjiLevels } from "@/lib/utils";
                 <div class="max-w-52">
                     <h4 class="text-2xl font-semibold lg:mt-8">Historia</h4>
                     <p class="mt-4 text-lg">
-                        Historia de este kanji usando las palabras direccion,
-                        arma y apellido. Tienen que apuntar a viaje.
+                        Si alguien te amenaza con un
+                        <span class="underline">arma</span>, te cambias de
+                        <span class="underline">apellido</span> y te vas de
+                        <span class="font-semibold">viaje</span> en
+                        <span class="underline">dirección</span> contraria.
                     </p>
                 </div>
             </div>

@@ -79,6 +79,9 @@ onMounted(() => {
                     variant="secondaryGradient"
                     size="gradient"
                     @click="changeKanji(index)"
+                    :class="{
+                        'bg-gradient-levels-educated text-light': id == index,
+                    }"
                 >
                     {{ kanjiIndex.literal }}
                 </Button>

@@ -1,15 +1,7 @@
 <script setup lang="ts">
 import { Link } from "@inertiajs/vue3";
 import { useBreakpoints, breakpointsTailwind } from "@vueuse/core";
-import {
-    LogIn,
-    LogOut,
-    Settings,
-    User,
-    UserPlus,
-    Info,
-    Search,
-} from "lucide-vue-next";
+import { LogIn, LogOut, Settings, User, UserPlus, Info } from "lucide-vue-next";
 import NavigationMenu from "@/Components/Navbar/NavigationMenu.vue";
 import ToggleDarkMode from "@/Components/Navbar/ToggleDarkMode.vue";
 import SearchNav from "@/Components/Navbar/SearchNav.vue";
