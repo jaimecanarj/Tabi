@@ -13,7 +13,19 @@ const page = usePage();
 
 momentLocale();
 
-defineProps<{ estudios: (Estudio & { kanji: Kanji })[] }>();
+defineProps<{
+    data: {
+        studys: Estudio[];
+        kanjisToReview: number;
+        kanjisStudiedNumber: number;
+        userStudySessions: number;
+        userCorrectAnswers: number;
+        lastWrongKanjis: (Estudio & { kanji: Kanji })[];
+        lastReviewedKanjis: (Estudio & { kanji: Kanji })[];
+        studiedToday: number;
+        reviewedToday: number;
+    };
+}>();
 </script>
 
 <template>
@@ -45,15 +57,26 @@ defineProps<{ estudios: (Estudio & { kanji: Kanji })[] }>();
                 <section
                     class="flex flex-col justify-between gap-5 xl:flex-row"
                 >
-                    <HomeStudyCard type="estudio" :estudios="estudios" />
-                    <HomeStudyCard type="repaso" :estudios="estudios" />
+                    <HomeStudyCard
+                        type="estudio"
+                        :kanjisStudied="data.studiedToday"
+                    />
+                    <HomeStudyCard
+                        type="repaso"
+                        :kanjisStudied="data.reviewedToday"
+                        :studys="data.kanjisToReview"
+                    />
                 </section>
-                <HomeLastStudy :estudios="estudios" />
-                <HomeProgress :estudios="estudios" />
-                <HomeLastWrong :estudios="estudios" />
+                <HomeLastStudy :data="data.lastReviewedKanjis" />
+                <HomeProgress
+                    :kanjisStudied="data.kanjisStudiedNumber"
+                    :studySessions="data.userStudySessions"
+                    :correctAnswers="data.userCorrectAnswers"
+                />
+                <HomeLastWrong :data="data.lastWrongKanjis" />
             </div>
             <div class="lg:col-span-1">
-                <HomeNextReview :estudios="estudios" />
+                <HomeNextReview :studys="data.studys" />
             </div>
         </div>
     </main>

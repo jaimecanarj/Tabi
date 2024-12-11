@@ -1,30 +1,21 @@
 <script setup lang="ts">
 import { Link } from "@inertiajs/vue3";
 import { Crown, SquareSigma, SquareCheck, SquareX } from "lucide-vue-next";
-import { Estudio, Kanji } from "@/lib/types";
+import { computed } from "vue";
 
-const props = defineProps<{ estudios: (Estudio & { kanji: Kanji })[] }>();
+const props = defineProps<{
+    kanjisStudied: number;
+    studySessions: number;
+    correctAnswers: number;
+}>();
 
-let kanjisStudied: number[] = [];
-let studyAttempts = 0;
-let studyCorrect = 0;
-let studyWrong = 0;
-
-props.estudios.forEach((estudio) => {
-    studyAttempts++;
-    if (!kanjisStudied.includes(estudio.kanji_id)) {
-        kanjisStudied.push(estudio.kanji_id);
-    }
-    if (estudio.respuesta) {
-        studyCorrect++;
-    } else {
-        studyWrong++;
-    }
+const wrongAnswers = computed(() => {
+    return props.studySessions - props.correctAnswers;
 });
 </script>
 
 <template>
-    <section class="bg-gradient-primary-to-alt mt-10 rounded-xl p-6 shadow-md">
+    <section class="mt-10 rounded-xl bg-gradient-primary-to-alt p-6 shadow-md">
         <Link href="/progreso">
             <h2
                 class="inline-flex items-center gap-2 text-3xl font-bold text-light"
@@ -37,24 +28,24 @@ props.estudios.forEach((estudio) => {
         >
             <div class="text-3xl sm:text-5xl">
                 <span class="text-7xl font-semibold sm:text-8xl">{{
-                    kanjisStudied.length
+                    kanjisStudied
                 }}</span>
                 kanjis
             </div>
             <div class="text-2xl">
                 <div class="flex items-center gap-1">
                     <SquareSigma :size="30" />
-                    <span class="font-semibold">{{ studyAttempts }}</span>
+                    <span class="font-semibold">{{ studySessions }}</span>
                     <span>repasos</span>
                 </div>
                 <div class="flex items-center gap-1">
                     <SquareCheck :size="30" />
-                    <span class="font-semibold">{{ studyCorrect }}</span>
+                    <span class="font-semibold">{{ correctAnswers }}</span>
                     <span>aciertos</span>
                 </div>
                 <div class="flex items-center gap-1">
                     <SquareX :size="30" />
-                    <span class="font-semibold">{{ studyWrong }}</span>
+                    <span class="font-semibold">{{ wrongAnswers }}</span>
                     <span>fallos</span>
                 </div>
             </div>

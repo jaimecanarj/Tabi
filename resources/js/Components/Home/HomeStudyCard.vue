@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { Link, usePage } from "@inertiajs/vue3";
-import moment from "moment/moment";
 import { ChevronRight } from "lucide-vue-next";
-import { Estudio, Kanji } from "@/lib/types";
 import { Button } from "@/Components/ui/button";
 import { Badge } from "@/Components/ui/badge";
 
@@ -10,57 +8,27 @@ const page = usePage();
 
 const props = defineProps<{
     type: string;
-    estudios: (Estudio & { kanji: Kanji })[];
+    kanjisStudied: number;
+    studys?: number;
 }>();
 
-const typeStudy = props.type == "estudio";
+const isStudy = props.type == "estudio";
 
-let kanjisStudied: number;
-let kanjisToStudy = 0;
+let kanjisToStudy: number;
 
-if (typeStudy) {
-    //Calcular estudiados hoy
-    kanjisStudied = props.estudios.reduce((acc, estudio) => {
-        if (
-            estudio.intentos == 1 &&
-            moment(estudio.fecha).isSame(moment(), "day")
-        ) {
-            return acc + 1;
-        }
-        return acc;
-    }, 0);
+if (isStudy) {
     //Calcular por estudiar hoy
-    kanjisToStudy = page.props.auth.user.estudio_diario - kanjisStudied;
+    kanjisToStudy = page.props.auth.user.estudio_diario - props.kanjisStudied;
     kanjisToStudy = kanjisToStudy < 0 ? 0 : kanjisToStudy;
 } else {
-    //Calcular repasados hoy
-    kanjisStudied = props.estudios.reduce((acc, estudio) => {
-        if (
-            estudio.intentos != 1 &&
-            moment(estudio.fecha).isSame(moment(), "day")
-        ) {
-            return acc + 1;
-        }
-        return acc;
-    }, 0);
-    //Calcular repasos disponibles
-    const kanjisSeen: number[] = [];
-    props.estudios.forEach((estudio) => {
-        if (!kanjisSeen.includes(estudio.kanji_id)) {
-            moment(estudio.fecha)
-                .add(estudio.tiempo, "hours")
-                .isBefore(moment()) && kanjisToStudy++;
-
-            kanjisSeen.push(estudio.kanji_id);
-        }
-    });
+    kanjisToStudy = props.studys!;
 }
 </script>
 
 <template>
     <div
         :class="[
-            typeStudy ? 'bg-primary' : 'bg-primary-alt',
+            isStudy ? 'bg-primary' : 'bg-primary-alt',
             'w-full min-w-[296px] rounded-md p-5 shadow-lg',
         ]"
     >
@@ -69,11 +37,11 @@ if (typeStudy) {
                 <div
                     class="mb-3 flex items-end gap-2 text-2xl font-semibold text-light sm:text-3xl"
                 >
-                    {{ typeStudy ? "Estudiar" : "Repasar" }}
+                    {{ isStudy ? "Estudiar" : "Repasar" }}
                     <Badge
                         variant="secondary"
                         :class="[
-                            typeStudy ? 'text-primary' : 'text-primary-alt',
+                            isStudy ? 'text-primary' : 'text-primary-alt',
                             'min-w-10 justify-center bg-light text-base text-primary shadow-sm hover:bg-light',
                         ]"
                     >
@@ -83,7 +51,7 @@ if (typeStudy) {
                 <div class="flex flex-col leading-8 sm:flex-row xl:flex-col">
                     <p class="mr-1 inline text-light">
                         Hoy has
-                        {{ typeStudy ? "estudiado" : "repasado" }}
+                        {{ isStudy ? "estudiado" : "repasado" }}
                     </p>
                     <p class="inline text-light">
                         <span class="text-xl font-semibold underline">
@@ -96,7 +64,7 @@ if (typeStudy) {
             <div>
                 <img
                     :src="
-                        typeStudy
+                        isStudy
                             ? '/assets/Viajero%20con%20pergamino.webp'
                             : '/assets/Viajero%20repaso.webp'
                     "
@@ -105,12 +73,12 @@ if (typeStudy) {
                 />
             </div>
         </div>
-        <Link :href="typeStudy ? '/estudiar' : '/repasar'">
+        <Link :href="isStudy ? '/estudiar' : '/repasar'">
             <Button
                 variant="secondary"
                 class="mt-4 w-full bg-light text-xl text-primary shadow-md transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:bg-light hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl active:shadow-none"
             >
-                <p>Empezar a {{ typeStudy ? "estudiar" : "repasar" }}</p>
+                <p>Empezar a {{ isStudy ? "estudiar" : "repasar" }}</p>
                 <ChevronRight :size="28" class="mt-1.5" />
             </Button>
         </Link>

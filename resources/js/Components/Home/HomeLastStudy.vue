@@ -4,9 +4,9 @@ import { Estudio, Kanji } from "@/lib/types";
 import { kanjiLevels } from "@/lib/utils";
 import HomeKanjiGrid from "@/Components/Home/HomeKanjiGrid.vue";
 
-const props = defineProps<{ estudios: (Estudio & { kanji: Kanji })[] }>();
+const props = defineProps<{ data: (Estudio & { kanji: Kanji })[] }>();
 
-let lastStudies = props.estudios.slice(0, 28).map((estudio) => {
+let lastStudies = props.data.map((estudio) => {
     let level = kanjiLevels.find(
         (level) => estudio.tiempo / 24 < level.threshold,
     )!;

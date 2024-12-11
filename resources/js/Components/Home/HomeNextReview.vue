@@ -2,9 +2,8 @@
 import moment from "moment/moment";
 import "moment/locale/es";
 import { CalendarClock } from "lucide-vue-next";
-import { Estudio, Kanji } from "@/lib/types";
+import { Estudio } from "@/lib/types";
 import { hourIcons } from "@/lib/utils";
-import { ScrollArea } from "@/Components/ui/scroll-area";
 import {
     Accordion,
     AccordionItem,
@@ -12,18 +11,14 @@ import {
     AccordionContent,
 } from "@/Components/ui/accordion";
 
-const props = defineProps<{ estudios: (Estudio & { kanji: Kanji })[] }>();
+const props = defineProps<{ studys: Estudio[] }>();
 
 //Obtener próximos estudios de cada kanji
 let kanjisToStudy: moment.Moment[] = [];
-const kanjisSeen: number[] = [];
-props.estudios.forEach((estudio) => {
-    if (!kanjisSeen.includes(estudio.kanji_id)) {
-        kanjisToStudy.push(
-            moment.utc(estudio.fecha).add(estudio.tiempo, "hours").local(),
-        );
-        kanjisSeen.push(estudio.kanji_id);
-    }
+props.studys.forEach((study) => {
+    kanjisToStudy.push(
+        moment.utc(study.fecha).add(study.tiempo, "hours").local(),
+    );
 });
 
 //Ordenar por fecha
@@ -76,49 +71,40 @@ kanjisToStudy.forEach((date) => {
         </h2>
 
         <div class="flex flex-col pb-5">
-            <ScrollArea
-                height-class="h-[720px] lg:h-[1167px] xl:h-[910px]"
-                type="auto"
-            >
-                <h2 v-if="!dates.length" class="p-5 text-2xl">
-                    No tienes repasos pendientes.
-                </h2>
-                <Accordion v-else type="single" class="w-full px-6" collapsible>
-                    <AccordionItem v-for="date in dates" :value="date.fecha">
-                        <AccordionTrigger
-                            class="hover:text-primary hover:no-underline"
+            <h2 v-if="!dates.length" class="p-5 text-2xl">
+                No tienes repasos pendientes.
+            </h2>
+            <Accordion v-else type="single" class="w-full px-6" collapsible>
+                <AccordionItem v-for="date in dates" :value="date.fecha">
+                    <AccordionTrigger
+                        class="hover:text-primary hover:no-underline"
+                    >
+                        <div class="flex w-full justify-between pr-3 text-lg">
+                            <p>{{ date.fecha }}</p>
+                            <p class="rounded-sm bg-secondary px-2 shadow-sm">
+                                {{ date.total }}
+                            </p>
+                        </div>
+                    </AccordionTrigger>
+                    <AccordionContent>
+                        <div
+                            class="flex justify-between gap-2 px-7 text-base"
+                            v-for="hour in date.data"
                         >
-                            <div
-                                class="flex w-full justify-between pr-3 text-lg"
-                            >
-                                <p>{{ date.fecha }}</p>
-                                <p
-                                    class="rounded-sm bg-secondary px-2 shadow-sm"
-                                >
-                                    {{ date.total }}
-                                </p>
+                            <div class="flex items-center gap-1">
+                                <component
+                                    :is="hourIcons[parseInt(hour.hour)]"
+                                    :size="16"
+                                />
+                                <p>{{ hour.hour }}:00</p>
                             </div>
-                        </AccordionTrigger>
-                        <AccordionContent>
-                            <div
-                                class="flex justify-between gap-2 px-7 text-base"
-                                v-for="hour in date.data"
-                            >
-                                <div class="flex items-center gap-1">
-                                    <component
-                                        :is="hourIcons[parseInt(hour.hour)]"
-                                        :size="16"
-                                    />
-                                    <p>{{ hour.hour }}:00</p>
-                                </div>
-                                <p class="px-2 text-lg">
-                                    {{ hour.items }}
-                                </p>
-                            </div>
-                        </AccordionContent>
-                    </AccordionItem>
-                </Accordion>
-            </ScrollArea>
+                            <p class="px-2 text-lg">
+                                {{ hour.items }}
+                            </p>
+                        </div>
+                    </AccordionContent>
+                </AccordionItem>
+            </Accordion>
         </div>
     </section>
 </template>
