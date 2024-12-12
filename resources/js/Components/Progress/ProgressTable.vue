@@ -17,14 +17,14 @@ const getLevelBackground = (kanji: Kanji & { estudios: Estudio[] }) => {
     }
 };
 
-const visibleLimit = ref(500);
+const visibleLimit = ref(300);
 const handleScroll = () => {
     const scrollTop = window.scrollY;
     const windowHeight = window.innerHeight;
     const documentHeight = document.documentElement.scrollHeight;
 
     if (scrollTop + windowHeight >= documentHeight) {
-        visibleLimit.value += 500;
+        visibleLimit.value += 300;
     }
 
     //Eliminar evento al cargar todos los kanjis
