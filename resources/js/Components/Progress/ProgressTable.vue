@@ -4,7 +4,7 @@ import { Link } from "@inertiajs/vue3";
 import { Estudio, Kanji } from "@/lib/types";
 import { kanjiLevels } from "@/lib/utils";
 
-defineProps<{ kanjis: (Kanji & { estudios: Estudio[] })[] }>();
+const props = defineProps<{ kanjis: (Kanji & { estudios: Estudio[] })[] }>();
 
 const getLevelBackground = (kanji: Kanji & { estudios: Estudio[] }) => {
     if (kanji.estudios.length) {
@@ -25,6 +25,11 @@ const handleScroll = () => {
 
     if (scrollTop + windowHeight >= documentHeight) {
         visibleLimit.value += 500;
+    }
+
+    //Eliminar evento al cargar todos los kanjis
+    if (visibleLimit.value > props.kanjis.length) {
+        window.removeEventListener("scroll", handleScroll);
     }
 };
 
