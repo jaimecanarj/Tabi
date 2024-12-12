@@ -23,7 +23,7 @@ class ProgresoController extends Controller
         //Obtenemos estudios basados en fechas
         if (Request::input("start") && Request::input("end")) {
             $start = Request::input("start");
-            $end = Request::input("end");
+            $end = Carbon::parse(Request::input("end"))->endOfDay();
             $kanjis->load([
                 "estudios" => function ($query) use ($userId, $start, $end) {
                     $query

@@ -26,9 +26,10 @@ props.kanjis.forEach((kanji) => {
 
 let studyWrong = computed(() => studyAttempts - studyCorrect);
 
-let studyPercentage = computed(() =>
-    Math.round((studyCorrect / studyAttempts) * 100),
-);
+let studyPercentage = computed(() => {
+    if (studyAttempts == 0) return 0;
+    return Math.round((studyCorrect / studyAttempts) * 100);
+});
 </script>
 
 <template>
