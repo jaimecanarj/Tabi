@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { onMounted, ref } from "vue";
 import { Link } from "@inertiajs/vue3";
 import { Estudio, Kanji } from "@/lib/types";
 import { kanjiLevels } from "@/lib/utils";
@@ -15,13 +16,32 @@ const getLevelBackground = (kanji: Kanji & { estudios: Estudio[] }) => {
         return "bg-gradient-levels-new";
     }
 };
+
+const visibleLimit = ref(500);
+const handleScroll = () => {
+    const scrollTop = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+
+    if (scrollTop + windowHeight >= documentHeight) {
+        visibleLimit.value += 500;
+    }
+};
+
+onMounted(() => {
+    window.addEventListener("scroll", handleScroll);
+});
 </script>
 
 <template>
     <div
         class="mt-10 grid grid-cols-[repeat(auto-fill,_minmax(48px,_1fr))] gap-1"
     >
-        <Link :href="`/kanjis/${kanji.id}`" v-for="kanji in kanjis">
+        <Link
+            :href="`/kanjis/${kanji.id}`"
+            v-for="kanji in kanjis.slice(0, visibleLimit)"
+            :key="kanji.id"
+        >
             <div
                 :class="[
                     getLevelBackground(kanji),
