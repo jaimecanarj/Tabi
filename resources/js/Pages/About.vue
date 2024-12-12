@@ -32,7 +32,7 @@ import { kanjiLevels } from "@/lib/utils";
                 </p>
             </div>
             <div
-                class="ml-8 w-[296px] rounded-md bg-primary p-5 shadow-lg sm:w-[400px] md:ml-0"
+                class="ml-8 w-[264px] rounded-md bg-primary p-5 shadow-lg sm:w-[400px] md:ml-0"
             >
                 <div class="flex justify-between">
                     <div class="ml-1 mt-4 flex flex-col">
@@ -48,7 +48,7 @@ import { kanjiLevels } from "@/lib/utils";
                         /assets/Viajero%20con%20pergamino.webp
                     "
                             alt="viajero"
-                            class="w-32 sm:w-40"
+                            class="w-28 sm:w-40"
                         />
                     </div>
                 </div>
@@ -64,7 +64,7 @@ import { kanjiLevels } from "@/lib/utils";
         <!--Historia de un kanji-->
         <div class="mt-8 flex flex-col justify-between gap-4 md:flex-row">
             <div
-                class="order-1 ml-8 flex min-w-80 gap-6 rounded-md bg-card p-5 md:order-none md:ml-0 md:flex-col lg:flex-row lg:gap-8"
+                class="order-1 ml-8 flex min-w-64 flex-col gap-6 rounded-md bg-card p-5 sm:flex-row md:order-none md:ml-0 md:flex-col lg:flex-row lg:gap-8"
             >
                 <div>
                     <img
@@ -134,7 +134,7 @@ import { kanjiLevels } from "@/lib/utils";
                     nivel de conocimiento con cada kanji.
                 </p>
             </div>
-            <div class="ml-8 w-[296px] sm:w-[400px] md:ml-0">
+            <div class="ml-8 w-[264px] sm:w-[400px] md:ml-0">
                 <div
                     class="h-48 rounded-t-md bg-gradient-primary-to-alt p-5 text-center text-9xl text-light"
                 >

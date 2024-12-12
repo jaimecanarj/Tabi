@@ -25,7 +25,7 @@ defineProps<{
             <slot name="significado" />
         </div>
         <template v-if="showData">
-            <div class="grid gap-10 lg:grid-cols-[1fr_auto_1fr]">
+            <div class="grid gap-3 lg:grid-cols-[1fr_auto_1fr] lg:gap-10">
                 <!-- Radicales -->
                 <div class="m-5">
                     <h3 class="pb-2 text-4xl font-semibold">Radicales</h3>

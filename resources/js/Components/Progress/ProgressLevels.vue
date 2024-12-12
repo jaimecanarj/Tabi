@@ -54,10 +54,10 @@ props.kanjis.forEach((kanji) => {
             :key="level.name"
             :class="[
                 level.bgColor,
-                'flex h-40 min-w-40 grow flex-col items-center justify-center',
+                'flex h-40 min-w-36 grow flex-col items-center justify-center',
             ]"
         >
-            <p class="text-5xl font-bold">{{ level.kanjis }}</p>
+            <p class="text-4xl font-bold sm:text-5xl">{{ level.kanjis }}</p>
             <p>{{ level.name }}</p>
         </div>
     </div>

@@ -13,6 +13,8 @@ const props = defineProps<{
 
 const mode = useColorMode({ disableTransition: false });
 
+const height = window.innerWidth < 640 ? 350 : "auto";
+
 watch(mode, (mode) => {
     chartOptions["theme"].mode = mode;
 });
@@ -145,6 +147,7 @@ const chartOptions = {
 <template>
     <div id="chart">
         <VueApexCharts
+            :height="height"
             :key="mode"
             :options="chartOptions"
             :series="series"

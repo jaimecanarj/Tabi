@@ -23,7 +23,6 @@ const series = [
 
 const chartOptions = {
     chart: {
-        height: 300,
         type: "area",
         background: "transparent",
         zoom: {
@@ -43,6 +42,7 @@ const chartOptions = {
     xaxis: {
         name: "Intento",
         categories: props.estudios.map((estudio) => estudio.intentos).reverse(),
+        tickAmount: 5,
         labels: {
             style: {
                 fontSize: "14px",
@@ -60,6 +60,7 @@ const chartOptions = {
             },
         },
     },
+    grid: { padding: { top: 0, right: 0, bottom: 0, left: 0 } },
     theme: {
         mode: mode.value,
     },
@@ -73,6 +74,7 @@ const chartOptions = {
 
 <template>
     <VueApexCharts
+        height="350"
         :key="mode"
         :options="chartOptions"
         :series="series"
