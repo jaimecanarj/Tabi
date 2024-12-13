@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref } from "vue";
+import { onMounted, onUnmounted, ref } from "vue";
 import { Link } from "@inertiajs/vue3";
 import { Estudio, Kanji } from "@/lib/types";
 import { kanjiLevels } from "@/lib/utils";
@@ -18,23 +18,33 @@ const getLevelBackground = (kanji: Kanji & { estudios: Estudio[] }) => {
 };
 
 const visibleLimit = ref(300);
-const handleScroll = () => {
-    const scrollTop = window.scrollY;
-    const windowHeight = window.innerHeight;
-    const documentHeight = document.documentElement.scrollHeight;
+const observerTarget = ref<HTMLElement | null>(null);
 
-    if (scrollTop + windowHeight >= documentHeight) {
-        visibleLimit.value += 300;
-    }
+let observer: IntersectionObserver;
 
-    //Eliminar evento al cargar todos los kanjis
-    if (visibleLimit.value > props.kanjis.length) {
-        window.removeEventListener("scroll", handleScroll);
-    }
-};
-
+// Observador con IntersectionObserver
 onMounted(() => {
-    window.addEventListener("scroll", handleScroll);
+    // Crear el observer una vez que el componente esté montado
+    observer = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+            visibleLimit.value += 300;
+
+            // Finalizamos el observador cuando se cargan todos los kanjis
+            if (visibleLimit.value >= props.kanjis.length && observer) {
+                observer.disconnect();
+            }
+        }
+    });
+
+    // Observar el target si está disponible
+    if (observerTarget.value) {
+        observer.observe(observerTarget.value);
+    }
+});
+
+// Desmontar el IntersectionObserver
+onUnmounted(() => {
+    if (observer) observer.disconnect();
 });
 </script>
 
@@ -57,4 +67,6 @@ onMounted(() => {
             </div>
         </Link>
     </div>
+
+    <div ref="observerTarget" class="h-1 bg-transparent"></div>
 </template>

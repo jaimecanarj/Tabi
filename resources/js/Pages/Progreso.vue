@@ -14,6 +14,11 @@ import DateRangePicker from "@/Components/ui/date-range-picker/DateRangePicker.v
 const props = defineProps<{
     kanjis: (Kanji & { estudios: Estudio[] })[];
     fechas: { inicio: string; fin: string };
+    details: {
+        kanjisStudiedNumber: number;
+        userStudySessions: number;
+        userCorrectAnswers: number;
+    };
 }>();
 
 let fechaInicio = props.fechas.inicio.split("-");
@@ -61,7 +66,7 @@ watch(dates, (newValue) => {
                 class="flex flex-col items-center lg:order-last lg:basis-2/5 lg:pl-6"
             >
                 <DateRangePicker v-model="dates" />
-                <ProgressDetails :kanjis="kanjis" />
+                <ProgressDetails :data="details" />
             </div>
             <ProgressChart class="lg:basis-3/5" :kanjis="kanjis" />
         </div>

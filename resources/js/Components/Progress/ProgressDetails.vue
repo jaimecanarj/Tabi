@@ -6,23 +6,18 @@ import {
     SquareX,
     SquarePercent,
 } from "lucide-vue-next";
-import { Estudio, Kanji } from "@/lib/types";
 
-const props = defineProps<{ kanjis: (Kanji & { estudios: Estudio[] })[] }>();
+const props = defineProps<{
+    data: {
+        kanjisStudiedNumber: number;
+        userStudySessions: number;
+        userCorrectAnswers: number;
+    };
+}>();
 
-let kanjisStudied = 0;
-let studyAttempts = 0;
-let studyCorrect = 0;
-
-props.kanjis.forEach((kanji) => {
-    if (kanji.estudios.length) {
-        //Si el kanji tiene estudios sumo 1
-        kanjisStudied++;
-        //Sumo datos del último estudio
-        studyAttempts += kanji.estudios[0].intentos;
-        studyCorrect += kanji.estudios[0].aciertos;
-    }
-});
+let kanjisStudied = props.data.kanjisStudiedNumber;
+let studyAttempts = props.data.userStudySessions;
+let studyCorrect = props.data.userCorrectAnswers;
 
 let studyWrong = computed(() => studyAttempts - studyCorrect);
 

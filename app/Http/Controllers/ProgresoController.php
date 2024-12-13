@@ -22,18 +22,20 @@ class ProgresoController extends Controller
 
         //Obtenemos estudios basados en fechas
         if (Request::input("start") && Request::input("end")) {
-            $start = Request::input("start");
-            $end = Carbon::parse(Request::input("end"))->endOfDay();
+            $startDate = Request::input("start");
+            $endDate = Carbon::parse(Request::input("end"))->endOfDay();
             $kanjis->load([
-                "estudios" => function ($query) use ($userId, $start, $end) {
+                "estudios" => function ($query) use (
+                    $userId,
+                    $startDate,
+                    $endDate
+                ) {
                     $query
-                        ->whereBetween("fecha", [$start, $end])
+                        ->whereBetween("fecha", [$startDate, $endDate])
                         ->where("user_id", "=", $userId)
                         ->orderBy("fecha", "desc");
                 },
             ]);
-            $startDate = Request::input("start");
-            $endDate = Request::input("end");
         }
         //Obtenemos todos si no tiene fechas
         else {
@@ -53,6 +55,28 @@ class ProgresoController extends Controller
                 ->first()?->fecha;
         }
 
+        //Calcular numero de kanjis estudiados
+        $kanjisStudiedNumber = Estudio::where("user_id", "=", $userId)
+            ->whereBetween("fecha", [$startDate, $endDate])
+            ->whereRaw(
+                "id IN ( SELECT MAX(id) FROM estudios
+                    WHERE user_id = $userId GROUP BY kanji_id )"
+            )
+            ->orderBy("fecha", "desc")
+            ->count();
+
+        //Calcular numero de estudios del usuario
+        $userStudySessions = Estudio::where("user_id", "=", $userId)
+            ->whereBetween("fecha", [$startDate, $endDate])
+            ->count();
+
+        //Calcular numero de aciertos
+        $userCorrectAnswers = Estudio::where("user_id", "=", $userId)
+            ->whereBetween("fecha", [$startDate, $endDate])
+            ->where("respuesta", "=", true)
+            ->count();
+
+        //Si el usuario no ha estudiado todavía
         if (is_null($startDate) && is_null($endDate)) {
             $startDate = Carbon::now();
             $endDate = Carbon::now();
@@ -63,6 +87,11 @@ class ProgresoController extends Controller
             "fechas" => [
                 "inicio" => $startDate,
                 "fin" => $endDate,
+            ],
+            "details" => [
+                "kanjisStudiedNumber" => $kanjisStudiedNumber,
+                "userStudySessions" => $userStudySessions,
+                "userCorrectAnswers" => $userCorrectAnswers,
             ],
         ]);
     }
