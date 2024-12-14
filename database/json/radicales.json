@@ -141,7 +141,7 @@
     },
     {
         "literal": "ｲ",
-        "significado": "persona",
+        "significado": "cabecilla",
         "trazos": 2
     },
     {
@@ -191,7 +191,7 @@
     },
     {
         "literal": "几",
-        "significado": "viento",
+        "significado": "mesa",
         "trazos": 2
     },
     {
@@ -271,7 +271,7 @@
     },
     {
         "literal": "夕",
-        "significado": "noche",
+        "significado": "tarde",
         "trazos": 3
     },
     {
@@ -336,7 +336,7 @@
     },
     {
         "literal": "弋",
-        "significado": "flecha",
+        "significado": "ceremonia",
         "trazos": 3
     },
     {
@@ -506,7 +506,7 @@
     },
     {
         "literal": "丬",
-        "significado": "tortuga",
+        "significado": "carámbano",
         "trazos": 3
     },
     {
@@ -536,7 +536,7 @@
     },
     {
         "literal": "文",
-        "significado": "letras",
+        "significado": "literatura",
         "trazos": 4
     },
     {
@@ -571,7 +571,7 @@
     },
     {
         "literal": "中",
-        "significado": "centro",
+        "significado": "en",
         "trazos": 4
     },
     {
@@ -606,7 +606,7 @@
     },
     {
         "literal": "ネ",
-        "significado": "spirit",
+        "significado": "espíritu",
         "trazos": 4
     },
     {
@@ -616,32 +616,32 @@
     },
     {
         "literal": "气",
-        "significado": "energy",
+        "significado": "energía",
         "trazos": 4
     },
     {
         "literal": "不",
-        "significado": "prefijo negativo: in-",
+        "significado": "negativo",
         "trazos": 4
     },
     {
         "literal": "巴",
-        "significado": "bed",
+        "significado": "cama",
         "trazos": 4
     },
     {
         "literal": "耂",
-        "significado": "coffin",
+        "significado": "ataúd",
         "trazos": 4
     },
     {
         "literal": "毋",
-        "significado": "window",
+        "significado": "ventana",
         "trazos": 4
     },
     {
         "literal": "斤",
-        "significado": "antigua medida de peso (1.32 libras)",
+        "significado": "hacha",
         "trazos": 4
     },
     {
@@ -651,17 +651,17 @@
     },
     {
         "literal": "斗",
-        "significado": "medida de capacidad",
+        "significado": "osa mayor",
         "trazos": 4
     },
     {
         "literal": "ホ",
-        "significado": "angel",
+        "significado": "ángel",
         "trazos": 4
     },
     {
         "literal": "灬",
-        "significado": "boil",
+        "significado": "cocinar",
         "trazos": 4
     },
     {
@@ -686,22 +686,22 @@
     },
     {
         "literal": "云",
-        "significado": "cloud",
+        "significado": "nube",
         "trazos": 4
     },
     {
         "literal": "殳",
-        "significado": "weapon",
+        "significado": "misíl",
         "trazos": 4
     },
     {
         "literal": "比",
-        "significado": "comparación",
+        "significado": "comparar",
         "trazos": 4
     },
     {
         "literal": "片",
-        "significado": "una parte de un total de dos",
+        "significado": "una mitad",
         "trazos": 4
     },
     {
@@ -711,17 +711,17 @@
     },
     {
         "literal": "开",
-        "significado": "lantern",
+        "significado": "linterna",
         "trazos": 4
     },
     {
         "literal": "勿",
-        "significado": "wing",
+        "significado": "ala",
         "trazos": 4
     },
     {
         "literal": "戈",
-        "significado": "drunkard",
+        "significado": "borracho",
         "trazos": 4
     },
     {
@@ -791,7 +791,7 @@
     },
     {
         "literal": "卬",
-        "significado": "cat-pirate",
+        "significado": "caro",
         "trazos": 4
     },
     {
@@ -806,12 +806,12 @@
     },
     {
         "literal": "冘",
-        "significado": "pirate",
+        "significado": "pirata",
         "trazos": 4
     },
     {
         "literal": "太",
-        "significado": "grande",
+        "significado": "gordo",
         "trazos": 4
     },
     {
@@ -821,12 +821,12 @@
     },
     {
         "literal": "⺤",
-        "significado": "cleat",
+        "significado": "clavos",
         "trazos": 4
     },
     {
         "literal": "龷",
-        "significado": "blackjack",
+        "significado": "valla",
         "trazos": 4
     },
     {
@@ -886,27 +886,27 @@
     },
     {
         "literal": "可",
-        "significado": "bueno",
+        "significado": "posible",
         "trazos": 5
     },
     {
         "literal": "冋",
-        "significado": "mustache",
+        "significado": "mostacho",
         "trazos": 5
     },
     {
         "literal": "乍",
-        "significado": "key",
+        "significado": "llave",
         "trazos": 5
     },
     {
         "literal": "未",
-        "significado": "aún no",
+        "significado": "todavía",
         "trazos": 5
     },
     {
         "literal": "禾",
-        "significado": "grain",
+        "significado": "grano",
         "trazos": 5
     },
     {
@@ -926,7 +926,7 @@
     },
     {
         "literal": "罒",
-        "significado": "net",
+        "significado": "red",
         "trazos": 5
     },
     {
@@ -936,7 +936,7 @@
     },
     {
         "literal": "癶",
-        "significado": "tent",
+        "significado": "tienda de campaña",
         "trazos": 5
     },
     {
@@ -946,7 +946,7 @@
     },
     {
         "literal": "圣",
-        "significado": "tombstone",
+        "significado": "lápida",
         "trazos": 5
     },
     {
@@ -956,7 +956,7 @@
     },
     {
         "literal": "疒",
-        "significado": "sick",
+        "significado": "enfermo",
         "trazos": 5
     },
     {
@@ -966,7 +966,7 @@
     },
     {
         "literal": "申",
-        "significado": "decir",
+        "significado": "humilde",
         "trazos": 5
     },
     {
@@ -1046,7 +1046,7 @@
     },
     {
         "literal": "弗",
-        "significado": "dollar",
+        "significado": "dolar",
         "trazos": 5
     },
     {
@@ -1061,7 +1061,7 @@
     },
     {
         "literal": "代",
-        "significado": "generación",
+        "significado": "sustituto",
         "trazos": 5
     },
     {
@@ -1121,7 +1121,7 @@
     },
     {
         "literal": "広",
-        "significado": "amplio",
+        "significado": "ámplio",
         "trazos": 5
     },
     {
@@ -1146,7 +1146,7 @@
     },
     {
         "literal": "疋",
-        "significado": "coat-rack",
+        "significado": "perchero",
         "trazos": 5
     },
     {
@@ -1156,27 +1156,27 @@
     },
     {
         "literal": "凹",
-        "significado": "hueco",
+        "significado": "cóncavo",
         "trazos": 5
     },
     {
         "literal": "业",
-        "significado": "spikes",
+        "significado": "pinchos",
         "trazos": 5
     },
     {
         "literal": "龸",
-        "significado": "viking",
+        "significado": "vikingo",
         "trazos": 5
     },
     {
         "literal": "㠯",
-        "significado": "bear",
+        "significado": "oso",
         "trazos": 5
     },
     {
         "literal": "𡗗",
-        "significado": "spring",
+        "significado": "primavera",
         "trazos": 5
     },
     {
@@ -1276,7 +1276,7 @@
     },
     {
         "literal": "艮",
-        "significado": "root",
+        "significado": "raíz",
         "trazos": 6
     },
     {
@@ -1296,7 +1296,7 @@
     },
     {
         "literal": "聿",
-        "significado": "brush",
+        "significado": "pincel",
         "trazos": 6
     },
     {
@@ -1306,7 +1306,7 @@
     },
     {
         "literal": "巩",
-        "significado": "saw",
+        "significado": "sierra",
         "trazos": 6
     },
     {
@@ -1316,7 +1316,7 @@
     },
     {
         "literal": "虍",
-        "significado": "tiger",
+        "significado": "tigre",
         "trazos": 6
     },
     {
@@ -1336,7 +1336,7 @@
     },
     {
         "literal": "共",
-        "significado": "ambos",
+        "significado": "juntos",
         "trazos": 6
     },
     {
@@ -1371,7 +1371,7 @@
     },
     {
         "literal": "而",
-        "significado": "rake",
+        "significado": "rastrillo",
         "trazos": 6
     },
     {
@@ -1386,7 +1386,7 @@
     },
     {
         "literal": "亥",
-        "significado": "slice",
+        "significado": "rebanada",
         "trazos": 6
     },
     {
@@ -1406,22 +1406,22 @@
     },
     {
         "literal": "瓜",
-        "significado": "melon",
+        "significado": "melón",
         "trazos": 6
     },
     {
         "literal": "耒",
-        "significado": "plow",
+        "significado": "arado",
         "trazos": 6
     },
     {
         "literal": "缶",
-        "significado": "lata de hojalata",
+        "significado": "lata",
         "trazos": 6
     },
     {
         "literal": "守",
-        "significado": "guardar proteger",
+        "significado": "proteger",
         "trazos": 6
     },
     {
@@ -1441,7 +1441,7 @@
     },
     {
         "literal": "舛",
-        "significado": "dance",
+        "significado": "bailar",
         "trazos": 6
     },
     {
@@ -1461,7 +1461,7 @@
     },
     {
         "literal": "龹",
-        "significado": "gladiator",
+        "significado": "gladiador",
         "trazos": 6
     },
     {
@@ -1486,7 +1486,7 @@
     },
     {
         "literal": "足",
-        "significado": "pierna",
+        "significado": "pie",
         "trazos": 7
     },
     {
@@ -1501,12 +1501,12 @@
     },
     {
         "literal": "里",
-        "significado": "ri (unidad de medida)",
+        "significado": "calculadora",
         "trazos": 7
     },
     {
         "literal": "釆",
-        "significado": "sickle",
+        "significado": "hoz",
         "trazos": 7
     },
     {
@@ -1526,7 +1526,7 @@
     },
     {
         "literal": "辰",
-        "significado": "landslide",
+        "significado": "desprendimiento",
         "trazos": 7
     },
     {
@@ -1536,7 +1536,7 @@
     },
     {
         "literal": "亜",
-        "significado": "pref. para indicar",
+        "significado": "Asia",
         "trazos": 7
     },
     {
@@ -1546,7 +1546,7 @@
     },
     {
         "literal": "豕",
-        "significado": "pig",
+        "significado": "cerdo",
         "trazos": 7
     },
     {
@@ -1566,7 +1566,7 @@
     },
     {
         "literal": "我",
-        "significado": "yo",
+        "significado": "ego",
         "trazos": 7
     },
     {
@@ -1581,7 +1581,7 @@
     },
     {
         "literal": "甫",
-        "significado": "wedding",
+        "significado": "boda",
         "trazos": 7
     },
     {
@@ -1611,17 +1611,17 @@
     },
     {
         "literal": "串",
-        "significado": "broqueta",
+        "significado": "brocheta",
         "trazos": 7
     },
     {
         "literal": "君",
-        "significado": "señor",
+        "significado": "compañero",
         "trazos": 7
     },
     {
         "literal": "夆",
-        "significado": "signpost",
+        "significado": "cartel",
         "trazos": 7
     },
     {
@@ -1636,7 +1636,7 @@
     },
     {
         "literal": "豸",
-        "significado": "badger",
+        "significado": "tejón",
         "trazos": 7
     },
     {
@@ -1646,17 +1646,17 @@
     },
     {
         "literal": "兑",
-        "significado": "guard",
+        "significado": "demonio",
         "trazos": 7
     },
     {
         "literal": "覀",
-        "significado": "helicopter",
+        "significado": "helicóptero",
         "trazos": 7
     },
     {
         "literal": "夋",
-        "significado": "spider",
+        "significado": "araña",
         "trazos": 7
     },
     {
@@ -1706,17 +1706,17 @@
     },
     {
         "literal": "咅",
-        "significado": "clown",
+        "significado": "payaso",
         "trazos": 8
     },
     {
         "literal": "者",
-        "significado": "persona",
+        "significado": "alguien",
         "trazos": 8
     },
     {
         "literal": "其",
-        "significado": "crab",
+        "significado": "cangrejo",
         "trazos": 8
     },
     {
@@ -1726,17 +1726,17 @@
     },
     {
         "literal": "非",
-        "significado": "negativo",
+        "significado": "criminal",
         "trazos": 8
     },
     {
         "literal": "門",
-        "significado": "puerta",
+        "significado": "portón",
         "trazos": 8
     },
     {
         "literal": "坴",
-        "significado": "womb",
+        "significado": "útero",
         "trazos": 8
     },
     {
@@ -1751,17 +1751,17 @@
     },
     {
         "literal": "隹",
-        "significado": "turkey",
+        "significado": "pavo",
         "trazos": 8
     },
     {
         "literal": "歩",
-        "significado": "camino",
+        "significado": "andar",
         "trazos": 8
     },
     {
         "literal": "苟",
-        "significado": "poem",
+        "significado": "poema",
         "trazos": 8
     },
     {
@@ -1771,7 +1771,7 @@
     },
     {
         "literal": "尭",
-        "significado": "gambler",
+        "significado": "apostar",
         "trazos": 8
     },
     {
@@ -1841,7 +1841,7 @@
     },
     {
         "literal": "夌",
-        "significado": "frostbite",
+        "significado": "congelado",
         "trazos": 8
     },
     {
@@ -1851,17 +1851,17 @@
     },
     {
         "literal": "㑒",
-        "significado": "squid",
+        "significado": "calamar",
         "trazos": 8
     },
     {
         "literal": "𠦝",
-        "significado": "morning",
+        "significado": "por la mañana",
         "trazos": 8
     },
     {
         "literal": "直",
-        "significado": "derecho",
+        "significado": "directamente",
         "trazos": 8
     },
     {
@@ -1881,7 +1881,7 @@
     },
     {
         "literal": "頁",
-        "significado": "geoduck",
+        "significado": "página",
         "trazos": 9
     },
     {
@@ -1911,7 +1911,7 @@
     },
     {
         "literal": "复",
-        "significado": "black-hole",
+        "significado": "agujero negro",
         "trazos": 9
     },
     {
@@ -1921,7 +1921,7 @@
     },
     {
         "literal": "爰",
-        "significado": "football",
+        "significado": "fútbol",
         "trazos": 9
     },
     {
@@ -1946,7 +1946,7 @@
     },
     {
         "literal": "扁",
-        "significado": "library",
+        "significado": "librería",
         "trazos": 9
     },
     {
@@ -1981,7 +1981,7 @@
     },
     {
         "literal": "屋",
-        "significado": "casa",
+        "significado": "habitación",
         "trazos": 9
     },
     {
@@ -1991,7 +1991,7 @@
     },
     {
         "literal": "禺",
-        "significado": "splinter",
+        "significado": "astilla",
         "trazos": 9
     },
     {
@@ -2006,7 +2006,7 @@
     },
     {
         "literal": "壴",
-        "significado": "drum",
+        "significado": "tambor",
         "trazos": 9
     },
     {
@@ -2026,7 +2026,7 @@
     },
     {
         "literal": "畐",
-        "significado": "scarecrow",
+        "significado": "espantapájaros",
         "trazos": 9
     },
     {
@@ -2041,7 +2041,7 @@
     },
     {
         "literal": "前",
-        "significado": "antes",
+        "significado": "enfrente",
         "trazos": 9
     },
     {
@@ -2071,17 +2071,17 @@
     },
     {
         "literal": "韋",
-        "significado": "korea",
+        "significado": "Corea",
         "trazos": 10
     },
     {
         "literal": "冓",
-        "significado": "lifeguard",
+        "significado": "socorrista",
         "trazos": 10
     },
     {
         "literal": "鬲",
-        "significado": "bully",
+        "significado": "matón",
         "trazos": 10
     },
     {
@@ -2096,7 +2096,7 @@
     },
     {
         "literal": "莫",
-        "significado": "greenhouse",
+        "significado": "invernadero",
         "trazos": 10
     },
     {
@@ -2131,7 +2131,7 @@
     },
     {
         "literal": "堇",
-        "significado": "boot",
+        "significado": "bota",
         "trazos": 10
     },
     {
@@ -2176,12 +2176,12 @@
     },
     {
         "literal": "曽",
-        "significado": "antes",
+        "significado": "máscara",
         "trazos": 11
     },
     {
         "literal": "啇",
-        "significado": "mohawk",
+        "significado": "cresta",
         "trazos": 11
     },
     {
@@ -2191,7 +2191,7 @@
     },
     {
         "literal": "离",
-        "significado": "rocket",
+        "significado": "cohete",
         "trazos": 11
     },
     {
@@ -2221,7 +2221,7 @@
     },
     {
         "literal": "道",
-        "significado": "camino",
+        "significado": "carretera",
         "trazos": 12
     },
     {
@@ -2231,7 +2231,7 @@
     },
     {
         "literal": "尞",
-        "significado": "charcoal",
+        "significado": "carbón",
         "trazos": 12
     },
     {
@@ -2241,7 +2241,7 @@
     },
     {
         "literal": "貴",
-        "significado": "precioso",
+        "significado": "valioso",
         "trazos": 12
     },
     {
@@ -2256,7 +2256,7 @@
     },
     {
         "literal": "敝",
-        "significado": "penguin",
+        "significado": "pingüino",
         "trazos": 12
     },
     {
@@ -2281,7 +2281,7 @@
     },
     {
         "literal": "辟",
-        "significado": "hot-pepper",
+        "significado": "chili",
         "trazos": 13
     },
     {
@@ -2301,17 +2301,17 @@
     },
     {
         "literal": "㐮",
-        "significado": "nurse",
+        "significado": "enfermera",
         "trazos": 13
     },
     {
         "literal": "𦰩",
-        "significado": "chinese",
+        "significado": "chino",
         "trazos": 13
     },
     {
         "literal": "喿",
-        "significado": "syrup",
+        "significado": "sirope",
         "trazos": 13
     },
     {
@@ -2326,7 +2326,7 @@
     },
     {
         "literal": "蔵",
-        "significado": "almacén",
+        "significado": "depósito",
         "trazos": 15
     },
     {
