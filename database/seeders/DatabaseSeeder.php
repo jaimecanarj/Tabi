@@ -32,8 +32,8 @@ class DatabaseSeeder extends Seeder
         //Generar datos de estudio para el usuario 1
         $studyNumber = 20;
         $fecha = 0;
-        foreach (range(1, 200) as $i) {
-            if ($i % 10 == 0) {
+        foreach (range(1, 600) as $i) {
+            if ($i % 30 == 0 && $i != 600) {
                 $studyNumber = $studyNumber - 1;
                 $fecha = $fecha + 4;
             }

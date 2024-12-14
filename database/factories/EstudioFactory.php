@@ -23,7 +23,7 @@ class EstudioFactory extends Factory
         $respuesta = $this->faker->numberBetween(1, 100) <= 85 ? 1 : 0;
 
         if ($respuesta) {
-            self::$tiempo += log(self::$intentos + 1) * 100;
+            self::$tiempo += log(self::$intentos + 1) * 86;
             self::$aciertos++;
         } else {
             self::$tiempo *= 0.8;
@@ -31,7 +31,7 @@ class EstudioFactory extends Factory
         self::$intentos++;
 
         self::$fecha += $this->faker->numberBetween(3, 6);
-        $fecha = Carbon::create(2024, 8)->addDays(self::$fecha);
+        $fecha = Carbon::create(2024, 9, 25)->addDays(self::$fecha);
 
         return [
             "user_id" => 1,
