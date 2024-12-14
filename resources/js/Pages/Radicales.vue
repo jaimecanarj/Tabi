@@ -98,6 +98,7 @@ const fetchResults = (filters: Filters) => {
             </HoverCardContent>
         </HoverCard>
         <Pagination
+            :key="response.current_page"
             :total="response.total"
             :current_page="response.current_page"
             :per_page="response.per_page"

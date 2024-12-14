@@ -59,8 +59,13 @@ class ProgresoController extends Controller
         $kanjisStudiedNumber = Estudio::where("user_id", "=", $userId)
             ->whereBetween("fecha", [$startDate, $endDate])
             ->whereRaw(
-                "id IN ( SELECT MAX(id) FROM estudios
-                    WHERE user_id = $userId GROUP BY kanji_id )"
+                "id IN (
+            SELECT MAX(id)
+            FROM estudios
+            WHERE user_id = ? AND fecha BETWEEN ? AND ?
+            GROUP BY kanji_id
+        )",
+                [$userId, $startDate, $endDate]
             )
             ->orderBy("fecha", "desc")
             ->count();

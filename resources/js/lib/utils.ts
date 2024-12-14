@@ -72,7 +72,7 @@ export const kanjiLevels: KanjiLevel[] = [
         name: "Experto",
         color: "levels-expert",
         bgColor: "bg-levels-expert",
-        threshold: 90,
+        threshold: 60,
     },
     {
         icon: Crown,

@@ -17,7 +17,7 @@ useColorMode();
     </header>
     <main>
         <div
-            class="container mt-32 flex flex-col items-center justify-center gap-12 lg:mt-56 lg:flex-row lg:gap-28"
+            class="container mt-24 flex flex-col items-center justify-center gap-12 pb-16 sm:mt-32 lg:mt-56 lg:flex-row lg:gap-28"
         >
             <div class="flex flex-col items-center">
                 <ApplicationLogo class="h-72 w-72" />

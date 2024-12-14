@@ -47,7 +47,12 @@ class RadicalController extends Controller
 
         return Inertia::render("Radicales", [
             "response" => $radicales,
-            "filters" => Request::only(["strokes"]),
+            "filters" => Request::only([
+                "search",
+                "strokes",
+                "sortCategory",
+                "sortOrder",
+            ]),
             "trazos" => $strokes,
         ]);
     }
