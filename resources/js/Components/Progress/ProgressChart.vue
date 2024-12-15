@@ -61,12 +61,12 @@ props.kanjis.forEach((kanji) => {
             const date = estudio.fecha.split(" ")[0];
 
             // Primera iteración
-            if (!currentLevel) {
-                updateSeriesData(updatesByDay.Aprendiz, date, 1);
-            }
+
             // Si cambia de nivel
-            else if (newLevel.name !== currentLevel) {
-                updateSeriesData(updatesByDay[currentLevel], date, -1);
+            if (newLevel.name !== currentLevel) {
+                if (currentLevel) {
+                    updateSeriesData(updatesByDay[currentLevel], date, -1);
+                }
                 updateSeriesData(updatesByDay[newLevel.name], date, 1);
             }
             //Añadir fecha a todas las series

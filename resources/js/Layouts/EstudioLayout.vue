@@ -46,7 +46,8 @@ defineProps<{
                                 {{ radical.literal }}
                             </Button>
                             <p
-                                class="text-center text-xl font-semibold first-letter:capitalize"
+                                class="hyphens-auto text-center text-xl font-semibold first-letter:capitalize"
+                                lang="es"
                             >
                                 {{ radical.significado }}
                             </p>
