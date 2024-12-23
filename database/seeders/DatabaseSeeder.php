@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             "password" => "probando",
             "indice" => "escolar",
             "estudio_diario" => 10,
+            "admin" => true,
         ]);
 
         $this->call([

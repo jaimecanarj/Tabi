@@ -1,7 +1,15 @@
 <script setup lang="ts">
 import { Link } from "@inertiajs/vue3";
 import { useBreakpoints, breakpointsTailwind } from "@vueuse/core";
-import { LogIn, LogOut, Settings, User, UserPlus, Info } from "lucide-vue-next";
+import {
+    LogIn,
+    LogOut,
+    Settings,
+    User,
+    UserPlus,
+    Info,
+    Shield,
+} from "lucide-vue-next";
 import NavigationMenu from "@/Components/Navbar/NavigationMenu.vue";
 import ToggleDarkMode from "@/Components/Navbar/ToggleDarkMode.vue";
 import SearchNav from "@/Components/Navbar/SearchNav.vue";
@@ -71,9 +79,14 @@ const showLogo = breakpoints.greaterOrEqual("md");
                         class="w-40"
                         v-if="$page.props.auth.user"
                     >
-                        <Link :href="`/usuario/${$page.props.auth.user.id}`">
+                        <Link :href="`/usuarios/${$page.props.auth.user.id}`">
                             <DropdownMenuItem class="cursor-pointer">
                                 <User class="mr-1 h-5 w-5" /> Mi cuenta
+                            </DropdownMenuItem>
+                        </Link>
+                        <Link href="/admin" v-if="$page.props.auth.user.admin">
+                            <DropdownMenuItem class="cursor-pointer">
+                                <Shield class="mr-1 h-5 w-5" /> Administrar
                             </DropdownMenuItem>
                         </Link>
                         <Link href="/opciones">

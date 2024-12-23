@@ -1,5 +1,8 @@
+import { Ref } from "vue";
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
+import moment from "moment/moment";
+import { Updater } from "@tanstack/vue-table";
 import {
     Clock1,
     Clock10,
@@ -21,10 +24,19 @@ import {
     Spade,
 } from "lucide-vue-next";
 import { KanjiLevel } from "@/lib/types";
-import moment from "moment/moment";
 
 export function cn(...inputs: ClassValue[]) {
     return twMerge(clsx(inputs));
+}
+
+export function valueUpdater<T extends Updater<any>>(
+    updaterOrValue: T,
+    ref: Ref,
+) {
+    ref.value =
+        typeof updaterOrValue === "function"
+            ? updaterOrValue(ref.value)
+            : updaterOrValue;
 }
 
 export const momentLocale = () => {

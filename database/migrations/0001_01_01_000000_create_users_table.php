@@ -18,6 +18,7 @@ return new class extends Migration {
             $table->enum("indice", ["escolar", "heisig", "wanikani"]);
             $table->tinyInteger("estudio_diario");
             $table->string("avatar")->nullable();
+            $table->boolean("admin")->default(false);
             $table->rememberToken();
             $table->timestamps();
         });

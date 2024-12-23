@@ -5,6 +5,7 @@ export interface User {
     indice: string;
     estudio_diario: number;
     avatar: string;
+    admin: boolean;
 }
 
 export type PageProps<
