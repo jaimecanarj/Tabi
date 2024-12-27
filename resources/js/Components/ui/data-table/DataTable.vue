@@ -68,7 +68,7 @@ const filterColumn = ref<string>("");
 switch (props.name) {
     case "kanjis":
     case "radicales": {
-        filterColumn.value = "significado";
+        filterColumn.value = "meaning";
         break;
     }
     case "usuarios": {

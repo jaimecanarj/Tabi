@@ -9,7 +9,7 @@ const page = usePage();
 const props = defineProps<{
     type: string;
     kanjisStudied: number;
-    studys?: number;
+    studies?: number;
 }>();
 
 const isStudy = props.type == "estudio";
@@ -18,10 +18,10 @@ let kanjisToStudy: number;
 
 if (isStudy) {
     //Calcular por estudiar hoy
-    kanjisToStudy = page.props.auth.user.estudio_diario - props.kanjisStudied;
+    kanjisToStudy = page.props.auth.user.daily_study - props.kanjisStudied;
     kanjisToStudy = kanjisToStudy < 0 ? 0 : kanjisToStudy;
 } else {
-    kanjisToStudy = props.studys!;
+    kanjisToStudy = props.studies!;
 }
 </script>
 

@@ -1,15 +1,15 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from "vue";
 import { Link } from "@inertiajs/vue3";
-import { Estudio, Kanji } from "@/lib/types";
+import { Study, Kanji } from "@/types";
 import { kanjiLevels } from "@/lib/utils";
 
-const props = defineProps<{ kanjis: (Kanji & { estudios: Estudio[] })[] }>();
+const props = defineProps<{ kanjis: (Kanji & { studies: Study[] })[] }>();
 
-const getLevelBackground = (kanji: Kanji & { estudios: Estudio[] }) => {
-    if (kanji.estudios.length) {
+const getLevelBackground = (kanji: Kanji & { studies: Study[] }) => {
+    if (kanji.studies.length) {
         let level = kanjiLevels.find(
-            (level) => kanji.estudios[0].tiempo / 24 < level.threshold,
+            (level) => kanji.studies[0].time / 24 < level.threshold,
         )!;
         return `bg-gradient-${level.color}`;
     } else {

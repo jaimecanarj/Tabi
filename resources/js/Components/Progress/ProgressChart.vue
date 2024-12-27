@@ -4,11 +4,11 @@ import VueApexCharts from "vue3-apexcharts";
 import { useColorMode } from "@vueuse/core";
 import moment from "moment/moment";
 import "moment/locale/es";
-import { Estudio, Kanji } from "@/lib/types";
+import { Study, Kanji } from "@/types";
 import { kanjiLevels } from "@/lib/utils";
 
 const props = defineProps<{
-    kanjis: (Kanji & { estudios: Estudio[] })[];
+    kanjis: (Kanji & { studies: Study[] })[];
 }>();
 
 const mode = useColorMode({ disableTransition: false });
@@ -49,16 +49,16 @@ const updateSeriesData = (
 
 //Obtengo las actualizaciones por día de cada nivel
 props.kanjis.forEach((kanji) => {
-    if (kanji.estudios.length) {
+    if (kanji.studies.length) {
         let currentLevel = "";
 
-        for (const estudio of [...kanji.estudios].reverse()) {
+        for (const study of [...kanji.studies].reverse()) {
             // Obtener nivel del estudio
             let newLevel = kanjiLevels.find((levelData) => {
-                return estudio.tiempo / 24 < levelData.threshold;
+                return study.time / 24 < levelData.threshold;
             })!;
             //Fecha del estudio
-            const date = estudio.fecha.split(" ")[0];
+            const date = study.date.split(" ")[0];
 
             // Primera iteración
 

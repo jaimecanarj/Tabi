@@ -19,68 +19,65 @@ import {
 const page = usePage();
 const { toast } = useToast();
 
-const props = defineProps<{ kanji_id: number }>();
+const props = defineProps<{ kanjiId: number }>();
 const emit = defineEmits(["close"]);
 
 const form = useForm({
     id: null,
-    historia: "",
+    story: "",
     user_id: page.props.auth.user?.id,
-    kanji_id: props.kanji_id,
+    kanji_id: props.kanjiId,
 });
 
-const fetchHistoria = async () => {
-    let historia = await axios.get(
-        `/historia/${page.props.auth.user.id}/${props.kanji_id}`,
+const fetchStory = async () => {
+    let story = await axios.get(
+        `/story/${page.props.auth.user.id}/${props.kanjiId}`,
     );
 
-    if (historia.data) {
-        form.id = historia.data.id;
-        form.historia = historia.data.historia;
+    if (story.data) {
+        form.id = story.data.id;
+        form.story = story.data.story;
     }
 };
 
 const submit = () => {
-    form.post("/historia", {
+    form.post("/story", {
         onSuccess: () => {
             toast({
                 title: form.id ? "Historia actualizada" : "Historia creada",
             });
             emit("close");
-            fetchHistoria();
+            fetchStory();
         },
     });
 };
 
 const deleteStory = () => {
-    form.delete("/historia", {
+    form.delete("/story", {
         onSuccess: () => {
             toast({
                 title: "Historia borrada",
             });
             form.id = null;
-            form.historia = "";
+            form.story = "";
             emit("close");
         },
     });
 };
 
 onMounted(() => {
-    fetchHistoria();
+    fetchStory();
 });
 </script>
 
 <template>
     <!-- Formulario -->
     <form id="submitStory" @submit.prevent="submit">
-        <Textarea
-            v-model="form.historia"
-            class="min-h-32 border-border bg-card"
-        />
+        <Textarea v-model="form.story" class="min-h-32 border-border bg-card" />
     </form>
     <!-- Error -->
-    <p class="mt-2 text-sm text-red-600" v-show="form.errors.historia">
-        {{ form.errors.historia }}
+    <p class="mt-2 text-sm text-red-600" v-show="form.errors.story">
+        {{ form.errors.story }}
     </p>
     <!-- Botones -->
     <div class="mt-3 flex items-center justify-end gap-2">

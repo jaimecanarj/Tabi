@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
-use App\Models\Estudio;
+use App\Models\Study;
 use App\Models\User;
-use Database\Factories\EstudioFactory;
+use Database\Factories\StudyFactory;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -18,8 +18,8 @@ class DatabaseSeeder extends Seeder
             "email" => "prueba@mail.com",
             "name" => "prueba",
             "password" => "probando",
-            "indice" => "escolar",
-            "estudio_diario" => 10,
+            "index" => "heisig",
+            "daily_study" => 10,
             "admin" => true,
         ]);
 
@@ -32,14 +32,14 @@ class DatabaseSeeder extends Seeder
 
         //Generar datos de estudio para el usuario 1
         $studyNumber = 20;
-        $fecha = 0;
+        $date = 0;
         foreach (range(1, 600) as $i) {
             if ($i % 30 == 0 && $i != 600) {
                 $studyNumber = $studyNumber - 1;
-                $fecha = $fecha + 4;
+                $date = $date + 4;
             }
-            EstudioFactory::reset($fecha);
-            Estudio::factory($studyNumber)->create([
+            StudyFactory::reset($date);
+            Study::factory($studyNumber)->create([
                 "kanji_id" => $i,
             ]);
         }

@@ -20,8 +20,8 @@ class User extends Authenticatable
         "name",
         "email",
         "password",
-        "indice",
-        "estudio_diario",
+        "index",
+        "daily_study",
         "avatar",
     ];
 

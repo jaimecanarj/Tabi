@@ -2,7 +2,6 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration {
     /**
@@ -15,8 +14,8 @@ return new class extends Migration {
             $table->string("name");
             $table->string("email")->unique();
             $table->string("password");
-            $table->enum("indice", ["escolar", "heisig", "wanikani"]);
-            $table->tinyInteger("estudio_diario");
+            $table->enum("index", ["heisig", "wanikani"]);
+            $table->tinyInteger("daily_study");
             $table->string("avatar")->nullable();
             $table->boolean("admin")->default(false);
             $table->rememberToken();

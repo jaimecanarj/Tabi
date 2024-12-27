@@ -4,6 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Significado extends Model
+class Reading extends Model
 {
 }

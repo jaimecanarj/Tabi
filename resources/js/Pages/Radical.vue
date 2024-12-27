@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Head, Link } from "@inertiajs/vue3";
-import { Kanji, Radical } from "@/lib/types";
+import { Kanji, Radical } from "@/types";
 import MainLayout from "@/Layouts/MainLayout.vue";
 import ItemDetailsCard from "@/Components/ItemDetailsCard.vue";
 import { Button } from "@/Components/ui/button";
@@ -24,13 +24,13 @@ defineProps<{
     <main class="container mt-6">
         <ItemDetailsCard
             :literal="radical.literal"
-            tipo="radicales"
-            :titulo="radical.significado"
+            type="radicales"
+            :title="radical.meaning"
         >
             <!-- Trazos -->
             <div class="mb-3">
                 <h3 class="mr-1 inline text-lg">Trazos:</h3>
-                <span class="text-lg font-semibold">{{ radical.trazos }}</span>
+                <span class="text-lg font-semibold">{{ radical.strokes }}</span>
             </div>
             <!-- Kanjis donde aparece -->
             <div class="mb-3">
@@ -59,7 +59,7 @@ defineProps<{
                                 </HoverCardTrigger>
                                 <HoverCardContent class="w-fit max-w-48">
                                     <p class="capitalize">
-                                        {{ kanji.significado }}
+                                        {{ kanji.meaning }}
                                     </p>
                                 </HoverCardContent>
                             </HoverCard>

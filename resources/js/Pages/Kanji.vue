@@ -2,7 +2,7 @@
 import { ref } from "vue";
 import { Head, usePage } from "@inertiajs/vue3";
 import { ScrollText } from "lucide-vue-next";
-import { Kanji, Lectura, Significado, Radical, Estudio } from "@/lib/types";
+import { Kanji, Reading, Meaning, Radical, Study } from "@/types";
 import MainLayout from "@/Layouts/MainLayout.vue";
 import ItemDetailsCard from "@/Components/ItemDetailsCard.vue";
 import KanjiDetails from "@/Components/Kanjis/KanjiDetails.vue";
@@ -21,11 +21,11 @@ import {
 const page = usePage();
 
 const props = defineProps<{
-    kanji: Kanji & { estudios: Estudio[] };
-    lecturas: Lectura[];
-    significados: Significado[];
-    radicales: Radical[];
-    similares: Kanji[];
+    kanji: Kanji & { studies: Study[] };
+    readings: Reading[];
+    meanings: Meaning[];
+    radicals: Radical[];
+    similarKanjis: Kanji[];
 }>();
 
 let isOpen = ref(false);
@@ -42,8 +42,8 @@ const toggleDialog = () => {
         <!-- Tarjeta -->
         <ItemDetailsCard
             :literal="kanji.literal"
-            tipo="kanjis"
-            :titulo="kanji.significado"
+            type="kanjis"
+            :title="kanji.meaning"
         >
             <!-- Botón de historia -->
             <template #boton>
@@ -65,7 +65,7 @@ const toggleDialog = () => {
                                 Añade una historia a este kanji.
                             </DialogDescription>
                         </DialogHeader>
-                        <StoryForm :kanji_id="kanji.id" @close="toggleDialog" />
+                        <StoryForm :kanjiId="kanji.id" @close="toggleDialog" />
                     </DialogContent>
                 </Dialog>
             </template>
@@ -73,9 +73,6 @@ const toggleDialog = () => {
             <KanjiDetails v-bind="props" />
         </ItemDetailsCard>
         <!-- Progreso del usuario -->
-        <KanjiProgress
-            v-if="page.props.auth.user"
-            :estudios="kanji.estudios!"
-        />
+        <KanjiProgress v-if="page.props.auth.user" :studies="kanji.studies!" />
     </main>
 </template>

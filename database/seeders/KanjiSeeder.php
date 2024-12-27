@@ -3,8 +3,8 @@
 namespace Database\Seeders;
 
 use App\Models\Kanji;
-use App\Models\Lectura;
-use App\Models\Significado;
+use App\Models\Reading;
+use App\Models\Meaning;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\File;
 
@@ -22,31 +22,30 @@ class KanjiSeeder extends Seeder
                 //Añadir kanjis
                 $newKanji = Kanji::create([
                     "literal" => $kanji["literal"],
-                    "grado" => $kanji["grado"],
-                    "trazos" => $kanji["trazos"],
-                    "significado" => $kanji["significados"][0],
-                    "frecuencia" => $kanji["frecuencia"] ?? null,
-                    "indice_escolar" => $kanji["indiceEscolar"],
-                    "indice_heisig" => $kanji["indiceHeisig"],
-                    "indice_wanikani" => $kanji["indiceWaniKani"],
+                    "grade" => $kanji["grade"],
+                    "strokes" => $kanji["strokes"],
+                    "meaning" => $kanji["meanings"][0],
+                    "frequency" => $kanji["frequency"] ?? null,
+                    "heisig_index" => $kanji["HeisigIndex"],
+                    "wanikani_index" => $kanji["WaniKaniIndex"],
                 ]);
 
                 //Añadir lecturas
-                foreach ($kanji["lecturas"] as $lectura) {
-                    Lectura::insert([
+                foreach ($kanji["readings"] as $reading) {
+                    Reading::insert([
                         "kanji_id" => $newKanji->id,
-                        "lectura" => $lectura["texto"],
-                        "tipo" => $lectura["tipo"],
+                        "reading" => $reading["reading"],
+                        "type" => $reading["type"],
                     ]);
                 }
 
                 //Añadir significados
-                $significados = array_slice($kanji["significados"], 1);
-                if ($significados) {
-                    foreach ($significados as $significado) {
-                        Significado::insert([
+                $meanings = array_slice($kanji["meanings"], 1);
+                if ($meanings) {
+                    foreach ($meanings as $meaning) {
+                        Meaning::insert([
                             "kanji_id" => $newKanji->id,
-                            "significado" => $significado,
+                            "meaning" => $meaning,
                         ]);
                     }
                 }

@@ -4,12 +4,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\IsAdmin;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\EstudioController;
-use App\Http\Controllers\HistoriaController;
-use App\Http\Controllers\KanjiController;
-use App\Http\Controllers\ProgresoController;
-use App\Http\Controllers\RadicalController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\KanjiController;
+use App\Http\Controllers\ProgressController;
+use App\Http\Controllers\RadicalController;
+use App\Http\Controllers\StoryController;
+use App\Http\Controllers\StudyController;
 
 // Rutas básicas
 Route::inertia("/", "Welcome");
@@ -21,26 +21,22 @@ Route::get("/usuarios/{id}", [RegisteredUserController::class, "show"]);
 // Kanjis
 Route::get("/kanjis", [KanjiController::class, "index"]);
 Route::get("/kanjis/{id}", [KanjiController::class, "show"])->name("kanji");
-Route::get("/search/{literal}", [KanjiController::class, "search"]);
 
 // Radicales
 Route::get("/radicales", [RadicalController::class, "index"]);
 Route::get("/radicales/{id}", [RadicalController::class, "show"]);
 
 // Historias
-Route::get("/historia/{user_id}/{kanji_id}", [
-    HistoriaController::class,
-    "show",
-]);
-Route::post("/historia", [HistoriaController::class, "store"]);
-Route::delete("/historia", [HistoriaController::class, "destroy"]);
+Route::get("/story/{user_id}/{kanji_id}", [StoryController::class, "show"]);
+Route::post("/story", [StoryController::class, "store"]);
+Route::delete("/story", [StoryController::class, "destroy"]);
 
 // Estudios
 Route::middleware("auth")->group(function () {
-    Route::get("/estudiar", [EstudioController::class, "show"]);
-    Route::get("/repasar", [EstudioController::class, "review"]);
-    Route::post("/repasar", [EstudioController::class, "store"]);
-    Route::get("/progreso", [ProgresoController::class, "index"]);
+    Route::get("/estudiar", [StudyController::class, "show"]);
+    Route::get("/repasar", [StudyController::class, "review"]);
+    Route::post("/review", [StudyController::class, "store"]);
+    Route::get("/progreso", [ProgressController::class, "index"]);
 });
 
 // Admin

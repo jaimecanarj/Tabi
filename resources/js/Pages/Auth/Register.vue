@@ -25,8 +25,8 @@ const form = useForm({
     password: "",
     password_confirmation: "",
     avatar: "",
-    index: "escolar",
-    estudio_diario: 10,
+    index: "heisig_index",
+    daily_study: 10,
 });
 
 const submit = () => {
@@ -141,9 +141,12 @@ const submit = () => {
                             <SelectValue placeholder="Selecciona un índice" />
                         </SelectTrigger>
                         <SelectContent>
-                            <SelectItem value="escolar"> Escolar </SelectItem>
-                            <SelectItem value="heisig"> Heisig </SelectItem>
-                            <SelectItem value="wanikani"> WaniKani </SelectItem>
+                            <SelectItem value="heisig_index">
+                                Heisig
+                            </SelectItem>
+                            <SelectItem value="wanikani_index">
+                                WaniKani
+                            </SelectItem>
                         </SelectContent>
                     </Select>
                 </div>
@@ -153,7 +156,7 @@ const submit = () => {
                         <span class="text-red-600">*</span></Label
                     >
                     <NumberField
-                        v-model="form.estudio_diario"
+                        v-model="form.daily_study"
                         required
                         :min="10"
                         :max="50"
@@ -173,9 +176,9 @@ const submit = () => {
                 </p>
                 <p
                     class="mt-2 text-sm text-red-600"
-                    v-show="form.errors.estudio_diario"
+                    v-show="form.errors.daily_study"
                 >
-                    {{ form.errors.estudio_diario }}
+                    {{ form.errors.daily_study }}
                 </p>
             </div>
 

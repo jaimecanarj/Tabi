@@ -4,7 +4,7 @@ import { Link } from "@inertiajs/vue3";
 import { VisuallyHidden } from "radix-vue";
 import axios from "axios";
 import { Pencil, Search } from "lucide-vue-next";
-import { Kanji, Radical } from "@/lib/types";
+import { Kanji, Radical } from "@/types";
 import { Button } from "@/Components/ui/button";
 import { Input } from "@/Components/ui/input";
 import { Badge } from "@/Components/ui/badge";
@@ -19,9 +19,9 @@ import {
 
 const query = ref("");
 const fetched = ref(false);
-const results = ref<{ kanjis: Kanji[]; radicales: Radical[] }>({
+const results = ref<{ kanjis: Kanji[]; radicals: Radical[] }>({
     kanjis: [],
-    radicales: [],
+    radicals: [],
 });
 
 const submit = () => {
@@ -59,7 +59,7 @@ const submit = () => {
                 />
             </form>
             <div
-                v-if="results.kanjis.length || results.radicales.length"
+                v-if="results.kanjis.length || results.radicals.length"
                 class="-mt-[20px] flex flex-col rounded-b-sm bg-background"
             >
                 <div v-if="results.kanjis.length" class="mt-2">
@@ -77,19 +77,19 @@ const submit = () => {
                                     {{ kanji.literal }}
                                 </h3>
                                 <p class="capitalize">
-                                    {{ kanji.significado }}
+                                    {{ kanji.meaning }}
                                 </p>
                             </div>
                             <div>
                                 <Badge variant="secondary">
                                     <Pencil class="inline" />
-                                    {{ kanji.trazos }}
+                                    {{ kanji.strokes }}
                                 </Badge>
                             </div>
                         </Link>
                     </ScrollArea>
                 </div>
-                <div v-if="results.radicales.length">
+                <div v-if="results.radicals.length">
                     <div class="mt-2 bg-card px-4 py-2">
                         <h2 class="font-semibold">Radicales</h2>
                     </div>
@@ -100,7 +100,7 @@ const submit = () => {
                     >
                         <Link
                             :href="`/radicales/${radical.id}`"
-                            v-for="radical of results.radicales"
+                            v-for="radical of results.radicals"
                             class="flex items-center justify-between px-4 py-2 hover:bg-accent"
                         >
                             <div class="flex items-end gap-2">
@@ -108,13 +108,13 @@ const submit = () => {
                                     {{ radical.literal }}
                                 </h3>
                                 <p class="capitalize">
-                                    {{ radical.significado }}
+                                    {{ radical.meaning }}
                                 </p>
                             </div>
                             <div>
                                 <Badge variant="secondary">
                                     <Pencil class="inline" />
-                                    {{ radical.trazos }}
+                                    {{ radical.strokes }}
                                 </Badge>
                             </div>
                         </Link>

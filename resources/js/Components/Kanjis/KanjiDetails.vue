@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Link } from "@inertiajs/vue3";
-import { Kanji, Lectura, Radical, Significado } from "@/lib/types";
+import { Kanji, Reading, Radical, Meaning } from "@/types";
 import { Badge } from "@/Components/ui/badge";
 import { Button } from "@/Components/ui/button";
 import {
@@ -11,17 +11,17 @@ import {
 
 const props = defineProps<{
     kanji: Kanji;
-    lecturas: Lectura[];
-    significados: Significado[];
-    radicales: Radical[];
-    similares: Kanji[];
+    readings: Reading[];
+    meanings: Meaning[];
+    radicals: Radical[];
+    similarKanjis: Kanji[];
 }>();
 
-const lecturasOnyomi = props.lecturas.filter(
-    (lectura) => lectura.tipo == "onyomi",
+const onyomiReadings = props.readings.filter(
+    (reading) => reading.type == "onyomi",
 );
-const lecturasKunyomi = props.lecturas.filter(
-    (lectura) => lectura.tipo == "kunyomi",
+const kunyomiReadings = props.readings.filter(
+    (reading) => reading.type == "kunyomi",
 );
 </script>
 
@@ -30,15 +30,15 @@ const lecturasKunyomi = props.lecturas.filter(
     <div class="mb-3 flex flex-col sm:flex-row sm:space-x-3">
         <div>
             <h3 class="mr-1 inline text-lg">Trazos:</h3>
-            <span class="text-lg font-semibold">{{ kanji.trazos }}</span>
+            <span class="text-lg font-semibold">{{ kanji.strokes }}</span>
         </div>
         <div>
             <h3 class="mr-1 inline text-lg">Grado:</h3>
-            <span class="text-lg font-semibold">{{ kanji.grado }}</span>
+            <span class="text-lg font-semibold">{{ kanji.grade }}</span>
         </div>
-        <div v-if="kanji.frecuencia">
+        <div v-if="kanji.frequency">
             <h3 class="mr-1 inline text-lg">Frecuencia:</h3>
-            <span class="text-lg font-semibold">{{ kanji.frecuencia }}</span
+            <span class="text-lg font-semibold">{{ kanji.frequency }}</span
             ><span> de 2500</span>
         </div>
     </div>
@@ -51,39 +51,39 @@ const lecturasKunyomi = props.lecturas.filter(
                 <Badge
                     variant="secondary"
                     class="m-1 text-base"
-                    v-for="lectura of lecturasOnyomi"
+                    v-for="reading of onyomiReadings"
                 >
-                    {{ lectura.lectura }}
+                    {{ reading.reading }}
                 </Badge>
             </div>
-            <div v-if="lecturasKunyomi.length">
+            <div v-if="kunyomiReadings.length">
                 <h4 class="mr-2 inline tracking-tight">Kunyomi:</h4>
                 <Badge
                     variant="secondary"
                     class="m-1 text-base"
-                    v-for="lectura of lecturasKunyomi"
+                    v-for="reading of kunyomiReadings"
                 >
-                    {{ lectura.lectura }}
+                    {{ reading.reading }}
                 </Badge>
             </div>
         </div>
     </div>
     <!-- Significados -->
-    <div class="mb-3" v-if="significados.length">
+    <div class="mb-3" v-if="meanings.length">
         <h3 class="text-lg font-semibold tracking-tight">Significados</h3>
         <Badge
             variant="secondary"
             class="m-1 text-base first-letter:capitalize"
-            v-for="significado of significados"
+            v-for="meaning of meanings"
         >
-            {{ significado.significado }}
+            {{ meaning.meaning }}
         </Badge>
     </div>
     <div class="flex flex-col lg:flex-row lg:space-x-20">
         <!-- Radicales -->
         <div class="lg:max-w-[50%]">
             <h3 class="text-lg font-semibold tracking-tight">Radicales</h3>
-            <template v-for="radical of radicales">
+            <template v-for="radical of radicals">
                 <Link :href="`/radicales/${radical.id}`">
                     <HoverCard>
                         <HoverCardTrigger asChild>
@@ -99,7 +99,7 @@ const lecturasKunyomi = props.lecturas.filter(
                         </HoverCardTrigger>
                         <HoverCardContent class="w-fit max-w-48">
                             <p class="capitalize">
-                                {{ radical.significado }}
+                                {{ radical.meaning }}
                             </p>
                         </HoverCardContent>
                     </HoverCard>
@@ -107,12 +107,12 @@ const lecturasKunyomi = props.lecturas.filter(
             </template>
         </div>
         <!-- Kanjis similares -->
-        <div v-if="similares.length" class="lg:max-w-[50%]">
+        <div v-if="similarKanjis.length" class="lg:max-w-[50%]">
             <h3 class="text-lg font-semibold tracking-tight">
                 Kanjis similares
             </h3>
-            <template v-for="similar of similares">
-                <Link :href="`/kanjis/${similar.id}`">
+            <template v-for="similarKanji of similarKanjis">
+                <Link :href="`/kanjis/${similarKanji.id}`">
                     <HoverCard>
                         <HoverCardTrigger asChild>
                             <Button
@@ -120,12 +120,12 @@ const lecturasKunyomi = props.lecturas.filter(
                                 size="gradient"
                                 class="m-1"
                             >
-                                {{ similar.literal }}
+                                {{ similarKanji.literal }}
                             </Button>
                         </HoverCardTrigger>
                         <HoverCardContent class="w-fit max-w-48">
                             <p class="capitalize">
-                                {{ similar.significado }}
+                                {{ similarKanji.meaning }}
                             </p>
                         </HoverCardContent>
                     </HoverCard>

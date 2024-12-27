@@ -23,7 +23,7 @@ import {
     Heart,
     Spade,
 } from "lucide-vue-next";
-import { KanjiLevel } from "@/lib/types";
+import { KanjiLevel } from "@/types";
 
 export function cn(...inputs: ClassValue[]) {
     return twMerge(clsx(inputs));

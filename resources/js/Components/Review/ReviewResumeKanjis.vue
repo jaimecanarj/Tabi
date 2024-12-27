@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Link } from "@inertiajs/vue3";
 import { CalendarClock, ChevronsRight } from "lucide-vue-next";
-import { Kanji, KanjiLevel } from "@/lib/types";
+import { Kanji, KanjiLevel } from "@/types";
 
 defineProps<{
     kanjis: (Kanji & {
@@ -38,7 +38,7 @@ defineProps<{
                 class="flex h-full w-full flex-col justify-between gap-2 px-5 py-2"
             >
                 <h3 class="text-3xl font-semibold first-letter:capitalize">
-                    {{ kanji.significado }}
+                    {{ kanji.meaning }}
                 </h3>
                 <div class="flex flex-col gap-2">
                     <div class="flex">

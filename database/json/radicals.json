@@ -1,0 +1,2352 @@
+[
+    {
+        "literal": "一",
+        "meaning": "suelo",
+        "strokes": 1
+    },
+    {
+        "literal": "丶",
+        "meaning": "gota",
+        "strokes": 1
+    },
+    {
+        "literal": "丿",
+        "meaning": "rampa",
+        "strokes": 1
+    },
+    {
+        "literal": "亅",
+        "meaning": "clavo",
+        "strokes": 1
+    },
+    {
+        "literal": "L",
+        "meaning": "ele",
+        "strokes": 1
+    },
+    {
+        "literal": "乚",
+        "meaning": "paraguas",
+        "strokes": 1
+    },
+    {
+        "literal": "乙",
+        "meaning": "anzuelo",
+        "strokes": 1
+    },
+    {
+        "literal": "丨",
+        "meaning": "bastón",
+        "strokes": 1
+    },
+    {
+        "literal": "𠃌",
+        "meaning": "capa",
+        "strokes": 1
+    },
+    {
+        "literal": "ハ",
+        "meaning": "patas",
+        "strokes": 2
+    },
+    {
+        "literal": "七",
+        "meaning": "cortar en dados",
+        "strokes": 2
+    },
+    {
+        "literal": "二",
+        "meaning": "paralelo",
+        "strokes": 2
+    },
+    {
+        "literal": "亠",
+        "meaning": "chistera",
+        "strokes": 2
+    },
+    {
+        "literal": "人",
+        "meaning": "persona",
+        "strokes": 2
+    },
+    {
+        "literal": "ト",
+        "meaning": "adivino",
+        "strokes": 2
+    },
+    {
+        "literal": "九",
+        "meaning": "béisbol",
+        "strokes": 2
+    },
+    {
+        "literal": "入",
+        "meaning": "entrar",
+        "strokes": 2
+    },
+    {
+        "literal": "力",
+        "meaning": "potencia",
+        "strokes": 2
+    },
+    {
+        "literal": "勹",
+        "meaning": "empaquetado",
+        "strokes": 2
+    },
+    {
+        "literal": "十",
+        "meaning": "aguja",
+        "strokes": 2
+    },
+    {
+        "literal": "刀",
+        "meaning": "espada",
+        "strokes": 2
+    },
+    {
+        "literal": "ナ",
+        "meaning": "narval",
+        "strokes": 2
+    },
+    {
+        "literal": "丁",
+        "meaning": "calle",
+        "strokes": 2
+    },
+    {
+        "literal": "儿",
+        "meaning": "piernas",
+        "strokes": 2
+    },
+    {
+        "literal": "冂",
+        "meaning": "capucha",
+        "strokes": 2
+    },
+    {
+        "literal": "又",
+        "meaning": "entrepierna",
+        "strokes": 2
+    },
+    {
+        "literal": "メ",
+        "meaning": "tesoro",
+        "strokes": 2
+    },
+    {
+        "literal": "匕",
+        "meaning": "cuchara",
+        "strokes": 2
+    },
+    {
+        "literal": "ｲ",
+        "meaning": "cabecilla",
+        "strokes": 2
+    },
+    {
+        "literal": "冖",
+        "meaning": "corona",
+        "strokes": 2
+    },
+    {
+        "literal": "厂",
+        "meaning": "precipicio",
+        "strokes": 2
+    },
+    {
+        "literal": "冫",
+        "meaning": "hielo",
+        "strokes": 2
+    },
+    {
+        "literal": "凵",
+        "meaning": "pala",
+        "strokes": 2
+    },
+    {
+        "literal": "刂",
+        "meaning": "cuchillo",
+        "strokes": 2
+    },
+    {
+        "literal": "ム",
+        "meaning": "codo",
+        "strokes": 2
+    },
+    {
+        "literal": "マ",
+        "meaning": "mamá",
+        "strokes": 2
+    },
+    {
+        "literal": "卩",
+        "meaning": "sello",
+        "strokes": 2
+    },
+    {
+        "literal": "ユ",
+        "meaning": "gancho",
+        "strokes": 2
+    },
+    {
+        "literal": "几",
+        "meaning": "mesa",
+        "strokes": 2
+    },
+    {
+        "literal": "乃",
+        "meaning": "escaleras",
+        "strokes": 2
+    },
+    {
+        "literal": "匚",
+        "meaning": "caja",
+        "strokes": 2
+    },
+    {
+        "literal": "丩",
+        "meaning": "enredadera",
+        "strokes": 2
+    },
+    {
+        "literal": "𠂉",
+        "meaning": "arma",
+        "strokes": 2
+    },
+    {
+        "literal": "丆",
+        "meaning": "hoja",
+        "strokes": 2
+    },
+    {
+        "literal": "𠆢",
+        "meaning": "sombrero",
+        "strokes": 2
+    },
+    {
+        "literal": "丷",
+        "meaning": "cuernos",
+        "strokes": 2
+    },
+    {
+        "literal": "口",
+        "meaning": "boca",
+        "strokes": 3
+    },
+    {
+        "literal": "土",
+        "meaning": "tierra",
+        "strokes": 3
+    },
+    {
+        "literal": "大",
+        "meaning": "grande",
+        "strokes": 3
+    },
+    {
+        "literal": "女",
+        "meaning": "mujer",
+        "strokes": 3
+    },
+    {
+        "literal": "山",
+        "meaning": "montaña",
+        "strokes": 3
+    },
+    {
+        "literal": "川",
+        "meaning": "arroyo",
+        "strokes": 3
+    },
+    {
+        "literal": "工",
+        "meaning": "viga",
+        "strokes": 3
+    },
+    {
+        "literal": "千",
+        "meaning": "mil",
+        "strokes": 3
+    },
+    {
+        "literal": "夕",
+        "meaning": "tarde",
+        "strokes": 3
+    },
+    {
+        "literal": "子",
+        "meaning": "niño",
+        "strokes": 3
+    },
+    {
+        "literal": "小",
+        "meaning": "pequeño",
+        "strokes": 3
+    },
+    {
+        "literal": "弓",
+        "meaning": "arco",
+        "strokes": 3
+    },
+    {
+        "literal": "尸",
+        "meaning": "bandera",
+        "strokes": 3
+    },
+    {
+        "literal": "彡",
+        "meaning": "pelo",
+        "strokes": 3
+    },
+    {
+        "literal": "夂",
+        "meaning": "invierno",
+        "strokes": 3
+    },
+    {
+        "literal": "干",
+        "meaning": "secar",
+        "strokes": 3
+    },
+    {
+        "literal": "广",
+        "meaning": "cueva",
+        "strokes": 3
+    },
+    {
+        "literal": "扌",
+        "meaning": "dedos",
+        "strokes": 3
+    },
+    {
+        "literal": "寸",
+        "meaning": "medida",
+        "strokes": 3
+    },
+    {
+        "literal": "也",
+        "meaning": "escorpión",
+        "strokes": 3
+    },
+    {
+        "literal": "宀",
+        "meaning": "tejado",
+        "strokes": 3
+    },
+    {
+        "literal": "弋",
+        "meaning": "ceremonia",
+        "strokes": 3
+    },
+    {
+        "literal": "幺",
+        "meaning": "capullo",
+        "strokes": 3
+    },
+    {
+        "literal": "艹",
+        "meaning": "flores",
+        "strokes": 3
+    },
+    {
+        "literal": "士",
+        "meaning": "samurai",
+        "strokes": 3
+    },
+    {
+        "literal": "彳",
+        "meaning": "ir",
+        "strokes": 3
+    },
+    {
+        "literal": "兀",
+        "meaning": "pi",
+        "strokes": 3
+    },
+    {
+        "literal": "巾",
+        "meaning": "toalla",
+        "strokes": 3
+    },
+    {
+        "literal": "氵",
+        "meaning": "tsunami",
+        "strokes": 3
+    },
+    {
+        "literal": "ヨ",
+        "meaning": "escoba",
+        "strokes": 3
+    },
+    {
+        "literal": "廾",
+        "meaning": "dos manos",
+        "strokes": 3
+    },
+    {
+        "literal": "⻌",
+        "meaning": "camino",
+        "strokes": 3
+    },
+    {
+        "literal": "犭",
+        "meaning": "animal",
+        "strokes": 3
+    },
+    {
+        "literal": "巳",
+        "meaning": "serpiente",
+        "strokes": 3
+    },
+    {
+        "literal": "阝",
+        "meaning": "edificio",
+        "strokes": 3
+    },
+    {
+        "literal": "及",
+        "meaning": "escaleras mecánicas",
+        "strokes": 3
+    },
+    {
+        "literal": "廴",
+        "meaning": "estirar",
+        "strokes": 3
+    },
+    {
+        "literal": "亡",
+        "meaning": "difunto",
+        "strokes": 3
+    },
+    {
+        "literal": "丸",
+        "meaning": "redondo",
+        "strokes": 3
+    },
+    {
+        "literal": "己",
+        "meaning": "yo",
+        "strokes": 3
+    },
+    {
+        "literal": "忄",
+        "meaning": "estado mental",
+        "strokes": 3
+    },
+    {
+        "literal": "勺",
+        "meaning": "piscina",
+        "strokes": 3
+    },
+    {
+        "literal": "才",
+        "meaning": "genio",
+        "strokes": 3
+    },
+    {
+        "literal": "巛",
+        "meaning": "río sinuoso",
+        "strokes": 3
+    },
+    {
+        "literal": "万",
+        "meaning": "diez mil",
+        "strokes": 3
+    },
+    {
+        "literal": "上",
+        "meaning": "arriba",
+        "strokes": 3
+    },
+    {
+        "literal": "彑",
+        "meaning": "shuriken",
+        "strokes": 3
+    },
+    {
+        "literal": "三",
+        "meaning": "tres",
+        "strokes": 3
+    },
+    {
+        "literal": "刃",
+        "meaning": "filo",
+        "strokes": 3
+    },
+    {
+        "literal": "丈",
+        "meaning": "metraje",
+        "strokes": 3
+    },
+    {
+        "literal": "下",
+        "meaning": "debajo",
+        "strokes": 3
+    },
+    {
+        "literal": "⺌",
+        "meaning": "triceratops",
+        "strokes": 3
+    },
+    {
+        "literal": "𠫓",
+        "meaning": "bebé",
+        "strokes": 3
+    },
+    {
+        "literal": "乞",
+        "meaning": "mendigar",
+        "strokes": 3
+    },
+    {
+        "literal": "𭕄",
+        "meaning": "hierba",
+        "strokes": 3
+    },
+    {
+        "literal": "丬",
+        "meaning": "carámbano",
+        "strokes": 3
+    },
+    {
+        "literal": "日",
+        "meaning": "sol",
+        "strokes": 4
+    },
+    {
+        "literal": "木",
+        "meaning": "árbol",
+        "strokes": 4
+    },
+    {
+        "literal": "五",
+        "meaning": "cinco",
+        "strokes": 4
+    },
+    {
+        "literal": "天",
+        "meaning": "paraíso",
+        "strokes": 4
+    },
+    {
+        "literal": "手",
+        "meaning": "mano",
+        "strokes": 4
+    },
+    {
+        "literal": "文",
+        "meaning": "literatura",
+        "strokes": 4
+    },
+    {
+        "literal": "月",
+        "meaning": "mes",
+        "strokes": 4
+    },
+    {
+        "literal": "止",
+        "meaning": "parar",
+        "strokes": 4
+    },
+    {
+        "literal": "水",
+        "meaning": "agua",
+        "strokes": 4
+    },
+    {
+        "literal": "火",
+        "meaning": "fuego",
+        "strokes": 4
+    },
+    {
+        "literal": "犬",
+        "meaning": "perro",
+        "strokes": 4
+    },
+    {
+        "literal": "王",
+        "meaning": "rey",
+        "strokes": 4
+    },
+    {
+        "literal": "中",
+        "meaning": "en",
+        "strokes": 4
+    },
+    {
+        "literal": "元",
+        "meaning": "comienzo",
+        "strokes": 4
+    },
+    {
+        "literal": "心",
+        "meaning": "corazón",
+        "strokes": 4
+    },
+    {
+        "literal": "方",
+        "meaning": "dirección",
+        "strokes": 4
+    },
+    {
+        "literal": "毛",
+        "meaning": "pelaje",
+        "strokes": 4
+    },
+    {
+        "literal": "父",
+        "meaning": "padre",
+        "strokes": 4
+    },
+    {
+        "literal": "戸",
+        "meaning": "puerta",
+        "strokes": 4
+    },
+    {
+        "literal": "ネ",
+        "meaning": "espíritu",
+        "strokes": 4
+    },
+    {
+        "literal": "支",
+        "meaning": "soporte",
+        "strokes": 4
+    },
+    {
+        "literal": "气",
+        "meaning": "energía",
+        "strokes": 4
+    },
+    {
+        "literal": "不",
+        "meaning": "negativo",
+        "strokes": 4
+    },
+    {
+        "literal": "巴",
+        "meaning": "cama",
+        "strokes": 4
+    },
+    {
+        "literal": "耂",
+        "meaning": "ataúd",
+        "strokes": 4
+    },
+    {
+        "literal": "毋",
+        "meaning": "ventana",
+        "strokes": 4
+    },
+    {
+        "literal": "斤",
+        "meaning": "hacha",
+        "strokes": 4
+    },
+    {
+        "literal": "牛",
+        "meaning": "vaca",
+        "strokes": 4
+    },
+    {
+        "literal": "斗",
+        "meaning": "osa mayor",
+        "strokes": 4
+    },
+    {
+        "literal": "ホ",
+        "meaning": "ángel",
+        "strokes": 4
+    },
+    {
+        "literal": "灬",
+        "meaning": "cocinar",
+        "strokes": 4
+    },
+    {
+        "literal": "歹",
+        "meaning": "yakuza",
+        "strokes": 4
+    },
+    {
+        "literal": "欠",
+        "meaning": "falta",
+        "strokes": 4
+    },
+    {
+        "literal": "夫",
+        "meaning": "marido",
+        "strokes": 4
+    },
+    {
+        "literal": "氏",
+        "meaning": "apellido",
+        "strokes": 4
+    },
+    {
+        "literal": "云",
+        "meaning": "nube",
+        "strokes": 4
+    },
+    {
+        "literal": "殳",
+        "meaning": "misíl",
+        "strokes": 4
+    },
+    {
+        "literal": "比",
+        "meaning": "comparar",
+        "strokes": 4
+    },
+    {
+        "literal": "片",
+        "meaning": "una mitad",
+        "strokes": 4
+    },
+    {
+        "literal": "介",
+        "meaning": "intervención",
+        "strokes": 4
+    },
+    {
+        "literal": "开",
+        "meaning": "linterna",
+        "strokes": 4
+    },
+    {
+        "literal": "勿",
+        "meaning": "ala",
+        "strokes": 4
+    },
+    {
+        "literal": "戈",
+        "meaning": "borracho",
+        "strokes": 4
+    },
+    {
+        "literal": "少",
+        "meaning": "poco",
+        "strokes": 4
+    },
+    {
+        "literal": "尺",
+        "meaning": "regla",
+        "strokes": 4
+    },
+    {
+        "literal": "反",
+        "meaning": "anti-",
+        "strokes": 4
+    },
+    {
+        "literal": "公",
+        "meaning": "público",
+        "strokes": 4
+    },
+    {
+        "literal": "今",
+        "meaning": "ahora",
+        "strokes": 4
+    },
+    {
+        "literal": "井",
+        "meaning": "pozo",
+        "strokes": 4
+    },
+    {
+        "literal": "分",
+        "meaning": "parte",
+        "strokes": 4
+    },
+    {
+        "literal": "凶",
+        "meaning": "mal",
+        "strokes": 4
+    },
+    {
+        "literal": "友",
+        "meaning": "amigo",
+        "strokes": 4
+    },
+    {
+        "literal": "化",
+        "meaning": "cambiar",
+        "strokes": 4
+    },
+    {
+        "literal": "屯",
+        "meaning": "barraca",
+        "strokes": 4
+    },
+    {
+        "literal": "区",
+        "meaning": "barrio",
+        "strokes": 4
+    },
+    {
+        "literal": "予",
+        "meaning": "de antemano",
+        "strokes": 4
+    },
+    {
+        "literal": "卬",
+        "meaning": "caro",
+        "strokes": 4
+    },
+    {
+        "literal": "内",
+        "meaning": "interior",
+        "strokes": 4
+    },
+    {
+        "literal": "爪",
+        "meaning": "uña",
+        "strokes": 4
+    },
+    {
+        "literal": "冘",
+        "meaning": "pirata",
+        "strokes": 4
+    },
+    {
+        "literal": "太",
+        "meaning": "gordo",
+        "strokes": 4
+    },
+    {
+        "literal": "午",
+        "meaning": "mediodía",
+        "strokes": 4
+    },
+    {
+        "literal": "⺤",
+        "meaning": "clavos",
+        "strokes": 4
+    },
+    {
+        "literal": "龷",
+        "meaning": "valla",
+        "strokes": 4
+    },
+    {
+        "literal": "本",
+        "meaning": "libro",
+        "strokes": 5
+    },
+    {
+        "literal": "田",
+        "meaning": "campo de arroz",
+        "strokes": 5
+    },
+    {
+        "literal": "白",
+        "meaning": "blanco",
+        "strokes": 5
+    },
+    {
+        "literal": "目",
+        "meaning": "ojo",
+        "strokes": 5
+    },
+    {
+        "literal": "石",
+        "meaning": "piedra",
+        "strokes": 5
+    },
+    {
+        "literal": "立",
+        "meaning": "levantarse",
+        "strokes": 5
+    },
+    {
+        "literal": "古",
+        "meaning": "viejo",
+        "strokes": 5
+    },
+    {
+        "literal": "用",
+        "meaning": "uso",
+        "strokes": 5
+    },
+    {
+        "literal": "矢",
+        "meaning": "flecha",
+        "strokes": 5
+    },
+    {
+        "literal": "世",
+        "meaning": "generación",
+        "strokes": 5
+    },
+    {
+        "literal": "皿",
+        "meaning": "plato",
+        "strokes": 5
+    },
+    {
+        "literal": "可",
+        "meaning": "posible",
+        "strokes": 5
+    },
+    {
+        "literal": "冋",
+        "meaning": "mostacho",
+        "strokes": 5
+    },
+    {
+        "literal": "乍",
+        "meaning": "llave",
+        "strokes": 5
+    },
+    {
+        "literal": "未",
+        "meaning": "todavía",
+        "strokes": 5
+    },
+    {
+        "literal": "禾",
+        "meaning": "grano",
+        "strokes": 5
+    },
+    {
+        "literal": "占",
+        "meaning": "adivinar",
+        "strokes": 5
+    },
+    {
+        "literal": "矛",
+        "meaning": "alabarda",
+        "strokes": 5
+    },
+    {
+        "literal": "主",
+        "meaning": "señor",
+        "strokes": 5
+    },
+    {
+        "literal": "罒",
+        "meaning": "red",
+        "strokes": 5
+    },
+    {
+        "literal": "史",
+        "meaning": "historia",
+        "strokes": 5
+    },
+    {
+        "literal": "癶",
+        "meaning": "tienda de campaña",
+        "strokes": 5
+    },
+    {
+        "literal": "穴",
+        "meaning": "agujero",
+        "strokes": 5
+    },
+    {
+        "literal": "圣",
+        "meaning": "lápida",
+        "strokes": 5
+    },
+    {
+        "literal": "丙",
+        "meaning": "tercera clase",
+        "strokes": 5
+    },
+    {
+        "literal": "疒",
+        "meaning": "enfermo",
+        "strokes": 5
+    },
+    {
+        "literal": "令",
+        "meaning": "órdenes",
+        "strokes": 5
+    },
+    {
+        "literal": "申",
+        "meaning": "humilde",
+        "strokes": 5
+    },
+    {
+        "literal": "兄",
+        "meaning": "hermano mayor",
+        "strokes": 5
+    },
+    {
+        "literal": "皮",
+        "meaning": "pellejo",
+        "strokes": 5
+    },
+    {
+        "literal": "示",
+        "meaning": "mostrar",
+        "strokes": 5
+    },
+    {
+        "literal": "生",
+        "meaning": "vida",
+        "strokes": 5
+    },
+    {
+        "literal": "冊",
+        "meaning": "tomo",
+        "strokes": 5
+    },
+    {
+        "literal": "正",
+        "meaning": "correcto",
+        "strokes": 5
+    },
+    {
+        "literal": "央",
+        "meaning": "centro",
+        "strokes": 5
+    },
+    {
+        "literal": "句",
+        "meaning": "frase",
+        "strokes": 5
+    },
+    {
+        "literal": "去",
+        "meaning": "pasado",
+        "strokes": 5
+    },
+    {
+        "literal": "付",
+        "meaning": "adherir",
+        "strokes": 5
+    },
+    {
+        "literal": "司",
+        "meaning": "dirigir",
+        "strokes": 5
+    },
+    {
+        "literal": "市",
+        "meaning": "mercado",
+        "strokes": 5
+    },
+    {
+        "literal": "由",
+        "meaning": "razón",
+        "strokes": 5
+    },
+    {
+        "literal": "失",
+        "meaning": "pérdida",
+        "strokes": 5
+    },
+    {
+        "literal": "平",
+        "meaning": "llanura",
+        "strokes": 5
+    },
+    {
+        "literal": "弗",
+        "meaning": "dolar",
+        "strokes": 5
+    },
+    {
+        "literal": "旦",
+        "meaning": "alba",
+        "strokes": 5
+    },
+    {
+        "literal": "半",
+        "meaning": "mitad",
+        "strokes": 5
+    },
+    {
+        "literal": "代",
+        "meaning": "sustituto",
+        "strokes": 5
+    },
+    {
+        "literal": "民",
+        "meaning": "gente",
+        "strokes": 5
+    },
+    {
+        "literal": "巨",
+        "meaning": "gigantesco",
+        "strokes": 5
+    },
+    {
+        "literal": "北",
+        "meaning": "Norte",
+        "strokes": 5
+    },
+    {
+        "literal": "甲",
+        "meaning": "caparazón",
+        "strokes": 5
+    },
+    {
+        "literal": "召",
+        "meaning": "seducir",
+        "strokes": 5
+    },
+    {
+        "literal": "出",
+        "meaning": "salir",
+        "strokes": 5
+    },
+    {
+        "literal": "牙",
+        "meaning": "colmillo",
+        "strokes": 5
+    },
+    {
+        "literal": "必",
+        "meaning": "sin falta",
+        "strokes": 5
+    },
+    {
+        "literal": "甘",
+        "meaning": "dulce",
+        "strokes": 5
+    },
+    {
+        "literal": "右",
+        "meaning": "derecha",
+        "strokes": 5
+    },
+    {
+        "literal": "旧",
+        "meaning": "antiguo",
+        "strokes": 5
+    },
+    {
+        "literal": "広",
+        "meaning": "ámplio",
+        "strokes": 5
+    },
+    {
+        "literal": "包",
+        "meaning": "envolver",
+        "strokes": 5
+    },
+    {
+        "literal": "玄",
+        "meaning": "misterioso",
+        "strokes": 5
+    },
+    {
+        "literal": "台",
+        "meaning": "estante",
+        "strokes": 5
+    },
+    {
+        "literal": "且",
+        "meaning": "además",
+        "strokes": 5
+    },
+    {
+        "literal": "疋",
+        "meaning": "perchero",
+        "strokes": 5
+    },
+    {
+        "literal": "凸",
+        "meaning": "convexo",
+        "strokes": 5
+    },
+    {
+        "literal": "凹",
+        "meaning": "cóncavo",
+        "strokes": 5
+    },
+    {
+        "literal": "业",
+        "meaning": "pinchos",
+        "strokes": 5
+    },
+    {
+        "literal": "龸",
+        "meaning": "vikingo",
+        "strokes": 5
+    },
+    {
+        "literal": "㠯",
+        "meaning": "oso",
+        "strokes": 5
+    },
+    {
+        "literal": "𡗗",
+        "meaning": "primavera",
+        "strokes": 5
+    },
+    {
+        "literal": "永",
+        "meaning": "eterno",
+        "strokes": 5
+    },
+    {
+        "literal": "竹",
+        "meaning": "bambú",
+        "strokes": 6
+    },
+    {
+        "literal": "糸",
+        "meaning": "hilo",
+        "strokes": 6
+    },
+    {
+        "literal": "耳",
+        "meaning": "oreja",
+        "strokes": 6
+    },
+    {
+        "literal": "虫",
+        "meaning": "insecto",
+        "strokes": 6
+    },
+    {
+        "literal": "米",
+        "meaning": "arroz",
+        "strokes": 6
+    },
+    {
+        "literal": "肉",
+        "meaning": "carne",
+        "strokes": 6
+    },
+    {
+        "literal": "自",
+        "meaning": "uno mismo",
+        "strokes": 6
+    },
+    {
+        "literal": "色",
+        "meaning": "color",
+        "strokes": 6
+    },
+    {
+        "literal": "行",
+        "meaning": "bulevar",
+        "strokes": 6
+    },
+    {
+        "literal": "西",
+        "meaning": "Oeste",
+        "strokes": 6
+    },
+    {
+        "literal": "羊",
+        "meaning": "oveja",
+        "strokes": 6
+    },
+    {
+        "literal": "血",
+        "meaning": "sangre",
+        "strokes": 6
+    },
+    {
+        "literal": "舟",
+        "meaning": "bote",
+        "strokes": 6
+    },
+    {
+        "literal": "会",
+        "meaning": "asociación",
+        "strokes": 6
+    },
+    {
+        "literal": "舌",
+        "meaning": "lengua",
+        "strokes": 6
+    },
+    {
+        "literal": "各",
+        "meaning": "cada uno",
+        "strokes": 6
+    },
+    {
+        "literal": "曲",
+        "meaning": "melodía",
+        "strokes": 6
+    },
+    {
+        "literal": "寺",
+        "meaning": "templo budista",
+        "strokes": 6
+    },
+    {
+        "literal": "艮",
+        "meaning": "raíz",
+        "strokes": 6
+    },
+    {
+        "literal": "早",
+        "meaning": "temprano",
+        "strokes": 6
+    },
+    {
+        "literal": "羽",
+        "meaning": "pluma",
+        "strokes": 6
+    },
+    {
+        "literal": "合",
+        "meaning": "adecuado",
+        "strokes": 6
+    },
+    {
+        "literal": "聿",
+        "meaning": "pincel",
+        "strokes": 6
+    },
+    {
+        "literal": "百",
+        "meaning": "cien",
+        "strokes": 6
+    },
+    {
+        "literal": "巩",
+        "meaning": "sierra",
+        "strokes": 6
+    },
+    {
+        "literal": "吉",
+        "meaning": "buena suerte",
+        "strokes": 6
+    },
+    {
+        "literal": "虍",
+        "meaning": "tigre",
+        "strokes": 6
+    },
+    {
+        "literal": "先",
+        "meaning": "antes",
+        "strokes": 6
+    },
+    {
+        "literal": "争",
+        "meaning": "pelear",
+        "strokes": 6
+    },
+    {
+        "literal": "成",
+        "meaning": "convertirse en",
+        "strokes": 6
+    },
+    {
+        "literal": "共",
+        "meaning": "juntos",
+        "strokes": 6
+    },
+    {
+        "literal": "至",
+        "meaning": "llegar",
+        "strokes": 6
+    },
+    {
+        "literal": "次",
+        "meaning": "siguiente",
+        "strokes": 6
+    },
+    {
+        "literal": "安",
+        "meaning": "barato",
+        "strokes": 6
+    },
+    {
+        "literal": "充",
+        "meaning": "asignar",
+        "strokes": 6
+    },
+    {
+        "literal": "交",
+        "meaning": "cambio",
+        "strokes": 6
+    },
+    {
+        "literal": "両",
+        "meaning": "ambos",
+        "strokes": 6
+    },
+    {
+        "literal": "而",
+        "meaning": "rastrillo",
+        "strokes": 6
+    },
+    {
+        "literal": "衣",
+        "meaning": "prenda",
+        "strokes": 6
+    },
+    {
+        "literal": "同",
+        "meaning": "mismo",
+        "strokes": 6
+    },
+    {
+        "literal": "亥",
+        "meaning": "rebanada",
+        "strokes": 6
+    },
+    {
+        "literal": "兆",
+        "meaning": "presagio",
+        "strokes": 6
+    },
+    {
+        "literal": "有",
+        "meaning": "existir",
+        "strokes": 6
+    },
+    {
+        "literal": "毎",
+        "meaning": "siempre",
+        "strokes": 6
+    },
+    {
+        "literal": "瓜",
+        "meaning": "melón",
+        "strokes": 6
+    },
+    {
+        "literal": "耒",
+        "meaning": "arado",
+        "strokes": 6
+    },
+    {
+        "literal": "缶",
+        "meaning": "lata",
+        "strokes": 6
+    },
+    {
+        "literal": "守",
+        "meaning": "proteger",
+        "strokes": 6
+    },
+    {
+        "literal": "光",
+        "meaning": "rayo",
+        "strokes": 6
+    },
+    {
+        "literal": "回",
+        "meaning": "girar",
+        "strokes": 6
+    },
+    {
+        "literal": "名",
+        "meaning": "nombre",
+        "strokes": 6
+    },
+    {
+        "literal": "舛",
+        "meaning": "bailar",
+        "strokes": 6
+    },
+    {
+        "literal": "㦮",
+        "meaning": "bar",
+        "strokes": 6
+    },
+    {
+        "literal": "臼",
+        "meaning": "mortero",
+        "strokes": 6
+    },
+    {
+        "literal": "丞",
+        "meaning": "coral",
+        "strokes": 6
+    },
+    {
+        "literal": "龹",
+        "meaning": "gladiador",
+        "strokes": 6
+    },
+    {
+        "literal": "見",
+        "meaning": "vista",
+        "strokes": 7
+    },
+    {
+        "literal": "赤",
+        "meaning": "rojo",
+        "strokes": 7
+    },
+    {
+        "literal": "車",
+        "meaning": "coche",
+        "strokes": 7
+    },
+    {
+        "literal": "貝",
+        "meaning": "concha",
+        "strokes": 7
+    },
+    {
+        "literal": "足",
+        "meaning": "pie",
+        "strokes": 7
+    },
+    {
+        "literal": "言",
+        "meaning": "palabras",
+        "strokes": 7
+    },
+    {
+        "literal": "走",
+        "meaning": "correr",
+        "strokes": 7
+    },
+    {
+        "literal": "里",
+        "meaning": "calculadora",
+        "strokes": 7
+    },
+    {
+        "literal": "釆",
+        "meaning": "hoz",
+        "strokes": 7
+    },
+    {
+        "literal": "辛",
+        "meaning": "amargo",
+        "strokes": 7
+    },
+    {
+        "literal": "豆",
+        "meaning": "legumbres",
+        "strokes": 7
+    },
+    {
+        "literal": "酉",
+        "meaning": "alcohol",
+        "strokes": 7
+    },
+    {
+        "literal": "辰",
+        "meaning": "desprendimiento",
+        "strokes": 7
+    },
+    {
+        "literal": "弟",
+        "meaning": "hermano menor",
+        "strokes": 7
+    },
+    {
+        "literal": "亜",
+        "meaning": "Asia",
+        "strokes": 7
+    },
+    {
+        "literal": "束",
+        "meaning": "manojo",
+        "strokes": 7
+    },
+    {
+        "literal": "豕",
+        "meaning": "cerdo",
+        "strokes": 7
+    },
+    {
+        "literal": "身",
+        "meaning": "cuerpo",
+        "strokes": 7
+    },
+    {
+        "literal": "男",
+        "meaning": "masculino",
+        "strokes": 7
+    },
+    {
+        "literal": "谷",
+        "meaning": "valle",
+        "strokes": 7
+    },
+    {
+        "literal": "我",
+        "meaning": "ego",
+        "strokes": 7
+    },
+    {
+        "literal": "角",
+        "meaning": "ángulo",
+        "strokes": 7
+    },
+    {
+        "literal": "呂",
+        "meaning": "columna vertebral",
+        "strokes": 7
+    },
+    {
+        "literal": "甫",
+        "meaning": "boda",
+        "strokes": 7
+    },
+    {
+        "literal": "告",
+        "meaning": "revelación",
+        "strokes": 7
+    },
+    {
+        "literal": "余",
+        "meaning": "remanente",
+        "strokes": 7
+    },
+    {
+        "literal": "臣",
+        "meaning": "criado",
+        "strokes": 7
+    },
+    {
+        "literal": "系",
+        "meaning": "sistema",
+        "strokes": 7
+    },
+    {
+        "literal": "呉",
+        "meaning": "dar",
+        "strokes": 7
+    },
+    {
+        "literal": "串",
+        "meaning": "brocheta",
+        "strokes": 7
+    },
+    {
+        "literal": "君",
+        "meaning": "compañero",
+        "strokes": 7
+    },
+    {
+        "literal": "夆",
+        "meaning": "cartel",
+        "strokes": 7
+    },
+    {
+        "literal": "更",
+        "meaning": "renovar",
+        "strokes": 7
+    },
+    {
+        "literal": "求",
+        "meaning": "petición",
+        "strokes": 7
+    },
+    {
+        "literal": "豸",
+        "meaning": "tejón",
+        "strokes": 7
+    },
+    {
+        "literal": "孝",
+        "meaning": "devoción filial",
+        "strokes": 7
+    },
+    {
+        "literal": "兑",
+        "meaning": "demonio",
+        "strokes": 7
+    },
+    {
+        "literal": "覀",
+        "meaning": "helicóptero",
+        "strokes": 7
+    },
+    {
+        "literal": "夋",
+        "meaning": "araña",
+        "strokes": 7
+    },
+    {
+        "literal": "売",
+        "meaning": "vender",
+        "strokes": 7
+    },
+    {
+        "literal": "良",
+        "meaning": "bueno",
+        "strokes": 7
+    },
+    {
+        "literal": "麦",
+        "meaning": "cebada",
+        "strokes": 7
+    },
+    {
+        "literal": "金",
+        "meaning": "oro",
+        "strokes": 8
+    },
+    {
+        "literal": "雨",
+        "meaning": "lluvia",
+        "strokes": 8
+    },
+    {
+        "literal": "青",
+        "meaning": "azul",
+        "strokes": 8
+    },
+    {
+        "literal": "長",
+        "meaning": "largo",
+        "strokes": 8
+    },
+    {
+        "literal": "周",
+        "meaning": "circunferencia",
+        "strokes": 8
+    },
+    {
+        "literal": "易",
+        "meaning": "fácil",
+        "strokes": 8
+    },
+    {
+        "literal": "咅",
+        "meaning": "payaso",
+        "strokes": 8
+    },
+    {
+        "literal": "者",
+        "meaning": "alguien",
+        "strokes": 8
+    },
+    {
+        "literal": "其",
+        "meaning": "cangrejo",
+        "strokes": 8
+    },
+    {
+        "literal": "免",
+        "meaning": "excusa",
+        "strokes": 8
+    },
+    {
+        "literal": "非",
+        "meaning": "criminal",
+        "strokes": 8
+    },
+    {
+        "literal": "門",
+        "meaning": "portón",
+        "strokes": 8
+    },
+    {
+        "literal": "坴",
+        "meaning": "útero",
+        "strokes": 8
+    },
+    {
+        "literal": "東",
+        "meaning": "Este",
+        "strokes": 8
+    },
+    {
+        "literal": "果",
+        "meaning": "fruto",
+        "strokes": 8
+    },
+    {
+        "literal": "隹",
+        "meaning": "pavo",
+        "strokes": 8
+    },
+    {
+        "literal": "歩",
+        "meaning": "andar",
+        "strokes": 8
+    },
+    {
+        "literal": "苟",
+        "meaning": "poema",
+        "strokes": 8
+    },
+    {
+        "literal": "昔",
+        "meaning": "antiguamente",
+        "strokes": 8
+    },
+    {
+        "literal": "尭",
+        "meaning": "apostar",
+        "strokes": 8
+    },
+    {
+        "literal": "幸",
+        "meaning": "felicidad",
+        "strokes": 8
+    },
+    {
+        "literal": "斉",
+        "meaning": "semejante",
+        "strokes": 8
+    },
+    {
+        "literal": "制",
+        "meaning": "determinar",
+        "strokes": 8
+    },
+    {
+        "literal": "受",
+        "meaning": "recipiente",
+        "strokes": 8
+    },
+    {
+        "literal": "京",
+        "meaning": "capital",
+        "strokes": 8
+    },
+    {
+        "literal": "奇",
+        "meaning": "extraño",
+        "strokes": 8
+    },
+    {
+        "literal": "並",
+        "meaning": "alinear",
+        "strokes": 8
+    },
+    {
+        "literal": "夜",
+        "meaning": "noche",
+        "strokes": 8
+    },
+    {
+        "literal": "享",
+        "meaning": "recibir tratamiento",
+        "strokes": 8
+    },
+    {
+        "literal": "明",
+        "meaning": "luz",
+        "strokes": 8
+    },
+    {
+        "literal": "空",
+        "meaning": "cielo",
+        "strokes": 8
+    },
+    {
+        "literal": "岡",
+        "meaning": "monte",
+        "strokes": 8
+    },
+    {
+        "literal": "波",
+        "meaning": "onda",
+        "strokes": 8
+    },
+    {
+        "literal": "夌",
+        "meaning": "congelado",
+        "strokes": 8
+    },
+    {
+        "literal": "舎",
+        "meaning": "casa de campo",
+        "strokes": 8
+    },
+    {
+        "literal": "㑒",
+        "meaning": "calamar",
+        "strokes": 8
+    },
+    {
+        "literal": "𠦝",
+        "meaning": "por la mañana",
+        "strokes": 8
+    },
+    {
+        "literal": "直",
+        "meaning": "directamente",
+        "strokes": 8
+    },
+    {
+        "literal": "妻",
+        "meaning": "esposa",
+        "strokes": 8
+    },
+    {
+        "literal": "食",
+        "meaning": "alimento",
+        "strokes": 9
+    },
+    {
+        "literal": "首",
+        "meaning": "cuello",
+        "strokes": 9
+    },
+    {
+        "literal": "頁",
+        "meaning": "página",
+        "strokes": 9
+    },
+    {
+        "literal": "重",
+        "meaning": "pesado",
+        "strokes": 9
+    },
+    {
+        "literal": "音",
+        "meaning": "sonido",
+        "strokes": 9
+    },
+    {
+        "literal": "単",
+        "meaning": "sencillo",
+        "strokes": 9
+    },
+    {
+        "literal": "品",
+        "meaning": "producto",
+        "strokes": 9
+    },
+    {
+        "literal": "面",
+        "meaning": "cara",
+        "strokes": 9
+    },
+    {
+        "literal": "复",
+        "meaning": "agujero negro",
+        "strokes": 9
+    },
+    {
+        "literal": "飛",
+        "meaning": "volar",
+        "strokes": 9
+    },
+    {
+        "literal": "爰",
+        "meaning": "fútbol",
+        "strokes": 9
+    },
+    {
+        "literal": "革",
+        "meaning": "cuero",
+        "strokes": 9
+    },
+    {
+        "literal": "亭",
+        "meaning": "restaurante",
+        "strokes": 9
+    },
+    {
+        "literal": "客",
+        "meaning": "huésped",
+        "strokes": 9
+    },
+    {
+        "literal": "専",
+        "meaning": "especialidad",
+        "strokes": 9
+    },
+    {
+        "literal": "扁",
+        "meaning": "librería",
+        "strokes": 9
+    },
+    {
+        "literal": "為",
+        "meaning": "hacer",
+        "strokes": 9
+    },
+    {
+        "literal": "発",
+        "meaning": "abrir",
+        "strokes": 9
+    },
+    {
+        "literal": "南",
+        "meaning": "Sur",
+        "strokes": 9
+    },
+    {
+        "literal": "思",
+        "meaning": "pensar",
+        "strokes": 9
+    },
+    {
+        "literal": "県",
+        "meaning": "prefectura",
+        "strokes": 9
+    },
+    {
+        "literal": "保",
+        "meaning": "garantizar",
+        "strokes": 9
+    },
+    {
+        "literal": "屋",
+        "meaning": "habitación",
+        "strokes": 9
+    },
+    {
+        "literal": "甚",
+        "meaning": "tremendamente",
+        "strokes": 9
+    },
+    {
+        "literal": "禺",
+        "meaning": "astilla",
+        "strokes": 9
+    },
+    {
+        "literal": "巻",
+        "meaning": "enrollar",
+        "strokes": 9
+    },
+    {
+        "literal": "風",
+        "meaning": "viento",
+        "strokes": 9
+    },
+    {
+        "literal": "壴",
+        "meaning": "tambor",
+        "strokes": 9
+    },
+    {
+        "literal": "禹",
+        "meaning": "mantis",
+        "strokes": 9
+    },
+    {
+        "literal": "胃",
+        "meaning": "estómago",
+        "strokes": 9
+    },
+    {
+        "literal": "勇",
+        "meaning": "valentía",
+        "strokes": 9
+    },
+    {
+        "literal": "畐",
+        "meaning": "espantapájaros",
+        "strokes": 9
+    },
+    {
+        "literal": "郎",
+        "meaning": "hombre",
+        "strokes": 9
+    },
+    {
+        "literal": "荒",
+        "meaning": "áspero",
+        "strokes": 9
+    },
+    {
+        "literal": "前",
+        "meaning": "enfrente",
+        "strokes": 9
+    },
+    {
+        "literal": "馬",
+        "meaning": "caballo",
+        "strokes": 10
+    },
+    {
+        "literal": "原",
+        "meaning": "origen",
+        "strokes": 10
+    },
+    {
+        "literal": "兼",
+        "meaning": "concurrentemente",
+        "strokes": 10
+    },
+    {
+        "literal": "能",
+        "meaning": "habilidad",
+        "strokes": 10
+    },
+    {
+        "literal": "鬼",
+        "meaning": "fantasma",
+        "strokes": 10
+    },
+    {
+        "literal": "韋",
+        "meaning": "Corea",
+        "strokes": 10
+    },
+    {
+        "literal": "冓",
+        "meaning": "socorrista",
+        "strokes": 10
+    },
+    {
+        "literal": "鬲",
+        "meaning": "matón",
+        "strokes": 10
+    },
+    {
+        "literal": "員",
+        "meaning": "empleado",
+        "strokes": 10
+    },
+    {
+        "literal": "帯",
+        "meaning": "faja",
+        "strokes": 10
+    },
+    {
+        "literal": "莫",
+        "meaning": "invernadero",
+        "strokes": 10
+    },
+    {
+        "literal": "骨",
+        "meaning": "hueso",
+        "strokes": 10
+    },
+    {
+        "literal": "竜",
+        "meaning": "dragón",
+        "strokes": 10
+    },
+    {
+        "literal": "家",
+        "meaning": "casa",
+        "strokes": 10
+    },
+    {
+        "literal": "恵",
+        "meaning": "favor",
+        "strokes": 10
+    },
+    {
+        "literal": "容",
+        "meaning": "contenido",
+        "strokes": 10
+    },
+    {
+        "literal": "真",
+        "meaning": "verdad",
+        "strokes": 10
+    },
+    {
+        "literal": "堇",
+        "meaning": "bota",
+        "strokes": 10
+    },
+    {
+        "literal": "高",
+        "meaning": "alto",
+        "strokes": 10
+    },
+    {
+        "literal": "袁",
+        "meaning": "zombie",
+        "strokes": 10
+    },
+    {
+        "literal": "倉",
+        "meaning": "almacén",
+        "strokes": 10
+    },
+    {
+        "literal": "将",
+        "meaning": "líder",
+        "strokes": 10
+    },
+    {
+        "literal": "魚",
+        "meaning": "pez",
+        "strokes": 11
+    },
+    {
+        "literal": "鳥",
+        "meaning": "pájaro",
+        "strokes": 11
+    },
+    {
+        "literal": "黄",
+        "meaning": "amarillo",
+        "strokes": 11
+    },
+    {
+        "literal": "黒",
+        "meaning": "negro",
+        "strokes": 11
+    },
+    {
+        "literal": "曽",
+        "meaning": "máscara",
+        "strokes": 11
+    },
+    {
+        "literal": "啇",
+        "meaning": "cresta",
+        "strokes": 11
+    },
+    {
+        "literal": "責",
+        "meaning": "condena",
+        "strokes": 11
+    },
+    {
+        "literal": "离",
+        "meaning": "cohete",
+        "strokes": 11
+    },
+    {
+        "literal": "亀",
+        "meaning": "tortuga",
+        "strokes": 11
+    },
+    {
+        "literal": "祭",
+        "meaning": "celebración",
+        "strokes": 11
+    },
+    {
+        "literal": "章",
+        "meaning": "distintivo",
+        "strokes": 11
+    },
+    {
+        "literal": "無",
+        "meaning": "nada",
+        "strokes": 12
+    },
+    {
+        "literal": "番",
+        "meaning": "turno",
+        "strokes": 12
+    },
+    {
+        "literal": "道",
+        "meaning": "carretera",
+        "strokes": 12
+    },
+    {
+        "literal": "然",
+        "meaning": "de esa forma",
+        "strokes": 12
+    },
+    {
+        "literal": "尞",
+        "meaning": "carbón",
+        "strokes": 12
+    },
+    {
+        "literal": "間",
+        "meaning": "intervalo",
+        "strokes": 12
+    },
+    {
+        "literal": "貴",
+        "meaning": "valioso",
+        "strokes": 12
+    },
+    {
+        "literal": "歯",
+        "meaning": "diente",
+        "strokes": 12
+    },
+    {
+        "literal": "雇",
+        "meaning": "emplear",
+        "strokes": 12
+    },
+    {
+        "literal": "敝",
+        "meaning": "pingüino",
+        "strokes": 12
+    },
+    {
+        "literal": "象",
+        "meaning": "imagen",
+        "strokes": 12
+    },
+    {
+        "literal": "意",
+        "meaning": "idea",
+        "strokes": 13
+    },
+    {
+        "literal": "楽",
+        "meaning": "música",
+        "strokes": 13
+    },
+    {
+        "literal": "農",
+        "meaning": "agricultura",
+        "strokes": 13
+    },
+    {
+        "literal": "辟",
+        "meaning": "chili",
+        "strokes": 13
+    },
+    {
+        "literal": "義",
+        "meaning": "moralidad",
+        "strokes": 13
+    },
+    {
+        "literal": "業",
+        "meaning": "negocio",
+        "strokes": 13
+    },
+    {
+        "literal": "感",
+        "meaning": "sentimiento",
+        "strokes": 13
+    },
+    {
+        "literal": "㐮",
+        "meaning": "enfermera",
+        "strokes": 13
+    },
+    {
+        "literal": "𦰩",
+        "meaning": "chino",
+        "strokes": 13
+    },
+    {
+        "literal": "喿",
+        "meaning": "sirope",
+        "strokes": 13
+    },
+    {
+        "literal": "疑",
+        "meaning": "duda",
+        "strokes": 14
+    },
+    {
+        "literal": "監",
+        "meaning": "supervisar",
+        "strokes": 15
+    },
+    {
+        "literal": "蔵",
+        "meaning": "depósito",
+        "strokes": 15
+    },
+    {
+        "literal": "賞",
+        "meaning": "premio",
+        "strokes": 15
+    },
+    {
+        "literal": "暴",
+        "meaning": "violento",
+        "strokes": 15
+    },
+    {
+        "literal": "龍",
+        "meaning": "imperial",
+        "strokes": 16
+    },
+    {
+        "literal": "麗",
+        "meaning": "precioso",
+        "strokes": 19
+    }
+]

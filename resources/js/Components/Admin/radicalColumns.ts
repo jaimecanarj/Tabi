@@ -1,7 +1,7 @@
 import { h } from "vue";
 import { ColumnDef } from "@tanstack/vue-table";
 import { ArrowUpDown } from "lucide-vue-next";
-import { Radical } from "@/lib/types";
+import { Radical } from "@/types";
 import { Button } from "@/Components/ui/button";
 import { DropdownAction } from "@/Components/ui/data-table";
 
@@ -16,7 +16,7 @@ export const columns: ColumnDef<Radical>[] = [
         },
     },
     {
-        accessorKey: "significado",
+        accessorKey: "meaning",
         header: ({ column }) =>
             h(
                 Button,
@@ -31,7 +31,7 @@ export const columns: ColumnDef<Radical>[] = [
                 ],
             ),
         cell: ({ row }) => {
-            const meaning: string = row.getValue("significado");
+            const meaning: string = row.getValue("meaning");
 
             return h(
                 "div",
@@ -41,7 +41,7 @@ export const columns: ColumnDef<Radical>[] = [
         },
     },
     {
-        accessorKey: "trazos",
+        accessorKey: "strokes",
         header: ({ column }) =>
             h(
                 Button,
@@ -53,7 +53,7 @@ export const columns: ColumnDef<Radical>[] = [
                 () => ["Trazos", h(ArrowUpDown, { class: "ml-2 h-4 w-4" })],
             ),
         cell: ({ row }) => {
-            const strokes: string = row.getValue("trazos");
+            const strokes: string = row.getValue("strokes");
 
             return h("div", { class: "text-lg ml-4" }, strokes);
         },

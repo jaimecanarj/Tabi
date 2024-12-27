@@ -2,7 +2,7 @@
 import { computed, ref } from "vue";
 import { Head, router, Link } from "@inertiajs/vue3";
 import { Info, Library, PencilLine, TrendingUp } from "lucide-vue-next";
-import { Kanji, Pagination as PaginationType, Filters } from "@/lib/types";
+import { Kanji, Pagination as PaginationType, Filters } from "@/types";
 import MainLayout from "@/Layouts/MainLayout.vue";
 import KanjiGrid from "@/Components/Kanjis/KanjiGrid.vue";
 import Pagination from "@/Components/Pagination.vue";
@@ -16,8 +16,8 @@ import {
 const props = defineProps<{
     response: PaginationType;
     filters: Filters;
-    trazos: number[];
-    grados: number[];
+    strokes: number[];
+    grades: number[];
 }>();
 
 const kanjis = computed(() => props.response.data as Kanji[]);
@@ -58,8 +58,8 @@ const fetchResults = (filters: Filters) => {
         <!-- Formulario de búsqueda -->
         <KanjiFilters
             :filters="filters"
-            :trazos="trazos"
-            :grados="grados"
+            :strokes="strokes"
+            :grades="grades"
             @change="fetchResults"
         />
         <!-- Grid de kanjis -->
@@ -100,8 +100,8 @@ const fetchResults = (filters: Filters) => {
         <Pagination
             :key="response.current_page"
             :total="response.total"
-            :current_page="response.current_page"
-            :per_page="response.per_page"
+            :currentPage="response.current_page"
+            :perPage="response.per_page"
             @update:page="updatePage"
         />
     </footer>

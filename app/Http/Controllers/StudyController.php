@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Estudio;
+use App\Models\Study;
 use App\Models\Kanji;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Validator;
@@ -11,13 +11,13 @@ use Illuminate\Http\Request;
 use Inertia\Response;
 use Illuminate\Database\Eloquent\Collection;
 
-class EstudioController extends Controller
+class StudyController extends Controller
 {
     public function show(): Response
     {
-        $kanjis = EstudioController::getStudyKanjis();
+        $kanjis = StudyController::getStudyKanjis();
 
-        return Inertia::render("Estudio", [
+        return Inertia::render("Study", [
             "kanjis" => $kanjis,
         ]);
     }
@@ -29,9 +29,9 @@ class EstudioController extends Controller
         $lastUrl = end($urlArray);
         //De estudiar
         if ($lastUrl == "estudiar") {
-            $kanjis = EstudioController::getStudyKanjis();
+            $kanjis = StudyController::getStudyKanjis();
 
-            return Inertia::render("Repaso", [
+            return Inertia::render("Review", [
                 "kanjis" => $kanjis,
             ]);
         }
@@ -42,21 +42,19 @@ class EstudioController extends Controller
         $kanjis = Kanji::whereIn("id", function ($query) use ($userId) {
             $query
                 ->select("kanji_id")
-                ->from("estudios")
+                ->from("studies")
                 ->where("user_id", "=", $userId);
         })->get();
 
         //Obtener último estudio de cada kanji
         $kanjis->load([
-            "estudio" => function ($query) use ($userId) {
-                $query
-                    ->where("user_id", "=", $userId)
-                    ->orderBy("fecha", "desc");
+            "study" => function ($query) use ($userId) {
+                $query->where("user_id", "=", $userId)->orderBy("date", "desc");
             },
-            "radicales",
+            "radicals",
         ]);
 
-        return Inertia::render("Repaso", [
+        return Inertia::render("Review", [
             "kanjis" => $kanjis,
         ]);
     }
@@ -67,19 +65,19 @@ class EstudioController extends Controller
             $validator = Validator::make($study, [
                 "kanji_id" => "required|numeric",
                 "user_id" => "required|numeric",
-                "tiempo" => "required|numeric",
+                "time" => "required|numeric",
                 "betaA" => "required|numeric",
                 "betaB" => "required|numeric",
-                "respuesta" => "required|boolean",
-                "aciertos" => "required|numeric",
-                "intentos" => "required|numeric",
+                "answer" => "required|boolean",
+                "successes" => "required|numeric",
+                "attempts" => "required|numeric",
             ]);
 
             if ($validator->fails()) {
                 dd($validator->errors());
             }
 
-            Estudio::create([...$study, "fecha" => Carbon::now()]);
+            Study::create([...$study, "date" => Carbon::now()]);
         }
     }
 
@@ -87,13 +85,13 @@ class EstudioController extends Controller
     {
         //Obtenemos información del usuario
         $userId = auth()->user()->id;
-        $userIndex = "indice_" . auth()->user()->indice;
+        $userIndex = auth()->user()->index . "_index";
 
         // Obtenemos los kanjis a estudiar
         $kanjis = Kanji::whereNotIn("id", function ($query) use ($userId) {
             $query
                 ->select("kanji_id")
-                ->from("estudios")
+                ->from("studies")
                 ->where("user_id", "=", $userId);
         })
             ->orderBy($userIndex)
@@ -101,7 +99,7 @@ class EstudioController extends Controller
             ->get();
 
         //Les añadimos sus radicales
-        $kanjis->load("radicales");
+        $kanjis->load("radicals");
 
         return $kanjis;
     }

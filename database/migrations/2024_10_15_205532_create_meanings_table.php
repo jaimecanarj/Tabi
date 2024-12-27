@@ -11,14 +11,13 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create("lecturas", function (Blueprint $table) {
+        Schema::create("meanings", function (Blueprint $table) {
             $table->id();
             $table
                 ->foreignIdFor(Kanji::class)
                 ->constrained()
                 ->cascadeOnDelete();
-            $table->string("lectura", length: 20);
-            $table->enum("tipo", ["onyomi", "kunyomi"]);
+            $table->string("meaning", length: 50);
         });
     }
 
@@ -27,6 +26,6 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists("lecturas");
+        Schema::dropIfExists("meanings");
     }
 };

@@ -9,7 +9,7 @@ import {
     BreadcrumbSeparator,
 } from "@/Components/ui/breadcrumb/";
 
-defineProps({ literal: String, tipo: String, titulo: String });
+defineProps({ literal: String, type: String, title: String });
 </script>
 
 <template>
@@ -25,8 +25,8 @@ defineProps({ literal: String, tipo: String, titulo: String });
                 <BreadcrumbSeparator />
                 <BreadcrumbItem class="text-xl capitalize">
                     <BreadcrumbLink asChild>
-                        <Link :href="`/${tipo}`">
-                            {{ tipo }}
+                        <Link :href="`/${type}`">
+                            {{ type }}
                         </Link>
                     </BreadcrumbLink>
                 </BreadcrumbItem>
@@ -44,7 +44,7 @@ defineProps({ literal: String, tipo: String, titulo: String });
     >
         <!-- Literal -->
         <div
-            class="bg-gradient-primary-to-alt flex basis-2/5 items-center justify-center rounded-lg text-[200px] font-bold text-light xl:basis-1/3"
+            class="flex basis-2/5 items-center justify-center rounded-lg bg-gradient-primary-to-alt text-[200px] font-bold text-light xl:basis-1/3"
         >
             <h2>{{ literal }}</h2>
         </div>
@@ -52,7 +52,7 @@ defineProps({ literal: String, tipo: String, titulo: String });
         <div class="basis-3/5 xl:basis-2/3">
             <!-- Significado -->
             <h1 class="mb-3 text-6xl font-semibold first-letter:capitalize">
-                {{ titulo }}
+                {{ title }}
             </h1>
             <slot />
         </div>

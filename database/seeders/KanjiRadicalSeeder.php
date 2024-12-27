@@ -15,11 +15,11 @@ class KanjiRadicalSeeder extends Seeder
      */
     public function run(): void
     {
-        $json = File::get("database/json/kanjiRadicales.json");
+        $json = File::get("database/json/kanjiRadicals.json");
         $relations = collect(json_decode($json, true));
 
         $relations->each(function ($relation) {
-            foreach ($relation["radicales"] as $radical) {
+            foreach ($relation["radicals"] as $radical) {
                 DB::table("kanji_radical")->insert([
                     "kanji_id" => Kanji::where(
                         "literal",

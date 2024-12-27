@@ -3,20 +3,20 @@ import { computed } from "vue";
 import { Head, Link } from "@inertiajs/vue3";
 import moment from "moment/moment";
 import {
-    User,
+    User as UserIcon,
     Calendar,
     CalendarClock,
     BookMarked,
     SquareSigma,
 } from "lucide-vue-next";
-import { Estudio, Kanji, Usuario } from "@/lib/types";
+import { Study, Kanji, User } from "@/types";
 import { kanjiLevels, momentLocale } from "@/lib/utils";
 import MainLayout from "@/Layouts/MainLayout.vue";
 
 const props = defineProps<{
-    user: Usuario;
+    user: User;
     studyCount: number;
-    studys: (Estudio & { kanji: Kanji })[];
+    studys: (Study & { kanji: Kanji })[];
 }>();
 
 momentLocale();
@@ -32,8 +32,8 @@ const studysWithLevel = computed(() => {
         return {
             id: study.kanji_id,
             literal: study.kanji.literal,
-            meaning: study.kanji.significado,
-            level: getKanjiLevel(study.tiempo),
+            meaning: study.kanji.meaning,
+            level: getKanjiLevel(study.time),
         };
     });
 });
@@ -59,7 +59,7 @@ const studysWithLevel = computed(() => {
                     alt="avatar"
                     class="h-80 rounded-lg object-contain"
                 />
-                <User v-else :size="200" class="text-light" />
+                <UserIcon v-else :size="200" class="text-light" />
             </div>
             <!-- Información -->
             <div class="basis-3/5 xl:basis-2/3">
@@ -88,7 +88,7 @@ const studysWithLevel = computed(() => {
                     <p
                         class="mb-2 ml-8 text-lg font-semibold capitalize sm:m-0 lg:text-xl"
                     >
-                        {{ user.indice }}
+                        {{ user.index }}
                     </p>
                 </div>
                 <div class="flex flex-col sm:flex-row sm:items-center sm:gap-2">
@@ -109,9 +109,7 @@ const studysWithLevel = computed(() => {
                         v-if="studyCount > 0"
                         class="mb-2 ml-8 text-lg font-semibold sm:m-0 lg:text-xl"
                     >
-                        {{
-                            moment(studys[0].fecha).format("d [de] MMMM, YYYY")
-                        }}
+                        {{ moment(studys[0].date).format("D [de] MMMM, YYYY") }}
                     </p>
                     <p
                         v-else

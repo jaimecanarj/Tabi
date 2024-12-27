@@ -10,20 +10,20 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Kanji extends Model
 {
     public $timestamps = false;
-    public function lecturas(): HasMany
+    public function readings(): HasMany
     {
-        return $this->hasMany(Lectura::class);
+        return $this->hasMany(Reading::class);
     }
-    public function significados(): HasMany
+    public function meanings(): HasMany
     {
-        return $this->hasMany(Significado::class);
+        return $this->hasMany(Meaning::class);
     }
-    public function radicales(): BelongsToMany
+    public function radicals(): BelongsToMany
     {
         return $this->belongsToMany(Radical::class);
     }
 
-    public function similares(): BelongsToMany
+    public function similarKanjis(): BelongsToMany
     {
         return $this->belongsToMany(
             Kanji::class,
@@ -33,13 +33,13 @@ class Kanji extends Model
         );
     }
 
-    public function estudio(): HasOne
+    public function study(): HasOne
     {
-        return $this->hasOne(Estudio::class);
+        return $this->hasOne(Study::class);
     }
 
-    public function estudios(): HasMany
+    public function studies(): HasMany
     {
-        return $this->hasMany(Estudio::class);
+        return $this->hasMany(Study::class);
     }
 }

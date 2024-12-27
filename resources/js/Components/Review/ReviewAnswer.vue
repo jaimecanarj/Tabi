@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { ChevronRight, CircleAlert } from "lucide-vue-next";
-import { Kanji, Answer } from "@/lib/types";
+import { Kanji, Answer } from "@/types";
 import { Input } from "@/Components/ui/input";
 
 const props = defineProps<{ kanji: Kanji }>();
@@ -24,7 +24,7 @@ const checkAnswer = () => {
     } else {
         //Compruebo resultado sin mayúsculas ni tildes
         answer.value.answerResult =
-            props.kanji.significado.localeCompare(
+            props.kanji.meaning.localeCompare(
                 answer.value.userAnswer,
                 undefined,
                 {
@@ -67,7 +67,7 @@ const checkAnswer = () => {
             >
                 <CircleAlert />
                 <p class="text-nowrap text-2xl first-letter:capitalize">
-                    {{ kanji.significado }}
+                    {{ kanji.meaning }}
                 </p>
             </div>
         </div>

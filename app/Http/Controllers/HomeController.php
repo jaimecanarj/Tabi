@@ -2,32 +2,33 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Estudio;
+use App\Models\Study;
 use App\Models\Kanji;
 use App\Models\Radical;
 use Carbon\Carbon;
 use Inertia\Inertia;
+use Inertia\Response;
 
 class HomeController extends Controller
 {
-    public function index()
+    public function index(): Response
     {
         $userId = auth()->user()?->id;
 
         if (isset($userId)) {
             //Obtener último estudio de cada kanji del usuario
-            $studys = Estudio::where("user_id", "=", $userId)
+            $studys = Study::where("user_id", "=", $userId)
                 ->whereRaw(
-                    "id IN ( SELECT MAX(id) FROM estudios
+                    "id IN ( SELECT MAX(id) FROM studies
                     WHERE user_id = $userId GROUP BY kanji_id )"
                 )
-                ->orderBy("fecha", "desc")
+                ->orderBy("date", "desc")
                 ->get();
 
             $studysWeek = $studys
                 ->filter(function ($study) {
-                    $date = Carbon::parse($study["fecha"])->addHours(
-                        $study["tiempo"]
+                    $date = Carbon::parse($study["date"])->addHours(
+                        $study["time"]
                     );
 
                     return $date->isBefore(Carbon::now()->addDays(7));
@@ -37,8 +38,8 @@ class HomeController extends Controller
             //Calcular kanjis disponibles para repasar
             $kanjisToReview = count(
                 $studysWeek->filter(function ($study) {
-                    $date = Carbon::parse($study["fecha"])->addHours(
-                        $study["tiempo"]
+                    $date = Carbon::parse($study["date"])->addHours(
+                        $study["time"]
                     );
 
                     return $date->isBefore(Carbon::now());
@@ -49,44 +50,40 @@ class HomeController extends Controller
             $kanjisStudiedNumber = $studys->count();
 
             //Calcular numero de estudios del usuario
-            $userStudySessions = Estudio::where(
-                "user_id",
-                "=",
-                $userId
-            )->count();
+            $userStudySessions = Study::where("user_id", "=", $userId)->count();
 
             //Calcular numero de aciertos
-            $userCorrectAnswers = Estudio::where("user_id", "=", $userId)
-                ->where("respuesta", "=", true)
+            $userCorrectAnswers = Study::where("user_id", "=", $userId)
+                ->where("answer", "=", true)
                 ->count();
 
             //Obtener últimos kanjis fallados
-            $lastWrongKanjis = Estudio::where("user_id", "=", $userId)
-                ->where("respuesta", "=", false)
+            $lastWrongKanjis = Study::where("user_id", "=", $userId)
+                ->where("answer", "=", false)
                 ->distinct()
-                ->orderBy("fecha", "desc")
+                ->orderBy("date", "desc")
                 ->limit(28)
                 ->get();
             $lastWrongKanjis->load(["kanji"]);
 
             //Obtener últimos kanjis repasados
-            $lastReviewedKanjis = Estudio::where("user_id", "=", $userId)
+            $lastReviewedKanjis = Study::where("user_id", "=", $userId)
                 ->distinct()
-                ->orderBy("fecha", "desc")
+                ->orderBy("date", "desc")
                 ->limit(28)
                 ->get();
             $lastReviewedKanjis->load(["kanji"]);
 
             //Calcular kanjis estudiados hoy
-            $studiedToday = Estudio::where("user_id", "=", $userId)
-                ->whereDate("fecha", "=", Carbon::today())
-                ->where("intentos", "=", 1)
+            $studiedToday = Study::where("user_id", "=", $userId)
+                ->whereDate("date", "=", Carbon::today())
+                ->where("attempts", "=", 1)
                 ->count();
 
             //Calcular kanjis repasados hoy
-            $reviewedToday = Estudio::where("user_id", "=", $userId)
-                ->whereDate("fecha", "=", Carbon::today())
-                ->where("intentos", ">", 1)
+            $reviewedToday = Study::where("user_id", "=", $userId)
+                ->whereDate("date", "=", Carbon::today())
+                ->where("attempts", ">", 1)
                 ->count();
 
             $data = [
@@ -108,13 +105,13 @@ class HomeController extends Controller
     }
     public function search($query)
     {
-        $kanjis = Kanji::where("significado", "LIKE", "%$query%")
+        $kanjis = Kanji::where("meaning", "LIKE", "%$query%")
             ->orWhere("literal", "=", "%$query%")
             ->get();
-        $radicales = Radical::where("significado", "LIKE", "%$query%")
+        $radicales = Radical::where("meaning", "LIKE", "%$query%")
             ->orWhere("literal", "=", "%$query%")
             ->get();
 
-        return ["kanjis" => $kanjis, "radicales" => $radicales];
+        return ["kanjis" => $kanjis, "radicals" => $radicales];
     }
 }

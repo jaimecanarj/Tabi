@@ -2,7 +2,7 @@
 import { Link } from "@inertiajs/vue3";
 import moment from "moment/moment";
 import { Clock } from "lucide-vue-next";
-import { Estudio, Kanji, KanjiLevel } from "@/lib/types";
+import { Study, Kanji, KanjiLevel } from "@/types";
 import {
     HoverCard,
     HoverCardContent,
@@ -10,7 +10,7 @@ import {
 } from "@/Components/ui/hover-card";
 
 const props = defineProps<{
-    studys: (Estudio & { kanji: Kanji; level: KanjiLevel })[];
+    studies: (Study & { kanji: Kanji; level: KanjiLevel })[];
     type: string;
 }>();
 
@@ -33,7 +33,7 @@ switch (props.type) {
         >
             <slot name="title" />
         </h2>
-        <h2 v-if="!studys.length" class="pl-3 pt-5 text-2xl">
+        <h2 v-if="!studies.length" class="pl-3 pt-5 text-2xl">
             Aún no has {{ message }} ningún kanji.
         </h2>
         <div
@@ -41,7 +41,7 @@ switch (props.type) {
             class="mt-4 grid max-h-40 grid-cols-[repeat(auto-fill,_minmax(56px,_1fr))] gap-2 overflow-hidden sm:h-28"
         >
             <HoverCard
-                v-for="study in studys"
+                v-for="study in studies"
                 :open-delay="500"
                 :close-delay="200"
             >

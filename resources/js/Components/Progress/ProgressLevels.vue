@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { Estudio, Kanji } from "@/lib/types";
+import { Study, Kanji } from "@/types";
 import { kanjiLevels } from "@/lib/utils";
 
-const props = defineProps<{ kanjis: (Kanji & { estudios: Estudio[] })[] }>();
+const props = defineProps<{ kanjis: (Kanji & { studies: Study[] })[] }>();
 
 const levels = [
     {
@@ -32,9 +32,9 @@ const levels = [
 ];
 
 props.kanjis.forEach((kanji) => {
-    if (kanji.estudios.length) {
+    if (kanji.studies.length) {
         let result = levels.find(
-            (level) => kanji.estudios[0].tiempo / 24 < level.threshold,
+            (level) => kanji.studies[0].time / 24 < level.threshold,
         );
         if (result) {
             result.kanjis++;

@@ -5,7 +5,7 @@ import * as ebisu from "ebisu-js";
 import moment from "moment/moment";
 import "moment/locale/es";
 import axios from "axios";
-import { Answer, Estudio, Kanji, KanjiLevel } from "@/lib/types";
+import { Answer, Study, Kanji, KanjiLevel } from "@/types";
 import { kanjiLevels } from "@/lib/utils";
 import MainLayout from "@/Layouts/MainLayout.vue";
 import ReviewResumeKanjis from "@/Components/Review/ReviewResumeKanjis.vue";
@@ -14,7 +14,7 @@ import ReviewResumeCongratulation from "@/Components/Review/ReviewResumeCongratu
 const page = usePage();
 
 const props = defineProps<{
-    answers: (Answer & { kanji: Kanji; estudio?: Estudio })[];
+    answers: (Answer & { kanji: Kanji; study?: Study })[];
 }>();
 
 const answersCorrect = computed(() => {
@@ -24,17 +24,17 @@ const answersCorrect = computed(() => {
     }, 0);
 });
 
-const createNewModel = (answer: Answer & { estudio?: Estudio }) => {
+const createNewModel = (answer: Answer & { study?: Study }) => {
     let model = ebisu.defaultModel(48, 3, 3);
 
-    if (answer.estudio) {
+    if (answer.study) {
         model = ebisu.defaultModel(
-            answer.estudio.tiempo,
-            answer.estudio.betaA,
-            answer.estudio.betaB,
+            answer.study.time,
+            answer.study.betaA,
+            answer.study.betaB,
         );
         let newTime = moment().diff(
-            moment(answer.estudio.fecha, "YYYY-MM-DD HH:mm:ss"),
+            moment(answer.study.date, "YYYY-MM-DD HH:mm:ss"),
             "hours",
         );
         model = ebisu.updateRecall(
@@ -48,32 +48,32 @@ const createNewModel = (answer: Answer & { estudio?: Estudio }) => {
 };
 
 const storeStudys = async () => {
-    let studys: Omit<Estudio, "id" | "fecha">[] = [];
+    let studys: Omit<Study, "id" | "date">[] = [];
     props.answers.forEach((answer) => {
         let model = createNewModel(answer);
         let correctAnswers = 1;
         let attempts = 1;
 
-        if (answer.estudio) {
-            attempts += answer.estudio.intentos;
+        if (answer.study) {
+            attempts += answer.study.attempts;
             if (answer.answerResult) {
-                correctAnswers += answer.estudio.aciertos;
+                correctAnswers += answer.study.successes;
             } else {
-                correctAnswers = answer.estudio.aciertos;
+                correctAnswers = answer.study.successes;
             }
         }
         studys.push({
             kanji_id: answer.kanji.id,
             user_id: page.props.auth.user.id,
-            tiempo: model[2],
+            time: model[2],
             betaA: model[0],
             betaB: model[1],
-            respuesta: answer.answerResult ? 1 : 0,
-            aciertos: correctAnswers,
-            intentos: attempts,
+            answer: answer.answerResult ? 1 : 0,
+            successes: correctAnswers,
+            attempts: attempts,
         });
     });
-    await axios.post("/repasar", {
+    await axios.post("/review", {
         studys: studys,
     });
 };
@@ -92,15 +92,15 @@ const kanjis = ref<
 props.answers.forEach((answer) => {
     //Calcular fecha de repaso
     let newTime = 48;
-    if (answer.estudio) {
+    if (answer.study) {
         newTime = createNewModel(answer)[2];
     }
     let date = moment().add(newTime, "hours").from(moment());
     //Calcular niveles
     let oldLevel: KanjiLevel | undefined = undefined;
-    if (answer.estudio) {
+    if (answer.study) {
         oldLevel = kanjiLevels.find(
-            (level) => answer.estudio!.tiempo / 24 < level.threshold,
+            (level) => answer.study!.time / 24 < level.threshold,
         )!;
     }
     let newLevel = kanjiLevels.find((level) => newTime / 24 < level.threshold)!;

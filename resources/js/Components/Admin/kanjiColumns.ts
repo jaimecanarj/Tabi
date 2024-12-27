@@ -1,7 +1,7 @@
 import { h } from "vue";
 import { ColumnDef } from "@tanstack/vue-table";
 import { ArrowUpDown } from "lucide-vue-next";
-import { Kanji } from "@/lib/types";
+import { Kanji } from "@/types";
 import { Button } from "@/Components/ui/button";
 import { DropdownAction } from "@/Components/ui/data-table";
 
@@ -17,7 +17,7 @@ export const columns: ColumnDef<Kanji>[] = [
         },
     },
     {
-        accessorKey: "significado",
+        accessorKey: "meaning",
         header: ({ column }) =>
             h(
                 Button,
@@ -32,7 +32,7 @@ export const columns: ColumnDef<Kanji>[] = [
                 ],
             ),
         cell: ({ row }) => {
-            const meaning: string = row.getValue("significado");
+            const meaning: string = row.getValue("meaning");
 
             return h(
                 "div",
@@ -42,7 +42,7 @@ export const columns: ColumnDef<Kanji>[] = [
         },
     },
     {
-        accessorKey: "trazos",
+        accessorKey: "strokes",
         header: ({ column }) =>
             h(
                 Button,
@@ -54,13 +54,13 @@ export const columns: ColumnDef<Kanji>[] = [
                 () => ["Trazos", h(ArrowUpDown, { class: "ml-2 h-4 w-4" })],
             ),
         cell: ({ row }) => {
-            const strokes: string = row.getValue("trazos");
+            const strokes: string = row.getValue("strokes");
 
             return h("div", { class: "text-lg ml-4" }, strokes);
         },
     },
     {
-        accessorKey: "grado",
+        accessorKey: "grade",
         header: ({ column }) =>
             h(
                 Button,
@@ -72,13 +72,13 @@ export const columns: ColumnDef<Kanji>[] = [
                 () => ["Grado", h(ArrowUpDown, { class: "ml-2 h-4 w-4" })],
             ),
         cell: ({ row }) => {
-            const grade: string = row.getValue("grado");
+            const grade: string = row.getValue("grade");
 
             return h("div", { class: "text-lg ml-4" }, grade);
         },
     },
     {
-        accessorKey: "indice_heisig",
+        accessorKey: "heisig_index",
         header: ({ column }) =>
             h(
                 Button,
@@ -90,13 +90,13 @@ export const columns: ColumnDef<Kanji>[] = [
                 () => ["Heisig", h(ArrowUpDown, { class: "ml-2 h-4 w-4" })],
             ),
         cell: ({ row }) => {
-            const heisig: string = row.getValue("indice_heisig");
+            const heisig: string = row.getValue("heisig_index");
 
             return h("div", { class: "text-lg ml-4" }, heisig);
         },
     },
     {
-        accessorKey: "indice_wanikani",
+        accessorKey: "wanikani_index",
         header: ({ column }) =>
             h(
                 Button,
@@ -108,7 +108,7 @@ export const columns: ColumnDef<Kanji>[] = [
                 () => ["WaniKani", h(ArrowUpDown, { class: "ml-2 h-4 w-4" })],
             ),
         cell: ({ row }) => {
-            const wanikani: string = row.getValue("indice_wanikani");
+            const wanikani: string = row.getValue("wanikani_index");
 
             return h("div", { class: "text-lg ml-4" }, wanikani);
         },

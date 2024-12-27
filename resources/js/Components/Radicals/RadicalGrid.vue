@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { Link } from "@inertiajs/vue3";
 import { Hash, PencilLine } from "lucide-vue-next";
-import { Radical } from "@/lib/types";
+import { Radical } from "@/types";
 import { Badge } from "@/Components/ui/badge";
 
-defineProps<{ radicales: (Radical & { kanjis_count: number })[] }>();
+defineProps<{ radicals: (Radical & { kanjis_count: number })[] }>();
 </script>
 
 <template>
-    <Link v-for="radical of radicales" :href="`/radicales/${radical.id}`">
+    <Link v-for="radical of radicals" :href="`/radicales/${radical.id}`">
         <div
             class="group flex h-60 w-56 flex-col rounded-md border bg-card shadow-md hover:shadow-lg xl:w-48"
         >
@@ -23,7 +23,7 @@ defineProps<{ radicales: (Radical & { kanjis_count: number })[] }>();
                 <p
                     class="line-clamp-2 text-2xl font-semibold tracking-tight first-letter:capitalize"
                 >
-                    {{ radical.significado }}
+                    {{ radical.meaning }}
                 </p>
                 <Badge
                     variant="secondary"
@@ -31,7 +31,7 @@ defineProps<{ radicales: (Radical & { kanjis_count: number })[] }>();
                 >
                     <p>
                         <PencilLine class="inline h-5" />
-                        {{ radical.trazos }}
+                        {{ radical.strokes }}
                     </p>
                     <p>
                         <Hash class="inline h-5" />

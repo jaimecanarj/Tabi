@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Link } from "@inertiajs/vue3";
 import { Library, PencilLine, TrendingUp } from "lucide-vue-next";
-import { Kanji } from "@/lib/types";
+import { Kanji } from "@/types";
 import { Badge } from "@/Components/ui/badge";
 
 defineProps<{ kanjis: Kanji[] }>();
@@ -23,23 +23,23 @@ defineProps<{ kanjis: Kanji[] }>();
                 <p
                     class="line-clamp-2 text-2xl font-semibold tracking-tight first-letter:capitalize"
                 >
-                    {{ kanji.significado }}
+                    {{ kanji.meaning }}
                 </p>
                 <Badge
                     variant="secondary"
-                    class="flex w-full justify-evenly gap-1"
+                    class="flex w-full justify-evenly gap-0.5"
                 >
                     <p>
-                        <PencilLine class="inline h-5" />
-                        {{ kanji.trazos }}
+                        <PencilLine class="inline" :size="20" />
+                        {{ kanji.strokes }}
                     </p>
                     <p>
-                        <Library class="inline h-5" />
-                        {{ kanji.grado }}
+                        <Library class="inline" :size="20" />
+                        {{ kanji.grade }}
                     </p>
-                    <p v-if="kanji.frecuencia">
-                        <TrendingUp class="inline h-5" />
-                        {{ kanji.frecuencia }}
+                    <p v-if="kanji.frequency">
+                        <TrendingUp class="inline" :size="20" />
+                        {{ kanji.frequency }}
                     </p>
                 </Badge>
             </div>

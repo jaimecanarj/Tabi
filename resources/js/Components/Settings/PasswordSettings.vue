@@ -6,9 +6,9 @@ import { toast } from "@/Components/ui/toast";
 import { Button } from "@/Components/ui/button";
 
 const form = useForm({
-    current_password: "",
+    currentPassword: "",
     password: "",
-    password_confirmation: "",
+    passwordConfirmation: "",
 });
 
 const submit = () => {
@@ -40,14 +40,14 @@ const submit = () => {
                     type="password"
                     name="current_password"
                     required
-                    v-model="form.current_password"
+                    v-model="form.currentPassword"
                     class="mt-2 w-64 sm:w-72"
                 />
                 <p
                     class="mt-2 text-sm text-red-600"
-                    v-show="form.errors.current_password"
+                    v-show="form.errors.currentPassword"
                 >
-                    {{ form.errors.current_password }}
+                    {{ form.errors.currentPassword }}
                 </p>
             </div>
             <div class="flex flex-col gap-4 md:flex-row">
@@ -79,14 +79,14 @@ const submit = () => {
                         type="password"
                         name="password_confirmation"
                         required
-                        v-model="form.password_confirmation"
+                        v-model="form.passwordConfirmation"
                         class="mt-2 w-64 sm:w-72"
                     />
                     <p
                         class="mt-2 text-sm text-red-600"
-                        v-show="form.errors.password_confirmation"
+                        v-show="form.errors.passwordConfirmation"
                     >
-                        {{ form.errors.password_confirmation }}
+                        {{ form.errors.passwordConfirmation }}
                     </p>
                 </div>
             </div>

@@ -3,7 +3,7 @@ import { Ref, ref, watch } from "vue";
 import { Head, router } from "@inertiajs/vue3";
 import type { DateRange } from "radix-vue";
 import { CalendarDate } from "@internationalized/date";
-import { Estudio, Kanji } from "@/lib/types";
+import { Study, Kanji } from "@/types";
 import MainLayout from "@/Layouts/MainLayout.vue";
 import ProgressChart from "@/Components/Progress/ProgressChart.vue";
 import ProgressLevels from "@/Components/Progress/ProgressLevels.vue";
@@ -12,8 +12,8 @@ import ProgressDetails from "@/Components/Progress/ProgressDetails.vue";
 import DateRangePicker from "@/Components/ui/date-range-picker/DateRangePicker.vue";
 
 const props = defineProps<{
-    kanjis: (Kanji & { estudios: Estudio[] })[];
-    fechas: { inicio: string; fin: string };
+    kanjis: (Kanji & { studies: Study[] })[];
+    dates: { start: string; end: string };
     details: {
         kanjisStudiedNumber: number;
         userStudySessions: number;
@@ -21,20 +21,20 @@ const props = defineProps<{
     };
 }>();
 
-let fechaInicio = props.fechas.inicio.split("-");
-let fechaFin = props.fechas.fin.split("-");
+let startDate = props.dates.start.split("-");
+let endDate = props.dates.end.split("-");
 
 //Definido as any porque typescript no entiende bien el tipo
 const dates: Ref<DateRange> = ref({
     start: new CalendarDate(
-        parseInt(fechaInicio[0]),
-        parseInt(fechaInicio[1]),
-        parseInt(fechaInicio[2]),
+        parseInt(startDate[0]),
+        parseInt(startDate[1]),
+        parseInt(startDate[2]),
     ) as any,
     end: new CalendarDate(
-        parseInt(fechaFin[0]),
-        parseInt(fechaFin[1]),
-        parseInt(fechaFin[2]),
+        parseInt(endDate[0]),
+        parseInt(endDate[1]),
+        parseInt(endDate[2]),
     ) as any,
 });
 

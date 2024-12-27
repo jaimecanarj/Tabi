@@ -2,20 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Estudio;
+use App\Models\Study;
 use App\Models\Kanji;
 use Carbon\Carbon;
 use Inertia\Inertia;
 use Inertia\Response;
 use Request;
 
-class ProgresoController extends Controller
+class ProgressController extends Controller
 {
     public function index(): Response
     {
         //Obtenemos información del usuario
         $userId = auth()->user()->id;
-        $userIndex = "indice_" . auth()->user()->indice;
+        $userIndex = auth()->user()->index . "_index";
 
         //Obtenemos los kanjis ordenados por el índice del usuario
         $kanjis = Kanji::orderBy($userIndex)->get();
@@ -25,60 +25,59 @@ class ProgresoController extends Controller
             $startDate = Request::input("start");
             $endDate = Carbon::parse(Request::input("end"))->endOfDay();
             $kanjis->load([
-                "estudios" => function ($query) use (
+                "studies" => function ($query) use (
                     $userId,
                     $startDate,
                     $endDate
                 ) {
                     $query
-                        ->whereBetween("fecha", [$startDate, $endDate])
+                        ->whereBetween("date", [$startDate, $endDate])
                         ->where("user_id", "=", $userId)
-                        ->orderBy("fecha", "desc");
+                        ->orderBy("date", "desc");
                 },
             ]);
         }
         //Obtenemos todos si no tiene fechas
         else {
             $kanjis->load([
-                "estudios" => function ($query) use ($userId) {
+                "studies" => function ($query) use ($userId) {
                     $query
                         ->where("user_id", "=", $userId)
-                        ->orderBy("fecha", "desc");
+                        ->orderBy("date", "desc");
                 },
             ]);
             //Obtenemos primera y última fecha de estudio
-            $startDate = Estudio::where("user_id", $userId)
-                ->oldest("fecha")
-                ->first()?->fecha;
-            $endDate = Estudio::where("user_id", $userId)
-                ->latest("fecha")
-                ->first()?->fecha;
+            $startDate = Study::where("user_id", $userId)
+                ->oldest("date")
+                ->first()?->date;
+            $endDate = Study::where("user_id", $userId)->latest("date")->first()
+                ?->date;
         }
 
         //Calcular numero de kanjis estudiados
-        $kanjisStudiedNumber = Estudio::where("user_id", "=", $userId)
-            ->whereBetween("fecha", [$startDate, $endDate])
+        $kanjisStudiedNumber = Study::where("user_id", "=", $userId)
+            ->whereBetween("date", [$startDate, $endDate])
             ->whereRaw(
                 "id IN (
             SELECT MAX(id)
-            FROM estudios
-            WHERE user_id = ? AND fecha BETWEEN ? AND ?
+            FROM studies
+            WHERE user_id = ? AND date BETWEEN ? AND ?
             GROUP BY kanji_id
         )",
                 [$userId, $startDate, $endDate]
             )
-            ->orderBy("fecha", "desc")
+            ->orderBy("date", "desc")
             ->count();
 
         //Calcular numero de estudios del usuario
-        $userStudySessions = Estudio::where("user_id", "=", $userId)
-            ->whereBetween("fecha", [$startDate, $endDate])
+        $userStudySessions = Study::where("user_id", "=", $userId)
+            ->whereBetween("date", [$startDate, $endDate])
             ->count();
 
         //Calcular numero de aciertos
-        $userCorrectAnswers = Estudio::where("user_id", "=", $userId)
-            ->whereBetween("fecha", [$startDate, $endDate])
-            ->where("respuesta", "=", true)
+        $userCorrectAnswers = Study::where("user_id", "=", $userId)
+            ->whereBetween("date", [$startDate, $endDate])
+            ->where("answer", "=", true)
             ->count();
 
         //Si el usuario no ha estudiado todavía
@@ -87,11 +86,11 @@ class ProgresoController extends Controller
             $endDate = Carbon::now();
         }
 
-        return Inertia::render("Progreso", [
+        return Inertia::render("Progress", [
             "kanjis" => $kanjis,
-            "fechas" => [
-                "inicio" => $startDate,
-                "fin" => $endDate,
+            "dates" => [
+                "start" => $startDate,
+                "end" => $endDate,
             ],
             "details" => [
                 "kanjisStudiedNumber" => $kanjisStudiedNumber,

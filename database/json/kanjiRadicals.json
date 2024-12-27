@@ -1,0 +1,8546 @@
+[
+    {
+        "kanji": "一",
+        "radicals": ["一"]
+    },
+    {
+        "kanji": "二",
+        "radicals": ["二"]
+    },
+    {
+        "kanji": "九",
+        "radicals": ["九"]
+    },
+    {
+        "kanji": "七",
+        "radicals": ["七"]
+    },
+    {
+        "kanji": "人",
+        "radicals": ["人"]
+    },
+    {
+        "kanji": "入",
+        "radicals": ["入"]
+    },
+    {
+        "kanji": "八",
+        "radicals": ["ハ"]
+    },
+    {
+        "kanji": "力",
+        "radicals": ["力"]
+    },
+    {
+        "kanji": "十",
+        "radicals": ["十"]
+    },
+    {
+        "kanji": "三",
+        "radicals": ["一", "二"]
+    },
+    {
+        "kanji": "上",
+        "radicals": ["ト", "一"]
+    },
+    {
+        "kanji": "下",
+        "radicals": ["一", "ト"]
+    },
+    {
+        "kanji": "口",
+        "radicals": ["口"]
+    },
+    {
+        "kanji": "大",
+        "radicals": ["大"]
+    },
+    {
+        "kanji": "女",
+        "radicals": ["女"]
+    },
+    {
+        "kanji": "山",
+        "radicals": ["山"]
+    },
+    {
+        "kanji": "川",
+        "radicals": ["川"]
+    },
+    {
+        "kanji": "工",
+        "radicals": ["工"]
+    },
+    {
+        "kanji": "刀",
+        "radicals": ["刀"]
+    },
+    {
+        "kanji": "土",
+        "radicals": ["土"]
+    },
+    {
+        "kanji": "千",
+        "radicals": ["千"]
+    },
+    {
+        "kanji": "夕",
+        "radicals": ["夕"]
+    },
+    {
+        "kanji": "子",
+        "radicals": ["子"]
+    },
+    {
+        "kanji": "小",
+        "radicals": ["小"]
+    },
+    {
+        "kanji": "丁",
+        "radicals": ["丁"]
+    },
+    {
+        "kanji": "了",
+        "radicals": ["亅"]
+    },
+    {
+        "kanji": "又",
+        "radicals": ["又"]
+    },
+    {
+        "kanji": "丸",
+        "radicals": ["九", "丶"]
+    },
+    {
+        "kanji": "才",
+        "radicals": ["一", "亅", "丿"]
+    },
+    {
+        "kanji": "中",
+        "radicals": ["中"]
+    },
+    {
+        "kanji": "五",
+        "radicals": ["五"]
+    },
+    {
+        "kanji": "六",
+        "radicals": ["亠", "ハ"]
+    },
+    {
+        "kanji": "円",
+        "radicals": ["冂", "亠"]
+    },
+    {
+        "kanji": "天",
+        "radicals": ["天"]
+    },
+    {
+        "kanji": "手",
+        "radicals": ["手"]
+    },
+    {
+        "kanji": "文",
+        "radicals": ["文"]
+    },
+    {
+        "kanji": "日",
+        "radicals": ["日"]
+    },
+    {
+        "kanji": "月",
+        "radicals": ["月"]
+    },
+    {
+        "kanji": "木",
+        "radicals": ["木"]
+    },
+    {
+        "kanji": "水",
+        "radicals": ["水"]
+    },
+    {
+        "kanji": "火",
+        "radicals": ["火"]
+    },
+    {
+        "kanji": "犬",
+        "radicals": ["犬"]
+    },
+    {
+        "kanji": "王",
+        "radicals": ["王"]
+    },
+    {
+        "kanji": "出",
+        "radicals": ["山"]
+    },
+    {
+        "kanji": "右",
+        "radicals": ["ナ", "口"]
+    },
+    {
+        "kanji": "四",
+        "radicals": ["口", "儿"]
+    },
+    {
+        "kanji": "左",
+        "radicals": ["ナ", "工"]
+    },
+    {
+        "kanji": "本",
+        "radicals": ["本"]
+    },
+    {
+        "kanji": "正",
+        "radicals": ["一", "止"]
+    },
+    {
+        "kanji": "玉",
+        "radicals": ["王", "丶"]
+    },
+    {
+        "kanji": "田",
+        "radicals": ["田"]
+    },
+    {
+        "kanji": "白",
+        "radicals": ["白"]
+    },
+    {
+        "kanji": "目",
+        "radicals": ["目"]
+    },
+    {
+        "kanji": "石",
+        "radicals": ["石"]
+    },
+    {
+        "kanji": "立",
+        "radicals": ["立"]
+    },
+    {
+        "kanji": "万",
+        "radicals": ["丆", "刀"]
+    },
+    {
+        "kanji": "久",
+        "radicals": ["丿", "入"]
+    },
+    {
+        "kanji": "今",
+        "radicals": ["今"]
+    },
+    {
+        "kanji": "元",
+        "radicals": ["元"]
+    },
+    {
+        "kanji": "公",
+        "radicals": ["ハ", "ム"]
+    },
+    {
+        "kanji": "内",
+        "radicals": ["冂", "人"]
+    },
+    {
+        "kanji": "分",
+        "radicals": ["ハ", "刀"]
+    },
+    {
+        "kanji": "切",
+        "radicals": ["七", "刀"]
+    },
+    {
+        "kanji": "午",
+        "radicals": ["丿", "干"]
+    },
+    {
+        "kanji": "友",
+        "radicals": ["ナ", "又"]
+    },
+    {
+        "kanji": "太",
+        "radicals": ["大", "丶"]
+    },
+    {
+        "kanji": "少",
+        "radicals": ["小", "丿"]
+    },
+    {
+        "kanji": "引",
+        "radicals": ["弓", "丨"]
+    },
+    {
+        "kanji": "心",
+        "radicals": ["心"]
+    },
+    {
+        "kanji": "戸",
+        "radicals": ["戸"]
+    },
+    {
+        "kanji": "方",
+        "radicals": ["方"]
+    },
+    {
+        "kanji": "牛",
+        "radicals": ["牛"]
+    },
+    {
+        "kanji": "父",
+        "radicals": ["父"]
+    },
+    {
+        "kanji": "毛",
+        "radicals": ["毛"]
+    },
+    {
+        "kanji": "止",
+        "radicals": ["止"]
+    },
+    {
+        "kanji": "兄",
+        "radicals": ["口", "儿"]
+    },
+    {
+        "kanji": "冬",
+        "radicals": ["夂", "冫"]
+    },
+    {
+        "kanji": "北",
+        "radicals": ["冫", "丨", "匕"]
+    },
+    {
+        "kanji": "半",
+        "radicals": ["⺌", "干"]
+    },
+    {
+        "kanji": "古",
+        "radicals": ["古"]
+    },
+    {
+        "kanji": "台",
+        "radicals": ["ム", "口"]
+    },
+    {
+        "kanji": "外",
+        "radicals": ["夕", "ト"]
+    },
+    {
+        "kanji": "市",
+        "radicals": ["亠", "巾"]
+    },
+    {
+        "kanji": "広",
+        "radicals": ["广", "ム"]
+    },
+    {
+        "kanji": "母",
+        "radicals": ["毋"]
+    },
+    {
+        "kanji": "用",
+        "radicals": ["用"]
+    },
+    {
+        "kanji": "矢",
+        "radicals": ["矢"]
+    },
+    {
+        "kanji": "世",
+        "radicals": ["世"]
+    },
+    {
+        "kanji": "主",
+        "radicals": ["主"]
+    },
+    {
+        "kanji": "他",
+        "radicals": ["ｲ", "也"]
+    },
+    {
+        "kanji": "代",
+        "radicals": ["ｲ", "弋"]
+    },
+    {
+        "kanji": "写",
+        "radicals": ["冖", "一", "勹"]
+    },
+    {
+        "kanji": "去",
+        "radicals": ["土", "ム"]
+    },
+    {
+        "kanji": "号",
+        "radicals": ["口", "一", "勹"]
+    },
+    {
+        "kanji": "央",
+        "radicals": ["央"]
+    },
+    {
+        "kanji": "平",
+        "radicals": ["干", "丷"]
+    },
+    {
+        "kanji": "打",
+        "radicals": ["扌", "丁"]
+    },
+    {
+        "kanji": "氷",
+        "radicals": ["丶", "水"]
+    },
+    {
+        "kanji": "申",
+        "radicals": ["十", "口"]
+    },
+    {
+        "kanji": "皮",
+        "radicals": ["丿", "支"]
+    },
+    {
+        "kanji": "皿",
+        "radicals": ["皿"]
+    },
+    {
+        "kanji": "礼",
+        "radicals": ["ネ", "乚"]
+    },
+    {
+        "kanji": "休",
+        "radicals": ["ｲ", "木"]
+    },
+    {
+        "kanji": "先",
+        "radicals": ["丿", "土", "儿"]
+    },
+    {
+        "kanji": "名",
+        "radicals": ["夕", "口"]
+    },
+    {
+        "kanji": "字",
+        "radicals": ["宀", "子"]
+    },
+    {
+        "kanji": "年",
+        "radicals": ["𠂉", "牛"]
+    },
+    {
+        "kanji": "早",
+        "radicals": ["日", "十"]
+    },
+    {
+        "kanji": "気",
+        "radicals": ["气", "メ"]
+    },
+    {
+        "kanji": "百",
+        "radicals": ["丆", "日"]
+    },
+    {
+        "kanji": "竹",
+        "radicals": ["竹"]
+    },
+    {
+        "kanji": "糸",
+        "radicals": ["糸"]
+    },
+    {
+        "kanji": "耳",
+        "radicals": ["耳"]
+    },
+    {
+        "kanji": "虫",
+        "radicals": ["虫"]
+    },
+    {
+        "kanji": "村",
+        "radicals": ["木", "寸"]
+    },
+    {
+        "kanji": "男",
+        "radicals": ["男"]
+    },
+    {
+        "kanji": "町",
+        "radicals": ["田", "丁"]
+    },
+    {
+        "kanji": "花",
+        "radicals": ["艹", "ｲ", "匕"]
+    },
+    {
+        "kanji": "見",
+        "radicals": ["見"]
+    },
+    {
+        "kanji": "貝",
+        "radicals": ["貝"]
+    },
+    {
+        "kanji": "赤",
+        "radicals": ["赤"]
+    },
+    {
+        "kanji": "足",
+        "radicals": ["足"]
+    },
+    {
+        "kanji": "車",
+        "radicals": ["車"]
+    },
+    {
+        "kanji": "不",
+        "radicals": ["不"]
+    },
+    {
+        "kanji": "仕",
+        "radicals": ["ｲ", "士"]
+    },
+    {
+        "kanji": "交",
+        "radicals": ["亠", "父"]
+    },
+    {
+        "kanji": "会",
+        "radicals": ["会"]
+    },
+    {
+        "kanji": "光",
+        "radicals": ["⺌", "兀"]
+    },
+    {
+        "kanji": "同",
+        "radicals": ["冋", "一"]
+    },
+    {
+        "kanji": "回",
+        "radicals": ["口"]
+    },
+    {
+        "kanji": "多",
+        "radicals": ["夕"]
+    },
+    {
+        "kanji": "当",
+        "radicals": ["⺌", "ヨ"]
+    },
+    {
+        "kanji": "毎",
+        "radicals": ["𠂉", "毋"]
+    },
+    {
+        "kanji": "池",
+        "radicals": ["也", "氵"]
+    },
+    {
+        "kanji": "米",
+        "radicals": ["米"]
+    },
+    {
+        "kanji": "羽",
+        "radicals": ["羽"]
+    },
+    {
+        "kanji": "考",
+        "radicals": ["耂", "勹"]
+    },
+    {
+        "kanji": "肉",
+        "radicals": ["肉"]
+    },
+    {
+        "kanji": "自",
+        "radicals": ["自"]
+    },
+    {
+        "kanji": "色",
+        "radicals": ["色"]
+    },
+    {
+        "kanji": "行",
+        "radicals": ["行"]
+    },
+    {
+        "kanji": "西",
+        "radicals": ["西"]
+    },
+    {
+        "kanji": "何",
+        "radicals": ["ｲ", "可"]
+    },
+    {
+        "kanji": "体",
+        "radicals": ["ｲ", "本"]
+    },
+    {
+        "kanji": "作",
+        "radicals": ["ｲ", "乍"]
+    },
+    {
+        "kanji": "図",
+        "radicals": ["口", "丶", "メ"]
+    },
+    {
+        "kanji": "声",
+        "radicals": ["士", "尸", "丨"]
+    },
+    {
+        "kanji": "売",
+        "radicals": ["士", "冖", "儿"]
+    },
+    {
+        "kanji": "弟",
+        "radicals": ["丷", "弓", "丨", "丿"]
+    },
+    {
+        "kanji": "形",
+        "radicals": ["开", "彡"]
+    },
+    {
+        "kanji": "来",
+        "radicals": ["一", "米"]
+    },
+    {
+        "kanji": "社",
+        "radicals": ["ネ", "土"]
+    },
+    {
+        "kanji": "角",
+        "radicals": ["勹", "用"]
+    },
+    {
+        "kanji": "言",
+        "radicals": ["言"]
+    },
+    {
+        "kanji": "谷",
+        "radicals": ["ハ", "𠆢", "口"]
+    },
+    {
+        "kanji": "走",
+        "radicals": ["走"]
+    },
+    {
+        "kanji": "近",
+        "radicals": ["⻌", "斤"]
+    },
+    {
+        "kanji": "里",
+        "radicals": ["里"]
+    },
+    {
+        "kanji": "麦",
+        "radicals": ["生", "夂"]
+    },
+    {
+        "kanji": "学",
+        "radicals": ["龸", "子"]
+    },
+    {
+        "kanji": "林",
+        "radicals": ["木"]
+    },
+    {
+        "kanji": "空",
+        "radicals": ["穴", "工"]
+    },
+    {
+        "kanji": "金",
+        "radicals": ["金"]
+    },
+    {
+        "kanji": "雨",
+        "radicals": ["雨"]
+    },
+    {
+        "kanji": "青",
+        "radicals": ["青"]
+    },
+    {
+        "kanji": "草",
+        "radicals": ["艹", "日", "十"]
+    },
+    {
+        "kanji": "音",
+        "radicals": ["立", "日"]
+    },
+    {
+        "kanji": "化",
+        "radicals": ["ｲ", "匕"]
+    },
+    {
+        "kanji": "地",
+        "radicals": ["土", "也"]
+    },
+    {
+        "kanji": "両",
+        "radicals": ["一", "冂", "山"]
+    },
+    {
+        "kanji": "全",
+        "radicals": ["𠆢", "王"]
+    },
+    {
+        "kanji": "向",
+        "radicals": ["丶", "冋"]
+    },
+    {
+        "kanji": "安",
+        "radicals": ["宀", "女"]
+    },
+    {
+        "kanji": "州",
+        "radicals": ["丶", "川"]
+    },
+    {
+        "kanji": "曲",
+        "radicals": ["口", "廾"]
+    },
+    {
+        "kanji": "有",
+        "radicals": ["ナ", "月"]
+    },
+    {
+        "kanji": "次",
+        "radicals": ["冫", "欠"]
+    },
+    {
+        "kanji": "死",
+        "radicals": ["歹", "匕"]
+    },
+    {
+        "kanji": "羊",
+        "radicals": ["羊"]
+    },
+    {
+        "kanji": "血",
+        "radicals": ["血"]
+    },
+    {
+        "kanji": "京",
+        "radicals": ["亠", "口", "小"]
+    },
+    {
+        "kanji": "国",
+        "radicals": ["口", "王", "丶"]
+    },
+    {
+        "kanji": "夜",
+        "radicals": ["亠", "ｲ", "夂", "丶"]
+    },
+    {
+        "kanji": "妹",
+        "radicals": ["女", "未"]
+    },
+    {
+        "kanji": "姉",
+        "radicals": ["女", "市"]
+    },
+    {
+        "kanji": "店",
+        "radicals": ["广", "占"]
+    },
+    {
+        "kanji": "明",
+        "radicals": ["日", "月"]
+    },
+    {
+        "kanji": "東",
+        "radicals": ["木", "日"]
+    },
+    {
+        "kanji": "歩",
+        "radicals": ["止", "小", "丿"]
+    },
+    {
+        "kanji": "画",
+        "radicals": ["丁", "田", "凵"]
+    },
+    {
+        "kanji": "直",
+        "radicals": ["L", "十", "目"]
+    },
+    {
+        "kanji": "知",
+        "radicals": ["矢", "口"]
+    },
+    {
+        "kanji": "長",
+        "radicals": ["長"]
+    },
+    {
+        "kanji": "前",
+        "radicals": ["丷", "一", "月", "刂"]
+    },
+    {
+        "kanji": "南",
+        "radicals": ["十", "冂", "丷", "干"]
+    },
+    {
+        "kanji": "室",
+        "radicals": ["宀", "一", "ム", "土"]
+    },
+    {
+        "kanji": "後",
+        "radicals": ["彳", "幺", "夂"]
+    },
+    {
+        "kanji": "思",
+        "radicals": ["田", "心"]
+    },
+    {
+        "kanji": "星",
+        "radicals": ["日", "生"]
+    },
+    {
+        "kanji": "活",
+        "radicals": ["氵", "舌"]
+    },
+    {
+        "kanji": "海",
+        "radicals": ["氵", "𠂉", "毋"]
+    },
+    {
+        "kanji": "点",
+        "radicals": ["占", "灬"]
+    },
+    {
+        "kanji": "科",
+        "radicals": ["禾", "斗"]
+    },
+    {
+        "kanji": "茶",
+        "radicals": ["艹", "𠆢", "ホ"]
+    },
+    {
+        "kanji": "食",
+        "radicals": ["食"]
+    },
+    {
+        "kanji": "首",
+        "radicals": ["首"]
+    },
+    {
+        "kanji": "欠",
+        "radicals": ["欠"]
+    },
+    {
+        "kanji": "氏",
+        "radicals": ["氏"]
+    },
+    {
+        "kanji": "由",
+        "radicals": ["十", "口"]
+    },
+    {
+        "kanji": "札",
+        "radicals": ["木", "乚"]
+    },
+    {
+        "kanji": "民",
+        "radicals": ["口", "氏"]
+    },
+    {
+        "kanji": "辺",
+        "radicals": ["⻌", "刀"]
+    },
+    {
+        "kanji": "付",
+        "radicals": ["ｲ", "寸"]
+    },
+    {
+        "kanji": "以",
+        "radicals": ["L", "丶", "人"]
+    },
+    {
+        "kanji": "失",
+        "radicals": ["丿", "夫"]
+    },
+    {
+        "kanji": "必",
+        "radicals": ["心", "丿"]
+    },
+    {
+        "kanji": "未",
+        "radicals": ["未"]
+    },
+    {
+        "kanji": "末",
+        "radicals": ["未"]
+    },
+    {
+        "kanji": "校",
+        "radicals": ["木", "亠", "父"]
+    },
+    {
+        "kanji": "夏",
+        "radicals": ["丆", "目", "夂"]
+    },
+    {
+        "kanji": "家",
+        "radicals": ["家"]
+    },
+    {
+        "kanji": "弱",
+        "radicals": ["弓", "冫"]
+    },
+    {
+        "kanji": "時",
+        "radicals": ["日", "寺"]
+    },
+    {
+        "kanji": "紙",
+        "radicals": ["糸", "氏"]
+    },
+    {
+        "kanji": "記",
+        "radicals": ["言", "己"]
+    },
+    {
+        "kanji": "通",
+        "radicals": ["⻌", "マ", "用"]
+    },
+    {
+        "kanji": "高",
+        "radicals": ["亠", "口", "冋"]
+    },
+    {
+        "kanji": "強",
+        "radicals": ["弓", "ム", "虫"]
+    },
+    {
+        "kanji": "教",
+        "radicals": ["孝", "夂"]
+    },
+    {
+        "kanji": "理",
+        "radicals": ["王", "里"]
+    },
+    {
+        "kanji": "組",
+        "radicals": ["糸", "且"]
+    },
+    {
+        "kanji": "船",
+        "radicals": ["舟", "ハ", "口"]
+    },
+    {
+        "kanji": "週",
+        "radicals": ["⻌", "周"]
+    },
+    {
+        "kanji": "雪",
+        "radicals": ["雨", "ヨ"]
+    },
+    {
+        "kanji": "魚",
+        "radicals": ["魚"]
+    },
+    {
+        "kanji": "鳥",
+        "radicals": ["鳥"]
+    },
+    {
+        "kanji": "黄",
+        "radicals": ["黄"]
+    },
+    {
+        "kanji": "黒",
+        "radicals": ["黒"]
+    },
+    {
+        "kanji": "支",
+        "radicals": ["支"]
+    },
+    {
+        "kanji": "住",
+        "radicals": ["ｲ", "主"]
+    },
+    {
+        "kanji": "助",
+        "radicals": ["且", "力"]
+    },
+    {
+        "kanji": "医",
+        "radicals": ["匚", "矢"]
+    },
+    {
+        "kanji": "君",
+        "radicals": ["ヨ", "丿", "口"]
+    },
+    {
+        "kanji": "対",
+        "radicals": ["文", "寸"]
+    },
+    {
+        "kanji": "局",
+        "radicals": ["尸", "𠃌", "口"]
+    },
+    {
+        "kanji": "役",
+        "radicals": ["彳", "殳"]
+    },
+    {
+        "kanji": "投",
+        "radicals": ["扌", "殳"]
+    },
+    {
+        "kanji": "決",
+        "radicals": ["氵", "人", "ユ"]
+    },
+    {
+        "kanji": "究",
+        "radicals": ["穴", "九"]
+    },
+    {
+        "kanji": "身",
+        "radicals": ["自", "丿"]
+    },
+    {
+        "kanji": "者",
+        "radicals": ["耂", "日"]
+    },
+    {
+        "kanji": "研",
+        "radicals": ["石", "开"]
+    },
+    {
+        "kanji": "馬",
+        "radicals": ["馬"]
+    },
+    {
+        "kanji": "森",
+        "radicals": ["木"]
+    },
+    {
+        "kanji": "場",
+        "radicals": ["土", "易"]
+    },
+    {
+        "kanji": "朝",
+        "radicals": ["十", "日", "月"]
+    },
+    {
+        "kanji": "番",
+        "radicals": ["釆", "田"]
+    },
+    {
+        "kanji": "答",
+        "radicals": ["竹", "合"]
+    },
+    {
+        "kanji": "絵",
+        "radicals": ["糸", "会"]
+    },
+    {
+        "kanji": "買",
+        "radicals": ["罒", "貝"]
+    },
+    {
+        "kanji": "道",
+        "radicals": ["⻌", "首"]
+    },
+    {
+        "kanji": "間",
+        "radicals": ["門", "日"]
+    },
+    {
+        "kanji": "雲",
+        "radicals": ["雨", "云"]
+    },
+    {
+        "kanji": "数",
+        "radicals": ["米", "女", "夂"]
+    },
+    {
+        "kanji": "楽",
+        "radicals": ["白", "冫", "木"]
+    },
+    {
+        "kanji": "話",
+        "radicals": ["言", "舌"]
+    },
+    {
+        "kanji": "電",
+        "radicals": ["雨", "田", "乚"]
+    },
+    {
+        "kanji": "所",
+        "radicals": ["戸", "斤"]
+    },
+    {
+        "kanji": "事",
+        "radicals": ["十", "口", "ヨ"]
+    },
+    {
+        "kanji": "使",
+        "radicals": ["ｲ", "一", "史"]
+    },
+    {
+        "kanji": "具",
+        "radicals": ["目", "一", "ハ"]
+    },
+    {
+        "kanji": "受",
+        "radicals": ["⺤", "冖", "又"]
+    },
+    {
+        "kanji": "和",
+        "radicals": ["禾", "口"]
+    },
+    {
+        "kanji": "始",
+        "radicals": ["女", "台"]
+    },
+    {
+        "kanji": "定",
+        "radicals": ["宀", "正"]
+    },
+    {
+        "kanji": "実",
+        "radicals": ["宀", "𡗗"]
+    },
+    {
+        "kanji": "服",
+        "radicals": ["月", "卩", "又"]
+    },
+    {
+        "kanji": "泳",
+        "radicals": ["氵", "永"]
+    },
+    {
+        "kanji": "物",
+        "radicals": ["牛", "勿"]
+    },
+    {
+        "kanji": "苦",
+        "radicals": ["艹", "古"]
+    },
+    {
+        "kanji": "表",
+        "radicals": ["生", "衣"]
+    },
+    {
+        "kanji": "部",
+        "radicals": ["咅", "阝"]
+    },
+    {
+        "kanji": "乗",
+        "radicals": ["禾", "口"]
+    },
+    {
+        "kanji": "客",
+        "radicals": ["宀", "夂", "口"]
+    },
+    {
+        "kanji": "屋",
+        "radicals": ["尸", "一", "ム", "土"]
+    },
+    {
+        "kanji": "度",
+        "radicals": ["广", "凵", "一", "又"]
+    },
+    {
+        "kanji": "待",
+        "radicals": ["彳", "寺"]
+    },
+    {
+        "kanji": "持",
+        "radicals": ["扌", "寺"]
+    },
+    {
+        "kanji": "界",
+        "radicals": ["田", "介"]
+    },
+    {
+        "kanji": "発",
+        "radicals": ["癶", "开"]
+    },
+    {
+        "kanji": "相",
+        "radicals": ["木", "目"]
+    },
+    {
+        "kanji": "県",
+        "radicals": ["目", "L", "小"]
+    },
+    {
+        "kanji": "美",
+        "radicals": ["羊", "大"]
+    },
+    {
+        "kanji": "負",
+        "radicals": ["勹", "貝"]
+    },
+    {
+        "kanji": "送",
+        "radicals": ["⻌", "丷", "天"]
+    },
+    {
+        "kanji": "重",
+        "radicals": ["重"]
+    },
+    {
+        "kanji": "談",
+        "radicals": ["言", "火"]
+    },
+    {
+        "kanji": "要",
+        "radicals": ["覀", "女"]
+    },
+    {
+        "kanji": "勝",
+        "radicals": ["月", "龹", "力"]
+    },
+    {
+        "kanji": "仮",
+        "radicals": ["ｲ", "反"]
+    },
+    {
+        "kanji": "起",
+        "radicals": ["走", "己"]
+    },
+    {
+        "kanji": "速",
+        "radicals": ["⻌", "束"]
+    },
+    {
+        "kanji": "配",
+        "radicals": ["酉", "己"]
+    },
+    {
+        "kanji": "酒",
+        "radicals": ["氵", "酉"]
+    },
+    {
+        "kanji": "院",
+        "radicals": ["阝", "宀", "元"]
+    },
+    {
+        "kanji": "終",
+        "radicals": ["糸", "夂", "冫"]
+    },
+    {
+        "kanji": "習",
+        "radicals": ["羽", "白"]
+    },
+    {
+        "kanji": "転",
+        "radicals": ["車", "云"]
+    },
+    {
+        "kanji": "進",
+        "radicals": ["⻌", "隹"]
+    },
+    {
+        "kanji": "落",
+        "radicals": ["艹", "氵", "各"]
+    },
+    {
+        "kanji": "葉",
+        "radicals": ["艹", "世", "木"]
+    },
+    {
+        "kanji": "軽",
+        "radicals": ["車", "圣"]
+    },
+    {
+        "kanji": "運",
+        "radicals": ["⻌", "冖", "車"]
+    },
+    {
+        "kanji": "開",
+        "radicals": ["門", "开"]
+    },
+    {
+        "kanji": "集",
+        "radicals": ["隹", "木"]
+    },
+    {
+        "kanji": "飲",
+        "radicals": ["食", "欠"]
+    },
+    {
+        "kanji": "業",
+        "radicals": ["业", "羊", "ハ"]
+    },
+    {
+        "kanji": "漢",
+        "radicals": ["氵", "𦰩"]
+    },
+    {
+        "kanji": "路",
+        "radicals": ["足", "各"]
+    },
+    {
+        "kanji": "農",
+        "radicals": ["曲", "辰"]
+    },
+    {
+        "kanji": "鉄",
+        "radicals": ["金", "失"]
+    },
+    {
+        "kanji": "歌",
+        "radicals": ["可", "欠"]
+    },
+    {
+        "kanji": "算",
+        "radicals": ["竹", "目", "廾"]
+    },
+    {
+        "kanji": "聞",
+        "radicals": ["門", "耳"]
+    },
+    {
+        "kanji": "語",
+        "radicals": ["言", "五", "口"]
+    },
+    {
+        "kanji": "読",
+        "radicals": ["言", "売"]
+    },
+    {
+        "kanji": "鳴",
+        "radicals": ["口", "鳥"]
+    },
+    {
+        "kanji": "線",
+        "radicals": ["糸", "白", "水"]
+    },
+    {
+        "kanji": "横",
+        "radicals": ["木", "黄"]
+    },
+    {
+        "kanji": "調",
+        "radicals": ["言", "周"]
+    },
+    {
+        "kanji": "親",
+        "radicals": ["立", "木", "見"]
+    },
+    {
+        "kanji": "頭",
+        "radicals": ["豆", "頁"]
+    },
+    {
+        "kanji": "顔",
+        "radicals": ["立", "厂", "彡", "頁"]
+    },
+    {
+        "kanji": "病",
+        "radicals": ["疒", "丙"]
+    },
+    {
+        "kanji": "最",
+        "radicals": ["日", "耳", "又"]
+    },
+    {
+        "kanji": "争",
+        "radicals": ["勹", "ヨ", "亅"]
+    },
+    {
+        "kanji": "仲",
+        "radicals": ["ｲ", "中"]
+    },
+    {
+        "kanji": "伝",
+        "radicals": ["ｲ", "云"]
+    },
+    {
+        "kanji": "共",
+        "radicals": ["龷", "ハ"]
+    },
+    {
+        "kanji": "好",
+        "radicals": ["女", "子"]
+    },
+    {
+        "kanji": "成",
+        "radicals": ["戈", "刀"]
+    },
+    {
+        "kanji": "老",
+        "radicals": ["耂", "匕"]
+    },
+    {
+        "kanji": "位",
+        "radicals": ["ｲ", "立"]
+    },
+    {
+        "kanji": "低",
+        "radicals": ["ｲ", "氏", "一"]
+    },
+    {
+        "kanji": "初",
+        "radicals": ["ネ", "刀"]
+    },
+    {
+        "kanji": "別",
+        "radicals": ["口", "刀", "刂"]
+    },
+    {
+        "kanji": "利",
+        "radicals": ["禾", "刂"]
+    },
+    {
+        "kanji": "努",
+        "radicals": ["女", "又", "力"]
+    },
+    {
+        "kanji": "労",
+        "radicals": ["龸", "力"]
+    },
+    {
+        "kanji": "命",
+        "radicals": ["令", "口"]
+    },
+    {
+        "kanji": "岸",
+        "radicals": ["山", "厂", "干"]
+    },
+    {
+        "kanji": "放",
+        "radicals": ["方", "夂"]
+    },
+    {
+        "kanji": "昔",
+        "radicals": ["龷", "日"]
+    },
+    {
+        "kanji": "波",
+        "radicals": ["氵", "皮"]
+    },
+    {
+        "kanji": "注",
+        "radicals": ["氵", "主"]
+    },
+    {
+        "kanji": "育",
+        "radicals": ["𠫓", "月"]
+    },
+    {
+        "kanji": "拾",
+        "radicals": ["扌", "合"]
+    },
+    {
+        "kanji": "指",
+        "radicals": ["扌", "匕", "日"]
+    },
+    {
+        "kanji": "洋",
+        "radicals": ["氵", "羊"]
+    },
+    {
+        "kanji": "神",
+        "radicals": ["ネ", "申"]
+    },
+    {
+        "kanji": "秒",
+        "radicals": ["禾", "少"]
+    },
+    {
+        "kanji": "級",
+        "radicals": ["糸", "及"]
+    },
+    {
+        "kanji": "追",
+        "radicals": ["⻌", "㠯", "丶"]
+    },
+    {
+        "kanji": "戦",
+        "radicals": ["単", "戈"]
+    },
+    {
+        "kanji": "競",
+        "radicals": ["立", "兄"]
+    },
+    {
+        "kanji": "良",
+        "radicals": ["丶", "艮"]
+    },
+    {
+        "kanji": "功",
+        "radicals": ["工", "力"]
+    },
+    {
+        "kanji": "特",
+        "radicals": ["牛", "寺"]
+    },
+    {
+        "kanji": "便",
+        "radicals": ["ｲ", "一", "田", "メ"]
+    },
+    {
+        "kanji": "働",
+        "radicals": ["ｲ", "重", "力"]
+    },
+    {
+        "kanji": "令",
+        "radicals": ["令"]
+    },
+    {
+        "kanji": "意",
+        "radicals": ["音", "心"]
+    },
+    {
+        "kanji": "味",
+        "radicals": ["口", "未"]
+    },
+    {
+        "kanji": "勉",
+        "radicals": ["免", "力"]
+    },
+    {
+        "kanji": "庭",
+        "radicals": ["广", "廴", "王"]
+    },
+    {
+        "kanji": "息",
+        "radicals": ["自", "心"]
+    },
+    {
+        "kanji": "旅",
+        "radicals": ["方", "𠂉", "氏"]
+    },
+    {
+        "kanji": "根",
+        "radicals": ["木", "艮"]
+    },
+    {
+        "kanji": "流",
+        "radicals": ["氵", "𠫓", "川"]
+    },
+    {
+        "kanji": "消",
+        "radicals": ["氵", "⺌", "月"]
+    },
+    {
+        "kanji": "倍",
+        "radicals": ["ｲ", "咅"]
+    },
+    {
+        "kanji": "員",
+        "radicals": ["口", "貝"]
+    },
+    {
+        "kanji": "島",
+        "radicals": ["鳥", "山"]
+    },
+    {
+        "kanji": "祭",
+        "radicals": ["月", "又", "示"]
+    },
+    {
+        "kanji": "章",
+        "radicals": ["立", "早"]
+    },
+    {
+        "kanji": "第",
+        "radicals": ["竹", "弟"]
+    },
+    {
+        "kanji": "都",
+        "radicals": ["者", "阝"]
+    },
+    {
+        "kanji": "動",
+        "radicals": ["重", "力"]
+    },
+    {
+        "kanji": "商",
+        "radicals": ["立", "冋", "儿"]
+    },
+    {
+        "kanji": "悪",
+        "radicals": ["亜", "心"]
+    },
+    {
+        "kanji": "族",
+        "radicals": ["方", "𠂉", "矢"]
+    },
+    {
+        "kanji": "深",
+        "radicals": ["氵", "兀", "木"]
+    },
+    {
+        "kanji": "球",
+        "radicals": ["王", "求"]
+    },
+    {
+        "kanji": "童",
+        "radicals": ["立", "里"]
+    },
+    {
+        "kanji": "陽",
+        "radicals": ["阝", "易"]
+    },
+    {
+        "kanji": "階",
+        "radicals": ["阝", "比", "白"]
+    },
+    {
+        "kanji": "寒",
+        "radicals": ["宀", "𡗗", "冫"]
+    },
+    {
+        "kanji": "悲",
+        "radicals": ["非", "心"]
+    },
+    {
+        "kanji": "暑",
+        "radicals": ["日", "者"]
+    },
+    {
+        "kanji": "期",
+        "radicals": ["其", "月"]
+    },
+    {
+        "kanji": "植",
+        "radicals": ["木", "直"]
+    },
+    {
+        "kanji": "歯",
+        "radicals": ["止", "凵", "米"]
+    },
+    {
+        "kanji": "温",
+        "radicals": ["氵", "日", "皿"]
+    },
+    {
+        "kanji": "港",
+        "radicals": ["氵", "共", "己"]
+    },
+    {
+        "kanji": "湯",
+        "radicals": ["氵", "易"]
+    },
+    {
+        "kanji": "登",
+        "radicals": ["癶", "豆"]
+    },
+    {
+        "kanji": "着",
+        "radicals": ["羊", "目"]
+    },
+    {
+        "kanji": "短",
+        "radicals": ["矢", "豆"]
+    },
+    {
+        "kanji": "野",
+        "radicals": ["里", "予"]
+    },
+    {
+        "kanji": "泉",
+        "radicals": ["白", "水"]
+    },
+    {
+        "kanji": "生",
+        "radicals": ["生"]
+    },
+    {
+        "kanji": "亡",
+        "radicals": ["亡"]
+    },
+    {
+        "kanji": "合",
+        "radicals": ["合"]
+    },
+    {
+        "kanji": "風",
+        "radicals": ["几", "丿", "虫"]
+    },
+    {
+        "kanji": "予",
+        "radicals": ["マ", "丁"]
+    },
+    {
+        "kanji": "反",
+        "radicals": ["厂", "又"]
+    },
+    {
+        "kanji": "新",
+        "radicals": ["立", "木", "斤"]
+    },
+    {
+        "kanji": "返",
+        "radicals": ["⻌", "反"]
+    },
+    {
+        "kanji": "問",
+        "radicals": ["門", "口"]
+    },
+    {
+        "kanji": "宿",
+        "radicals": ["宀", "ｲ", "百"]
+    },
+    {
+        "kanji": "想",
+        "radicals": ["木", "目", "心"]
+    },
+    {
+        "kanji": "感",
+        "radicals": ["丿", "戈", "口", "一", "心"]
+    },
+    {
+        "kanji": "整",
+        "radicals": ["束", "夂", "正"]
+    },
+    {
+        "kanji": "暗",
+        "radicals": ["日", "立"]
+    },
+    {
+        "kanji": "様",
+        "radicals": ["木", "羊", "水"]
+    },
+    {
+        "kanji": "橋",
+        "radicals": ["木", "天", "口", "冋"]
+    },
+    {
+        "kanji": "福",
+        "radicals": ["ネ", "畐"]
+    },
+    {
+        "kanji": "緑",
+        "radicals": ["糸", "ヨ", "水"]
+    },
+    {
+        "kanji": "練",
+        "radicals": ["糸", "東"]
+    },
+    {
+        "kanji": "詩",
+        "radicals": ["言", "寺"]
+    },
+    {
+        "kanji": "銀",
+        "radicals": ["金", "艮"]
+    },
+    {
+        "kanji": "題",
+        "radicals": ["日", "正", "頁"]
+    },
+    {
+        "kanji": "館",
+        "radicals": ["食", "宀", "㠯"]
+    },
+    {
+        "kanji": "駅",
+        "radicals": ["馬", "尺"]
+    },
+    {
+        "kanji": "億",
+        "radicals": ["ｲ", "意"]
+    },
+    {
+        "kanji": "器",
+        "radicals": ["大", "品"]
+    },
+    {
+        "kanji": "士",
+        "radicals": ["士"]
+    },
+    {
+        "kanji": "料",
+        "radicals": ["米", "斗"]
+    },
+    {
+        "kanji": "標",
+        "radicals": ["木", "覀", "示"]
+    },
+    {
+        "kanji": "殺",
+        "radicals": ["メ", "木", "殳"]
+    },
+    {
+        "kanji": "然",
+        "radicals": ["月", "犬", "灬"]
+    },
+    {
+        "kanji": "熱",
+        "radicals": ["坴", "丸", "灬"]
+    },
+    {
+        "kanji": "課",
+        "radicals": ["言", "果"]
+    },
+    {
+        "kanji": "賞",
+        "radicals": ["龸", "口", "貝"]
+    },
+    {
+        "kanji": "輪",
+        "radicals": ["車", "𠆢", "一", "冊"]
+    },
+    {
+        "kanji": "選",
+        "radicals": ["⻌", "己", "共"]
+    },
+    {
+        "kanji": "鏡",
+        "radicals": ["金", "立", "見"]
+    },
+    {
+        "kanji": "願",
+        "radicals": ["原", "頁"]
+    },
+    {
+        "kanji": "養",
+        "radicals": ["羊", "良", "ハ"]
+    },
+    {
+        "kanji": "像",
+        "radicals": ["ｲ", "象"]
+    },
+    {
+        "kanji": "情",
+        "radicals": ["忄", "青"]
+    },
+    {
+        "kanji": "謝",
+        "radicals": ["言", "身", "寸"]
+    },
+    {
+        "kanji": "映",
+        "radicals": ["日", "央"]
+    },
+    {
+        "kanji": "疑",
+        "radicals": ["匕", "マ", "矢", "疋"]
+    },
+    {
+        "kanji": "皆",
+        "radicals": ["比", "白"]
+    },
+    {
+        "kanji": "例",
+        "radicals": ["ｲ", "歹", "刂"]
+    },
+    {
+        "kanji": "卒",
+        "radicals": ["亠", "人", "十"]
+    },
+    {
+        "kanji": "協",
+        "radicals": ["十", "力"]
+    },
+    {
+        "kanji": "参",
+        "radicals": ["ム", "大", "彡"]
+    },
+    {
+        "kanji": "周",
+        "radicals": ["周"]
+    },
+    {
+        "kanji": "囲",
+        "radicals": ["口", "井"]
+    },
+    {
+        "kanji": "固",
+        "radicals": ["口", "古"]
+    },
+    {
+        "kanji": "季",
+        "radicals": ["禾", "子"]
+    },
+    {
+        "kanji": "完",
+        "radicals": ["宀", "元"]
+    },
+    {
+        "kanji": "希",
+        "radicals": ["メ", "ナ", "巾"]
+    },
+    {
+        "kanji": "念",
+        "radicals": ["今", "心"]
+    },
+    {
+        "kanji": "折",
+        "radicals": ["扌", "斤"]
+    },
+    {
+        "kanji": "望",
+        "radicals": ["亡", "月", "王"]
+    },
+    {
+        "kanji": "材",
+        "radicals": ["木", "才"]
+    },
+    {
+        "kanji": "束",
+        "radicals": ["束"]
+    },
+    {
+        "kanji": "松",
+        "radicals": ["木", "公"]
+    },
+    {
+        "kanji": "残",
+        "radicals": ["歹", "㦮"]
+    },
+    {
+        "kanji": "求",
+        "radicals": ["一", "水", "丶"]
+    },
+    {
+        "kanji": "的",
+        "radicals": ["白", "勺"]
+    },
+    {
+        "kanji": "約",
+        "radicals": ["糸", "勺"]
+    },
+    {
+        "kanji": "芸",
+        "radicals": ["艹", "云"]
+    },
+    {
+        "kanji": "基",
+        "radicals": ["其", "土"]
+    },
+    {
+        "kanji": "性",
+        "radicals": ["忄", "生"]
+    },
+    {
+        "kanji": "技",
+        "radicals": ["扌", "支"]
+    },
+    {
+        "kanji": "格",
+        "radicals": ["木", "各"]
+    },
+    {
+        "kanji": "能",
+        "radicals": ["ム", "月", "匕"]
+    },
+    {
+        "kanji": "術",
+        "radicals": ["行", "ホ", "丶"]
+    },
+    {
+        "kanji": "私",
+        "radicals": ["禾", "ム"]
+    },
+    {
+        "kanji": "骨",
+        "radicals": ["冋", "冖", "月"]
+    },
+    {
+        "kanji": "妥",
+        "radicals": ["⺤", "女"]
+    },
+    {
+        "kanji": "雰",
+        "radicals": ["雨", "分"]
+    },
+    {
+        "kanji": "頑",
+        "radicals": ["元", "頁"]
+    },
+    {
+        "kanji": "寺",
+        "radicals": ["寺"]
+    },
+    {
+        "kanji": "岩",
+        "radicals": ["山", "石"]
+    },
+    {
+        "kanji": "帰",
+        "radicals": ["刂", "ヨ", "冖", "巾"]
+    },
+    {
+        "kanji": "春",
+        "radicals": ["𡗗", "日"]
+    },
+    {
+        "kanji": "昼",
+        "radicals": ["尺", "日", "一"]
+    },
+    {
+        "kanji": "晴",
+        "radicals": ["日", "青"]
+    },
+    {
+        "kanji": "秋",
+        "radicals": ["禾", "火"]
+    },
+    {
+        "kanji": "計",
+        "radicals": ["言", "十"]
+    },
+    {
+        "kanji": "列",
+        "radicals": ["歹", "刂"]
+    },
+    {
+        "kanji": "区",
+        "radicals": ["匚", "メ"]
+    },
+    {
+        "kanji": "坂",
+        "radicals": ["土", "反"]
+    },
+    {
+        "kanji": "式",
+        "radicals": ["弋", "工"]
+    },
+    {
+        "kanji": "信",
+        "radicals": ["ｲ", "言"]
+    },
+    {
+        "kanji": "勇",
+        "radicals": ["勇"]
+    },
+    {
+        "kanji": "単",
+        "radicals": ["単"]
+    },
+    {
+        "kanji": "司",
+        "radicals": ["𠃌", "口", "一"]
+    },
+    {
+        "kanji": "変",
+        "radicals": ["赤", "夂"]
+    },
+    {
+        "kanji": "夫",
+        "radicals": ["夫"]
+    },
+    {
+        "kanji": "建",
+        "radicals": ["廴", "聿"]
+    },
+    {
+        "kanji": "昨",
+        "radicals": ["日", "乍"]
+    },
+    {
+        "kanji": "毒",
+        "radicals": ["生", "毋"]
+    },
+    {
+        "kanji": "法",
+        "radicals": ["氵", "去"]
+    },
+    {
+        "kanji": "泣",
+        "radicals": ["氵", "立"]
+    },
+    {
+        "kanji": "浅",
+        "radicals": ["氵", "㦮"]
+    },
+    {
+        "kanji": "紀",
+        "radicals": ["糸", "己"]
+    },
+    {
+        "kanji": "英",
+        "radicals": ["艹", "央"]
+    },
+    {
+        "kanji": "軍",
+        "radicals": ["冖", "車"]
+    },
+    {
+        "kanji": "飯",
+        "radicals": ["食", "反"]
+    },
+    {
+        "kanji": "仏",
+        "radicals": ["ｲ", "ム"]
+    },
+    {
+        "kanji": "築",
+        "radicals": ["竹", "巩", "木"]
+    },
+    {
+        "kanji": "晩",
+        "radicals": ["日", "免"]
+    },
+    {
+        "kanji": "猫",
+        "radicals": ["犭", "艹", "田"]
+    },
+    {
+        "kanji": "園",
+        "radicals": ["口", "袁"]
+    },
+    {
+        "kanji": "曜",
+        "radicals": ["日", "ヨ", "隹"]
+    },
+    {
+        "kanji": "書",
+        "radicals": ["聿", "日"]
+    },
+    {
+        "kanji": "遠",
+        "radicals": ["⻌", "袁"]
+    },
+    {
+        "kanji": "門",
+        "radicals": ["門"]
+    },
+    {
+        "kanji": "係",
+        "radicals": ["ｲ", "一", "糸"]
+    },
+    {
+        "kanji": "取",
+        "radicals": ["耳", "又"]
+    },
+    {
+        "kanji": "品",
+        "radicals": ["品"]
+    },
+    {
+        "kanji": "守",
+        "radicals": ["宀", "寸"]
+    },
+    {
+        "kanji": "幸",
+        "radicals": ["亠", "辛"]
+    },
+    {
+        "kanji": "急",
+        "radicals": ["勹", "ヨ", "心"]
+    },
+    {
+        "kanji": "真",
+        "radicals": ["目", "十", "一", "ハ"]
+    },
+    {
+        "kanji": "箱",
+        "radicals": ["竹", "木", "目"]
+    },
+    {
+        "kanji": "荷",
+        "radicals": ["艹", "ｲ", "可"]
+    },
+    {
+        "kanji": "面",
+        "radicals": ["面"]
+    },
+    {
+        "kanji": "典",
+        "radicals": ["曲", "ハ"]
+    },
+    {
+        "kanji": "喜",
+        "radicals": ["壴", "口"]
+    },
+    {
+        "kanji": "府",
+        "radicals": ["广", "付"]
+    },
+    {
+        "kanji": "治",
+        "radicals": ["氵", "台"]
+    },
+    {
+        "kanji": "浴",
+        "radicals": ["氵", "谷"]
+    },
+    {
+        "kanji": "笑",
+        "radicals": ["竹", "天"]
+    },
+    {
+        "kanji": "辞",
+        "radicals": ["舌", "辛"]
+    },
+    {
+        "kanji": "関",
+        "radicals": ["門", "丷", "天"]
+    },
+    {
+        "kanji": "保",
+        "radicals": ["ｲ", "口", "木"]
+    },
+    {
+        "kanji": "弁",
+        "radicals": ["ム", "廾"]
+    },
+    {
+        "kanji": "政",
+        "radicals": ["正", "夂"]
+    },
+    {
+        "kanji": "留",
+        "radicals": ["ム", "刀", "田"]
+    },
+    {
+        "kanji": "証",
+        "radicals": ["言", "正"]
+    },
+    {
+        "kanji": "険",
+        "radicals": ["阝", "㑒"]
+    },
+    {
+        "kanji": "危",
+        "radicals": ["勹", "厂", "巳"]
+    },
+    {
+        "kanji": "存",
+        "radicals": ["ナ", "丨", "子"]
+    },
+    {
+        "kanji": "専",
+        "radicals": ["十", "田", "寸"]
+    },
+    {
+        "kanji": "冒",
+        "radicals": ["日", "目"]
+    },
+    {
+        "kanji": "冗",
+        "radicals": ["冖", "几"]
+    },
+    {
+        "kanji": "阪",
+        "radicals": ["阝", "反"]
+    },
+    {
+        "kanji": "原",
+        "radicals": ["原"]
+    },
+    {
+        "kanji": "細",
+        "radicals": ["糸", "田"]
+    },
+    {
+        "kanji": "薬",
+        "radicals": ["艹", "楽"]
+    },
+    {
+        "kanji": "鼻",
+        "radicals": ["自", "田", "廾"]
+    },
+    {
+        "kanji": "側",
+        "radicals": ["ｲ", "貝", "刂"]
+    },
+    {
+        "kanji": "兵",
+        "radicals": ["斤", "一", "ハ"]
+    },
+    {
+        "kanji": "堂",
+        "radicals": ["龸", "口", "土"]
+    },
+    {
+        "kanji": "塩",
+        "radicals": ["土", "𠂉", "口", "皿"]
+    },
+    {
+        "kanji": "席",
+        "radicals": ["广", "凵", "一", "巾"]
+    },
+    {
+        "kanji": "敗",
+        "radicals": ["貝", "夂"]
+    },
+    {
+        "kanji": "果",
+        "radicals": ["果"]
+    },
+    {
+        "kanji": "栄",
+        "radicals": ["龸", "木"]
+    },
+    {
+        "kanji": "梅",
+        "radicals": ["木", "𠂉", "毋"]
+    },
+    {
+        "kanji": "無",
+        "radicals": ["無"]
+    },
+    {
+        "kanji": "結",
+        "radicals": ["糸", "吉"]
+    },
+    {
+        "kanji": "因",
+        "radicals": ["口", "大"]
+    },
+    {
+        "kanji": "常",
+        "radicals": ["龸", "口", "巾"]
+    },
+    {
+        "kanji": "識",
+        "radicals": ["言", "音", "戈"]
+    },
+    {
+        "kanji": "非",
+        "radicals": ["非"]
+    },
+    {
+        "kanji": "干",
+        "radicals": ["干"]
+    },
+    {
+        "kanji": "是",
+        "radicals": ["日", "正"]
+    },
+    {
+        "kanji": "渉",
+        "radicals": ["氵", "歩"]
+    },
+    {
+        "kanji": "虚",
+        "radicals": ["虍", "业"]
+    },
+    {
+        "kanji": "官",
+        "radicals": ["宀", "㠯"]
+    },
+    {
+        "kanji": "察",
+        "radicals": ["宀", "祭"]
+    },
+    {
+        "kanji": "底",
+        "radicals": ["广", "氏", "一"]
+    },
+    {
+        "kanji": "愛",
+        "radicals": ["⺤", "冖", "心", "夂"]
+    },
+    {
+        "kanji": "署",
+        "radicals": ["罒", "者"]
+    },
+    {
+        "kanji": "警",
+        "radicals": ["苟", "夂", "言"]
+    },
+    {
+        "kanji": "恋",
+        "radicals": ["赤", "心"]
+    },
+    {
+        "kanji": "覚",
+        "radicals": ["龸", "見"]
+    },
+    {
+        "kanji": "説",
+        "radicals": ["言", "兑"]
+    },
+    {
+        "kanji": "幻",
+        "radicals": ["幺", "𠃌"]
+    },
+    {
+        "kanji": "訓",
+        "radicals": ["言", "川"]
+    },
+    {
+        "kanji": "試",
+        "radicals": ["言", "弋", "工"]
+    },
+    {
+        "kanji": "弓",
+        "radicals": ["弓"]
+    },
+    {
+        "kanji": "告",
+        "radicals": ["丿", "土", "口"]
+    },
+    {
+        "kanji": "種",
+        "radicals": ["禾", "重"]
+    },
+    {
+        "kanji": "達",
+        "radicals": ["⻌", "幸"]
+    },
+    {
+        "kanji": "類",
+        "radicals": ["米", "大", "頁"]
+    },
+    {
+        "kanji": "報",
+        "radicals": ["幸", "卩", "又"]
+    },
+    {
+        "kanji": "祈",
+        "radicals": ["ネ", "斤"]
+    },
+    {
+        "kanji": "等",
+        "radicals": ["竹", "寺"]
+    },
+    {
+        "kanji": "汽",
+        "radicals": ["氵", "气"]
+    },
+    {
+        "kanji": "借",
+        "radicals": ["ｲ", "昔"]
+    },
+    {
+        "kanji": "焼",
+        "radicals": ["火", "尭"]
+    },
+    {
+        "kanji": "座",
+        "radicals": ["广", "人", "土"]
+    },
+    {
+        "kanji": "忘",
+        "radicals": ["亡", "心"]
+    },
+    {
+        "kanji": "洗",
+        "radicals": ["氵", "先"]
+    },
+    {
+        "kanji": "胸",
+        "radicals": ["月", "勹", "凶"]
+    },
+    {
+        "kanji": "脳",
+        "radicals": ["月", "𭕄", "凶"]
+    },
+    {
+        "kanji": "僧",
+        "radicals": ["ｲ", "曽"]
+    },
+    {
+        "kanji": "禅",
+        "radicals": ["ネ", "単"]
+    },
+    {
+        "kanji": "験",
+        "radicals": ["馬", "㑒"]
+    },
+    {
+        "kanji": "可",
+        "radicals": ["可"]
+    },
+    {
+        "kanji": "許",
+        "radicals": ["言", "午"]
+    },
+    {
+        "kanji": "枚",
+        "radicals": ["木", "夂"]
+    },
+    {
+        "kanji": "静",
+        "radicals": ["青", "争"]
+    },
+    {
+        "kanji": "句",
+        "radicals": ["句"]
+    },
+    {
+        "kanji": "禁",
+        "radicals": ["木", "示"]
+    },
+    {
+        "kanji": "喫",
+        "radicals": ["口", "生", "刀", "大"]
+    },
+    {
+        "kanji": "煙",
+        "radicals": ["火", "覀", "土"]
+    },
+    {
+        "kanji": "加",
+        "radicals": ["力", "口"]
+    },
+    {
+        "kanji": "節",
+        "radicals": ["竹", "艮", "卩"]
+    },
+    {
+        "kanji": "減",
+        "radicals": ["氵", "丿", "戈", "口", "一"]
+    },
+    {
+        "kanji": "順",
+        "radicals": ["川", "頁"]
+    },
+    {
+        "kanji": "容",
+        "radicals": ["宀", "谷"]
+    },
+    {
+        "kanji": "布",
+        "radicals": ["ナ", "巾"]
+    },
+    {
+        "kanji": "易",
+        "radicals": ["易"]
+    },
+    {
+        "kanji": "財",
+        "radicals": ["貝", "才"]
+    },
+    {
+        "kanji": "若",
+        "radicals": ["艹", "右"]
+    },
+    {
+        "kanji": "詞",
+        "radicals": ["言", "司"]
+    },
+    {
+        "kanji": "昆",
+        "radicals": ["日", "比"]
+    },
+    {
+        "kanji": "閥",
+        "radicals": ["門", "ｲ", "戈"]
+    },
+    {
+        "kanji": "歴",
+        "radicals": ["厂", "木", "止"]
+    },
+    {
+        "kanji": "舌",
+        "radicals": ["舌"]
+    },
+    {
+        "kanji": "冊",
+        "radicals": ["冊"]
+    },
+    {
+        "kanji": "宇",
+        "radicals": ["宀", "干"]
+    },
+    {
+        "kanji": "宙",
+        "radicals": ["宀", "由"]
+    },
+    {
+        "kanji": "忙",
+        "radicals": ["忄", "亡"]
+    },
+    {
+        "kanji": "履",
+        "radicals": ["尸", "彳", "复"]
+    },
+    {
+        "kanji": "団",
+        "radicals": ["口", "寸"]
+    },
+    {
+        "kanji": "暴",
+        "radicals": ["日", "共", "水"]
+    },
+    {
+        "kanji": "混",
+        "radicals": ["氵", "日", "比"]
+    },
+    {
+        "kanji": "乱",
+        "radicals": ["舌", "乚"]
+    },
+    {
+        "kanji": "徒",
+        "radicals": ["彳", "走"]
+    },
+    {
+        "kanji": "得",
+        "radicals": ["彳", "日", "寺"]
+    },
+    {
+        "kanji": "改",
+        "radicals": ["己", "夂"]
+    },
+    {
+        "kanji": "続",
+        "radicals": ["糸", "売"]
+    },
+    {
+        "kanji": "連",
+        "radicals": ["⻌", "車"]
+    },
+    {
+        "kanji": "善",
+        "radicals": ["羊", "丷", "一", "口"]
+    },
+    {
+        "kanji": "困",
+        "radicals": ["口", "木"]
+    },
+    {
+        "kanji": "絡",
+        "radicals": ["糸", "各"]
+    },
+    {
+        "kanji": "比",
+        "radicals": ["比"]
+    },
+    {
+        "kanji": "災",
+        "radicals": ["巛", "火"]
+    },
+    {
+        "kanji": "機",
+        "radicals": ["木", "幺", "戈", "人"]
+    },
+    {
+        "kanji": "率",
+        "radicals": ["亠", "幺", "冫", "十"]
+    },
+    {
+        "kanji": "飛",
+        "radicals": ["飛"]
+    },
+    {
+        "kanji": "害",
+        "radicals": ["宀", "生", "口"]
+    },
+    {
+        "kanji": "余",
+        "radicals": ["𠆢", "示"]
+    },
+    {
+        "kanji": "難",
+        "radicals": ["𦰩", "隹"]
+    },
+    {
+        "kanji": "妨",
+        "radicals": ["女", "方"]
+    },
+    {
+        "kanji": "被",
+        "radicals": ["ネ", "皮"]
+    },
+    {
+        "kanji": "裕",
+        "radicals": ["ネ", "谷"]
+    },
+    {
+        "kanji": "震",
+        "radicals": ["雨", "辰"]
+    },
+    {
+        "kanji": "尻",
+        "radicals": ["尸", "九"]
+    },
+    {
+        "kanji": "尾",
+        "radicals": ["尸", "毛"]
+    },
+    {
+        "kanji": "械",
+        "radicals": ["木", "戈", "廾"]
+    },
+    {
+        "kanji": "確",
+        "radicals": ["石", "冖", "隹"]
+    },
+    {
+        "kanji": "嫌",
+        "radicals": ["女", "兼"]
+    },
+    {
+        "kanji": "個",
+        "radicals": ["ｲ", "口", "古"]
+    },
+    {
+        "kanji": "圧",
+        "radicals": ["厂", "土"]
+    },
+    {
+        "kanji": "在",
+        "radicals": ["ナ", "丨", "土"]
+    },
+    {
+        "kanji": "夢",
+        "radicals": ["艹", "罒", "冖", "夕"]
+    },
+    {
+        "kanji": "産",
+        "radicals": ["立", "厂", "生"]
+    },
+    {
+        "kanji": "倒",
+        "radicals": ["ｲ", "至", "刂"]
+    },
+    {
+        "kanji": "臭",
+        "radicals": ["自", "大"]
+    },
+    {
+        "kanji": "厚",
+        "radicals": ["厂", "日", "子"]
+    },
+    {
+        "kanji": "妻",
+        "radicals": ["一", "聿", "女"]
+    },
+    {
+        "kanji": "議",
+        "radicals": ["言", "義"]
+    },
+    {
+        "kanji": "犯",
+        "radicals": ["犭", "巳"]
+    },
+    {
+        "kanji": "罪",
+        "radicals": ["罒", "非"]
+    },
+    {
+        "kanji": "防",
+        "radicals": ["阝", "方"]
+    },
+    {
+        "kanji": "穴",
+        "radicals": ["穴"]
+    },
+    {
+        "kanji": "論",
+        "radicals": ["言", "𠆢", "一", "冊"]
+    },
+    {
+        "kanji": "経",
+        "radicals": ["糸", "圣"]
+    },
+    {
+        "kanji": "笛",
+        "radicals": ["竹", "由"]
+    },
+    {
+        "kanji": "史",
+        "radicals": ["史"]
+    },
+    {
+        "kanji": "敵",
+        "radicals": ["啇", "夂"]
+    },
+    {
+        "kanji": "済",
+        "radicals": ["氵", "斉"]
+    },
+    {
+        "kanji": "委",
+        "radicals": ["禾", "女"]
+    },
+    {
+        "kanji": "挙",
+        "radicals": ["𭕄", "一", "ハ", "手"]
+    },
+    {
+        "kanji": "判",
+        "radicals": ["半", "刂"]
+    },
+    {
+        "kanji": "制",
+        "radicals": ["牛", "巾", "刂"]
+    },
+    {
+        "kanji": "務",
+        "radicals": ["矛", "夂", "力"]
+    },
+    {
+        "kanji": "査",
+        "radicals": ["木", "且"]
+    },
+    {
+        "kanji": "総",
+        "radicals": ["糸", "公", "心"]
+    },
+    {
+        "kanji": "設",
+        "radicals": ["言", "殳"]
+    },
+    {
+        "kanji": "資",
+        "radicals": ["次", "貝"]
+    },
+    {
+        "kanji": "権",
+        "radicals": ["木", "矢", "隹"]
+    },
+    {
+        "kanji": "件",
+        "radicals": ["ｲ", "牛"]
+    },
+    {
+        "kanji": "派",
+        "radicals": ["氵", "厂", "氏"]
+    },
+    {
+        "kanji": "岡",
+        "radicals": ["冂", "丷", "一", "山"]
+    },
+    {
+        "kanji": "素",
+        "radicals": ["生", "糸"]
+    },
+    {
+        "kanji": "断",
+        "radicals": ["L", "米", "斤"]
+    },
+    {
+        "kanji": "評",
+        "radicals": ["言", "平"]
+    },
+    {
+        "kanji": "批",
+        "radicals": ["扌", "比"]
+    },
+    {
+        "kanji": "任",
+        "radicals": ["ｲ", "王"]
+    },
+    {
+        "kanji": "検",
+        "radicals": ["木", "㑒"]
+    },
+    {
+        "kanji": "審",
+        "radicals": ["宀", "番"]
+    },
+    {
+        "kanji": "条",
+        "radicals": ["夂", "木"]
+    },
+    {
+        "kanji": "責",
+        "radicals": ["生", "貝"]
+    },
+    {
+        "kanji": "省",
+        "radicals": ["少", "目"]
+    },
+    {
+        "kanji": "増",
+        "radicals": ["土", "曽"]
+    },
+    {
+        "kanji": "税",
+        "radicals": ["禾", "兑"]
+    },
+    {
+        "kanji": "解",
+        "radicals": ["角", "刀", "牛"]
+    },
+    {
+        "kanji": "際",
+        "radicals": ["阝", "祭"]
+    },
+    {
+        "kanji": "認",
+        "radicals": ["言", "刃", "心"]
+    },
+    {
+        "kanji": "企",
+        "radicals": ["𠆢", "止"]
+    },
+    {
+        "kanji": "義",
+        "radicals": ["義"]
+    },
+    {
+        "kanji": "罰",
+        "radicals": ["罒", "言", "刂"]
+    },
+    {
+        "kanji": "誕",
+        "radicals": ["言", "廴", "正"]
+    },
+    {
+        "kanji": "脱",
+        "radicals": ["月", "兑"]
+    },
+    {
+        "kanji": "過",
+        "radicals": ["⻌", "冋"]
+    },
+    {
+        "kanji": "坊",
+        "radicals": ["土", "方"]
+    },
+    {
+        "kanji": "寝",
+        "radicals": ["宀", "丬", "ヨ", "冖", "又"]
+    },
+    {
+        "kanji": "宮",
+        "radicals": ["宀", "呂"]
+    },
+    {
+        "kanji": "各",
+        "radicals": ["各"]
+    },
+    {
+        "kanji": "案",
+        "radicals": ["安", "木"]
+    },
+    {
+        "kanji": "置",
+        "radicals": ["罒", "直"]
+    },
+    {
+        "kanji": "費",
+        "radicals": ["弗", "貝"]
+    },
+    {
+        "kanji": "価",
+        "radicals": ["ｲ", "覀"]
+    },
+    {
+        "kanji": "勢",
+        "radicals": ["坴", "丸", "力"]
+    },
+    {
+        "kanji": "営",
+        "radicals": ["龸", "呂"]
+    },
+    {
+        "kanji": "示",
+        "radicals": ["示"]
+    },
+    {
+        "kanji": "統",
+        "radicals": ["糸", "充"]
+    },
+    {
+        "kanji": "領",
+        "radicals": ["令", "頁"]
+    },
+    {
+        "kanji": "策",
+        "radicals": ["竹", "木", "冂"]
+    },
+    {
+        "kanji": "藤",
+        "radicals": ["艹", "月", "龹", "水"]
+    },
+    {
+        "kanji": "副",
+        "radicals": ["畐", "刂"]
+    },
+    {
+        "kanji": "観",
+        "radicals": ["矢", "隹", "見"]
+    },
+    {
+        "kanji": "値",
+        "radicals": ["ｲ", "直"]
+    },
+    {
+        "kanji": "吸",
+        "radicals": ["口", "及"]
+    },
+    {
+        "kanji": "域",
+        "radicals": ["土", "戈", "口", "一"]
+    },
+    {
+        "kanji": "姿",
+        "radicals": ["次", "女"]
+    },
+    {
+        "kanji": "応",
+        "radicals": ["广", "心"]
+    },
+    {
+        "kanji": "提",
+        "radicals": ["扌", "日", "正"]
+    },
+    {
+        "kanji": "援",
+        "radicals": ["扌", "爰"]
+    },
+    {
+        "kanji": "状",
+        "radicals": ["丬", "犬"]
+    },
+    {
+        "kanji": "態",
+        "radicals": ["能", "心"]
+    },
+    {
+        "kanji": "賀",
+        "radicals": ["力", "口", "貝"]
+    },
+    {
+        "kanji": "収",
+        "radicals": ["丩", "又"]
+    },
+    {
+        "kanji": "停",
+        "radicals": ["ｲ", "亭"]
+    },
+    {
+        "kanji": "革",
+        "radicals": ["革"]
+    },
+    {
+        "kanji": "職",
+        "radicals": ["耳", "音", "戈"]
+    },
+    {
+        "kanji": "鬼",
+        "radicals": ["鬼"]
+    },
+    {
+        "kanji": "規",
+        "radicals": ["夫", "見"]
+    },
+    {
+        "kanji": "護",
+        "radicals": ["言", "艹", "隹", "又"]
+    },
+    {
+        "kanji": "割",
+        "radicals": ["宀", "生", "口", "刂"]
+    },
+    {
+        "kanji": "裁",
+        "radicals": ["十", "戈", "衣"]
+    },
+    {
+        "kanji": "崎",
+        "radicals": ["山", "大", "可"]
+    },
+    {
+        "kanji": "演",
+        "radicals": ["氵", "宀", "丁", "田", "ハ"]
+    },
+    {
+        "kanji": "律",
+        "radicals": ["彳", "聿"]
+    },
+    {
+        "kanji": "師",
+        "radicals": ["丶", "㠯", "一", "巾"]
+    },
+    {
+        "kanji": "看",
+        "radicals": ["手", "目"]
+    },
+    {
+        "kanji": "準",
+        "radicals": ["氵", "隹", "十"]
+    },
+    {
+        "kanji": "則",
+        "radicals": ["貝", "刂"]
+    },
+    {
+        "kanji": "備",
+        "radicals": ["ｲ", "艹", "厂", "用"]
+    },
+    {
+        "kanji": "導",
+        "radicals": ["道", "寸"]
+    },
+    {
+        "kanji": "幹",
+        "radicals": ["𠦝", "𠆢", "干"]
+    },
+    {
+        "kanji": "張",
+        "radicals": ["弓", "長"]
+    },
+    {
+        "kanji": "優",
+        "radicals": ["ｲ", "百", "冖", "心", "夂"]
+    },
+    {
+        "kanji": "宅",
+        "radicals": ["宀", "丿", "七"]
+    },
+    {
+        "kanji": "沢",
+        "radicals": ["氵", "尺"]
+    },
+    {
+        "kanji": "施",
+        "radicals": ["方", "𠂉", "也"]
+    },
+    {
+        "kanji": "現",
+        "radicals": ["王", "見"]
+    },
+    {
+        "kanji": "乳",
+        "radicals": ["⺤", "子", "乚"]
+    },
+    {
+        "kanji": "呼",
+        "radicals": ["口", "平"]
+    },
+    {
+        "kanji": "城",
+        "radicals": ["土", "成"]
+    },
+    {
+        "kanji": "俳",
+        "radicals": ["ｲ", "非"]
+    },
+    {
+        "kanji": "秀",
+        "radicals": ["禾", "乃"]
+    },
+    {
+        "kanji": "担",
+        "radicals": ["扌", "旦"]
+    },
+    {
+        "kanji": "額",
+        "radicals": ["客", "頁"]
+    },
+    {
+        "kanji": "製",
+        "radicals": ["制", "衣"]
+    },
+    {
+        "kanji": "違",
+        "radicals": ["⻌", "韋"]
+    },
+    {
+        "kanji": "輸",
+        "radicals": ["車", "𠆢", "月", "刂", "一"]
+    },
+    {
+        "kanji": "燃",
+        "radicals": ["火", "然"]
+    },
+    {
+        "kanji": "祝",
+        "radicals": ["ネ", "兄"]
+    },
+    {
+        "kanji": "届",
+        "radicals": ["尸", "由"]
+    },
+    {
+        "kanji": "狭",
+        "radicals": ["犭", "夫", "丷"]
+    },
+    {
+        "kanji": "肩",
+        "radicals": ["戸", "月"]
+    },
+    {
+        "kanji": "腕",
+        "radicals": ["月", "宀", "夕", "巳"]
+    },
+    {
+        "kanji": "腰",
+        "radicals": ["月", "覀", "女"]
+    },
+    {
+        "kanji": "触",
+        "radicals": ["角", "虫"]
+    },
+    {
+        "kanji": "載",
+        "radicals": ["十", "戈", "車"]
+    },
+    {
+        "kanji": "層",
+        "radicals": ["尸", "曽"]
+    },
+    {
+        "kanji": "型",
+        "radicals": ["开", "刂", "土"]
+    },
+    {
+        "kanji": "庁",
+        "radicals": ["广", "丁"]
+    },
+    {
+        "kanji": "視",
+        "radicals": ["ネ", "見"]
+    },
+    {
+        "kanji": "差",
+        "radicals": ["羊", "工"]
+    },
+    {
+        "kanji": "管",
+        "radicals": ["竹", "宀", "㠯"]
+    },
+    {
+        "kanji": "象",
+        "radicals": ["象"]
+    },
+    {
+        "kanji": "量",
+        "radicals": ["旦", "里"]
+    },
+    {
+        "kanji": "境",
+        "radicals": ["土", "立", "見"]
+    },
+    {
+        "kanji": "環",
+        "radicals": ["王", "罒", "袁"]
+    },
+    {
+        "kanji": "武",
+        "radicals": ["一", "弋", "止"]
+    },
+    {
+        "kanji": "質",
+        "radicals": ["斤", "貝"]
+    },
+    {
+        "kanji": "述",
+        "radicals": ["⻌", "ホ", "丶"]
+    },
+    {
+        "kanji": "供",
+        "radicals": ["ｲ", "共"]
+    },
+    {
+        "kanji": "展",
+        "radicals": ["尸", "龷", "衣"]
+    },
+    {
+        "kanji": "販",
+        "radicals": ["貝", "反"]
+    },
+    {
+        "kanji": "株",
+        "radicals": ["木", "丿", "未"]
+    },
+    {
+        "kanji": "限",
+        "radicals": ["阝", "艮"]
+    },
+    {
+        "kanji": "与",
+        "radicals": ["勹", "一"]
+    },
+    {
+        "kanji": "含",
+        "radicals": ["今", "口"]
+    },
+    {
+        "kanji": "影",
+        "radicals": ["日", "京", "彡"]
+    },
+    {
+        "kanji": "況",
+        "radicals": ["氵", "兄"]
+    },
+    {
+        "kanji": "渡",
+        "radicals": ["氵", "又"]
+    },
+    {
+        "kanji": "響",
+        "radicals": ["幺", "艮", "阝", "音"]
+    },
+    {
+        "kanji": "票",
+        "radicals": ["覀", "示"]
+    },
+    {
+        "kanji": "景",
+        "radicals": ["日", "京"]
+    },
+    {
+        "kanji": "抜",
+        "radicals": ["扌", "友"]
+    },
+    {
+        "kanji": "訴",
+        "radicals": ["言", "斤", "丶"]
+    },
+    {
+        "kanji": "訟",
+        "radicals": ["言", "公"]
+    },
+    {
+        "kanji": "逮",
+        "radicals": ["⻌", "ヨ", "水"]
+    },
+    {
+        "kanji": "補",
+        "radicals": ["ネ", "甫"]
+    },
+    {
+        "kanji": "候",
+        "radicals": ["ｲ", "丨", "ユ", "矢"]
+    },
+    {
+        "kanji": "構",
+        "radicals": ["木", "冓"]
+    },
+    {
+        "kanji": "模",
+        "radicals": ["木", "莫"]
+    },
+    {
+        "kanji": "捕",
+        "radicals": ["扌", "甫"]
+    },
+    {
+        "kanji": "鮮",
+        "radicals": ["魚", "羊"]
+    },
+    {
+        "kanji": "効",
+        "radicals": ["交", "力"]
+    },
+    {
+        "kanji": "属",
+        "radicals": ["尸", "禹"]
+    },
+    {
+        "kanji": "慣",
+        "radicals": ["忄", "毋", "貝"]
+    },
+    {
+        "kanji": "豊",
+        "radicals": ["曲", "豆"]
+    },
+    {
+        "kanji": "満",
+        "radicals": ["氵", "艹", "両"]
+    },
+    {
+        "kanji": "肥",
+        "radicals": ["月", "巴"]
+    },
+    {
+        "kanji": "巻",
+        "radicals": ["龹", "己"]
+    },
+    {
+        "kanji": "捜",
+        "radicals": ["扌", "申", "又"]
+    },
+    {
+        "kanji": "絞",
+        "radicals": ["糸", "交"]
+    },
+    {
+        "kanji": "輩",
+        "radicals": ["非", "車"]
+    },
+    {
+        "kanji": "隠",
+        "radicals": ["阝", "⺤", "ヨ", "心"]
+    },
+    {
+        "kanji": "掛",
+        "radicals": ["扌", "土", "ト"]
+    },
+    {
+        "kanji": "替",
+        "radicals": ["夫", "日"]
+    },
+    {
+        "kanji": "居",
+        "radicals": ["尸", "古"]
+    },
+    {
+        "kanji": "造",
+        "radicals": ["⻌", "告"]
+    },
+    {
+        "kanji": "授",
+        "radicals": ["扌", "受"]
+    },
+    {
+        "kanji": "印",
+        "radicals": ["臼", "卩"]
+    },
+    {
+        "kanji": "創",
+        "radicals": ["倉", "刂"]
+    },
+    {
+        "kanji": "復",
+        "radicals": ["彳", "复"]
+    },
+    {
+        "kanji": "往",
+        "radicals": ["彳", "主"]
+    },
+    {
+        "kanji": "較",
+        "radicals": ["車", "交"]
+    },
+    {
+        "kanji": "筆",
+        "radicals": ["竹", "聿"]
+    },
+    {
+        "kanji": "鉛",
+        "radicals": ["金", "ハ", "口"]
+    },
+    {
+        "kanji": "貯",
+        "radicals": ["貝", "宀", "丁"]
+    },
+    {
+        "kanji": "故",
+        "radicals": ["古", "夂"]
+    },
+    {
+        "kanji": "障",
+        "radicals": ["阝", "章"]
+    },
+    {
+        "kanji": "従",
+        "radicals": ["彳", "丷", "正"]
+    },
+    {
+        "kanji": "我",
+        "radicals": ["我"]
+    },
+    {
+        "kanji": "激",
+        "radicals": ["氵", "白", "方", "夂"]
+    },
+    {
+        "kanji": "刺",
+        "radicals": ["木", "冂", "刂"]
+    },
+    {
+        "kanji": "励",
+        "radicals": ["厂", "万", "力"]
+    },
+    {
+        "kanji": "討",
+        "radicals": ["言", "寸"]
+    },
+    {
+        "kanji": "郵",
+        "radicals": ["車", "阝"]
+    },
+    {
+        "kanji": "針",
+        "radicals": ["金", "十"]
+    },
+    {
+        "kanji": "徴",
+        "radicals": ["彳", "山", "王", "夂"]
+    },
+    {
+        "kanji": "怪",
+        "radicals": ["忄", "圣"]
+    },
+    {
+        "kanji": "獣",
+        "radicals": ["𭕄", "田", "口", "一", "犬"]
+    },
+    {
+        "kanji": "突",
+        "radicals": ["穴", "大"]
+    },
+    {
+        "kanji": "菓",
+        "radicals": ["艹", "果"]
+    },
+    {
+        "kanji": "河",
+        "radicals": ["氵", "可"]
+    },
+    {
+        "kanji": "振",
+        "radicals": ["扌", "辰"]
+    },
+    {
+        "kanji": "汗",
+        "radicals": ["氵", "干"]
+    },
+    {
+        "kanji": "豚",
+        "radicals": ["月", "豕"]
+    },
+    {
+        "kanji": "再",
+        "radicals": ["一", "冂", "土"]
+    },
+    {
+        "kanji": "接",
+        "radicals": ["扌", "立", "女"]
+    },
+    {
+        "kanji": "独",
+        "radicals": ["犭", "虫"]
+    },
+    {
+        "kanji": "占",
+        "radicals": ["占"]
+    },
+    {
+        "kanji": "招",
+        "radicals": ["扌", "召"]
+    },
+    {
+        "kanji": "段",
+        "radicals": ["臼", "殳"]
+    },
+    {
+        "kanji": "胃",
+        "radicals": ["田", "月"]
+    },
+    {
+        "kanji": "腹",
+        "radicals": ["月", "复"]
+    },
+    {
+        "kanji": "痛",
+        "radicals": ["疒", "マ", "用"]
+    },
+    {
+        "kanji": "退",
+        "radicals": ["⻌", "艮"]
+    },
+    {
+        "kanji": "屈",
+        "radicals": ["尸", "出"]
+    },
+    {
+        "kanji": "悩",
+        "radicals": ["忄", "𭕄", "凶"]
+    },
+    {
+        "kanji": "暇",
+        "radicals": ["日", "臼", "匚", "又"]
+    },
+    {
+        "kanji": "織",
+        "radicals": ["糸", "音", "戈"]
+    },
+    {
+        "kanji": "貸",
+        "radicals": ["代", "貝"]
+    },
+    {
+        "kanji": "迷",
+        "radicals": ["⻌", "米"]
+    },
+    {
+        "kanji": "惑",
+        "radicals": ["戈", "口", "一", "心"]
+    },
+    {
+        "kanji": "誘",
+        "radicals": ["言", "禾", "乃"]
+    },
+    {
+        "kanji": "就",
+        "radicals": ["京", "犬"]
+    },
+    {
+        "kanji": "訪",
+        "radicals": ["言", "方"]
+    },
+    {
+        "kanji": "怒",
+        "radicals": ["女", "又", "心"]
+    },
+    {
+        "kanji": "昇",
+        "radicals": ["日", "丿", "廾"]
+    },
+    {
+        "kanji": "眠",
+        "radicals": ["目", "民"]
+    },
+    {
+        "kanji": "睡",
+        "radicals": ["目", "車"]
+    },
+    {
+        "kanji": "症",
+        "radicals": ["疒", "正"]
+    },
+    {
+        "kanji": "締",
+        "radicals": ["糸", "立", "巾"]
+    },
+    {
+        "kanji": "迫",
+        "radicals": ["⻌", "白"]
+    },
+    {
+        "kanji": "靴",
+        "radicals": ["革", "化"]
+    },
+    {
+        "kanji": "濃",
+        "radicals": ["氵", "農"]
+    },
+    {
+        "kanji": "端",
+        "radicals": ["立", "山", "而"]
+    },
+    {
+        "kanji": "極",
+        "radicals": ["木", "一", "勹", "口", "又"]
+    },
+    {
+        "kanji": "途",
+        "radicals": ["⻌", "余"]
+    },
+    {
+        "kanji": "健",
+        "radicals": ["ｲ", "廴", "聿"]
+    },
+    {
+        "kanji": "康",
+        "radicals": ["广", "ヨ", "水"]
+    },
+    {
+        "kanji": "郎",
+        "radicals": ["良", "阝"]
+    },
+    {
+        "kanji": "給",
+        "radicals": ["糸", "合"]
+    },
+    {
+        "kanji": "逆",
+        "radicals": ["⻌", "屯", "丶"]
+    },
+    {
+        "kanji": "巨",
+        "radicals": ["巨"]
+    },
+    {
+        "kanji": "庫",
+        "radicals": ["广", "車"]
+    },
+    {
+        "kanji": "児",
+        "radicals": ["丨", "日", "儿"]
+    },
+    {
+        "kanji": "冷",
+        "radicals": ["冫", "令"]
+    },
+    {
+        "kanji": "凍",
+        "radicals": ["冫", "東"]
+    },
+    {
+        "kanji": "幼",
+        "radicals": ["幺", "力"]
+    },
+    {
+        "kanji": "稚",
+        "radicals": ["禾", "隹"]
+    },
+    {
+        "kanji": "処",
+        "radicals": ["夂", "几"]
+    },
+    {
+        "kanji": "博",
+        "radicals": ["十", "丶", "専"]
+    },
+    {
+        "kanji": "清",
+        "radicals": ["氵", "青"]
+    },
+    {
+        "kanji": "潔",
+        "radicals": ["氵", "生", "刀", "糸"]
+    },
+    {
+        "kanji": "録",
+        "radicals": ["金", "ヨ", "水"]
+    },
+    {
+        "kanji": "隊",
+        "radicals": ["阝", "丷", "豕"]
+    },
+    {
+        "kanji": "修",
+        "radicals": ["ｲ", "丨", "夂", "彡"]
+    },
+    {
+        "kanji": "券",
+        "radicals": ["龹", "刀"]
+    },
+    {
+        "kanji": "婦",
+        "radicals": ["女", "ヨ", "冖", "巾"]
+    },
+    {
+        "kanji": "奇",
+        "radicals": ["奇"]
+    },
+    {
+        "kanji": "妙",
+        "radicals": ["女", "少"]
+    },
+    {
+        "kanji": "麗",
+        "radicals": ["麗"]
+    },
+    {
+        "kanji": "微",
+        "radicals": ["彳", "山", "兀", "夂"]
+    },
+    {
+        "kanji": "益",
+        "radicals": ["丷", "一", "ハ", "皿"]
+    },
+    {
+        "kanji": "移",
+        "radicals": ["禾", "夕"]
+    },
+    {
+        "kanji": "程",
+        "radicals": ["禾", "口", "王"]
+    },
+    {
+        "kanji": "精",
+        "radicals": ["米", "青"]
+    },
+    {
+        "kanji": "絶",
+        "radicals": ["糸", "色"]
+    },
+    {
+        "kanji": "並",
+        "radicals": ["丷", "一", "业"]
+    },
+    {
+        "kanji": "憲",
+        "radicals": ["宀", "生", "罒", "心"]
+    },
+    {
+        "kanji": "衆",
+        "radicals": ["血", "彡", "氏"]
+    },
+    {
+        "kanji": "傘",
+        "radicals": ["𠆢", "人", "十"]
+    },
+    {
+        "kanji": "浜",
+        "radicals": ["氵", "斤", "一", "ハ"]
+    },
+    {
+        "kanji": "撃",
+        "radicals": ["車", "殳", "手"]
+    },
+    {
+        "kanji": "攻",
+        "radicals": ["工", "夂"]
+    },
+    {
+        "kanji": "監",
+        "radicals": ["臣", "𠂉", "一", "皿"]
+    },
+    {
+        "kanji": "杯",
+        "radicals": ["木", "不"]
+    },
+    {
+        "kanji": "乾",
+        "radicals": ["𠦝", "𠂉", "乙"]
+    },
+    {
+        "kanji": "催",
+        "radicals": ["ｲ", "山", "隹"]
+    },
+    {
+        "kanji": "促",
+        "radicals": ["ｲ", "足"]
+    },
+    {
+        "kanji": "欧",
+        "radicals": ["区", "欠"]
+    },
+    {
+        "kanji": "江",
+        "radicals": ["氵", "工"]
+    },
+    {
+        "kanji": "請",
+        "radicals": ["言", "青"]
+    },
+    {
+        "kanji": "雄",
+        "radicals": ["ナ", "ム", "隹"]
+    },
+    {
+        "kanji": "韓",
+        "radicals": ["𠦝", "韋"]
+    },
+    {
+        "kanji": "壊",
+        "radicals": ["土", "十", "罒", "衣"]
+    },
+    {
+        "kanji": "診",
+        "radicals": ["言", "𠆢", "彡"]
+    },
+    {
+        "kanji": "閣",
+        "radicals": ["門", "各"]
+    },
+    {
+        "kanji": "僚",
+        "radicals": ["ｲ", "尞"]
+    },
+    {
+        "kanji": "積",
+        "radicals": ["禾", "責"]
+    },
+    {
+        "kanji": "督",
+        "radicals": ["上", "小", "又", "目"]
+    },
+    {
+        "kanji": "臣",
+        "radicals": ["臣"]
+    },
+    {
+        "kanji": "略",
+        "radicals": ["田", "各"]
+    },
+    {
+        "kanji": "航",
+        "radicals": ["舟", "亠", "几"]
+    },
+    {
+        "kanji": "寄",
+        "radicals": ["宀", "奇"]
+    },
+    {
+        "kanji": "板",
+        "radicals": ["木", "反"]
+    },
+    {
+        "kanji": "街",
+        "radicals": ["土", "行"]
+    },
+    {
+        "kanji": "宗",
+        "radicals": ["宀", "示"]
+    },
+    {
+        "kanji": "緊",
+        "radicals": ["臣", "又", "糸"]
+    },
+    {
+        "kanji": "娘",
+        "radicals": ["女", "良"]
+    },
+    {
+        "kanji": "宴",
+        "radicals": ["宀", "日", "女"]
+    },
+    {
+        "kanji": "怖",
+        "radicals": ["忄", "ナ", "巾"]
+    },
+    {
+        "kanji": "恐",
+        "radicals": ["巩", "心"]
+    },
+    {
+        "kanji": "添",
+        "radicals": ["氵", "天", "小", "丶"]
+    },
+    {
+        "kanji": "猛",
+        "radicals": ["犭", "子", "皿"]
+    },
+    {
+        "kanji": "烈",
+        "radicals": ["歹", "刂", "灬"]
+    },
+    {
+        "kanji": "索",
+        "radicals": ["十", "冖", "糸"]
+    },
+    {
+        "kanji": "詰",
+        "radicals": ["言", "吉"]
+    },
+    {
+        "kanji": "詳",
+        "radicals": ["言", "羊"]
+    },
+    {
+        "kanji": "魅",
+        "radicals": ["鬼", "未"]
+    },
+    {
+        "kanji": "渇",
+        "radicals": ["氵", "日", "勹", "匕"]
+    },
+    {
+        "kanji": "系",
+        "radicals": ["系"]
+    },
+    {
+        "kanji": "婚",
+        "radicals": ["女", "氏", "日"]
+    },
+    {
+        "kanji": "遊",
+        "radicals": ["⻌", "方", "𠂉", "子"]
+    },
+    {
+        "kanji": "旗",
+        "radicals": ["方", "𠂉", "其"]
+    },
+    {
+        "kanji": "照",
+        "radicals": ["日", "召", "灬"]
+    },
+    {
+        "kanji": "快",
+        "radicals": ["忄", "人", "ユ"]
+    },
+    {
+        "kanji": "版",
+        "radicals": ["片", "反"]
+    },
+    {
+        "kanji": "貧",
+        "radicals": ["分", "貝"]
+    },
+    {
+        "kanji": "乏",
+        "radicals": ["丆", "丶", "乙"]
+    },
+    {
+        "kanji": "適",
+        "radicals": ["⻌", "啇"]
+    },
+    {
+        "kanji": "預",
+        "radicals": ["予", "頁"]
+    },
+    {
+        "kanji": "延",
+        "radicals": ["廴", "正"]
+    },
+    {
+        "kanji": "翌",
+        "radicals": ["羽", "立"]
+    },
+    {
+        "kanji": "覧",
+        "radicals": ["臣", "𠂉", "一", "見"]
+    },
+    {
+        "kanji": "懐",
+        "radicals": ["忄", "十", "罒", "衣"]
+    },
+    {
+        "kanji": "押",
+        "radicals": ["扌", "甲"]
+    },
+    {
+        "kanji": "更",
+        "radicals": ["一", "田", "メ"]
+    },
+    {
+        "kanji": "枕",
+        "radicals": ["木", "冘"]
+    },
+    {
+        "kanji": "浮",
+        "radicals": ["氵", "⺤", "子"]
+    },
+    {
+        "kanji": "漏",
+        "radicals": ["氵", "尸", "雨"]
+    },
+    {
+        "kanji": "符",
+        "radicals": ["竹", "付"]
+    },
+    {
+        "kanji": "購",
+        "radicals": ["貝", "冓"]
+    },
+    {
+        "kanji": "越",
+        "radicals": ["走", "成"]
+    },
+    {
+        "kanji": "飾",
+        "radicals": ["食", "𠂉", "巾"]
+    },
+    {
+        "kanji": "騒",
+        "radicals": ["馬", "又", "虫"]
+    },
+    {
+        "kanji": "背",
+        "radicals": ["北", "月"]
+    },
+    {
+        "kanji": "撮",
+        "radicals": ["扌", "日", "耳", "又"]
+    },
+    {
+        "kanji": "盗",
+        "radicals": ["次", "皿"]
+    },
+    {
+        "kanji": "離",
+        "radicals": ["离", "隹"]
+    },
+    {
+        "kanji": "融",
+        "radicals": ["鬲", "虫"]
+    },
+    {
+        "kanji": "編",
+        "radicals": ["糸", "扁"]
+    },
+    {
+        "kanji": "華",
+        "radicals": ["艹", "田", "十"]
+    },
+    {
+        "kanji": "既",
+        "radicals": ["艮", "牙"]
+    },
+    {
+        "kanji": "普",
+        "radicals": ["並", "日"]
+    },
+    {
+        "kanji": "豪",
+        "radicals": ["亠", "口", "冖", "豕"]
+    },
+    {
+        "kanji": "鑑",
+        "radicals": ["金", "監"]
+    },
+    {
+        "kanji": "除",
+        "radicals": ["阝", "余"]
+    },
+    {
+        "kanji": "尋",
+        "radicals": ["ヨ", "工", "口", "寸"]
+    },
+    {
+        "kanji": "幾",
+        "radicals": ["幺", "戈", "人"]
+    },
+    {
+        "kanji": "廊",
+        "radicals": ["广", "郎"]
+    },
+    {
+        "kanji": "掃",
+        "radicals": ["扌", "ヨ", "冖", "巾"]
+    },
+    {
+        "kanji": "泥",
+        "radicals": ["氵", "尸", "匕"]
+    },
+    {
+        "kanji": "棒",
+        "radicals": ["木", "𡗗", "干"]
+    },
+    {
+        "kanji": "驚",
+        "radicals": ["苟", "夂", "馬"]
+    },
+    {
+        "kanji": "嘆",
+        "radicals": ["口", "𦰩"]
+    },
+    {
+        "kanji": "倉",
+        "radicals": ["倉"]
+    },
+    {
+        "kanji": "孫",
+        "radicals": ["子", "系"]
+    },
+    {
+        "kanji": "巣",
+        "radicals": ["𭕄", "果"]
+    },
+    {
+        "kanji": "帯",
+        "radicals": ["山", "一", "冖", "巾"]
+    },
+    {
+        "kanji": "径",
+        "radicals": ["彳", "圣"]
+    },
+    {
+        "kanji": "救",
+        "radicals": ["求", "夂"]
+    },
+    {
+        "kanji": "散",
+        "radicals": ["龷", "月", "夂"]
+    },
+    {
+        "kanji": "粉",
+        "radicals": ["米", "分"]
+    },
+    {
+        "kanji": "脈",
+        "radicals": ["月", "厂", "氏"]
+    },
+    {
+        "kanji": "菜",
+        "radicals": ["艹", "⺤", "木"]
+    },
+    {
+        "kanji": "貨",
+        "radicals": ["化", "貝"]
+    },
+    {
+        "kanji": "陸",
+        "radicals": ["阝", "坴"]
+    },
+    {
+        "kanji": "似",
+        "radicals": ["ｲ", "L", "丶", "人"]
+    },
+    {
+        "kanji": "均",
+        "radicals": ["土", "勺", "丶"]
+    },
+    {
+        "kanji": "墓",
+        "radicals": ["土", "莫"]
+    },
+    {
+        "kanji": "富",
+        "radicals": ["宀", "畐"]
+    },
+    {
+        "kanji": "徳",
+        "radicals": ["彳", "十", "罒", "心"]
+    },
+    {
+        "kanji": "探",
+        "radicals": ["扌", "兀", "木"]
+    },
+    {
+        "kanji": "偵",
+        "radicals": ["ｲ", "ト", "貝"]
+    },
+    {
+        "kanji": "序",
+        "radicals": ["广", "予"]
+    },
+    {
+        "kanji": "迎",
+        "radicals": ["⻌", "卬"]
+    },
+    {
+        "kanji": "志",
+        "radicals": ["士", "心"]
+    },
+    {
+        "kanji": "恩",
+        "radicals": ["口", "大", "心"]
+    },
+    {
+        "kanji": "採",
+        "radicals": ["扌", "⺤", "木"]
+    },
+    {
+        "kanji": "桜",
+        "radicals": ["木", "𭕄", "女"]
+    },
+    {
+        "kanji": "永",
+        "radicals": ["永"]
+    },
+    {
+        "kanji": "液",
+        "radicals": ["氵", "夜"]
+    },
+    {
+        "kanji": "眼",
+        "radicals": ["目", "艮"]
+    },
+    {
+        "kanji": "祖",
+        "radicals": ["ネ", "且"]
+    },
+    {
+        "kanji": "績",
+        "radicals": ["糸", "責"]
+    },
+    {
+        "kanji": "興",
+        "radicals": ["臼", "同", "一", "ハ"]
+    },
+    {
+        "kanji": "衛",
+        "radicals": ["行", "韋"]
+    },
+    {
+        "kanji": "複",
+        "radicals": ["ネ", "复"]
+    },
+    {
+        "kanji": "雑",
+        "radicals": ["九", "木", "隹"]
+    },
+    {
+        "kanji": "賛",
+        "radicals": ["夫", "貝"]
+    },
+    {
+        "kanji": "酸",
+        "radicals": ["酉", "夋"]
+    },
+    {
+        "kanji": "銭",
+        "radicals": ["金", "㦮"]
+    },
+    {
+        "kanji": "飼",
+        "radicals": ["食", "司"]
+    },
+    {
+        "kanji": "傷",
+        "radicals": ["ｲ", "𠂉", "易"]
+    },
+    {
+        "kanji": "党",
+        "radicals": ["龸", "兄"]
+    },
+    {
+        "kanji": "卵",
+        "radicals": ["勺"]
+    },
+    {
+        "kanji": "厳",
+        "radicals": ["𭕄", "厂", "耳", "工", "夂"]
+    },
+    {
+        "kanji": "捨",
+        "radicals": ["扌", "舎"]
+    },
+    {
+        "kanji": "込",
+        "radicals": ["⻌", "入"]
+    },
+    {
+        "kanji": "密",
+        "radicals": ["宀", "必", "山"]
+    },
+    {
+        "kanji": "汚",
+        "radicals": ["氵", "二", "勹"]
+    },
+    {
+        "kanji": "欲",
+        "radicals": ["谷", "欠"]
+    },
+    {
+        "kanji": "暖",
+        "radicals": ["日", "爰"]
+    },
+    {
+        "kanji": "机",
+        "radicals": ["木", "几"]
+    },
+    {
+        "kanji": "秘",
+        "radicals": ["禾", "必"]
+    },
+    {
+        "kanji": "訳",
+        "radicals": ["言", "尺"]
+    },
+    {
+        "kanji": "染",
+        "radicals": ["氵", "九", "木"]
+    },
+    {
+        "kanji": "簡",
+        "radicals": ["竹", "間"]
+    },
+    {
+        "kanji": "閉",
+        "radicals": ["門", "才"]
+    },
+    {
+        "kanji": "誌",
+        "radicals": ["言", "士", "心"]
+    },
+    {
+        "kanji": "窓",
+        "radicals": ["穴", "ム", "心"]
+    },
+    {
+        "kanji": "否",
+        "radicals": ["不", "口"]
+    },
+    {
+        "kanji": "筋",
+        "radicals": ["竹", "月", "力"]
+    },
+    {
+        "kanji": "垂",
+        "radicals": ["車"]
+    },
+    {
+        "kanji": "宝",
+        "radicals": ["宀", "王", "丶"]
+    },
+    {
+        "kanji": "宣",
+        "radicals": ["宀", "一", "旦"]
+    },
+    {
+        "kanji": "尊",
+        "radicals": ["丷", "酉", "寸"]
+    },
+    {
+        "kanji": "忠",
+        "radicals": ["中", "心"]
+    },
+    {
+        "kanji": "拡",
+        "radicals": ["扌", "広"]
+    },
+    {
+        "kanji": "操",
+        "radicals": ["扌", "喿"]
+    },
+    {
+        "kanji": "敬",
+        "radicals": ["苟", "夂"]
+    },
+    {
+        "kanji": "暮",
+        "radicals": ["莫", "日"]
+    },
+    {
+        "kanji": "灰",
+        "radicals": ["厂", "火"]
+    },
+    {
+        "kanji": "熟",
+        "radicals": ["享", "丸", "灬"]
+    },
+    {
+        "kanji": "異",
+        "radicals": ["田", "共"]
+    },
+    {
+        "kanji": "皇",
+        "radicals": ["白", "王"]
+    },
+    {
+        "kanji": "盛",
+        "radicals": ["成", "皿"]
+    },
+    {
+        "kanji": "砂",
+        "radicals": ["石", "少"]
+    },
+    {
+        "kanji": "漠",
+        "radicals": ["氵", "莫"]
+    },
+    {
+        "kanji": "糖",
+        "radicals": ["米", "广", "聿", "口"]
+    },
+    {
+        "kanji": "納",
+        "radicals": ["糸", "内"]
+    },
+    {
+        "kanji": "肺",
+        "radicals": ["月", "市"]
+    },
+    {
+        "kanji": "著",
+        "radicals": ["艹", "者"]
+    },
+    {
+        "kanji": "蒸",
+        "radicals": ["艹", "丞", "灬"]
+    },
+    {
+        "kanji": "蔵",
+        "radicals": ["蔵"]
+    },
+    {
+        "kanji": "装",
+        "radicals": ["丬", "士", "衣"]
+    },
+    {
+        "kanji": "裏",
+        "radicals": ["亠", "里", "衣"]
+    },
+    {
+        "kanji": "諸",
+        "radicals": ["言", "者"]
+    },
+    {
+        "kanji": "賃",
+        "radicals": ["ｲ", "王", "貝"]
+    },
+    {
+        "kanji": "誤",
+        "radicals": ["言", "呉"]
+    },
+    {
+        "kanji": "臓",
+        "radicals": ["月", "蔵"]
+    },
+    {
+        "kanji": "貴",
+        "radicals": ["中", "一", "貝"]
+    },
+    {
+        "kanji": "降",
+        "radicals": ["阝", "夂", "牛"]
+    },
+    {
+        "kanji": "丼",
+        "radicals": ["井", "丶"]
+    },
+    {
+        "kanji": "吐",
+        "radicals": ["口", "土"]
+    },
+    {
+        "kanji": "奴",
+        "radicals": ["女", "又"]
+    },
+    {
+        "kanji": "隷",
+        "radicals": ["士", "示", "ヨ", "水"]
+    },
+    {
+        "kanji": "芋",
+        "radicals": ["艹", "干"]
+    },
+    {
+        "kanji": "縮",
+        "radicals": ["糸", "宀", "ｲ", "百"]
+    },
+    {
+        "kanji": "純",
+        "radicals": ["糸", "屯"]
+    },
+    {
+        "kanji": "縦",
+        "radicals": ["糸", "彳", "丷", "正"]
+    },
+    {
+        "kanji": "粋",
+        "radicals": ["米", "九", "十"]
+    },
+    {
+        "kanji": "聖",
+        "radicals": ["耳", "口", "王"]
+    },
+    {
+        "kanji": "磁",
+        "radicals": ["石", "丷", "一", "幺"]
+    },
+    {
+        "kanji": "紅",
+        "radicals": ["工", "糸"]
+    },
+    {
+        "kanji": "射",
+        "radicals": ["身", "寸"]
+    },
+    {
+        "kanji": "幕",
+        "radicals": ["莫", "巾"]
+    },
+    {
+        "kanji": "拝",
+        "radicals": ["扌", "干"]
+    },
+    {
+        "kanji": "薦",
+        "radicals": ["艹", "广", "覀", "鳥"]
+    },
+    {
+        "kanji": "推",
+        "radicals": ["扌", "隹"]
+    },
+    {
+        "kanji": "揮",
+        "radicals": ["扌", "冖", "車"]
+    },
+    {
+        "kanji": "沿",
+        "radicals": ["氵", "ハ", "口"]
+    },
+    {
+        "kanji": "源",
+        "radicals": ["氵", "原"]
+    },
+    {
+        "kanji": "劇",
+        "radicals": ["虍", "豕", "刂"]
+    },
+    {
+        "kanji": "勤",
+        "radicals": ["堇", "力"]
+    },
+    {
+        "kanji": "歓",
+        "radicals": ["矢", "隹", "欠"]
+    },
+    {
+        "kanji": "承",
+        "radicals": ["子", "二", "水"]
+    },
+    {
+        "kanji": "損",
+        "radicals": ["扌", "員"]
+    },
+    {
+        "kanji": "枝",
+        "radicals": ["木", "支"]
+    },
+    {
+        "kanji": "爪",
+        "radicals": ["爪"]
+    },
+    {
+        "kanji": "豆",
+        "radicals": ["豆"]
+    },
+    {
+        "kanji": "刻",
+        "radicals": ["亥", "刂"]
+    },
+    {
+        "kanji": "腐",
+        "radicals": ["广", "付", "肉"]
+    },
+    {
+        "kanji": "遅",
+        "radicals": ["⻌", "尸", "羊"]
+    },
+    {
+        "kanji": "彫",
+        "radicals": ["周", "彡"]
+    },
+    {
+        "kanji": "測",
+        "radicals": ["氵", "貝", "刂"]
+    },
+    {
+        "kanji": "破",
+        "radicals": ["石", "皮"]
+    },
+    {
+        "kanji": "舎",
+        "radicals": ["舎"]
+    },
+    {
+        "kanji": "講",
+        "radicals": ["言", "冓"]
+    },
+    {
+        "kanji": "滞",
+        "radicals": ["帯", "氵"]
+    },
+    {
+        "kanji": "紹",
+        "radicals": ["糸", "召"]
+    },
+    {
+        "kanji": "介",
+        "radicals": ["介"]
+    },
+    {
+        "kanji": "己",
+        "radicals": ["己"]
+    },
+    {
+        "kanji": "厄",
+        "radicals": ["厂", "巳"]
+    },
+    {
+        "kanji": "亀",
+        "radicals": ["亀"]
+    },
+    {
+        "kanji": "互",
+        "radicals": ["一", "彑"]
+    },
+    {
+        "kanji": "剣",
+        "radicals": ["㑒", "刂"]
+    },
+    {
+        "kanji": "寿",
+        "radicals": ["𡗗", "寸"]
+    },
+    {
+        "kanji": "彼",
+        "radicals": ["彳", "皮"]
+    },
+    {
+        "kanji": "恥",
+        "radicals": ["耳", "心"]
+    },
+    {
+        "kanji": "杉",
+        "radicals": ["木", "彡"]
+    },
+    {
+        "kanji": "汁",
+        "radicals": ["氵", "十"]
+    },
+    {
+        "kanji": "炎",
+        "radicals": ["火"]
+    },
+    {
+        "kanji": "為",
+        "radicals": ["為"]
+    },
+    {
+        "kanji": "熊",
+        "radicals": ["能", "灬"]
+    },
+    {
+        "kanji": "獄",
+        "radicals": ["犭", "言", "犬"]
+    },
+    {
+        "kanji": "酔",
+        "radicals": ["酉", "九", "十"]
+    },
+    {
+        "kanji": "酢",
+        "radicals": ["酉", "乍"]
+    },
+    {
+        "kanji": "鍋",
+        "radicals": ["金", "冋"]
+    },
+    {
+        "kanji": "湖",
+        "radicals": ["氵", "古", "月"]
+    },
+    {
+        "kanji": "銅",
+        "radicals": ["金", "同"]
+    },
+    {
+        "kanji": "払",
+        "radicals": ["扌", "ム"]
+    },
+    {
+        "kanji": "油",
+        "radicals": ["氵", "由"]
+    },
+    {
+        "kanji": "旧",
+        "radicals": ["丨", "日"]
+    },
+    {
+        "kanji": "姓",
+        "radicals": ["女", "生"]
+    },
+    {
+        "kanji": "貿",
+        "radicals": ["ム", "刀", "貝"]
+    },
+    {
+        "kanji": "将",
+        "radicals": ["将"]
+    },
+    {
+        "kanji": "盟",
+        "radicals": ["明", "皿"]
+    },
+    {
+        "kanji": "遺",
+        "radicals": ["⻌", "貴"]
+    },
+    {
+        "kanji": "伸",
+        "radicals": ["ｲ", "申"]
+    },
+    {
+        "kanji": "債",
+        "radicals": ["ｲ", "責"]
+    },
+    {
+        "kanji": "及",
+        "radicals": ["及"]
+    },
+    {
+        "kanji": "奈",
+        "radicals": ["大", "示"]
+    },
+    {
+        "kanji": "幅",
+        "radicals": ["巾", "畐"]
+    },
+    {
+        "kanji": "廃",
+        "radicals": ["广", "発"]
+    },
+    {
+        "kanji": "甘",
+        "radicals": ["甘"]
+    },
+    {
+        "kanji": "換",
+        "radicals": ["扌", "勹", "口", "儿", "大"]
+    },
+    {
+        "kanji": "摘",
+        "radicals": ["扌", "啇"]
+    },
+    {
+        "kanji": "核",
+        "radicals": ["木", "亥"]
+    },
+    {
+        "kanji": "沖",
+        "radicals": ["氵", "中"]
+    },
+    {
+        "kanji": "縄",
+        "radicals": ["糸", "亀"]
+    },
+    {
+        "kanji": "津",
+        "radicals": ["氵", "聿"]
+    },
+    {
+        "kanji": "献",
+        "radicals": ["南", "犬"]
+    },
+    {
+        "kanji": "療",
+        "radicals": ["疒", "尞"]
+    },
+    {
+        "kanji": "継",
+        "radicals": ["糸", "L", "米"]
+    },
+    {
+        "kanji": "維",
+        "radicals": ["糸", "隹"]
+    },
+    {
+        "kanji": "舞",
+        "radicals": ["無", "舛"]
+    },
+    {
+        "kanji": "伎",
+        "radicals": ["ｲ", "支"]
+    },
+    {
+        "kanji": "踏",
+        "radicals": ["足", "水", "日"]
+    },
+    {
+        "kanji": "般",
+        "radicals": ["舟", "殳"]
+    },
+    {
+        "kanji": "頼",
+        "radicals": ["束", "頁"]
+    },
+    {
+        "kanji": "依",
+        "radicals": ["ｲ", "衣"]
+    },
+    {
+        "kanji": "鹿",
+        "radicals": ["广", "覀", "比"]
+    },
+    {
+        "kanji": "諾",
+        "radicals": ["言", "艹", "右"]
+    },
+    {
+        "kanji": "牙",
+        "radicals": ["牙"]
+    },
+    {
+        "kanji": "跳",
+        "radicals": ["足", "兆"]
+    },
+    {
+        "kanji": "昭",
+        "radicals": ["日", "召"]
+    },
+    {
+        "kanji": "漁",
+        "radicals": ["氵", "魚"]
+    },
+    {
+        "kanji": "償",
+        "radicals": ["ｲ", "賞"]
+    },
+    {
+        "kanji": "刑",
+        "radicals": ["开", "刂"]
+    },
+    {
+        "kanji": "募",
+        "radicals": ["莫", "力"]
+    },
+    {
+        "kanji": "執",
+        "radicals": ["幸", "丸"]
+    },
+    {
+        "kanji": "塁",
+        "radicals": ["田", "冫", "土"]
+    },
+    {
+        "kanji": "崩",
+        "radicals": ["山", "月"]
+    },
+    {
+        "kanji": "患",
+        "radicals": ["串", "心"]
+    },
+    {
+        "kanji": "戻",
+        "radicals": ["戸", "大"]
+    },
+    {
+        "kanji": "抗",
+        "radicals": ["扌", "亠", "几"]
+    },
+    {
+        "kanji": "抵",
+        "radicals": ["扌", "氏", "一"]
+    },
+    {
+        "kanji": "旬",
+        "radicals": ["勹", "日"]
+    },
+    {
+        "kanji": "湾",
+        "radicals": ["氵", "赤", "弓"]
+    },
+    {
+        "kanji": "爆",
+        "radicals": ["火", "暴"]
+    },
+    {
+        "kanji": "弾",
+        "radicals": ["弓", "単"]
+    },
+    {
+        "kanji": "聴",
+        "radicals": ["耳", "十", "罒", "心"]
+    },
+    {
+        "kanji": "跡",
+        "radicals": ["足", "赤"]
+    },
+    {
+        "kanji": "遣",
+        "radicals": ["⻌", "虫", "㠯"]
+    },
+    {
+        "kanji": "闘",
+        "radicals": ["門", "豆", "寸"]
+    },
+    {
+        "kanji": "陣",
+        "radicals": ["阝", "車"]
+    },
+    {
+        "kanji": "香",
+        "radicals": ["禾", "日"]
+    },
+    {
+        "kanji": "兆",
+        "radicals": ["兆"]
+    },
+    {
+        "kanji": "臨",
+        "radicals": ["臣", "𠂉", "品"]
+    },
+    {
+        "kanji": "削",
+        "radicals": ["⺌", "月", "刂"]
+    },
+    {
+        "kanji": "契",
+        "radicals": ["生", "刀", "大"]
+    },
+    {
+        "kanji": "恵",
+        "radicals": ["十", "田", "心"]
+    },
+    {
+        "kanji": "抱",
+        "radicals": ["扌", "包"]
+    },
+    {
+        "kanji": "掲",
+        "radicals": ["扌", "日", "勹", "匕"]
+    },
+    {
+        "kanji": "狙",
+        "radicals": ["犭", "且"]
+    },
+    {
+        "kanji": "葬",
+        "radicals": ["艹", "歹", "匕", "廾"]
+    },
+    {
+        "kanji": "需",
+        "radicals": ["雨", "而"]
+    },
+    {
+        "kanji": "齢",
+        "radicals": ["歯", "令"]
+    },
+    {
+        "kanji": "宜",
+        "radicals": ["宀", "且"]
+    },
+    {
+        "kanji": "繰",
+        "radicals": ["糸", "喿"]
+    },
+    {
+        "kanji": "避",
+        "radicals": ["⻌", "辟"]
+    },
+    {
+        "kanji": "妊",
+        "radicals": ["女", "王"]
+    },
+    {
+        "kanji": "娠",
+        "radicals": ["女", "辰"]
+    },
+    {
+        "kanji": "致",
+        "radicals": ["至", "夂"]
+    },
+    {
+        "kanji": "刊",
+        "radicals": ["干", "刂"]
+    },
+    {
+        "kanji": "奏",
+        "radicals": ["𡗗", "天"]
+    },
+    {
+        "kanji": "伴",
+        "radicals": ["ｲ", "半"]
+    },
+    {
+        "kanji": "併",
+        "radicals": ["ｲ", "丷", "开"]
+    },
+    {
+        "kanji": "傾",
+        "radicals": ["化", "頁"]
+    },
+    {
+        "kanji": "却",
+        "radicals": ["去", "卩"]
+    },
+    {
+        "kanji": "奥",
+        "radicals": ["丶", "冂", "米", "大"]
+    },
+    {
+        "kanji": "慮",
+        "radicals": ["虍", "思"]
+    },
+    {
+        "kanji": "懸",
+        "radicals": ["県", "系", "心"]
+    },
+    {
+        "kanji": "房",
+        "radicals": ["戸", "方"]
+    },
+    {
+        "kanji": "扱",
+        "radicals": ["扌", "及"]
+    },
+    {
+        "kanji": "抑",
+        "radicals": ["扌", "卬"]
+    },
+    {
+        "kanji": "択",
+        "radicals": ["扌", "尺"]
+    },
+    {
+        "kanji": "描",
+        "radicals": ["扌", "艹", "田"]
+    },
+    {
+        "kanji": "盤",
+        "radicals": ["舟", "殳", "皿"]
+    },
+    {
+        "kanji": "称",
+        "radicals": ["禾", "𠂉", "小"]
+    },
+    {
+        "kanji": "緒",
+        "radicals": ["糸", "者"]
+    },
+    {
+        "kanji": "緩",
+        "radicals": ["糸", "爰"]
+    },
+    {
+        "kanji": "託",
+        "radicals": ["言", "丿", "七"]
+    },
+    {
+        "kanji": "賄",
+        "radicals": ["貝", "有"]
+    },
+    {
+        "kanji": "賂",
+        "radicals": ["貝", "各"]
+    },
+    {
+        "kanji": "贈",
+        "radicals": ["貝", "曽"]
+    },
+    {
+        "kanji": "逃",
+        "radicals": ["⻌", "兆"]
+    },
+    {
+        "kanji": "還",
+        "radicals": ["⻌", "罒", "袁"]
+    },
+    {
+        "kanji": "超",
+        "radicals": ["走", "召"]
+    },
+    {
+        "kanji": "邦",
+        "radicals": ["三", "丿", "阝"]
+    },
+    {
+        "kanji": "鈴",
+        "radicals": ["金", "令"]
+    },
+    {
+        "kanji": "阜",
+        "radicals": ["丶", "㠯", "十"]
+    },
+    {
+        "kanji": "岐",
+        "radicals": ["山", "支"]
+    },
+    {
+        "kanji": "隆",
+        "radicals": ["阝", "夂", "生"]
+    },
+    {
+        "kanji": "雇",
+        "radicals": ["隹", "戸"]
+    },
+    {
+        "kanji": "控",
+        "radicals": ["扌", "空"]
+    },
+    {
+        "kanji": "壁",
+        "radicals": ["土", "辟"]
+    },
+    {
+        "kanji": "棋",
+        "radicals": ["木", "其"]
+    },
+    {
+        "kanji": "渋",
+        "radicals": ["氵", "止", "冫"]
+    },
+    {
+        "kanji": "片",
+        "radicals": ["片"]
+    },
+    {
+        "kanji": "群",
+        "radicals": ["君", "羊"]
+    },
+    {
+        "kanji": "仙",
+        "radicals": ["ｲ", "山"]
+    },
+    {
+        "kanji": "充",
+        "radicals": ["充"]
+    },
+    {
+        "kanji": "免",
+        "radicals": ["免"]
+    },
+    {
+        "kanji": "勧",
+        "radicals": ["矢", "隹", "力"]
+    },
+    {
+        "kanji": "圏",
+        "radicals": ["口", "巻"]
+    },
+    {
+        "kanji": "埋",
+        "radicals": ["土", "里"]
+    },
+    {
+        "kanji": "埼",
+        "radicals": ["土", "奇"]
+    },
+    {
+        "kanji": "奪",
+        "radicals": ["大", "隹", "寸"]
+    },
+    {
+        "kanji": "御",
+        "radicals": ["彳", "𠂉", "正", "卩"]
+    },
+    {
+        "kanji": "慎",
+        "radicals": ["忄", "真"]
+    },
+    {
+        "kanji": "拒",
+        "radicals": ["扌", "巨"]
+    },
+    {
+        "kanji": "枠",
+        "radicals": ["木", "九", "十"]
+    },
+    {
+        "kanji": "甲",
+        "radicals": ["甲"]
+    },
+    {
+        "kanji": "祉",
+        "radicals": ["ネ", "止"]
+    },
+    {
+        "kanji": "稲",
+        "radicals": ["禾", "⺤", "旧"]
+    },
+    {
+        "kanji": "譲",
+        "radicals": ["言", "㐮"]
+    },
+    {
+        "kanji": "謙",
+        "radicals": ["言", "兼"]
+    },
+    {
+        "kanji": "躍",
+        "radicals": ["足", "ヨ", "隹"]
+    },
+    {
+        "kanji": "銃",
+        "radicals": ["金", "充"]
+    },
+    {
+        "kanji": "項",
+        "radicals": ["工", "頁"]
+    },
+    {
+        "kanji": "鋼",
+        "radicals": ["金", "岡"]
+    },
+    {
+        "kanji": "顧",
+        "radicals": ["雇", "頁"]
+    },
+    {
+        "kanji": "駐",
+        "radicals": ["馬", "主"]
+    },
+    {
+        "kanji": "駆",
+        "radicals": ["馬", "区"]
+    },
+    {
+        "kanji": "柱",
+        "radicals": ["木", "主"]
+    },
+    {
+        "kanji": "唱",
+        "radicals": ["口", "日"]
+    },
+    {
+        "kanji": "孝",
+        "radicals": ["孝"]
+    },
+    {
+        "kanji": "俊",
+        "radicals": ["ｲ", "夋"]
+    },
+    {
+        "kanji": "兼",
+        "radicals": ["兼"]
+    },
+    {
+        "kanji": "剤",
+        "radicals": ["斉", "刂"]
+    },
+    {
+        "kanji": "吹",
+        "radicals": ["口", "欠"]
+    },
+    {
+        "kanji": "堀",
+        "radicals": ["土", "尸", "出"]
+    },
+    {
+        "kanji": "巡",
+        "radicals": ["⻌", "巛"]
+    },
+    {
+        "kanji": "戒",
+        "radicals": ["戈", "廾"]
+    },
+    {
+        "kanji": "排",
+        "radicals": ["扌", "非"]
+    },
+    {
+        "kanji": "携",
+        "radicals": ["扌", "隹", "乃"]
+    },
+    {
+        "kanji": "敏",
+        "radicals": ["毎", "夂"]
+    },
+    {
+        "kanji": "鋭",
+        "radicals": ["金", "兑"]
+    },
+    {
+        "kanji": "敷",
+        "radicals": ["丶", "十", "田", "方", "夂"]
+    },
+    {
+        "kanji": "殿",
+        "radicals": ["尸", "共", "殳"]
+    },
+    {
+        "kanji": "犠",
+        "radicals": ["牛", "義"]
+    },
+    {
+        "kanji": "獲",
+        "radicals": ["犭", "艹", "隹", "又"]
+    },
+    {
+        "kanji": "茂",
+        "radicals": ["艹", "丿", "戈"]
+    },
+    {
+        "kanji": "繁",
+        "radicals": ["毎", "夂", "糸"]
+    },
+    {
+        "kanji": "頻",
+        "radicals": ["歩", "頁"]
+    },
+    {
+        "kanji": "殖",
+        "radicals": ["歹", "直"]
+    },
+    {
+        "kanji": "薄",
+        "radicals": ["艹", "氵", "丶", "専"]
+    },
+    {
+        "kanji": "衝",
+        "radicals": ["行", "重"]
+    },
+    {
+        "kanji": "誉",
+        "radicals": ["𭕄", "一", "ハ", "言"]
+    },
+    {
+        "kanji": "褒",
+        "radicals": ["亠", "保", "衣"]
+    },
+    {
+        "kanji": "透",
+        "radicals": ["⻌", "禾", "乃"]
+    },
+    {
+        "kanji": "隣",
+        "radicals": ["阝", "米", "舛"]
+    },
+    {
+        "kanji": "雅",
+        "radicals": ["牙", "隹"]
+    },
+    {
+        "kanji": "遜",
+        "radicals": ["⻌", "子", "系"]
+    },
+    {
+        "kanji": "伺",
+        "radicals": ["ｲ", "司"]
+    },
+    {
+        "kanji": "徹",
+        "radicals": ["彳", "𠫓", "月", "夂"]
+    },
+    {
+        "kanji": "瀬",
+        "radicals": ["氵", "束", "頁"]
+    },
+    {
+        "kanji": "撤",
+        "radicals": ["扌", "𠫓", "月", "夂"]
+    },
+    {
+        "kanji": "措",
+        "radicals": ["扌", "昔"]
+    },
+    {
+        "kanji": "拠",
+        "radicals": ["扌", "夂", "几"]
+    },
+    {
+        "kanji": "儀",
+        "radicals": ["ｲ", "義"]
+    },
+    {
+        "kanji": "樹",
+        "radicals": ["木", "壴", "寸"]
+    },
+    {
+        "kanji": "棄",
+        "radicals": ["𠫓", "果"]
+    },
+    {
+        "kanji": "虎",
+        "radicals": ["虍", "儿"]
+    },
+    {
+        "kanji": "蛍",
+        "radicals": ["龸", "虫"]
+    },
+    {
+        "kanji": "蜂",
+        "radicals": ["虫", "夆"]
+    },
+    {
+        "kanji": "酎",
+        "radicals": ["酉", "寸"]
+    },
+    {
+        "kanji": "蜜",
+        "radicals": ["宀", "必", "虫"]
+    },
+    {
+        "kanji": "艦",
+        "radicals": ["舟", "監"]
+    },
+    {
+        "kanji": "潜",
+        "radicals": ["氵", "夫", "日"]
+    },
+    {
+        "kanji": "拳",
+        "radicals": ["龹", "手"]
+    },
+    {
+        "kanji": "炭",
+        "radicals": ["山", "厂", "火"]
+    },
+    {
+        "kanji": "畑",
+        "radicals": ["火", "田"]
+    },
+    {
+        "kanji": "包",
+        "radicals": ["包"]
+    },
+    {
+        "kanji": "衣",
+        "radicals": ["衣"]
+    },
+    {
+        "kanji": "仁",
+        "radicals": ["ｲ", "二"]
+    },
+    {
+        "kanji": "鉱",
+        "radicals": ["金", "広"]
+    },
+    {
+        "kanji": "至",
+        "radicals": ["至"]
+    },
+    {
+        "kanji": "誠",
+        "radicals": ["言", "成"]
+    },
+    {
+        "kanji": "郷",
+        "radicals": ["幺", "郎"]
+    },
+    {
+        "kanji": "侵",
+        "radicals": ["ｲ", "ヨ", "冖", "又"]
+    },
+    {
+        "kanji": "偽",
+        "radicals": ["ｲ", "為"]
+    },
+    {
+        "kanji": "克",
+        "radicals": ["古", "儿"]
+    },
+    {
+        "kanji": "到",
+        "radicals": ["至", "刂"]
+    },
+    {
+        "kanji": "双",
+        "radicals": ["又"]
+    },
+    {
+        "kanji": "哲",
+        "radicals": ["扌", "斤", "口"]
+    },
+    {
+        "kanji": "喪",
+        "radicals": ["十", "口", "衣"]
+    },
+    {
+        "kanji": "堅",
+        "radicals": ["臣", "又", "土"]
+    },
+    {
+        "kanji": "床",
+        "radicals": ["广", "木"]
+    },
+    {
+        "kanji": "括",
+        "radicals": ["扌", "舌"]
+    },
+    {
+        "kanji": "弧",
+        "radicals": ["弓", "瓜"]
+    },
+    {
+        "kanji": "挑",
+        "radicals": ["扌", "兆"]
+    },
+    {
+        "kanji": "掘",
+        "radicals": ["扌", "尸", "出"]
+    },
+    {
+        "kanji": "揚",
+        "radicals": ["扌", "易"]
+    },
+    {
+        "kanji": "握",
+        "radicals": ["扌", "屋"]
+    },
+    {
+        "kanji": "揺",
+        "radicals": ["扌", "干", "凵", "爪"]
+    },
+    {
+        "kanji": "斎",
+        "radicals": ["斉", "示"]
+    },
+    {
+        "kanji": "暫",
+        "radicals": ["車", "斤", "日"]
+    },
+    {
+        "kanji": "析",
+        "radicals": ["木", "斤"]
+    },
+    {
+        "kanji": "枢",
+        "radicals": ["木", "区"]
+    },
+    {
+        "kanji": "軸",
+        "radicals": ["車", "由"]
+    },
+    {
+        "kanji": "柄",
+        "radicals": ["木", "丙"]
+    },
+    {
+        "kanji": "泊",
+        "radicals": ["氵", "白"]
+    },
+    {
+        "kanji": "滑",
+        "radicals": ["氵", "骨"]
+    },
+    {
+        "kanji": "潟",
+        "radicals": ["氵", "日", "勿"]
+    },
+    {
+        "kanji": "焦",
+        "radicals": ["隹", "灬"]
+    },
+    {
+        "kanji": "範",
+        "radicals": ["竹", "車", "巳"]
+    },
+    {
+        "kanji": "紛",
+        "radicals": ["糸", "分"]
+    },
+    {
+        "kanji": "糾",
+        "radicals": ["糸", "丩"]
+    },
+    {
+        "kanji": "綱",
+        "radicals": ["糸", "岡"]
+    },
+    {
+        "kanji": "網",
+        "radicals": ["糸", "岡"]
+    },
+    {
+        "kanji": "肝",
+        "radicals": ["月", "干"]
+    },
+    {
+        "kanji": "芝",
+        "radicals": ["艹", "丶", "乙"]
+    },
+    {
+        "kanji": "荒",
+        "radicals": ["艹", "亡", "川"]
+    },
+    {
+        "kanji": "袋",
+        "radicals": ["代", "衣"]
+    },
+    {
+        "kanji": "誰",
+        "radicals": ["言", "隹"]
+    },
+    {
+        "kanji": "珍",
+        "radicals": ["王", "𠆢", "彡"]
+    },
+    {
+        "kanji": "裂",
+        "radicals": ["歹", "刂", "衣"]
+    },
+    {
+        "kanji": "襲",
+        "radicals": ["龍", "衣"]
+    },
+    {
+        "kanji": "貢",
+        "radicals": ["工", "貝"]
+    },
+    {
+        "kanji": "趣",
+        "radicals": ["走", "耳", "又"]
+    },
+    {
+        "kanji": "距",
+        "radicals": ["足", "巨"]
+    },
+    {
+        "kanji": "籍",
+        "radicals": ["竹", "耒", "昔"]
+    },
+    {
+        "kanji": "露",
+        "radicals": ["雨", "足", "各"]
+    },
+    {
+        "kanji": "牧",
+        "radicals": ["牛", "夂"]
+    },
+    {
+        "kanji": "刷",
+        "radicals": ["尸", "巾", "刂"]
+    },
+    {
+        "kanji": "朗",
+        "radicals": ["良", "月"]
+    },
+    {
+        "kanji": "潮",
+        "radicals": ["氵", "𠦝", "月"]
+    },
+    {
+        "kanji": "即",
+        "radicals": ["艮", "卩"]
+    },
+    {
+        "kanji": "垣",
+        "radicals": ["土", "一", "旦"]
+    },
+    {
+        "kanji": "威",
+        "radicals": ["丿", "戈", "一", "女"]
+    },
+    {
+        "kanji": "封",
+        "radicals": ["土", "寸"]
+    },
+    {
+        "kanji": "筒",
+        "radicals": ["竹", "同"]
+    },
+    {
+        "kanji": "岳",
+        "radicals": ["斤", "一", "山"]
+    },
+    {
+        "kanji": "慰",
+        "radicals": ["尸", "示", "寸", "心"]
+    },
+    {
+        "kanji": "懇",
+        "radicals": ["豸", "艮", "心"]
+    },
+    {
+        "kanji": "懲",
+        "radicals": ["彳", "山", "王", "夂", "心"]
+    },
+    {
+        "kanji": "摩",
+        "radicals": ["广", "木", "手"]
+    },
+    {
+        "kanji": "擦",
+        "radicals": ["扌", "宀", "祭"]
+    },
+    {
+        "kanji": "撲",
+        "radicals": ["扌", "業"]
+    },
+    {
+        "kanji": "斉",
+        "radicals": ["斉"]
+    },
+    {
+        "kanji": "旨",
+        "radicals": ["匕", "日"]
+    },
+    {
+        "kanji": "柔",
+        "radicals": ["矛", "木"]
+    },
+    {
+        "kanji": "沈",
+        "radicals": ["氵", "冘"]
+    },
+    {
+        "kanji": "沼",
+        "radicals": ["氵", "召"]
+    },
+    {
+        "kanji": "泰",
+        "radicals": ["𡗗", "水"]
+    },
+    {
+        "kanji": "滅",
+        "radicals": ["氵", "丿", "戈", "一", "火"]
+    },
+    {
+        "kanji": "滋",
+        "radicals": ["氵", "丷", "一", "幺"]
+    },
+    {
+        "kanji": "炉",
+        "radicals": ["火", "戸"]
+    },
+    {
+        "kanji": "琴",
+        "radicals": ["王", "今"]
+    },
+    {
+        "kanji": "寸",
+        "radicals": ["寸"]
+    },
+    {
+        "kanji": "竜",
+        "radicals": ["竜"]
+    },
+    {
+        "kanji": "縁",
+        "radicals": ["糸", "ヨ", "豕"]
+    },
+    {
+        "kanji": "翼",
+        "radicals": ["羽", "田", "共"]
+    },
+    {
+        "kanji": "吉",
+        "radicals": ["吉"]
+    },
+    {
+        "kanji": "刃",
+        "radicals": ["刃"]
+    },
+    {
+        "kanji": "忍",
+        "radicals": ["刃", "心"]
+    },
+    {
+        "kanji": "桃",
+        "radicals": ["木", "兆"]
+    },
+    {
+        "kanji": "辛",
+        "radicals": ["辛"]
+    },
+    {
+        "kanji": "謎",
+        "radicals": ["言", "⻌", "米"]
+    },
+    {
+        "kanji": "侍",
+        "radicals": ["ｲ", "寺"]
+    },
+    {
+        "kanji": "俺",
+        "radicals": ["ｲ", "大", "田", "乚"]
+    },
+    {
+        "kanji": "娯",
+        "radicals": ["女", "呉"]
+    },
+    {
+        "kanji": "斗",
+        "radicals": ["斗"]
+    },
+    {
+        "kanji": "朱",
+        "radicals": ["丿", "未"]
+    },
+    {
+        "kanji": "丘",
+        "radicals": ["斤", "一"]
+    },
+    {
+        "kanji": "梨",
+        "radicals": ["禾", "刂", "木"]
+    },
+    {
+        "kanji": "僕",
+        "radicals": ["ｲ", "業"]
+    },
+    {
+        "kanji": "匹",
+        "radicals": ["匚", "儿"]
+    },
+    {
+        "kanji": "叫",
+        "radicals": ["口", "丩"]
+    },
+    {
+        "kanji": "釣",
+        "radicals": ["金", "勺"]
+    },
+    {
+        "kanji": "髪",
+        "radicals": ["長", "彡", "友"]
+    },
+    {
+        "kanji": "嵐",
+        "radicals": ["山", "風"]
+    },
+    {
+        "kanji": "涙",
+        "radicals": ["氵", "戸", "大"]
+    },
+    {
+        "kanji": "缶",
+        "radicals": ["缶"]
+    },
+    {
+        "kanji": "姫",
+        "radicals": ["女", "臣"]
+    },
+    {
+        "kanji": "棚",
+        "radicals": ["木", "月"]
+    },
+    {
+        "kanji": "粒",
+        "radicals": ["米", "立"]
+    },
+    {
+        "kanji": "砲",
+        "radicals": ["石", "包"]
+    },
+    {
+        "kanji": "雷",
+        "radicals": ["雨", "田"]
+    },
+    {
+        "kanji": "芽",
+        "radicals": ["艹", "牙"]
+    },
+    {
+        "kanji": "塔",
+        "radicals": ["土", "艹", "合"]
+    },
+    {
+        "kanji": "澄",
+        "radicals": ["氵", "癶", "豆"]
+    },
+    {
+        "kanji": "矛",
+        "radicals": ["矛"]
+    },
+    {
+        "kanji": "肌",
+        "radicals": ["月", "几"]
+    },
+    {
+        "kanji": "舟",
+        "radicals": ["舟"]
+    },
+    {
+        "kanji": "鐘",
+        "radicals": ["金", "立", "里"]
+    },
+    {
+        "kanji": "凶",
+        "radicals": ["凶"]
+    },
+    {
+        "kanji": "塊",
+        "radicals": ["土", "鬼"]
+    },
+    {
+        "kanji": "狩",
+        "radicals": ["犭", "守"]
+    },
+    {
+        "kanji": "頃",
+        "radicals": ["匕", "頁"]
+    },
+    {
+        "kanji": "魂",
+        "radicals": ["云", "鬼"]
+    },
+    {
+        "kanji": "脚",
+        "radicals": ["月", "去", "卩"]
+    },
+    {
+        "kanji": "井",
+        "radicals": ["井"]
+    },
+    {
+        "kanji": "呪",
+        "radicals": ["口", "兄"]
+    },
+    {
+        "kanji": "嬢",
+        "radicals": ["女", "㐮"]
+    },
+    {
+        "kanji": "暦",
+        "radicals": ["厂", "木", "日"]
+    },
+    {
+        "kanji": "曇",
+        "radicals": ["日", "雨", "云"]
+    },
+    {
+        "kanji": "眺",
+        "radicals": ["目", "兆"]
+    },
+    {
+        "kanji": "裸",
+        "radicals": ["ネ", "果"]
+    },
+    {
+        "kanji": "賭",
+        "radicals": ["貝", "者"]
+    },
+    {
+        "kanji": "疲",
+        "radicals": ["疒", "皮"]
+    },
+    {
+        "kanji": "塾",
+        "radicals": ["享", "丸", "土"]
+    },
+    {
+        "kanji": "卓",
+        "radicals": ["ト", "早"]
+    },
+    {
+        "kanji": "磨",
+        "radicals": ["广", "木", "石"]
+    },
+    {
+        "kanji": "菌",
+        "radicals": ["艹", "口", "禾"]
+    },
+    {
+        "kanji": "陰",
+        "radicals": ["阝", "今", "云"]
+    },
+    {
+        "kanji": "霊",
+        "radicals": ["雨", "二", "业"]
+    },
+    {
+        "kanji": "湿",
+        "radicals": ["氵", "日", "业"]
+    },
+    {
+        "kanji": "硬",
+        "radicals": ["石", "更"]
+    },
+    {
+        "kanji": "稼",
+        "radicals": ["禾", "家"]
+    },
+    {
+        "kanji": "嫁",
+        "radicals": ["女", "家"]
+    },
+    {
+        "kanji": "溝",
+        "radicals": ["氵", "冓"]
+    },
+    {
+        "kanji": "滝",
+        "radicals": ["氵", "竜"]
+    },
+    {
+        "kanji": "狂",
+        "radicals": ["犭", "王"]
+    },
+    {
+        "kanji": "墨",
+        "radicals": ["黒", "土"]
+    },
+    {
+        "kanji": "穏",
+        "radicals": ["禾", "⺤", "ヨ", "心"]
+    },
+    {
+        "kanji": "鈍",
+        "radicals": ["金", "屯"]
+    },
+    {
+        "kanji": "魔",
+        "radicals": ["广", "木", "鬼"]
+    },
+    {
+        "kanji": "寮",
+        "radicals": ["宀", "尞"]
+    },
+    {
+        "kanji": "盆",
+        "radicals": ["分", "皿"]
+    },
+    {
+        "kanji": "棟",
+        "radicals": ["木", "東"]
+    },
+    {
+        "kanji": "斬",
+        "radicals": ["車", "斤"]
+    },
+    {
+        "kanji": "寧",
+        "radicals": ["宀", "心", "罒", "丁"]
+    },
+    {
+        "kanji": "椅",
+        "radicals": ["木", "奇"]
+    },
+    {
+        "kanji": "歳",
+        "radicals": ["止", "丿", "戈", "示"]
+    },
+    {
+        "kanji": "涼",
+        "radicals": ["氵", "京"]
+    },
+    {
+        "kanji": "猿",
+        "radicals": ["犭", "土", "口", "衣"]
+    },
+    {
+        "kanji": "瞳",
+        "radicals": ["目", "立", "里"]
+    },
+    {
+        "kanji": "鍵",
+        "radicals": ["金", "廴", "聿"]
+    },
+    {
+        "kanji": "零",
+        "radicals": ["雨", "令"]
+    },
+    {
+        "kanji": "碁",
+        "radicals": ["其", "石"]
+    },
+    {
+        "kanji": "租",
+        "radicals": ["禾", "且"]
+    },
+    {
+        "kanji": "幽",
+        "radicals": ["幺", "山"]
+    },
+    {
+        "kanji": "泡",
+        "radicals": ["氵", "包"]
+    },
+    {
+        "kanji": "癖",
+        "radicals": ["疒", "辟"]
+    },
+    {
+        "kanji": "鍛",
+        "radicals": ["金", "臼", "殳"]
+    },
+    {
+        "kanji": "錬",
+        "radicals": ["金", "東"]
+    },
+    {
+        "kanji": "穂",
+        "radicals": ["禾", "恵"]
+    },
+    {
+        "kanji": "帝",
+        "radicals": ["立", "巾"]
+    },
+    {
+        "kanji": "瞬",
+        "radicals": ["目", "⺤", "冖", "舛"]
+    },
+    {
+        "kanji": "菊",
+        "radicals": ["艹", "勹", "米"]
+    },
+    {
+        "kanji": "誇",
+        "radicals": ["言", "大", "二", "勹"]
+    },
+    {
+        "kanji": "阻",
+        "radicals": ["阝", "且"]
+    },
+    {
+        "kanji": "黙",
+        "radicals": ["里", "犬", "灬"]
+    },
+    {
+        "kanji": "俵",
+        "radicals": ["ｲ", "生", "衣"]
+    },
+    {
+        "kanji": "綿",
+        "radicals": ["糸", "白", "巾"]
+    },
+    {
+        "kanji": "架",
+        "radicals": ["力", "口", "木"]
+    },
+    {
+        "kanji": "砕",
+        "radicals": ["石", "九", "十"]
+    },
+    {
+        "kanji": "粘",
+        "radicals": ["米", "占"]
+    },
+    {
+        "kanji": "粧",
+        "radicals": ["米", "广", "土"]
+    },
+    {
+        "kanji": "欺",
+        "radicals": ["其", "欠"]
+    },
+    {
+        "kanji": "詐",
+        "radicals": ["言", "乍"]
+    },
+    {
+        "kanji": "霧",
+        "radicals": ["雨", "矛", "夂", "力"]
+    },
+    {
+        "kanji": "柳",
+        "radicals": ["木", "卩"]
+    },
+    {
+        "kanji": "佐",
+        "radicals": ["ｲ", "ナ", "工"]
+    },
+    {
+        "kanji": "尺",
+        "radicals": ["尺"]
+    },
+    {
+        "kanji": "哀",
+        "radicals": ["亠", "口", "衣"]
+    },
+    {
+        "kanji": "唇",
+        "radicals": ["辰", "口"]
+    },
+    {
+        "kanji": "塀",
+        "radicals": ["土", "尸", "丷", "开"]
+    },
+    {
+        "kanji": "墜",
+        "radicals": ["阝", "丷", "豕", "土"]
+    },
+    {
+        "kanji": "如",
+        "radicals": ["女", "口"]
+    },
+    {
+        "kanji": "婆",
+        "radicals": ["波", "女"]
+    },
+    {
+        "kanji": "崖",
+        "radicals": ["山", "厂", "土"]
+    },
+    {
+        "kanji": "帽",
+        "radicals": ["巾", "日", "目"]
+    },
+    {
+        "kanji": "幣",
+        "radicals": ["敝", "巾"]
+    },
+    {
+        "kanji": "恨",
+        "radicals": ["忄", "艮"]
+    },
+    {
+        "kanji": "憎",
+        "radicals": ["忄", "曽"]
+    },
+    {
+        "kanji": "憩",
+        "radicals": ["舌", "自", "心"]
+    },
+    {
+        "kanji": "扇",
+        "radicals": ["戸", "羽"]
+    },
+    {
+        "kanji": "扉",
+        "radicals": ["戸", "非"]
+    },
+    {
+        "kanji": "挿",
+        "radicals": ["扌", "千", "日"]
+    },
+    {
+        "kanji": "掌",
+        "radicals": ["龸", "口", "手"]
+    },
+    {
+        "kanji": "滴",
+        "radicals": ["氵", "啇"]
+    },
+    {
+        "kanji": "炊",
+        "radicals": ["火", "欠"]
+    },
+    {
+        "kanji": "爽",
+        "radicals": ["大", "メ"]
+    },
+    {
+        "kanji": "畳",
+        "radicals": ["田", "冖", "且"]
+    },
+    {
+        "kanji": "瞭",
+        "radicals": ["目", "尞"]
+    },
+    {
+        "kanji": "箸",
+        "radicals": ["竹", "者"]
+    },
+    {
+        "kanji": "胴",
+        "radicals": ["月", "同"]
+    },
+    {
+        "kanji": "芯",
+        "radicals": ["艹", "心"]
+    },
+    {
+        "kanji": "虹",
+        "radicals": ["虫", "工"]
+    },
+    {
+        "kanji": "帳",
+        "radicals": ["巾", "長"]
+    },
+    {
+        "kanji": "蚊",
+        "radicals": ["虫", "文"]
+    },
+    {
+        "kanji": "蛇",
+        "radicals": ["虫", "宀", "匕"]
+    },
+    {
+        "kanji": "貼",
+        "radicals": ["貝", "占"]
+    },
+    {
+        "kanji": "辱",
+        "radicals": ["辰", "寸"]
+    },
+    {
+        "kanji": "鉢",
+        "radicals": ["金", "本"]
+    },
+    {
+        "kanji": "闇",
+        "radicals": ["門", "音"]
+    },
+    {
+        "kanji": "隙",
+        "radicals": ["阝", "小", "日"]
+    },
+    {
+        "kanji": "霜",
+        "radicals": ["雨", "木", "目"]
+    },
+    {
+        "kanji": "飢",
+        "radicals": ["食", "几"]
+    },
+    {
+        "kanji": "餓",
+        "radicals": ["食", "我"]
+    },
+    {
+        "kanji": "畜",
+        "radicals": ["玄", "田"]
+    },
+    {
+        "kanji": "迅",
+        "radicals": ["⻌", "厂", "十"]
+    },
+    {
+        "kanji": "騎",
+        "radicals": ["馬", "奇"]
+    },
+    {
+        "kanji": "蓄",
+        "radicals": ["艹", "玄", "田"]
+    },
+    {
+        "kanji": "尽",
+        "radicals": ["尺", "冫"]
+    },
+    {
+        "kanji": "彩",
+        "radicals": ["⺤", "木", "彡"]
+    },
+    {
+        "kanji": "憶",
+        "radicals": ["忄", "意"]
+    },
+    {
+        "kanji": "溶",
+        "radicals": ["氵", "容"]
+    },
+    {
+        "kanji": "耐",
+        "radicals": ["而", "寸"]
+    },
+    {
+        "kanji": "踊",
+        "radicals": ["足", "マ", "用"]
+    },
+    {
+        "kanji": "賢",
+        "radicals": ["臣", "又", "貝"]
+    },
+    {
+        "kanji": "輝",
+        "radicals": ["光", "冖", "車"]
+    },
+    {
+        "kanji": "脅",
+        "radicals": ["力", "月"]
+    },
+    {
+        "kanji": "麻",
+        "radicals": ["广", "木"]
+    },
+    {
+        "kanji": "灯",
+        "radicals": ["火", "丁"]
+    },
+    {
+        "kanji": "咲",
+        "radicals": ["口", "丷", "天"]
+    },
+    {
+        "kanji": "培",
+        "radicals": ["土", "咅"]
+    },
+    {
+        "kanji": "悔",
+        "radicals": ["忄", "毎"]
+    },
+    {
+        "kanji": "脇",
+        "radicals": ["月", "力"]
+    },
+    {
+        "kanji": "遂",
+        "radicals": ["⻌", "丷", "豕"]
+    },
+    {
+        "kanji": "班",
+        "radicals": ["王", "刂"]
+    },
+    {
+        "kanji": "塗",
+        "radicals": ["氵", "余", "土"]
+    },
+    {
+        "kanji": "斜",
+        "radicals": ["余", "斗"]
+    },
+    {
+        "kanji": "殴",
+        "radicals": ["区", "殳"]
+    },
+    {
+        "kanji": "盾",
+        "radicals": ["厂", "目", "十"]
+    },
+    {
+        "kanji": "穫",
+        "radicals": ["禾", "艹", "隹", "又"]
+    },
+    {
+        "kanji": "巾",
+        "radicals": ["巾"]
+    },
+    {
+        "kanji": "駒",
+        "radicals": ["馬", "句"]
+    },
+    {
+        "kanji": "紫",
+        "radicals": ["止", "匕", "糸"]
+    },
+    {
+        "kanji": "抽",
+        "radicals": ["扌", "由"]
+    },
+    {
+        "kanji": "誓",
+        "radicals": ["扌", "斤", "言"]
+    },
+    {
+        "kanji": "悟",
+        "radicals": ["忄", "五", "口"]
+    },
+    {
+        "kanji": "拓",
+        "radicals": ["扌", "石"]
+    },
+    {
+        "kanji": "拘",
+        "radicals": ["扌", "句"]
+    },
+    {
+        "kanji": "礎",
+        "radicals": ["石", "木", "疋"]
+    },
+    {
+        "kanji": "鶴",
+        "radicals": ["宀", "隹", "鳥"]
+    },
+    {
+        "kanji": "刈",
+        "radicals": ["メ", "刂"]
+    },
+    {
+        "kanji": "剛",
+        "radicals": ["岡", "刂"]
+    },
+    {
+        "kanji": "唯",
+        "radicals": ["口", "隹"]
+    },
+    {
+        "kanji": "壇",
+        "radicals": ["土", "亠", "回", "旦"]
+    },
+    {
+        "kanji": "尼",
+        "radicals": ["尸", "匕"]
+    },
+    {
+        "kanji": "概",
+        "radicals": ["木", "艮", "牙"]
+    },
+    {
+        "kanji": "浸",
+        "radicals": ["氵", "ヨ", "冖", "又"]
+    },
+    {
+        "kanji": "淡",
+        "radicals": ["氵", "火"]
+    },
+    {
+        "kanji": "煮",
+        "radicals": ["者", "灬"]
+    },
+    {
+        "kanji": "覆",
+        "radicals": ["覀", "彳", "复"]
+    },
+    {
+        "kanji": "謀",
+        "radicals": ["言", "甘", "木"]
+    },
+    {
+        "kanji": "陶",
+        "radicals": ["阝", "勹", "缶"]
+    },
+    {
+        "kanji": "隔",
+        "radicals": ["阝", "鬲"]
+    },
+    {
+        "kanji": "征",
+        "radicals": ["彳", "正"]
+    },
+    {
+        "kanji": "陛",
+        "radicals": ["阝", "比", "土"]
+    },
+    {
+        "kanji": "俗",
+        "radicals": ["ｲ", "谷"]
+    },
+    {
+        "kanji": "桑",
+        "radicals": ["又", "木"]
+    },
+    {
+        "kanji": "潤",
+        "radicals": ["氵", "門", "王"]
+    },
+    {
+        "kanji": "珠",
+        "radicals": ["王", "丿", "未"]
+    },
+    {
+        "kanji": "衰",
+        "radicals": ["亠", "日", "衣"]
+    },
+    {
+        "kanji": "奨",
+        "radicals": ["将", "大"]
+    },
+    {
+        "kanji": "劣",
+        "radicals": ["少", "力"]
+    },
+    {
+        "kanji": "勘",
+        "radicals": ["甚", "力"]
+    },
+    {
+        "kanji": "妃",
+        "radicals": ["女", "己"]
+    },
+    {
+        "kanji": "丈",
+        "radicals": ["丈"]
+    },
+    {
+        "kanji": "峰",
+        "radicals": ["山", "夆"]
+    },
+    {
+        "kanji": "巧",
+        "radicals": ["工", "一", "勹"]
+    },
+    {
+        "kanji": "邪",
+        "radicals": ["牙", "阝"]
+    },
+    {
+        "kanji": "駄",
+        "radicals": ["馬", "太"]
+    },
+    {
+        "kanji": "唐",
+        "radicals": ["广", "聿", "口"]
+    },
+    {
+        "kanji": "廷",
+        "radicals": ["廴", "王"]
+    },
+    {
+        "kanji": "鬱",
+        "radicals": ["木", "缶", "冖", "匕", "彡", "凵", "メ"]
+    },
+    {
+        "kanji": "簿",
+        "radicals": ["竹", "氵", "丶", "専"]
+    },
+    {
+        "kanji": "彰",
+        "radicals": ["章", "彡"]
+    },
+    {
+        "kanji": "漫",
+        "radicals": ["氵", "日", "罒", "又"]
+    },
+    {
+        "kanji": "訂",
+        "radicals": ["言", "丁"]
+    },
+    {
+        "kanji": "諮",
+        "radicals": ["言", "次", "口"]
+    },
+    {
+        "kanji": "銘",
+        "radicals": ["金", "名"]
+    },
+    {
+        "kanji": "堤",
+        "radicals": ["土", "日", "正"]
+    },
+    {
+        "kanji": "漂",
+        "radicals": ["氵", "覀", "示"]
+    },
+    {
+        "kanji": "翻",
+        "radicals": ["番", "羽"]
+    },
+    {
+        "kanji": "軌",
+        "radicals": ["車", "九"]
+    },
+    {
+        "kanji": "后",
+        "radicals": ["厂", "一", "口"]
+    },
+    {
+        "kanji": "奮",
+        "radicals": ["大", "隹", "田"]
+    },
+    {
+        "kanji": "亭",
+        "radicals": ["亭"]
+    },
+    {
+        "kanji": "仰",
+        "radicals": ["ｲ", "卬"]
+    },
+    {
+        "kanji": "伯",
+        "radicals": ["ｲ", "白"]
+    },
+    {
+        "kanji": "偶",
+        "radicals": ["ｲ", "禺"]
+    },
+    {
+        "kanji": "墳",
+        "radicals": ["土", "十", "艹", "貝"]
+    },
+    {
+        "kanji": "壮",
+        "radicals": ["丬", "士"]
+    },
+    {
+        "kanji": "把",
+        "radicals": ["扌", "巴"]
+    },
+    {
+        "kanji": "搬",
+        "radicals": ["扌", "舟", "殳"]
+    },
+    {
+        "kanji": "晶",
+        "radicals": ["日"]
+    },
+    {
+        "kanji": "洞",
+        "radicals": ["氵", "同"]
+    },
+    {
+        "kanji": "涯",
+        "radicals": ["氵", "厂", "土"]
+    },
+    {
+        "kanji": "疫",
+        "radicals": ["疒", "殳"]
+    },
+    {
+        "kanji": "孔",
+        "radicals": ["子", "乚"]
+    },
+    {
+        "kanji": "偉",
+        "radicals": ["ｲ", "韋"]
+    },
+    {
+        "kanji": "頂",
+        "radicals": ["丁", "頁"]
+    },
+    {
+        "kanji": "召",
+        "radicals": ["召"]
+    },
+    {
+        "kanji": "挟",
+        "radicals": ["扌", "夫", "丷"]
+    },
+    {
+        "kanji": "枯",
+        "radicals": ["木", "古"]
+    },
+    {
+        "kanji": "沸",
+        "radicals": ["氵", "弗"]
+    },
+    {
+        "kanji": "濯",
+        "radicals": ["氵", "ヨ", "隹"]
+    },
+    {
+        "kanji": "燥",
+        "radicals": ["火", "喿"]
+    },
+    {
+        "kanji": "瓶",
+        "radicals": ["丷", "开", "万", "丶", "一"]
+    },
+    {
+        "kanji": "耕",
+        "radicals": ["耒", "井"]
+    },
+    {
+        "kanji": "肯",
+        "radicals": ["止", "月"]
+    },
+    {
+        "kanji": "脂",
+        "radicals": ["月", "匕", "日"]
+    },
+    {
+        "kanji": "膚",
+        "radicals": ["虍", "胃"]
+    },
+    {
+        "kanji": "軒",
+        "radicals": ["車", "干"]
+    },
+    {
+        "kanji": "軟",
+        "radicals": ["車", "欠"]
+    },
+    {
+        "kanji": "郊",
+        "radicals": ["交", "阝"]
+    },
+    {
+        "kanji": "隅",
+        "radicals": ["阝", "禺"]
+    },
+    {
+        "kanji": "隻",
+        "radicals": ["隹", "又"]
+    },
+    {
+        "kanji": "邸",
+        "radicals": ["氏", "一", "阝"]
+    },
+    {
+        "kanji": "郡",
+        "radicals": ["君", "阝"]
+    },
+    {
+        "kanji": "釈",
+        "radicals": ["釆", "尺"]
+    },
+    {
+        "kanji": "肪",
+        "radicals": ["月", "方"]
+    },
+    {
+        "kanji": "喚",
+        "radicals": ["口", "勹", "儿", "大"]
+    },
+    {
+        "kanji": "媛",
+        "radicals": ["女", "爰"]
+    },
+    {
+        "kanji": "貞",
+        "radicals": ["ト", "貝"]
+    },
+    {
+        "kanji": "玄",
+        "radicals": ["玄"]
+    },
+    {
+        "kanji": "苗",
+        "radicals": ["艹", "田"]
+    },
+    {
+        "kanji": "渦",
+        "radicals": ["氵", "冋"]
+    },
+    {
+        "kanji": "慈",
+        "radicals": ["丷", "一", "幺", "心"]
+    },
+    {
+        "kanji": "襟",
+        "radicals": ["ネ", "木", "示"]
+    },
+    {
+        "kanji": "浦",
+        "radicals": ["氵", "甫"]
+    },
+    {
+        "kanji": "塚",
+        "radicals": ["土", "冖", "豕"]
+    },
+    {
+        "kanji": "陥",
+        "radicals": ["阝", "勹", "旧"]
+    },
+    {
+        "kanji": "貫",
+        "radicals": ["毋", "貝"]
+    },
+    {
+        "kanji": "覇",
+        "radicals": ["覀", "革", "月"]
+    },
+    {
+        "kanji": "呂",
+        "radicals": ["呂"]
+    },
+    {
+        "kanji": "茨",
+        "radicals": ["艹", "次"]
+    },
+    {
+        "kanji": "擁",
+        "radicals": ["扌", "亠", "幺", "隹"]
+    },
+    {
+        "kanji": "孤",
+        "radicals": ["瓜", "子"]
+    },
+    {
+        "kanji": "賠",
+        "radicals": ["貝", "咅"]
+    },
+    {
+        "kanji": "鎖",
+        "radicals": ["金", "⺌", "貝"]
+    },
+    {
+        "kanji": "噴",
+        "radicals": ["口", "十", "艹", "貝"]
+    },
+    {
+        "kanji": "祥",
+        "radicals": ["ネ", "羊"]
+    },
+    {
+        "kanji": "牲",
+        "radicals": ["牛", "生"]
+    },
+    {
+        "kanji": "秩",
+        "radicals": ["禾", "失"]
+    },
+    {
+        "kanji": "唆",
+        "radicals": ["口", "夋"]
+    },
+    {
+        "kanji": "膨",
+        "radicals": ["月", "壴", "彡"]
+    },
+    {
+        "kanji": "芳",
+        "radicals": ["艹", "方"]
+    },
+    {
+        "kanji": "恒",
+        "radicals": ["忄", "一", "旦"]
+    },
+    {
+        "kanji": "倫",
+        "radicals": ["ｲ", "𠆢", "一", "冊"]
+    },
+    {
+        "kanji": "陳",
+        "radicals": ["阝", "東"]
+    },
+    {
+        "kanji": "須",
+        "radicals": ["彡", "頁"]
+    },
+    {
+        "kanji": "偏",
+        "radicals": ["ｲ", "扁"]
+    },
+    {
+        "kanji": "遇",
+        "radicals": ["⻌", "禺"]
+    },
+    {
+        "kanji": "糧",
+        "radicals": ["米", "旦", "里"]
+    },
+    {
+        "kanji": "殊",
+        "radicals": ["歹", "丿", "未"]
+    },
+    {
+        "kanji": "慢",
+        "radicals": ["忄", "日", "罒", "又"]
+    },
+    {
+        "kanji": "没",
+        "radicals": ["氵", "殳"]
+    },
+    {
+        "kanji": "怠",
+        "radicals": ["台", "心"]
+    },
+    {
+        "kanji": "遭",
+        "radicals": ["⻌", "一", "曲", "日"]
+    },
+    {
+        "kanji": "惰",
+        "radicals": ["忄", "ナ", "工", "月"]
+    },
+    {
+        "kanji": "猟",
+        "radicals": ["犭", "𭕄", "用"]
+    },
+    {
+        "kanji": "寛",
+        "radicals": ["宀", "艹", "見"]
+    },
+    {
+        "kanji": "胞",
+        "radicals": ["月", "包"]
+    },
+    {
+        "kanji": "浄",
+        "radicals": ["氵", "争"]
+    },
+    {
+        "kanji": "随",
+        "radicals": ["阝", "有", "⻌"]
+    },
+    {
+        "kanji": "稿",
+        "radicals": ["禾", "高"]
+    },
+    {
+        "kanji": "丹",
+        "radicals": ["舟"]
+    },
+    {
+        "kanji": "壌",
+        "radicals": ["土", "㐮"]
+    },
+    {
+        "kanji": "舗",
+        "radicals": ["舎", "甫"]
+    },
+    {
+        "kanji": "騰",
+        "radicals": ["月", "龹", "馬"]
+    },
+    {
+        "kanji": "緯",
+        "radicals": ["糸", "韋"]
+    },
+    {
+        "kanji": "艇",
+        "radicals": ["舟", "廴", "王"]
+    },
+    {
+        "kanji": "披",
+        "radicals": ["扌", "皮"]
+    },
+    {
+        "kanji": "錦",
+        "radicals": ["金", "白", "巾"]
+    },
+    {
+        "kanji": "准",
+        "radicals": ["冫", "隹"]
+    },
+    {
+        "kanji": "剰",
+        "radicals": ["禾", "口", "刂"]
+    },
+    {
+        "kanji": "繊",
+        "radicals": ["糸", "十", "业", "戈"]
+    },
+    {
+        "kanji": "諭",
+        "radicals": ["言", "𠆢", "月", "刂", "一"]
+    },
+    {
+        "kanji": "惨",
+        "radicals": ["忄", "ム", "大", "彡"]
+    },
+    {
+        "kanji": "虐",
+        "radicals": ["虍", "ヨ"]
+    },
+    {
+        "kanji": "据",
+        "radicals": ["扌", "尸", "古"]
+    },
+    {
+        "kanji": "徐",
+        "radicals": ["彳", "余"]
+    },
+    {
+        "kanji": "搭",
+        "radicals": ["扌", "艹", "合"]
+    },
+    {
+        "kanji": "戴",
+        "radicals": ["十", "戈", "田", "共"]
+    },
+    {
+        "kanji": "帥",
+        "radicals": ["丶", "㠯", "巾"]
+    },
+    {
+        "kanji": "啓",
+        "radicals": ["戸", "夂", "口"]
+    },
+    {
+        "kanji": "鯨",
+        "radicals": ["魚", "京"]
+    },
+    {
+        "kanji": "荘",
+        "radicals": ["艹", "丬", "士"]
+    },
+    {
+        "kanji": "栽",
+        "radicals": ["耒", "戈"]
+    },
+    {
+        "kanji": "拐",
+        "radicals": ["扌", "口", "刀"]
+    },
+    {
+        "kanji": "冠",
+        "radicals": ["冖", "元", "寸"]
+    },
+    {
+        "kanji": "勲",
+        "radicals": ["重", "力", "灬"]
+    },
+    {
+        "kanji": "酬",
+        "radicals": ["酉", "丶", "川"]
+    },
+    {
+        "kanji": "紋",
+        "radicals": ["糸", "文"]
+    },
+    {
+        "kanji": "卸",
+        "radicals": ["午", "止", "卩"]
+    },
+    {
+        "kanji": "欄",
+        "radicals": ["木", "門", "東"]
+    },
+    {
+        "kanji": "逸",
+        "radicals": ["⻌", "免"]
+    },
+    {
+        "kanji": "尚",
+        "radicals": ["⺌", "冋"]
+    },
+    {
+        "kanji": "顕",
+        "radicals": ["日", "业", "頁"]
+    },
+    {
+        "kanji": "粛",
+        "radicals": ["ヨ", "丨", "儿", "米"]
+    },
+    {
+        "kanji": "愚",
+        "radicals": ["禺", "心"]
+    },
+    {
+        "kanji": "庶",
+        "radicals": ["广", "凵", "一", "灬"]
+    },
+    {
+        "kanji": "践",
+        "radicals": ["足", "㦮"]
+    },
+    {
+        "kanji": "呈",
+        "radicals": ["口", "王"]
+    },
+    {
+        "kanji": "疎",
+        "radicals": ["疋", "束"]
+    },
+    {
+        "kanji": "疾",
+        "radicals": ["疒", "矢"]
+    },
+    {
+        "kanji": "謡",
+        "radicals": ["言", "干", "凵", "爪"]
+    },
+    {
+        "kanji": "鎌",
+        "radicals": ["金", "兼"]
+    },
+    {
+        "kanji": "酷",
+        "radicals": ["酉", "告"]
+    },
+    {
+        "kanji": "叙",
+        "radicals": ["余", "又"]
+    },
+    {
+        "kanji": "且",
+        "radicals": ["且"]
+    },
+    {
+        "kanji": "痴",
+        "radicals": ["疒", "矢", "口"]
+    },
+    {
+        "kanji": "哺",
+        "radicals": ["口", "甫"]
+    },
+    {
+        "kanji": "傲",
+        "radicals": ["ｲ", "土", "方", "夂"]
+    },
+    {
+        "kanji": "茎",
+        "radicals": ["艹", "圣"]
+    },
+    {
+        "kanji": "悠",
+        "radicals": ["ｲ", "丨", "夂", "心"]
+    },
+    {
+        "kanji": "伏",
+        "radicals": ["ｲ", "犬"]
+    },
+    {
+        "kanji": "鎮",
+        "radicals": ["金", "真"]
+    },
+    {
+        "kanji": "奉",
+        "radicals": ["𡗗", "干"]
+    },
+    {
+        "kanji": "憂",
+        "radicals": ["百", "冖", "心", "夂"]
+    },
+    {
+        "kanji": "朴",
+        "radicals": ["木", "ト"]
+    },
+    {
+        "kanji": "栃",
+        "radicals": ["木", "厂", "万"]
+    },
+    {
+        "kanji": "惜",
+        "radicals": ["忄", "昔"]
+    },
+    {
+        "kanji": "佳",
+        "radicals": ["ｲ", "土"]
+    },
+    {
+        "kanji": "悼",
+        "radicals": ["忄", "ト", "早"]
+    },
+    {
+        "kanji": "該",
+        "radicals": ["言", "亥"]
+    },
+    {
+        "kanji": "赴",
+        "radicals": ["走", "ト"]
+    },
+    {
+        "kanji": "髄",
+        "radicals": ["骨", "有", "⻌"]
+    },
+    {
+        "kanji": "傍",
+        "radicals": ["ｲ", "立", "方"]
+    },
+    {
+        "kanji": "累",
+        "radicals": ["田", "糸"]
+    },
+    {
+        "kanji": "癒",
+        "radicals": ["疒", "𠆢", "月", "刂", "一", "心"]
+    },
+    {
+        "kanji": "郭",
+        "radicals": ["享", "阝"]
+    },
+    {
+        "kanji": "尿",
+        "radicals": ["尸", "水"]
+    },
+    {
+        "kanji": "賓",
+        "radicals": ["宀", "一", "少", "貝"]
+    },
+    {
+        "kanji": "虜",
+        "radicals": ["虍", "男"]
+    },
+    {
+        "kanji": "憾",
+        "radicals": ["忄", "感"]
+    },
+    {
+        "kanji": "弥",
+        "radicals": ["弓", "𠂉", "小"]
+    },
+    {
+        "kanji": "粗",
+        "radicals": ["米", "且"]
+    },
+    {
+        "kanji": "循",
+        "radicals": ["彳", "厂", "目", "十"]
+    },
+    {
+        "kanji": "凝",
+        "radicals": ["冫", "疑"]
+    },
+    {
+        "kanji": "脊",
+        "radicals": ["二", "人", "月"]
+    },
+    {
+        "kanji": "旦",
+        "radicals": ["旦"]
+    },
+    {
+        "kanji": "愉",
+        "radicals": ["忄", "𠆢", "月", "刂", "一"]
+    },
+    {
+        "kanji": "抹",
+        "radicals": ["扌", "未"]
+    },
+    {
+        "kanji": "栓",
+        "radicals": ["木", "𠆢", "王"]
+    },
+    {
+        "kanji": "那",
+        "radicals": ["刀", "二", "阝"]
+    },
+    {
+        "kanji": "拍",
+        "radicals": ["扌", "白"]
+    },
+    {
+        "kanji": "猶",
+        "radicals": ["犭", "丷", "酉"]
+    },
+    {
+        "kanji": "宰",
+        "radicals": ["宀", "辛"]
+    },
+    {
+        "kanji": "寂",
+        "radicals": ["宀", "上", "小", "又"]
+    },
+    {
+        "kanji": "縫",
+        "radicals": ["糸", "⻌", "夆"]
+    },
+    {
+        "kanji": "呉",
+        "radicals": ["呉"]
+    },
+    {
+        "kanji": "凡",
+        "radicals": ["几", "丶"]
+    },
+    {
+        "kanji": "恭",
+        "radicals": ["共", "小", "丶"]
+    },
+    {
+        "kanji": "錯",
+        "radicals": ["金", "昔"]
+    },
+    {
+        "kanji": "穀",
+        "radicals": ["士", "冖", "禾", "殳"]
+    },
+    {
+        "kanji": "陵",
+        "radicals": ["阝", "夌"]
+    },
+    {
+        "kanji": "弊",
+        "radicals": ["敝", "廾"]
+    },
+    {
+        "kanji": "舶",
+        "radicals": ["舟", "白"]
+    },
+    {
+        "kanji": "窮",
+        "radicals": ["穴", "身", "弓"]
+    },
+    {
+        "kanji": "悦",
+        "radicals": ["忄", "兑"]
+    },
+    {
+        "kanji": "縛",
+        "radicals": ["糸", "専", "丶"]
+    },
+    {
+        "kanji": "轄",
+        "radicals": ["車", "宀", "生", "口"]
+    },
+    {
+        "kanji": "弦",
+        "radicals": ["弓", "玄"]
+    },
+    {
+        "kanji": "窒",
+        "radicals": ["穴", "至"]
+    },
+    {
+        "kanji": "洪",
+        "radicals": ["氵", "共"]
+    },
+    {
+        "kanji": "摂",
+        "radicals": ["扌", "耳", "冫"]
+    },
+    {
+        "kanji": "飽",
+        "radicals": ["食", "包"]
+    },
+    {
+        "kanji": "紳",
+        "radicals": ["糸", "申"]
+    },
+    {
+        "kanji": "庸",
+        "radicals": ["广", "聿", "用"]
+    },
+    {
+        "kanji": "搾",
+        "radicals": ["扌", "穴", "乍"]
+    },
+    {
+        "kanji": "碑",
+        "radicals": ["石", "丶", "田", "十"]
+    },
+    {
+        "kanji": "尉",
+        "radicals": ["尸", "示", "寸"]
+    },
+    {
+        "kanji": "匠",
+        "radicals": ["匚", "斤"]
+    },
+    {
+        "kanji": "賊",
+        "radicals": ["貝", "戈", "十"]
+    },
+    {
+        "kanji": "鼓",
+        "radicals": ["壴", "支"]
+    },
+    {
+        "kanji": "旋",
+        "radicals": ["方", "𠂉", "疋"]
+    },
+    {
+        "kanji": "腸",
+        "radicals": ["月", "易"]
+    },
+    {
+        "kanji": "槽",
+        "radicals": ["木", "一", "曲", "日"]
+    },
+    {
+        "kanji": "伐",
+        "radicals": ["ｲ", "戈"]
+    },
+    {
+        "kanji": "漬",
+        "radicals": ["氵", "責"]
+    },
+    {
+        "kanji": "坪",
+        "radicals": ["土", "平"]
+    },
+    {
+        "kanji": "紺",
+        "radicals": ["糸", "甘"]
+    },
+    {
+        "kanji": "羅",
+        "radicals": ["罒", "糸", "隹"]
+    },
+    {
+        "kanji": "峡",
+        "radicals": ["山", "丷", "夫"]
+    },
+    {
+        "kanji": "俸",
+        "radicals": ["ｲ", "𡗗", "干"]
+    },
+    {
+        "kanji": "醸",
+        "radicals": ["酉", "㐮"]
+    },
+    {
+        "kanji": "弔",
+        "radicals": ["弓", "丨"]
+    },
+    {
+        "kanji": "乙",
+        "radicals": ["乙"]
+    },
+    {
+        "kanji": "遍",
+        "radicals": ["⻌", "扁"]
+    },
+    {
+        "kanji": "衡",
+        "radicals": ["行", "勹", "田", "大"]
+    },
+    {
+        "kanji": "款",
+        "radicals": ["士", "示", "欠"]
+    },
+    {
+        "kanji": "閲",
+        "radicals": ["門", "兑"]
+    },
+    {
+        "kanji": "喝",
+        "radicals": ["口", "日", "勹", "匕"]
+    },
+    {
+        "kanji": "敢",
+        "radicals": ["耳", "工", "夂"]
+    },
+    {
+        "kanji": "膜",
+        "radicals": ["月", "莫"]
+    },
+    {
+        "kanji": "盲",
+        "radicals": ["亡", "目"]
+    },
+    {
+        "kanji": "胎",
+        "radicals": ["月", "台"]
+    },
+    {
+        "kanji": "酵",
+        "radicals": ["酉", "孝"]
+    },
+    {
+        "kanji": "堕",
+        "radicals": ["阝", "有", "土"]
+    },
+    {
+        "kanji": "遮",
+        "radicals": ["⻌", "广", "凵", "一", "灬"]
+    },
+    {
+        "kanji": "凸",
+        "radicals": ["凸"]
+    },
+    {
+        "kanji": "凹",
+        "radicals": ["凹"]
+    },
+    {
+        "kanji": "瑠",
+        "radicals": ["王", "ム", "刀", "田"]
+    },
+    {
+        "kanji": "硫",
+        "radicals": ["石", "𠫓", "川"]
+    },
+    {
+        "kanji": "赦",
+        "radicals": ["赤", "夂"]
+    },
+    {
+        "kanji": "窃",
+        "radicals": ["穴", "七", "刀"]
+    },
+    {
+        "kanji": "慨",
+        "radicals": ["忄", "艮", "牙"]
+    },
+    {
+        "kanji": "扶",
+        "radicals": ["扌", "夫"]
+    },
+    {
+        "kanji": "戯",
+        "radicals": ["虍", "业", "戈"]
+    },
+    {
+        "kanji": "忌",
+        "radicals": ["己", "心"]
+    },
+    {
+        "kanji": "濁",
+        "radicals": ["氵", "罒", "勹", "虫"]
+    },
+    {
+        "kanji": "奔",
+        "radicals": ["大", "十", "廾"]
+    },
+    {
+        "kanji": "肖",
+        "radicals": ["⺌", "月"]
+    },
+    {
+        "kanji": "朽",
+        "radicals": ["木", "一", "勹"]
+    },
+    {
+        "kanji": "殻",
+        "radicals": ["士", "冖", "几", "殳"]
+    },
+    {
+        "kanji": "享",
+        "radicals": ["享"]
+    },
+    {
+        "kanji": "藩",
+        "radicals": ["艹", "氵", "番"]
+    },
+    {
+        "kanji": "媒",
+        "radicals": ["女", "甘", "木"]
+    },
+    {
+        "kanji": "鶏",
+        "radicals": ["⺤", "夫", "鳥"]
+    },
+    {
+        "kanji": "嘱",
+        "radicals": ["口", "尸", "禹"]
+    },
+    {
+        "kanji": "迭",
+        "radicals": ["⻌", "失"]
+    },
+    {
+        "kanji": "椎",
+        "radicals": ["木", "隹"]
+    },
+    {
+        "kanji": "絹",
+        "radicals": ["糸", "口", "月"]
+    },
+    {
+        "kanji": "陪",
+        "radicals": ["阝", "咅"]
+    },
+    {
+        "kanji": "剖",
+        "radicals": ["咅", "刂"]
+    },
+    {
+        "kanji": "譜",
+        "radicals": ["言", "並", "日"]
+    },
+    {
+        "kanji": "淑",
+        "radicals": ["氵", "上", "小", "又"]
+    },
+    {
+        "kanji": "帆",
+        "radicals": ["巾", "几", "丶"]
+    },
+    {
+        "kanji": "憤",
+        "radicals": ["忄", "十", "艹", "貝"]
+    },
+    {
+        "kanji": "酌",
+        "radicals": ["酉", "勺"]
+    },
+    {
+        "kanji": "暁",
+        "radicals": ["日", "尭"]
+    },
+    {
+        "kanji": "傑",
+        "radicals": ["ｲ", "舛", "木"]
+    },
+    {
+        "kanji": "錠",
+        "radicals": ["金", "宀", "正"]
+    },
+    {
+        "kanji": "璃",
+        "radicals": ["王", "离"]
+    },
+    {
+        "kanji": "遷",
+        "radicals": ["⻌", "覀", "大", "己"]
+    },
+    {
+        "kanji": "拙",
+        "radicals": ["扌", "出"]
+    },
+    {
+        "kanji": "峠",
+        "radicals": ["山", "上", "下"]
+    },
+    {
+        "kanji": "篤",
+        "radicals": ["竹", "馬"]
+    },
+    {
+        "kanji": "叔",
+        "radicals": ["上", "小", "又"]
+    },
+    {
+        "kanji": "雌",
+        "radicals": ["止", "匕", "隹"]
+    },
+    {
+        "kanji": "堪",
+        "radicals": ["土", "甚"]
+    },
+    {
+        "kanji": "吟",
+        "radicals": ["口", "今"]
+    },
+    {
+        "kanji": "甚",
+        "radicals": ["甚"]
+    },
+    {
+        "kanji": "崇",
+        "radicals": ["山", "宀", "示"]
+    },
+    {
+        "kanji": "漆",
+        "radicals": ["氵", "木", "𠆢", "水"]
+    },
+    {
+        "kanji": "岬",
+        "radicals": ["山", "甲"]
+    },
+    {
+        "kanji": "紡",
+        "radicals": ["糸", "方"]
+    },
+    {
+        "kanji": "礁",
+        "radicals": ["石", "隹", "灬"]
+    },
+    {
+        "kanji": "屯",
+        "radicals": ["屯"]
+    },
+    {
+        "kanji": "姻",
+        "radicals": ["女", "口", "大"]
+    },
+    {
+        "kanji": "擬",
+        "radicals": ["扌", "疑"]
+    },
+    {
+        "kanji": "睦",
+        "radicals": ["目", "坴"]
+    },
+    {
+        "kanji": "閑",
+        "radicals": ["門", "木"]
+    },
+    {
+        "kanji": "曹",
+        "radicals": ["一", "曲", "日"]
+    },
+    {
+        "kanji": "詠",
+        "radicals": ["言", "永"]
+    },
+    {
+        "kanji": "卑",
+        "radicals": ["丶", "田", "十"]
+    },
+    {
+        "kanji": "侮",
+        "radicals": ["ｲ", "毎"]
+    },
+    {
+        "kanji": "鋳",
+        "radicals": ["金", "三", "丿", "寸"]
+    },
+    {
+        "kanji": "蔑",
+        "radicals": ["艹", "罒", "戈", "丿", "丶"]
+    },
+    {
+        "kanji": "胆",
+        "radicals": ["月", "旦"]
+    },
+    {
+        "kanji": "浪",
+        "radicals": ["氵", "良"]
+    },
+    {
+        "kanji": "禍",
+        "radicals": ["ネ", "冋"]
+    },
+    {
+        "kanji": "酪",
+        "radicals": ["酉", "各"]
+    },
+    {
+        "kanji": "憧",
+        "radicals": ["忄", "立", "里"]
+    },
+    {
+        "kanji": "慶",
+        "radicals": ["广", "覀", "亅", "心", "夂"]
+    },
+    {
+        "kanji": "亜",
+        "radicals": ["亜"]
+    },
+    {
+        "kanji": "汰",
+        "radicals": ["氵", "太"]
+    },
+    {
+        "kanji": "沙",
+        "radicals": ["氵", "少"]
+    },
+    {
+        "kanji": "逝",
+        "radicals": ["⻌", "扌", "斤"]
+    },
+    {
+        "kanji": "匿",
+        "radicals": ["匚", "艹", "右"]
+    },
+    {
+        "kanji": "寡",
+        "radicals": ["宀", "頁", "一", "刀"]
+    },
+    {
+        "kanji": "痢",
+        "radicals": ["疒", "禾", "刂"]
+    },
+    {
+        "kanji": "坑",
+        "radicals": ["土", "亠", "几"]
+    },
+    {
+        "kanji": "藍",
+        "radicals": ["艹", "監"]
+    },
+    {
+        "kanji": "畔",
+        "radicals": ["田", "半"]
+    },
+    {
+        "kanji": "唄",
+        "radicals": ["口", "貝"]
+    },
+    {
+        "kanji": "拷",
+        "radicals": ["扌", "耂", "勹"]
+    },
+    {
+        "kanji": "渓",
+        "radicals": ["氵", "⺤", "夫"]
+    },
+    {
+        "kanji": "廉",
+        "radicals": ["广", "兼"]
+    },
+    {
+        "kanji": "謹",
+        "radicals": ["言", "堇"]
+    },
+    {
+        "kanji": "湧",
+        "radicals": ["氵", "勇"]
+    },
+    {
+        "kanji": "醜",
+        "radicals": ["酉", "鬼"]
+    },
+    {
+        "kanji": "升",
+        "radicals": ["丿", "廾"]
+    },
+    {
+        "kanji": "殉",
+        "radicals": ["歹", "勹", "日"]
+    },
+    {
+        "kanji": "煩",
+        "radicals": ["火", "頁"]
+    },
+    {
+        "kanji": "劾",
+        "radicals": ["亥", "力"]
+    },
+    {
+        "kanji": "桟",
+        "radicals": ["木", "㦮"]
+    },
+    {
+        "kanji": "婿",
+        "radicals": ["女", "疋", "月"]
+    },
+    {
+        "kanji": "慕",
+        "radicals": ["莫", "小", "丶"]
+    },
+    {
+        "kanji": "罷",
+        "radicals": ["罒", "能"]
+    },
+    {
+        "kanji": "矯",
+        "radicals": ["矢", "天", "口", "冋"]
+    },
+    {
+        "kanji": "某",
+        "radicals": ["甘", "木"]
+    },
+    {
+        "kanji": "囚",
+        "radicals": ["口", "人"]
+    },
+    {
+        "kanji": "泌",
+        "radicals": ["氵", "必"]
+    },
+    {
+        "kanji": "漸",
+        "radicals": ["氵", "車", "斤"]
+    },
+    {
+        "kanji": "藻",
+        "radicals": ["艹", "氵", "喿"]
+    },
+    {
+        "kanji": "妄",
+        "radicals": ["亡", "女"]
+    },
+    {
+        "kanji": "蛮",
+        "radicals": ["赤", "虫"]
+    },
+    {
+        "kanji": "倹",
+        "radicals": ["ｲ", "㑒"]
+    },
+    {
+        "kanji": "匂",
+        "radicals": ["勹", "匕"]
+    },
+    {
+        "kanji": "串",
+        "radicals": ["串"]
+    },
+    {
+        "kanji": "喉",
+        "radicals": ["口", "ｲ", "矢", "ユ"]
+    },
+    {
+        "kanji": "諦",
+        "radicals": ["言", "立", "巾"]
+    },
+    {
+        "kanji": "捉",
+        "radicals": ["扌", "足"]
+    },
+    {
+        "kanji": "膝",
+        "radicals": ["月", "木", "𠆢", "水"]
+    },
+    {
+        "kanji": "眉",
+        "radicals": ["尸", "丨", "目"]
+    },
+    {
+        "kanji": "痩",
+        "radicals": ["疒", "申", "又"]
+    },
+    {
+        "kanji": "羨",
+        "radicals": ["羊", "次"]
+    },
+    {
+        "kanji": "慌",
+        "radicals": ["忄", "荒"]
+    },
+    {
+        "kanji": "挨",
+        "radicals": ["扌", "ム", "矢"]
+    },
+    {
+        "kanji": "拶",
+        "radicals": ["扌", "巛", "夕"]
+    },
+    {
+        "kanji": "斤",
+        "radicals": ["斤"]
+    },
+    {
+        "kanji": "袖",
+        "radicals": ["ネ", "由"]
+    },
+    {
+        "kanji": "凄",
+        "radicals": ["冫", "妻"]
+    },
+    {
+        "kanji": "妖",
+        "radicals": ["女", "天"]
+    },
+    {
+        "kanji": "宛",
+        "radicals": ["宀", "夕", "巳"]
+    },
+    {
+        "kanji": "蹴",
+        "radicals": ["足", "京", "犬"]
+    },
+    {
+        "kanji": "麺",
+        "radicals": ["麦", "面"]
+    },
+    {
+        "kanji": "股",
+        "radicals": ["月", "殳"]
+    },
+    {
+        "kanji": "柵",
+        "radicals": ["木", "冊"]
+    },
+    {
+        "kanji": "拉",
+        "radicals": ["扌", "立"]
+    },
+    {
+        "kanji": "苛",
+        "radicals": ["艹", "可"]
+    },
+    {
+        "kanji": "煎",
+        "radicals": ["前", "灬"]
+    },
+    {
+        "kanji": "戚",
+        "radicals": ["丿", "戈", "上", "小"]
+    },
+    {
+        "kanji": "餅",
+        "radicals": ["食", "丷", "开"]
+    },
+    {
+        "kanji": "璧",
+        "radicals": ["辟", "王", "丶"]
+    },
+    {
+        "kanji": "冥",
+        "radicals": ["冖", "日", "亠", "ハ"]
+    },
+    {
+        "kanji": "肢",
+        "radicals": ["月", "支"]
+    },
+    {
+        "kanji": "蚕",
+        "radicals": ["虫", "天"]
+    },
+    {
+        "kanji": "乞",
+        "radicals": ["乞"]
+    },
+    {
+        "kanji": "勾",
+        "radicals": ["勹", "ム"]
+    },
+    {
+        "kanji": "斥",
+        "radicals": ["斤", "丶"]
+    },
+    {
+        "kanji": "氾",
+        "radicals": ["氵", "卩"]
+    },
+    {
+        "kanji": "丙",
+        "radicals": ["冂", "人", "一"]
+    },
+    {
+        "kanji": "𠮟",
+        "radicals": ["口", "七"]
+    },
+    {
+        "kanji": "臼",
+        "radicals": ["臼"]
+    },
+    {
+        "kanji": "弐",
+        "radicals": ["一", "二", "弋"]
+    },
+    {
+        "kanji": "汎",
+        "radicals": ["氵", "几", "丶"]
+    },
+    {
+        "kanji": "吏",
+        "radicals": ["一", "史"]
+    },
+    {
+        "kanji": "壱",
+        "radicals": ["士", "冖", "匕"]
+    },
+    {
+        "kanji": "抄",
+        "radicals": ["扌", "少"]
+    },
+    {
+        "kanji": "但",
+        "radicals": ["ｲ", "日", "一"]
+    },
+    {
+        "kanji": "肘",
+        "radicals": ["月", "寸"]
+    },
+    {
+        "kanji": "冶",
+        "radicals": ["冫", "台"]
+    },
+    {
+        "kanji": "沃",
+        "radicals": ["氵", "大", "丿"]
+    },
+    {
+        "kanji": "弄",
+        "radicals": ["王", "廾"]
+    },
+    {
+        "kanji": "旺",
+        "radicals": ["日", "王"]
+    },
+    {
+        "kanji": "玩",
+        "radicals": ["王", "元"]
+    },
+    {
+        "kanji": "采",
+        "radicals": ["⺤", "木"]
+    },
+    {
+        "kanji": "妬",
+        "radicals": ["女", "石"]
+    },
+    {
+        "kanji": "附",
+        "radicals": ["阝", "ｲ", "寸"]
+    },
+    {
+        "kanji": "刹",
+        "radicals": ["メ", "木", "刂"]
+    },
+    {
+        "kanji": "畏",
+        "radicals": ["田", "衣"]
+    },
+    {
+        "kanji": "咽",
+        "radicals": ["口", "大"]
+    },
+    {
+        "kanji": "怨",
+        "radicals": ["夕", "卩", "心"]
+    },
+    {
+        "kanji": "柿",
+        "radicals": ["木", "市"]
+    },
+    {
+        "kanji": "侯",
+        "radicals": ["ｲ", "ユ", "矢"]
+    },
+    {
+        "kanji": "拭",
+        "radicals": ["扌", "工", "弋"]
+    },
+    {
+        "kanji": "衷",
+        "radicals": []
+    },
+    {
+        "kanji": "勅",
+        "radicals": []
+    },
+    {
+        "kanji": "勃",
+        "radicals": []
+    },
+    {
+        "kanji": "昧",
+        "radicals": []
+    },
+    {
+        "kanji": "侶",
+        "radicals": []
+    },
+    {
+        "kanji": "厘",
+        "radicals": []
+    },
+    {
+        "kanji": "訃",
+        "radicals": []
+    },
+    {
+        "kanji": "翁",
+        "radicals": []
+    },
+    {
+        "kanji": "釜",
+        "radicals": []
+    },
+    {
+        "kanji": "桁",
+        "radicals": []
+    },
+    {
+        "kanji": "挫",
+        "radicals": []
+    },
+    {
+        "kanji": "宵",
+        "radicals": []
+    },
+    {
+        "kanji": "畝",
+        "radicals": []
+    },
+    {
+        "kanji": "逐",
+        "radicals": []
+    },
+    {
+        "kanji": "捗",
+        "radicals": []
+    },
+    {
+        "kanji": "朕",
+        "radicals": []
+    },
+    {
+        "kanji": "逓",
+        "radicals": []
+    },
+    {
+        "kanji": "倣",
+        "radicals": []
+    },
+    {
+        "kanji": "耗",
+        "radicals": []
+    },
+    {
+        "kanji": "恣",
+        "radicals": []
+    },
+    {
+        "kanji": "剝",
+        "radicals": []
+    },
+    {
+        "kanji": "萎",
+        "radicals": []
+    },
+    {
+        "kanji": "淫",
+        "radicals": []
+    },
+    {
+        "kanji": "葛",
+        "radicals": []
+    },
+    {
+        "kanji": "舷",
+        "radicals": []
+    },
+    {
+        "kanji": "梗",
+        "radicals": []
+    },
+    {
+        "kanji": "痕",
+        "radicals": []
+    },
+    {
+        "kanji": "曽",
+        "radicals": []
+    },
+    {
+        "kanji": "唾",
+        "radicals": []
+    },
+    {
+        "kanji": "堆",
+        "radicals": []
+    },
+    {
+        "kanji": "捻",
+        "radicals": []
+    },
+    {
+        "kanji": "惧",
+        "radicals": []
+    },
+    {
+        "kanji": "羞",
+        "radicals": []
+    },
+    {
+        "kanji": "貪",
+        "radicals": []
+    },
+    {
+        "kanji": "棺",
+        "radicals": []
+    },
+    {
+        "kanji": "僅",
+        "radicals": []
+    },
+    {
+        "kanji": "硝",
+        "radicals": []
+    },
+    {
+        "kanji": "詔",
+        "radicals": []
+    },
+    {
+        "kanji": "痘",
+        "radicals": []
+    },
+    {
+        "kanji": "斑",
+        "radicals": []
+    },
+    {
+        "kanji": "喩",
+        "radicals": []
+    },
+    {
+        "kanji": "蓋",
+        "radicals": []
+    },
+    {
+        "kanji": "褐",
+        "radicals": []
+    },
+    {
+        "kanji": "虞",
+        "radicals": []
+    },
+    {
+        "kanji": "窟",
+        "radicals": []
+    },
+    {
+        "kanji": "詣",
+        "radicals": []
+    },
+    {
+        "kanji": "塞",
+        "radicals": []
+    },
+    {
+        "kanji": "嗣",
+        "radicals": []
+    },
+    {
+        "kanji": "嫉",
+        "radicals": []
+    },
+    {
+        "kanji": "腫",
+        "radicals": []
+    },
+    {
+        "kanji": "愁",
+        "radicals": []
+    },
+    {
+        "kanji": "腎",
+        "radicals": []
+    },
+    {
+        "kanji": "裾",
+        "radicals": []
+    },
+    {
+        "kanji": "腺",
+        "radicals": []
+    },
+    {
+        "kanji": "詮",
+        "radicals": []
+    },
+    {
+        "kanji": "塑",
+        "radicals": []
+    },
+    {
+        "kanji": "遡",
+        "radicals": []
+    },
+    {
+        "kanji": "溺",
+        "radicals": []
+    },
+    {
+        "kanji": "頓",
+        "radicals": []
+    },
+    {
+        "kanji": "頒",
+        "radicals": []
+    },
+    {
+        "kanji": "楼",
+        "radicals": []
+    },
+    {
+        "kanji": "嗅",
+        "radicals": []
+    },
+    {
+        "kanji": "毀",
+        "radicals": []
+    },
+    {
+        "kanji": "彙",
+        "radicals": []
+    },
+    {
+        "kanji": "慄",
+        "radicals": []
+    },
+    {
+        "kanji": "楷",
+        "radicals": []
+    },
+    {
+        "kanji": "塡",
+        "radicals": []
+    },
+    {
+        "kanji": "餌",
+        "radicals": []
+    },
+    {
+        "kanji": "箇",
+        "radicals": []
+    },
+    {
+        "kanji": "綻",
+        "radicals": []
+    },
+    {
+        "kanji": "嫡",
+        "radicals": []
+    },
+    {
+        "kanji": "貌",
+        "radicals": []
+    },
+    {
+        "kanji": "瘍",
+        "radicals": []
+    },
+    {
+        "kanji": "箋",
+        "radicals": []
+    },
+    {
+        "kanji": "辣",
+        "radicals": []
+    },
+    {
+        "kanji": "謁",
+        "radicals": []
+    },
+    {
+        "kanji": "畿",
+        "radicals": []
+    },
+    {
+        "kanji": "稽",
+        "radicals": []
+    },
+    {
+        "kanji": "賜",
+        "radicals": []
+    },
+    {
+        "kanji": "遵",
+        "radicals": []
+    },
+    {
+        "kanji": "潰",
+        "radicals": []
+    },
+    {
+        "kanji": "罵",
+        "radicals": []
+    },
+    {
+        "kanji": "賦",
+        "radicals": []
+    },
+    {
+        "kanji": "蔽",
+        "radicals": []
+    },
+    {
+        "kanji": "窯",
+        "radicals": []
+    },
+    {
+        "kanji": "嘲",
+        "radicals": []
+    },
+    {
+        "kanji": "憬",
+        "radicals": []
+    },
+    {
+        "kanji": "摯",
+        "radicals": []
+    },
+    {
+        "kanji": "踪",
+        "radicals": []
+    },
+    {
+        "kanji": "骸",
+        "radicals": []
+    },
+    {
+        "kanji": "薫",
+        "radicals": []
+    },
+    {
+        "kanji": "墾",
+        "radicals": []
+    },
+    {
+        "kanji": "儒",
+        "radicals": []
+    },
+    {
+        "kanji": "薪",
+        "radicals": []
+    },
+    {
+        "kanji": "醒",
+        "radicals": []
+    },
+    {
+        "kanji": "膳",
+        "radicals": []
+    },
+    {
+        "kanji": "緻",
+        "radicals": []
+    },
+    {
+        "kanji": "諧",
+        "radicals": []
+    },
+    {
+        "kanji": "錮",
+        "radicals": []
+    },
+    {
+        "kanji": "頰",
+        "radicals": []
+    },
+    {
+        "kanji": "臆",
+        "radicals": []
+    },
+    {
+        "kanji": "嚇",
+        "radicals": []
+    },
+    {
+        "kanji": "爵",
+        "radicals": []
+    },
+    {
+        "kanji": "謄",
+        "radicals": []
+    },
+    {
+        "kanji": "曖",
+        "radicals": []
+    },
+    {
+        "kanji": "顎",
+        "radicals": []
+    },
+    {
+        "kanji": "繕",
+        "radicals": []
+    },
+    {
+        "kanji": "繭",
+        "radicals": []
+    },
+    {
+        "kanji": "濫",
+        "radicals": []
+    },
+    {
+        "kanji": "韻",
+        "radicals": []
+    },
+    {
+        "kanji": "艶",
+        "radicals": []
+    },
+    {
+        "kanji": "璽",
+        "radicals": []
+    },
+    {
+        "kanji": "麓",
+        "radicals": []
+    },
+    {
+        "kanji": "籠",
+        "radicals": []
+    },
+    {
+        "kanji": "瓦",
+        "radicals": []
+    }
+]

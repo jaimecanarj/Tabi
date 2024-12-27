@@ -2,7 +2,7 @@
 import { reactive } from "vue";
 import { watchDebounced } from "@vueuse/core";
 import { ArrowDownWideNarrow, ArrowUpNarrowWide } from "lucide-vue-next";
-import { Filters } from "@/lib/types";
+import { Filters } from "@/types";
 import { Button } from "@/Components/ui/button";
 import { Input } from "@/Components/ui/input";
 import {
@@ -16,12 +16,12 @@ import {
 
 const props = defineProps<{
     filters: Filters;
-    trazos: number[];
-    grados: number[];
+    strokes: number[];
+    grades: number[];
 }>();
 const emit = defineEmits(["change"]);
 
-const grades = [
+const gradesName = [
     "Primero",
     "Segundo",
     "Tercero",
@@ -87,8 +87,11 @@ watchDebounced(
                 <SelectContent>
                     <SelectLabel>Trazos</SelectLabel>
                     <SelectItem value="0">Todos</SelectItem>
-                    <SelectItem v-for="trazo in trazos" :value="String(trazo)">
-                        {{ `${trazo} trazo${trazo != 1 ? "s" : ""} ` }}
+                    <SelectItem
+                        v-for="stroke in strokes"
+                        :value="String(stroke)"
+                    >
+                        {{ `${stroke} trazo${stroke != 1 ? "s" : ""} ` }}
                     </SelectItem>
                 </SelectContent>
             </Select>
@@ -100,8 +103,8 @@ watchDebounced(
                 <SelectContent>
                     <SelectLabel>Grado</SelectLabel>
                     <SelectItem value="0">Todos</SelectItem>
-                    <SelectItem v-for="grado in grados" :value="String(grado)">
-                        {{ grades[grado - 1] }}
+                    <SelectItem v-for="grade in grades" :value="String(grade)">
+                        {{ gradesName[grade - 1] }}
                     </SelectItem>
                 </SelectContent>
             </Select>

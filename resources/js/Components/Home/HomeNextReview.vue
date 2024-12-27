@@ -2,7 +2,7 @@
 import moment from "moment/moment";
 import "moment/locale/es";
 import { CalendarClock } from "lucide-vue-next";
-import { Estudio } from "@/lib/types";
+import { Study } from "@/types";
 import { hourIcons } from "@/lib/utils";
 import {
     Accordion,
@@ -11,14 +11,12 @@ import {
     AccordionContent,
 } from "@/Components/ui/accordion";
 
-const props = defineProps<{ studys: Estudio[] }>();
+const props = defineProps<{ studies: Study[] }>();
 
 //Obtener próximos estudios de cada kanji
 let kanjisToStudy: moment.Moment[] = [];
-props.studys.forEach((study) => {
-    kanjisToStudy.push(
-        moment.utc(study.fecha).add(study.tiempo, "hours").local(),
-    );
+props.studies.forEach((study) => {
+    kanjisToStudy.push(moment.utc(study.date).add(study.time, "hours").local());
 });
 
 //Ordenar por fecha
@@ -27,7 +25,7 @@ kanjisToStudy.sort((a, b) => {
 });
 
 let dates: {
-    fecha: string;
+    date: string;
     data: { hour: string; items: number }[];
     total: number;
 }[] = [];
@@ -39,12 +37,12 @@ kanjisToStudy.forEach((date) => {
         : date.format("D [de] MMMM");
     const hour = date.isBefore(now) ? now.format("HH") : date.format("HH");
 
-    let dateEntry = dates.find((entry) => dateString == entry.fecha);
+    let dateEntry = dates.find((entry) => dateString == entry.date);
 
     if (!dateEntry) {
         // Crear nueva fecha si no existe
         dates.push({
-            fecha: dateString,
+            date: dateString,
             data: [{ hour: hour, items: 1 }],
             total: 1,
         });
@@ -75,12 +73,12 @@ kanjisToStudy.forEach((date) => {
                 No tienes repasos pendientes.
             </h2>
             <Accordion v-else type="single" class="w-full px-6" collapsible>
-                <AccordionItem v-for="date in dates" :value="date.fecha">
+                <AccordionItem v-for="date in dates" :value="date.date">
                     <AccordionTrigger
                         class="hover:text-primary hover:no-underline"
                     >
                         <div class="flex w-full justify-between pr-3 text-lg">
-                            <p>{{ date.fecha }}</p>
+                            <p>{{ date.date }}</p>
                             <p class="rounded-sm bg-secondary px-2 shadow-sm">
                                 {{ date.total }}
                             </p>

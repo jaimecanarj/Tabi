@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Head, usePage } from "@inertiajs/vue3";
-import { Estudio, Kanji } from "@/lib/types";
+import { Study, Kanji } from "@/types";
 import { momentLocale } from "@/lib/utils";
 import MainLayout from "@/Layouts/MainLayout.vue";
 import HomeStudyCard from "@/Components/Home/HomeStudyCard.vue";
@@ -15,13 +15,13 @@ momentLocale();
 
 defineProps<{
     data: {
-        studys: Estudio[];
+        studys: Study[];
         kanjisToReview: number;
         kanjisStudiedNumber: number;
         userStudySessions: number;
         userCorrectAnswers: number;
-        lastWrongKanjis: (Estudio & { kanji: Kanji })[];
-        lastReviewedKanjis: (Estudio & { kanji: Kanji })[];
+        lastWrongKanjis: (Study & { kanji: Kanji })[];
+        lastReviewedKanjis: (Study & { kanji: Kanji })[];
         studiedToday: number;
         reviewedToday: number;
     };
@@ -64,7 +64,7 @@ defineProps<{
                     <HomeStudyCard
                         type="repaso"
                         :kanjisStudied="data.reviewedToday"
-                        :studys="data.kanjisToReview"
+                        :studies="data.kanjisToReview"
                     />
                 </section>
                 <HomeLastStudy :data="data.lastReviewedKanjis" />
@@ -76,7 +76,7 @@ defineProps<{
                 <HomeLastWrong :data="data.lastWrongKanjis" />
             </div>
             <div class="lg:col-span-1">
-                <HomeNextReview :studys="data.studys" />
+                <HomeNextReview :studies="data.studys" />
             </div>
         </div>
     </main>

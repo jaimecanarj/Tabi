@@ -2,11 +2,11 @@
 import { onMounted, ref } from "vue";
 import { Head, Link } from "@inertiajs/vue3";
 import { ChevronLeft, ChevronRight, CircleArrowRight } from "lucide-vue-next";
-import { Kanji, Radical } from "@/lib/types";
-import EstudioLayout from "@/Layouts/EstudioLayout.vue";
+import { Kanji, Radical } from "@/types";
+import StudyLayout from "@/Layouts/StudyLayout.vue";
 import { Button } from "@/Components/ui/button";
 
-const props = defineProps<{ kanjis: (Kanji & { radicales: Radical[] })[] }>();
+const props = defineProps<{ kanjis: (Kanji & { radicals: Radical[] })[] }>();
 
 let id = 0;
 let kanji = ref(props.kanjis[id]);
@@ -40,11 +40,11 @@ onMounted(() => {
 
 <template>
     <Head title="Estudio" />
-    <EstudioLayout :kanji="kanji" :showData="true">
-        <template #significado>
+    <StudyLayout :kanji="kanji" :showData="true">
+        <template #meaning>
             <div class="flex justify-center rounded-b-md bg-card">
                 <p class="p-4 text-6xl font-semibold first-letter:capitalize">
-                    {{ kanji.significado }}
+                    {{ kanji.meaning }}
                 </p>
             </div>
         </template>
@@ -93,5 +93,5 @@ onMounted(() => {
                 </Link>
             </footer>
         </template>
-    </EstudioLayout>
+    </StudyLayout>
 </template>

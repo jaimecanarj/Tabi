@@ -3,39 +3,38 @@ import { ref } from "vue";
 import { Head } from "@inertiajs/vue3";
 import moment from "moment/moment";
 import * as ebisu from "ebisu-js";
-import { Kanji, Estudio, Answer, Radical } from "@/lib/types";
-import EstudioLayout from "@/Layouts/EstudioLayout.vue";
+import { Kanji, Study, Answer, Radical } from "@/types";
+import EstudioLayout from "@/Layouts/StudyLayout.vue";
 import ReviewAnswer from "@/Components/Review/ReviewAnswer.vue";
 import ReviewResume from "@/Components/Review/ReviewResume.vue";
 
 const props = defineProps<{
-    kanjis: (Kanji & { radicales: Radical[]; estudio?: Estudio })[];
+    kanjis: (Kanji & { radicals: Radical[]; study?: Study })[];
 }>();
 
-let kanjisToAnswer: (Kanji & { radicales: Radical[]; estudio?: Estudio })[] =
-    [];
+let kanjisToAnswer: (Kanji & { radicals: Radical[]; study?: Study })[] = [];
 
 //Obtener kanjis a repasar
-if (props.kanjis[0].estudio) {
+if (props.kanjis[0].study) {
     //Ordenar por posibilidad de olvidarse
     kanjisToAnswer = props.kanjis
         .toSorted((kanjiA, kanjiB) => {
             let kanjiAModel = ebisu.defaultModel(
-                kanjiA.estudio!.tiempo,
-                kanjiA.estudio!.betaA,
-                kanjiA.estudio!.betaB,
+                kanjiA.study!.time,
+                kanjiA.study!.betaA,
+                kanjiA.study!.betaB,
             );
             let kanjiATime = moment().diff(
-                moment(kanjiA.estudio!.fecha, "YYYY-MM-DD HH:mm:ss"),
+                moment(kanjiA.study!.date, "YYYY-MM-DD HH:mm:ss"),
                 "hours",
             );
             let kanjiBModel = ebisu.defaultModel(
-                kanjiB.estudio!.tiempo,
-                kanjiB.estudio!.betaA,
-                kanjiB.estudio!.betaB,
+                kanjiB.study!.time,
+                kanjiB.study!.betaA,
+                kanjiB.study!.betaB,
             );
             let kanjiBTime = moment().diff(
-                moment(kanjiB.estudio!.fecha, "YYYY-MM-DD HH:mm:ss"),
+                moment(kanjiB.study!.date, "YYYY-MM-DD HH:mm:ss"),
                 "hours",
             );
             return (
@@ -51,22 +50,22 @@ if (props.kanjis[0].estudio) {
 let kanjisAnswered: number = 1; //Contador
 let kanji = ref(kanjisToAnswer[0]); //Kanji a repasar
 let showData = ref(false);
-let answers: (Answer & { kanji: Kanji; estudio?: Estudio })[] = [];
+let answers: (Answer & { kanji: Kanji; study?: Study })[] = [];
 
 const handleRound = (answer: Answer) => {
     if (answer.answered) {
-        if (kanji.value.estudio || answer.answerResult) {
+        if (kanji.value.study || answer.answerResult) {
             answers.push({
                 ...answer,
                 kanji: kanji.value,
-                estudio: kanji.value.estudio,
+                study: kanji.value.study,
             });
         }
         kanji.value = kanjisToAnswer[0]; //Actualizar kanji
         if (kanjisToAnswer.length + kanjisAnswered == 10) kanjisAnswered++; //Actualizar contador
         showData.value = false;
     } else {
-        if (!answer.answerResult && !kanji.value.estudio) {
+        if (!answer.answerResult && !kanji.value.study) {
             //En caso de estudio y fallo
             kanjisToAnswer.sort(() => Math.random() - 0.5); //Mezclar lista de kanjis
         } else {
@@ -81,7 +80,7 @@ const handleRound = (answer: Answer) => {
     <Head title="Estudio" />
     <ReviewResume v-if="kanjisAnswered > 10" :answers="answers" />
     <EstudioLayout v-else :kanji="kanji" :showData="showData">
-        <template #significado>
+        <template #meaning>
             <ReviewAnswer :kanji="kanji" @answer="handleRound" />
         </template>
         <template #footer>

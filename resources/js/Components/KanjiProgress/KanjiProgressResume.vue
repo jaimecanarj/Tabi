@@ -8,22 +8,24 @@ import {
     SquareX,
     CalendarClock,
 } from "lucide-vue-next";
-import { Estudio } from "@/lib/types";
+import { Study } from "@/types";
 import { kanjiLevels } from "@/lib/utils";
 
-const props = defineProps<{ estudios: Estudio[] }>();
+const props = defineProps<{ studies: Study[] }>();
+
+const lastStudy = props.studies[0];
 
 //Fecha del próximo estudio
 const nextStudy = computed(() => {
-    let result = moment(props.estudios[0].fecha)
-        .add(props.estudios[0].tiempo, "hours")
+    let result = moment(lastStudy.date)
+        .add(lastStudy.time, "hours")
         .from(moment());
     return result.includes("hace") ? "disponible" : result;
 });
 
 const level = computed(() => {
     let result = kanjiLevels.find(
-        (level) => props.estudios[0].tiempo / 24 < level.threshold,
+        (level) => lastStudy.time / 24 < level.threshold,
     );
     return result ?? kanjiLevels[0];
 });
@@ -46,7 +48,7 @@ const level = computed(() => {
                 <SquareSigma />
                 <p>
                     <span class="text-xl font-semibold">
-                        {{ estudios[0].intentos }}
+                        {{ lastStudy.attempts }}
                     </span>
                     Intentos
                 </p>
@@ -55,7 +57,7 @@ const level = computed(() => {
                 <SquareCheck class="text-emerald-500" />
                 <p>
                     <span class="text-xl font-semibold">
-                        {{ estudios[0].aciertos }}
+                        {{ lastStudy.successes }}
                     </span>
                     Aciertos
                 </p>
@@ -64,7 +66,7 @@ const level = computed(() => {
                 <SquareX class="text-rose-500" />
                 <p>
                     <span class="text-xl font-semibold">
-                        {{ estudios[0].intentos - estudios[0].aciertos }}
+                        {{ lastStudy.attempts - lastStudy.successes }}
                     </span>
                     Fallos
                 </p>

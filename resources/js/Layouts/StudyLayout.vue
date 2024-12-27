@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { Link } from "@inertiajs/vue3";
-import { Kanji, Radical } from "@/lib/types";
+import { Kanji, Radical } from "@/types";
 import MainLayout from "@/Layouts/MainLayout.vue";
 import StoryForm from "@/Components/StoryForm.vue";
 import { Button } from "@/Components/ui/button";
 import { Separator } from "@/Components/ui/separator";
 
 defineProps<{
-    kanji: Kanji & { radicales: Radical[] };
+    kanji: Kanji & { radicals: Radical[] };
     showData: boolean;
 }>();
 </script>
@@ -22,7 +22,7 @@ defineProps<{
             >
                 <h2>{{ kanji.literal }}</h2>
             </div>
-            <slot name="significado" />
+            <slot name="meaning" />
         </div>
         <template v-if="showData">
             <div class="grid gap-3 lg:grid-cols-[1fr_auto_1fr] lg:gap-10">
@@ -34,7 +34,7 @@ defineProps<{
                     </p>
                     <div class="mt-3 flex flex-wrap gap-7">
                         <Link
-                            v-for="radical of kanji.radicales"
+                            v-for="radical of kanji.radicals"
                             :href="`/radicales/${radical.id}`"
                             class="flex w-20 flex-col items-center gap-1"
                         >
@@ -49,7 +49,7 @@ defineProps<{
                                 class="hyphens-auto text-center text-xl font-semibold first-letter:capitalize"
                                 lang="es"
                             >
-                                {{ radical.significado }}
+                                {{ radical.meaning }}
                             </p>
                         </Link>
                     </div>
@@ -62,7 +62,7 @@ defineProps<{
                         <p class="mb-3 text-muted-foreground">
                             Añade una historia a este kanji.
                         </p>
-                        <StoryForm :kanji_id="kanji.id" :key="kanji.id" />
+                        <StoryForm :kanjiId="kanji.id" :key="kanji.id" />
                     </div>
                 </div>
             </div>

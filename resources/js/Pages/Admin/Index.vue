@@ -2,8 +2,7 @@
 import { ref } from "vue";
 import axios from "axios";
 import type { ColumnDef } from "@tanstack/vue-table";
-import { Kanji, Radical } from "@/lib/types";
-import { User } from "@/types";
+import { User, Kanji, Radical } from "@/types";
 import MainLayout from "@/Layouts/MainLayout.vue";
 import InfoCard from "@/Components/Admin/InfoCard.vue";
 import { columns as kanjiColumns } from "@/Components/Admin/kanjiColumns";

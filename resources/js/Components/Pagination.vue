@@ -17,12 +17,12 @@ const breakpoints = useBreakpoints(breakpointsTailwind);
 
 const props = defineProps<{
     total: number;
-    current_page: number;
-    per_page: number;
+    currentPage: number;
+    perPage: number;
 }>();
 defineEmits(["update:page"]);
 
-let page = ref(props.current_page);
+let page = ref(props.currentPage);
 const siblings = ref(breakpoints.isSmaller("sm"));
 
 onMounted(() => {
@@ -44,8 +44,8 @@ const setSiblings = () => {
         v-slot="{ page }"
         :total="total"
         :sibling-count="siblings ? 1 : 2"
-        :default-page="current_page"
-        :items-per-page="per_page"
+        :default-page="currentPage"
+        :items-per-page="perPage"
         v-model:page="page"
         @update:page="$emit('update:page', page)"
     >

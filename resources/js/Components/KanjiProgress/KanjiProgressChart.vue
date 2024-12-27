@@ -2,9 +2,9 @@
 import { watch } from "vue";
 import VueApexCharts from "vue3-apexcharts";
 import { useColorMode } from "@vueuse/core";
-import { Estudio } from "@/lib/types";
+import { Study } from "@/types";
 
-const props = defineProps<{ estudios: Estudio[] }>();
+const props = defineProps<{ studies: Study[] }>();
 
 const mode = useColorMode({ disableTransition: false });
 
@@ -15,8 +15,8 @@ watch(mode, (mode) => {
 const series = [
     {
         name: "Días",
-        data: props.estudios
-            .map((estudio) => parseFloat((estudio.tiempo / 24).toFixed(2)))
+        data: props.studies
+            .map((study) => parseFloat((study.time / 24).toFixed(2)))
             .reverse(),
     },
 ];
@@ -41,7 +41,7 @@ const chartOptions = {
     },
     xaxis: {
         name: "Intento",
-        categories: props.estudios.map((estudio) => estudio.intentos).reverse(),
+        categories: props.studies.map((study) => study.attempts).reverse(),
         tickAmount: 5,
         labels: {
             style: {

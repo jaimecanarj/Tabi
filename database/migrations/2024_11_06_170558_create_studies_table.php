@@ -12,9 +12,8 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create("historias", function (Blueprint $table) {
+        Schema::create("studies", function (Blueprint $table) {
             $table->id();
-            $table->text("historia");
             $table
                 ->foreignIdFor(Kanji::class)
                 ->constrained()
@@ -23,8 +22,13 @@ return new class extends Migration {
                 ->foreignIdFor(User::class)
                 ->constrained()
                 ->cascadeOnDelete();
-            $table->timestamps();
-            $table->unique(["kanji_id", "user_id"]);
+            $table->timestamp("date");
+            $table->double("time");
+            $table->double("betaA");
+            $table->double("betaB");
+            $table->boolean("answer");
+            $table->tinyInteger("successes");
+            $table->tinyInteger("attempts");
         });
     }
 
@@ -33,6 +37,6 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists("historias");
+        Schema::dropIfExists("studies");
     }
 };

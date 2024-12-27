@@ -12,9 +12,9 @@ class KanjiController extends Controller
     public function index(): Response
     {
         //Ordenamos los kanjis por su índice si está logueado
-        $index = "indice_escolar";
+        $index = "heisig_index";
         if (auth()->check()) {
-            $index = "indice_" . auth()->user()->indice;
+            $index = auth()->user()->index . "_index";
         }
 
         $strokesFilter = Request::input("strokes");
@@ -27,7 +27,7 @@ class KanjiController extends Controller
         ) {
             $query->where(function ($query) use ($search) {
                 $query
-                    ->where("significado", "like", "%$search%")
+                    ->where("meaning", "like", "%$search%")
                     ->orWhere("literal", "=", $search);
             });
         });
@@ -35,10 +35,10 @@ class KanjiController extends Controller
         //Datos filtro de trazos
         $strokes = (clone $data)
             ->when($gradeFilter, function ($query, $grade) {
-                $query->where("grado", "=", $grade);
+                $query->where("grade", "=", $grade);
             })
             ->get()
-            ->pluck("trazos")
+            ->pluck("strokes")
             ->unique()
             ->sort()
             ->values();
@@ -51,10 +51,10 @@ class KanjiController extends Controller
         //Datos filtro de grados
         $grades = (clone $data)
             ->when($strokesFilter, function ($query, $strokes) {
-                $query->where("trazos", "=", $strokes);
+                $query->where("strokes", "=", $strokes);
             })
             ->get()
-            ->pluck("grado")
+            ->pluck("grade")
             ->unique()
             ->sort()
             ->values();
@@ -68,11 +68,11 @@ class KanjiController extends Controller
         $kanjis = $data
             //Filtro de trazos
             ->when($strokesFilter, function ($query, $strokes) {
-                $query->where("trazos", "=", $strokes);
+                $query->where("strokes", "=", $strokes);
             })
             //Filtro de grado
             ->when($gradeFilter, function ($query, $grade) {
-                $query->where("grado", "=", $grade);
+                $query->where("grade", "=", $grade);
             })
             //Ordenación
             ->orderBy(
@@ -90,8 +90,8 @@ class KanjiController extends Controller
                 "sortCategory",
                 "sortOrder",
             ]),
-            "trazos" => $strokes,
-            "grados" => $grades,
+            "strokes" => $strokes,
+            "grades" => $grades,
         ]);
     }
 
@@ -100,27 +100,27 @@ class KanjiController extends Controller
         $userId = auth()->user()?->id;
 
         $kanji = Kanji::find($id);
-        $lecturas = Kanji::find($id)->lecturas;
-        $significados = Kanji::find($id)->significados;
-        $radicales = Kanji::find($id)->radicales;
-        $similares = Kanji::find($id)->similares;
+        $readings = Kanji::find($id)->readings;
+        $meanings = Kanji::find($id)->meanings;
+        $radicals = Kanji::find($id)->radicals;
+        $similarKanjis = Kanji::find($id)->similarKanjis;
 
         if (isset($userId)) {
             $kanji->load([
-                "estudios" => function ($query) use ($userId) {
+                "studies" => function ($query) use ($userId) {
                     $query
                         ->where("user_id", "=", $userId)
-                        ->orderBy("fecha", "desc");
+                        ->orderBy("date", "desc");
                 },
             ]);
         }
 
         return Inertia::render("Kanji", [
             "kanji" => $kanji,
-            "lecturas" => $lecturas,
-            "significados" => $significados,
-            "radicales" => $radicales,
-            "similares" => $similares,
+            "readings" => $readings,
+            "meanings" => $meanings,
+            "radicals" => $radicals,
+            "similarKanjis" => $similarKanjis,
         ]);
     }
 }

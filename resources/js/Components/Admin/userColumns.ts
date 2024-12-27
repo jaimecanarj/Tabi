@@ -43,7 +43,7 @@ export const columns: ColumnDef<User>[] = [
         },
     },
     {
-        accessorKey: "indice",
+        accessorKey: "index",
         header: ({ column }) =>
             h(
                 Button,
@@ -55,7 +55,7 @@ export const columns: ColumnDef<User>[] = [
                 () => ["Índice", h(ArrowUpDown, { class: "ml-2 h-4 w-4" })],
             ),
         cell: ({ row }) => {
-            const index: string = row.getValue("indice");
+            const index: string = row.getValue("index");
 
             return h(
                 "div",
@@ -65,7 +65,7 @@ export const columns: ColumnDef<User>[] = [
         },
     },
     {
-        accessorKey: "estudio_diario",
+        accessorKey: "daily_study",
         header: ({ column }) =>
             h(
                 Button,
@@ -77,7 +77,7 @@ export const columns: ColumnDef<User>[] = [
                 () => ["Índice", h(ArrowUpDown, { class: "ml-2 h-4 w-4" })],
             ),
         cell: ({ row }) => {
-            const dailyStudy: string = row.getValue("estudio_diario");
+            const dailyStudy: string = row.getValue("daily_study");
 
             return h(
                 "div",

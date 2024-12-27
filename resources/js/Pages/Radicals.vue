@@ -2,7 +2,7 @@
 import { computed, ref } from "vue";
 import { Head, router, Link } from "@inertiajs/vue3";
 import { Info, PencilLine, Hash } from "lucide-vue-next";
-import { Radical, Pagination as PaginationType, Filters } from "@/lib/types";
+import { Radical, Pagination as PaginationType, Filters } from "@/types";
 import MainLayout from "@/Layouts/MainLayout.vue";
 import RadicalFilters from "@/Components/Radicals/RadicalFilters.vue";
 import RadicalGrid from "@/Components/Radicals/RadicalGrid.vue";
@@ -16,11 +16,11 @@ import {
 const props = defineProps<{
     response: PaginationType;
     filters: Filters;
-    trazos: number[];
+    strokes: number[];
 }>();
 
-const radicales = computed(
-    () => props.response.data as (Radical & { kanjis_count: number })[],
+const radicals = computed(
+    () => props.response.data as (Radical & { kanjisCount: number })[],
 );
 
 const page = ref(props.response.current_page);
@@ -60,17 +60,17 @@ const fetchResults = (filters: Filters) => {
         <!-- Formulario de búsqueda -->
         <RadicalFilters
             :filters="filters"
-            :trazos="trazos"
+            :strokes="strokes"
             @change="fetchResults"
         />
         <!-- Grid de radicales -->
-        <div v-if="!radicales.length" class="ml-2 text-5xl sm:text-6xl">
+        <div v-if="!radicals.length" class="ml-2 text-5xl sm:text-6xl">
             No hay resultados.
         </div>
         <div
             class="grid grid-cols-1 justify-items-center gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6"
         >
-            <RadicalGrid :radicales="radicales" />
+            <RadicalGrid :radicals="radicals" />
         </div>
     </main>
     <!-- Paginación -->
@@ -100,8 +100,8 @@ const fetchResults = (filters: Filters) => {
         <Pagination
             :key="response.current_page"
             :total="response.total"
-            :current_page="response.current_page"
-            :per_page="response.per_page"
+            :currentPage="response.current_page"
+            :perPage="response.per_page"
             @update:page="updatePage"
         />
     </footer>
