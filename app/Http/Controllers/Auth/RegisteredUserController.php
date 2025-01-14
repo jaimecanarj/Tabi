@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Models\Study;
 use App\Models\User;
-use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -18,7 +17,7 @@ use Inertia\Response;
 class RegisteredUserController extends Controller
 {
     /**
-     * Display the registration view.
+     * Muestra la vista de registro
      */
     public function create(): Response
     {
@@ -26,9 +25,7 @@ class RegisteredUserController extends Controller
     }
 
     /**
-     * Handle an incoming registration request.
-     *
-     * @throws \Illuminate\Validation\ValidationException
+     * Maneja una petición de registro
      */
     public function store(Request $request): RedirectResponse
     {
@@ -63,7 +60,10 @@ class RegisteredUserController extends Controller
         return redirect(route("home", absolute: false));
     }
 
-    public function show($id)
+    /**
+     * Muestra la información del usuario
+     */
+    public function show($id): Response
     {
         //Obtener información del usuario
         $user = User::find($id);
@@ -97,17 +97,23 @@ class RegisteredUserController extends Controller
         ]);
     }
 
-    public function edit()
+    /**
+     * Muestra la vista de edición de usuario
+     */
+    public function edit(): Response
     {
         return Inertia::render("Settings");
     }
 
-    public function update(Request $request)
+    /**
+     * Actualiza la información del usuario
+     */
+    public function update(Request $request): void
     {
         $request->validate([
             "name" => "required|string|max:255",
             "index" => "required|in:escolar,heisig,wanikani",
-            "estudio_diario" => "required|integer|numeric|min:1|max:50",
+            "daily_study" => "required|integer|numeric|min:1|max:50",
             "avatar" => "image|max:2048|nullable",
         ]);
 
@@ -128,16 +134,22 @@ class RegisteredUserController extends Controller
 
         $user->update([
             "name" => $request->name,
-            "indice" => $request->index,
-            "estudio_diario" => $request->estudio_diario,
+            "index" => $request->index,
+            "daily_study" => $request->daily_study,
         ]);
     }
 
-    public function resetProgress()
+    /**
+     * Reinicia el progreso del usuario
+     */
+    public function resetProgress(): void
     {
         Study::where("user_id", Auth::id())->delete();
     }
 
+    /**
+     * Borra la cuenta del usuario
+     */
     public function destroy()
     {
         Auth::logout();
