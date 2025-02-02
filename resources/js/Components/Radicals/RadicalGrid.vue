@@ -4,7 +4,7 @@ import { Hash, PencilLine } from "lucide-vue-next";
 import { Radical } from "@/types";
 import { Badge } from "@/Components/ui/badge";
 
-defineProps<{ radicals: (Radical & { kanjis_count: number })[] }>();
+defineProps<{ radicals: (Radical & { kanjisCount: number })[] }>();
 </script>
 
 <template>
@@ -35,7 +35,7 @@ defineProps<{ radicals: (Radical & { kanjis_count: number })[] }>();
                     </p>
                     <p>
                         <Hash class="inline h-5" />
-                        {{ radical.kanjis_count }}
+                        {{ radical.kanjisCount }}
                     </p>
                 </Badge>
             </div>

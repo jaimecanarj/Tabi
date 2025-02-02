@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
-import { Head, router, Link } from "@inertiajs/vue3";
+import { Head, router, Link, Deferred } from "@inertiajs/vue3";
 import { Info, PencilLine, Hash } from "lucide-vue-next";
 import { Radical, Pagination as PaginationType, Filters } from "@/types";
 import MainLayout from "@/Layouts/MainLayout.vue";
@@ -12,18 +12,22 @@ import {
     HoverCardContent,
     HoverCardTrigger,
 } from "@/Components/ui/hover-card";
+import RadicalFiltersSkeleton from "@/Components/Radicals/RadicalFiltersSkeleton.vue";
+import RadicalGridSkeleton from "@/Components/Radicals/RadicalGridSkeleton.vue";
 
 const props = defineProps<{
-    response: PaginationType;
+    data: {
+        response: PaginationType;
+        strokes: number[];
+    };
     filters: Filters;
-    strokes: number[];
 }>();
 
 const radicals = computed(
-    () => props.response.data as (Radical & { kanjisCount: number })[],
+    () => props.data.response.data as (Radical & { kanjisCount: number })[],
 );
 
-const page = ref(props.response.current_page);
+const page = ref(props.filters.page);
 
 const updatePage = (newPage: number) => {
     page.value = newPage;
@@ -51,27 +55,38 @@ const fetchResults = (filters: Filters) => {
                     Radicales <span class="text-xl sm:text-3xl">「部首」</span>
                 </h1>
             </Link>
-            <p class="text-lg">
-                {{
-                    `${response.total} radical${response.total != 1 ? "es" : ""}`
-                }}
-            </p>
+            <Deferred data="data">
+                <template #fallback>
+                    <p class="text-lg">0 radicales</p>
+                </template>
+                <p class="text-lg">
+                    {{
+                        `${data.response.total} radical${data.response.total != 1 ? "es" : ""}`
+                    }}
+                </p>
+            </Deferred>
         </div>
-        <!-- Formulario de búsqueda -->
-        <RadicalFilters
-            :filters="filters"
-            :strokes="strokes"
-            @change="fetchResults"
-        />
-        <!-- Grid de radicales -->
-        <div v-if="!radicals.length" class="ml-2 text-5xl sm:text-6xl">
-            No hay resultados.
-        </div>
-        <div
-            class="grid grid-cols-1 justify-items-center gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6"
-        >
-            <RadicalGrid :radicals="radicals" />
-        </div>
+        <Deferred data="data">
+            <template #fallback>
+                <RadicalFiltersSkeleton />
+                <RadicalGridSkeleton />
+            </template>
+            <!-- Formulario de búsqueda -->
+            <RadicalFilters
+                :filters="filters"
+                :strokes="data.strokes"
+                @change="fetchResults"
+            />
+            <!-- Grid de radicales -->
+            <div v-if="!radicals.length" class="ml-2 text-5xl sm:text-6xl">
+                No hay resultados.
+            </div>
+            <div
+                class="grid grid-cols-1 justify-items-center gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6"
+            >
+                <RadicalGrid :radicals="radicals" />
+            </div>
+        </Deferred>
     </main>
     <!-- Paginación -->
     <footer
@@ -97,12 +112,17 @@ const fetchResults = (filters: Filters) => {
                 </div>
             </HoverCardContent>
         </HoverCard>
-        <Pagination
-            :key="response.current_page"
-            :total="response.total"
-            :currentPage="response.current_page"
-            :perPage="response.per_page"
-            @update:page="updatePage"
-        />
+        <Deferred data="data">
+            <template #fallback>
+                <Pagination :total="3" :currentPage="0" :perPage="1" disabled />
+            </template>
+            <Pagination
+                :key="page"
+                :total="data.response.total"
+                :currentPage="data.response.current_page"
+                :perPage="data.response.per_page"
+                @update:page="updatePage"
+            />
+        </Deferred>
     </footer>
 </template>

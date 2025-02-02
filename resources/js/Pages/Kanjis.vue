@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
-import { Head, router, Link } from "@inertiajs/vue3";
+import { Head, router, Link, Deferred } from "@inertiajs/vue3";
 import { Info, Library, PencilLine, TrendingUp } from "lucide-vue-next";
 import { Kanji, Pagination as PaginationType, Filters } from "@/types";
 import MainLayout from "@/Layouts/MainLayout.vue";
@@ -12,15 +12,19 @@ import {
     HoverCardContent,
     HoverCardTrigger,
 } from "@/Components/ui/hover-card";
+import KanjiGridSkeleton from "@/Components/Kanjis/KanjiGridSkeleton.vue";
+import KanjiFiltersSkeleton from "@/Components/Kanjis/KanjiFiltersSkeleton.vue";
 
 const props = defineProps<{
-    response: PaginationType;
+    data: {
+        response: PaginationType;
+        strokes: number[];
+        grades: number[];
+    };
     filters: Filters;
-    strokes: number[];
-    grades: number[];
 }>();
 
-const kanjis = computed(() => props.response.data as Kanji[]);
+const kanjis = computed(() => props.data.response.data as Kanji[]);
 
 const page = ref(props.filters.page);
 
@@ -51,31 +55,45 @@ const fetchResults = (filters: Filters) => {
                     Kanjis <span class="text-xl sm:text-3xl">「漢字」</span>
                 </h1>
             </Link>
-            <p class="text-lg">
-                {{ `${response.total} kanji${response.total != 1 ? "s" : ""}` }}
-            </p>
+            <Deferred data="data">
+                <template #fallback>
+                    <p class="text-lg">0 kanjis</p>
+                </template>
+                <p class="text-lg">
+                    {{
+                        `${data.response.total} kanji${data.response.total != 1 ? "s" : ""}`
+                    }}
+                </p>
+            </Deferred>
         </div>
-        <!-- Formulario de búsqueda -->
-        <KanjiFilters
-            :filters="filters"
-            :strokes="strokes"
-            :grades="grades"
-            @change="fetchResults"
-        />
-        <!-- Grid de kanjis -->
-        <div v-if="!kanjis.length" class="ml-2 text-5xl sm:text-6xl">
-            No hay resultados.
-        </div>
-        <div
-            class="grid grid-cols-1 justify-items-center gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6"
-        >
-            <KanjiGrid :kanjis="kanjis" />
-        </div>
+        <Deferred data="data">
+            <template #fallback>
+                <KanjiFiltersSkeleton />
+                <KanjiGridSkeleton />
+            </template>
+            <!-- Formulario de búsqueda -->
+            <KanjiFilters
+                :filters="filters"
+                :strokes="data.strokes"
+                :grades="data.grades"
+                @change="fetchResults"
+            />
+            <!-- Grid de kanjis -->
+            <div v-if="!kanjis.length" class="ml-2 text-5xl sm:text-6xl">
+                No hay resultados.
+            </div>
+            <div
+                class="grid grid-cols-1 justify-items-center gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6"
+            >
+                <KanjiGrid :kanjis="kanjis" />
+            </div>
+        </Deferred>
     </main>
-    <!-- Paginación -->
+    <!-- Footer -->
     <footer
         class="sticky top-[100vh] mb-6 mt-10 flex flex-col items-center gap-3"
     >
+        <!-- Información -->
         <HoverCard>
             <HoverCardTrigger>
                 <div
@@ -97,12 +115,18 @@ const fetchResults = (filters: Filters) => {
                 </div>
             </HoverCardContent>
         </HoverCard>
-        <Pagination
-            :key="response.current_page"
-            :total="response.total"
-            :currentPage="response.current_page"
-            :perPage="response.per_page"
-            @update:page="updatePage"
-        />
+        <!-- Paginación -->
+        <Deferred data="data">
+            <template #fallback>
+                <Pagination :total="3" :currentPage="0" :perPage="1" disabled />
+            </template>
+            <Pagination
+                :key="page"
+                :total="data.response.total"
+                :currentPage="data.response.current_page"
+                :perPage="data.response.per_page"
+                @update:page="updatePage"
+            />
+        </Deferred>
     </footer>
 </template>

@@ -11,6 +11,50 @@ class KanjiController extends Controller
 {
     public function index(): Response
     {
+        return Inertia::render("Kanjis", [
+            "data" => Inertia::defer(fn() => $this->indexDeferredProps()),
+            "filters" => Request::only([
+                "search",
+                "strokes",
+                "grade",
+                "sortCategory",
+                "sortOrder",
+                "page",
+            ]),
+        ]);
+    }
+
+    public function show($id): Response
+    {
+        $userId = auth()->user()?->id;
+
+        $kanji = Kanji::find($id);
+        $readings = Kanji::find($id)->readings;
+        $meanings = Kanji::find($id)->meanings;
+        $radicals = Kanji::find($id)->radicals;
+        $similarKanjis = Kanji::find($id)->similarKanjis;
+
+        if (isset($userId)) {
+            $kanji->load([
+                "studies" => function ($query) use ($userId) {
+                    $query
+                        ->where("user_id", "=", $userId)
+                        ->orderBy("date", "desc");
+                },
+            ]);
+        }
+
+        return Inertia::render("Kanji", [
+            "kanji" => $kanji,
+            "readings" => $readings,
+            "meanings" => $meanings,
+            "radicals" => $radicals,
+            "similarKanjis" => $similarKanjis,
+        ]);
+    }
+
+    private function indexDeferredProps()
+    {
         //Ordenamos los kanjis por su índice si está logueado
         $index = "heisig_index";
         if (auth()->check()) {
@@ -43,9 +87,9 @@ class KanjiController extends Controller
             ->sort()
             ->values();
 
+        //Añadir trazos seleccionado si no está entre los posibles filtros
         if ($strokesFilter && !$strokes->contains($strokesFilter)) {
-            $strokes->push($strokesFilter);
-            $strokes = $strokes->unique()->sort()->values();
+            $strokes->push($strokesFilter)->sort()->values();
         }
 
         //Datos filtro de grados
@@ -59,9 +103,9 @@ class KanjiController extends Controller
             ->sort()
             ->values();
 
+        //Añadir grado seleccionado si no está entre los posibles filtros
         if ($gradeFilter && !$grades->contains($gradeFilter)) {
-            $grades->push($gradeFilter);
-            $grades = $grades->unique()->sort()->values();
+            $grades->push($gradeFilter)->sort()->values();
         }
 
         //Paginación
@@ -81,46 +125,10 @@ class KanjiController extends Controller
             )
             ->paginate(12);
 
-        return Inertia::render("Kanjis", [
+        return [
             "response" => $kanjis,
-            "filters" => Request::only([
-                "search",
-                "strokes",
-                "grade",
-                "sortCategory",
-                "sortOrder",
-            ]),
             "strokes" => $strokes,
             "grades" => $grades,
-        ]);
-    }
-
-    public function show($id): Response
-    {
-        $userId = auth()->user()?->id;
-
-        $kanji = Kanji::find($id);
-        $readings = Kanji::find($id)->readings;
-        $meanings = Kanji::find($id)->meanings;
-        $radicals = Kanji::find($id)->radicals;
-        $similarKanjis = Kanji::find($id)->similarKanjis;
-
-        if (isset($userId)) {
-            $kanji->load([
-                "studies" => function ($query) use ($userId) {
-                    $query
-                        ->where("user_id", "=", $userId)
-                        ->orderBy("date", "desc");
-                },
-            ]);
-        }
-
-        return Inertia::render("Kanji", [
-            "kanji" => $kanji,
-            "readings" => $readings,
-            "meanings" => $meanings,
-            "radicals" => $radicals,
-            "similarKanjis" => $similarKanjis,
-        ]);
+        ];
     }
 }

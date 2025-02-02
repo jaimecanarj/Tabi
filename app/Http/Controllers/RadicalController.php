@@ -11,11 +11,36 @@ class RadicalController extends Controller
 {
     public function index(): Response
     {
+        return Inertia::render("Radicals", [
+            "data" => Inertia::defer(fn() => $this->indexDeferredProps()),
+            "filters" => Request::only([
+                "search",
+                "strokes",
+                "sortCategory",
+                "sortOrder",
+                "page",
+            ]),
+        ]);
+    }
+
+    public function show($id): Response
+    {
+        $radical = Radical::find($id);
+        $kanjis = Radical::find($id)->kanjis;
+
+        return Inertia::render("Radical", [
+            "radical" => $radical,
+            "kanjis" => $kanjis,
+        ]);
+    }
+
+    private function indexDeferredProps()
+    {
         $strokesFilter = Request::input("strokes");
 
         //Filtro de buscador
         $data = Radical::query()
-            ->withCount("kanjis")
+            ->withCount(["kanjis as kanjisCount"])
             ->when(Request::input("search"), function ($query, $search) {
                 $query->where(function ($query) use ($search) {
                     $query
@@ -27,9 +52,9 @@ class RadicalController extends Controller
         //Datos filtro de trazos
         $strokes = $data->get()->pluck("strokes")->unique()->sort()->values();
 
+        //Añadir trazos seleccionado si no está entre los posibles filtros
         if ($strokesFilter && !$strokes->contains($strokesFilter)) {
-            $strokes->push($strokesFilter);
-            $strokes = $strokes->unique()->sort()->values();
+            $strokes->push($strokesFilter)->sort()->values();
         }
 
         //Paginación
@@ -45,26 +70,9 @@ class RadicalController extends Controller
             )
             ->paginate(12);
 
-        return Inertia::render("Radicals", [
+        return [
             "response" => $radicals,
-            "filters" => Request::only([
-                "search",
-                "strokes",
-                "sortCategory",
-                "sortOrder",
-            ]),
             "strokes" => $strokes,
-        ]);
-    }
-
-    public function show($id): Response
-    {
-        $radical = Radical::find($id);
-        $kanjis = Radical::find($id)->kanjis;
-
-        return Inertia::render("Radical", [
-            "radical" => $radical,
-            "kanjis" => $kanjis,
-        ]);
+        ];
     }
 }
