@@ -34,8 +34,8 @@ type Form = {
 
 const form = useForm<Form>({
     name: user.name,
-    index: user.indice,
-    estudio_diario: user.estudio_diario,
+    index: user.index,
+    estudio_diario: user.daily_study,
     avatar: null,
 });
 

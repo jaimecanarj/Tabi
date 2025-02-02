@@ -7,9 +7,7 @@ import HomeKanjiGrid from "@/Components/Home/HomeKanjiGrid.vue";
 const props = defineProps<{ data: (Study & { kanji: Kanji })[] }>();
 
 let lastWrong = props.data.map((study) => {
-    let level = kanjiLevels.find(
-        (level) => study.tiempo / 24 < level.threshold,
-    )!;
+    let level = kanjiLevels.find((level) => study.time / 24 < level.threshold)!;
     return { ...study, level };
 });
 </script>

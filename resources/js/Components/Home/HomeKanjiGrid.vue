@@ -59,7 +59,7 @@ switch (props.type) {
                         <div
                             class="text-xl font-semibold first-letter:capitalize"
                         >
-                            {{ study.kanji.significado }}
+                            {{ study.kanji.meaning }}
                         </div>
                         <div
                             :class="[
@@ -72,7 +72,7 @@ switch (props.type) {
                     </div>
                     <div class="mt-2 flex items-center gap-1">
                         <Clock :size="20" />
-                        {{ moment(study.fecha).format("DD [de] MMM, YYYY") }}
+                        {{ moment(study.date).format("DD [de] MMM, YYYY") }}
                     </div>
                 </HoverCardContent>
             </HoverCard>
