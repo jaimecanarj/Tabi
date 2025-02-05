@@ -7,16 +7,16 @@ import MainLayout from "@/Layouts/MainLayout.vue";
 import KanjiGrid from "@/Components/Kanjis/KanjiGrid.vue";
 import Pagination from "@/Components/Pagination.vue";
 import KanjiFilters from "@/Components/Kanjis/KanjiFilters.vue";
+import GridSkeleton from "@/Components/Skeletons/GridSkeleton.vue";
+import GridFiltersSkeleton from "@/Components/Skeletons/GridFiltersSkeleton.vue";
 import {
     HoverCard,
     HoverCardContent,
     HoverCardTrigger,
 } from "@/Components/ui/hover-card";
-import KanjiGridSkeleton from "@/Components/Kanjis/KanjiGridSkeleton.vue";
-import KanjiFiltersSkeleton from "@/Components/Kanjis/KanjiFiltersSkeleton.vue";
 
 const props = defineProps<{
-    data: {
+    data?: {
         response: PaginationType;
         strokes: number[];
         grades: number[];
@@ -24,9 +24,15 @@ const props = defineProps<{
     filters: Filters;
 }>();
 
-const kanjis = computed(() => props.data.response.data as Kanji[]);
+const kanjis = computed(() => {
+    if (props.data) {
+        return props.data.response.data as Kanji[];
+    } else {
+        return [];
+    }
+});
 
-const page = ref(props.filters.page);
+const page = ref(props.filters.page ?? 1);
 
 const updatePage = (newPage: number) => {
     page.value = newPage;
@@ -61,21 +67,21 @@ const fetchResults = (filters: Filters) => {
                 </template>
                 <p class="text-lg">
                     {{
-                        `${data.response.total} kanji${data.response.total != 1 ? "s" : ""}`
+                        `${data!.response.total} kanji${data!.response.total != 1 ? "s" : ""}`
                     }}
                 </p>
             </Deferred>
         </div>
         <Deferred data="data">
             <template #fallback>
-                <KanjiFiltersSkeleton />
-                <KanjiGridSkeleton />
+                <GridFiltersSkeleton type="kanji" />
+                <GridSkeleton />
             </template>
             <!-- Formulario de búsqueda -->
             <KanjiFilters
                 :filters="filters"
-                :strokes="data.strokes"
-                :grades="data.grades"
+                :strokes="data!.strokes"
+                :grades="data!.grades"
                 @change="fetchResults"
             />
             <!-- Grid de kanjis -->
@@ -118,13 +124,18 @@ const fetchResults = (filters: Filters) => {
         <!-- Paginación -->
         <Deferred data="data">
             <template #fallback>
-                <Pagination :total="3" :currentPage="0" :perPage="1" disabled />
+                <Pagination
+                    :total="(Number(page) ?? 0) + 5"
+                    :currentPage="Number(page) ?? 1"
+                    :perPage="1"
+                    disabled
+                />
             </template>
             <Pagination
                 :key="page"
-                :total="data.response.total"
-                :currentPage="data.response.current_page"
-                :perPage="data.response.per_page"
+                :total="data!.response.total"
+                :currentPage="data!.response.current_page"
+                :perPage="data!.response.per_page"
                 @update:page="updatePage"
             />
         </Deferred>

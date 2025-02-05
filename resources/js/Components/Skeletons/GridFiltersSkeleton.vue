@@ -3,6 +3,8 @@ import { Select, SelectTrigger, SelectValue } from "@/Components/ui/select";
 import { Input } from "@/Components/ui/input";
 import { Button } from "@/Components/ui/button";
 import { ArrowUpNarrowWide } from "lucide-vue-next";
+
+defineProps<{ type: string }>();
 </script>
 
 <template>
@@ -11,7 +13,7 @@ import { ArrowUpNarrowWide } from "lucide-vue-next";
     >
         <div class="inline-flex w-min flex-col gap-2 md:flex-row">
             <!-- Literal o significado -->
-            <Input placeholder="Buscar kanji" class="w-56" disabled />
+            <Input :placeholder="`Buscar ${type}`" class="w-56" disabled />
             <!-- Trazos -->
             <Select disabled>
                 <SelectTrigger class="w-56">
@@ -19,7 +21,7 @@ import { ArrowUpNarrowWide } from "lucide-vue-next";
                 </SelectTrigger>
             </Select>
             <!-- Grado -->
-            <Select disabled>
+            <Select disabled v-if="type === 'kanji'">
                 <SelectTrigger class="w-56">
                     <SelectValue placeholder="Grado" />
                 </SelectTrigger>

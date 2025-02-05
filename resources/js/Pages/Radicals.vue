@@ -7,27 +7,33 @@ import MainLayout from "@/Layouts/MainLayout.vue";
 import RadicalFilters from "@/Components/Radicals/RadicalFilters.vue";
 import RadicalGrid from "@/Components/Radicals/RadicalGrid.vue";
 import Pagination from "@/Components/Pagination.vue";
+import GridFiltersSkeleton from "@/Components/Skeletons/GridFiltersSkeleton.vue";
+import GridSkeleton from "@/Components/Skeletons/GridSkeleton.vue";
 import {
     HoverCard,
     HoverCardContent,
     HoverCardTrigger,
 } from "@/Components/ui/hover-card";
-import RadicalFiltersSkeleton from "@/Components/Radicals/RadicalFiltersSkeleton.vue";
-import RadicalGridSkeleton from "@/Components/Radicals/RadicalGridSkeleton.vue";
 
 const props = defineProps<{
-    data: {
+    data?: {
         response: PaginationType;
         strokes: number[];
     };
     filters: Filters;
 }>();
 
-const radicals = computed(
-    () => props.data.response.data as (Radical & { kanjisCount: number })[],
-);
+const radicals = computed(() => {
+    if (props.data) {
+        return props.data.response.data as (Radical & {
+            kanjisCount: number;
+        })[];
+    } else {
+        return [];
+    }
+});
 
-const page = ref(props.filters.page);
+const page = ref(props.filters.page ?? 1);
 
 const updatePage = (newPage: number) => {
     page.value = newPage;
@@ -61,20 +67,20 @@ const fetchResults = (filters: Filters) => {
                 </template>
                 <p class="text-lg">
                     {{
-                        `${data.response.total} radical${data.response.total != 1 ? "es" : ""}`
+                        `${data!.response.total} radical${data!.response.total != 1 ? "es" : ""}`
                     }}
                 </p>
             </Deferred>
         </div>
         <Deferred data="data">
             <template #fallback>
-                <RadicalFiltersSkeleton />
-                <RadicalGridSkeleton />
+                <GridFiltersSkeleton type="radical" />
+                <GridSkeleton />
             </template>
             <!-- Formulario de búsqueda -->
             <RadicalFilters
                 :filters="filters"
-                :strokes="data.strokes"
+                :strokes="data!.strokes"
                 @change="fetchResults"
             />
             <!-- Grid de radicales -->
@@ -114,13 +120,18 @@ const fetchResults = (filters: Filters) => {
         </HoverCard>
         <Deferred data="data">
             <template #fallback>
-                <Pagination :total="3" :currentPage="0" :perPage="1" disabled />
+                <Pagination
+                    :total="(Number(page) ?? 0) + 5"
+                    :currentPage="Number(page) ?? 1"
+                    :perPage="1"
+                    disabled
+                />
             </template>
             <Pagination
                 :key="page"
-                :total="data.response.total"
-                :currentPage="data.response.current_page"
-                :perPage="data.response.per_page"
+                :total="data!.response.total"
+                :currentPage="data!.response.current_page"
+                :perPage="data!.response.per_page"
                 @update:page="updatePage"
             />
         </Deferred>
