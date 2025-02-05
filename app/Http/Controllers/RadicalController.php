@@ -25,16 +25,16 @@ class RadicalController extends Controller
 
     public function show($id): Response
     {
-        $radical = Radical::find($id);
-        $kanjis = Radical::find($id)->kanjis;
+        //        $radical = Radical::find($id);
+        //        $kanjis = Radical::find($id)->kanjis;
 
         return Inertia::render("Radical", [
-            "radical" => $radical,
-            "kanjis" => $kanjis,
+            "radical" => Inertia::defer(fn() => Radical::find($id)),
+            "kanjis" => Inertia::defer(fn() => Radical::find($id)->kanjis),
         ]);
     }
 
-    private function indexDeferredProps()
+    private function indexDeferredProps(): array
     {
         $strokesFilter = Request::input("strokes");
 

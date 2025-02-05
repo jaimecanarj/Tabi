@@ -1,8 +1,8 @@
 <script setup lang="ts">
+import { ArrowUpNarrowWide } from "lucide-vue-next";
 import { Select, SelectTrigger, SelectValue } from "@/Components/ui/select";
 import { Input } from "@/Components/ui/input";
 import { Button } from "@/Components/ui/button";
-import { ArrowUpNarrowWide } from "lucide-vue-next";
 
 defineProps<{ type: string }>();
 </script>

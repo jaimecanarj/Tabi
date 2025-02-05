@@ -26,34 +26,36 @@ class KanjiController extends Controller
 
     public function show($id): Response
     {
-        $userId = auth()->user()?->id;
+        //        $userId = auth()->user()?->id;
 
-        $kanji = Kanji::find($id);
-        $readings = Kanji::find($id)->readings;
-        $meanings = Kanji::find($id)->meanings;
-        $radicals = Kanji::find($id)->radicals;
-        $similarKanjis = Kanji::find($id)->similarKanjis;
+        //        $kanji = Kanji::find($id);
+        //        $readings = Kanji::find($id)->readings;
+        //        $meanings = Kanji::find($id)->meanings;
+        //        $radicals = Kanji::find($id)->radicals;
+        //        $similarKanjis = Kanji::find($id)->similarKanjis;
 
-        if (isset($userId)) {
-            $kanji->load([
-                "studies" => function ($query) use ($userId) {
-                    $query
-                        ->where("user_id", "=", $userId)
-                        ->orderBy("date", "desc");
-                },
-            ]);
-        }
+        //        if (isset($userId)) {
+        //            $kanji->load([
+        //                "studies" => function ($query) use ($userId) {
+        //                    $query
+        //                        ->where("user_id", "=", $userId)
+        //                        ->orderBy("date", "desc");
+        //                },
+        //            ]);
+        //        }
 
         return Inertia::render("Kanji", [
-            "kanji" => $kanji,
-            "readings" => $readings,
-            "meanings" => $meanings,
-            "radicals" => $radicals,
-            "similarKanjis" => $similarKanjis,
+            "kanji" => Inertia::defer(fn() => $this->showDeferredKanji($id)),
+            "readings" => Inertia::defer(fn() => Kanji::find($id)->readings),
+            "meanings" => Inertia::defer(fn() => Kanji::find($id)->meanings),
+            "radicals" => Inertia::defer(fn() => Kanji::find($id)->radicals),
+            "similarKanjis" => Inertia::defer(
+                fn() => Kanji::find($id)->similarKanjis
+            ),
         ]);
     }
 
-    private function indexDeferredProps()
+    private function indexDeferredProps(): array
     {
         //Ordenamos los kanjis por su índice si está logueado
         $index = "heisig_index";
@@ -130,5 +132,24 @@ class KanjiController extends Controller
             "strokes" => $strokes,
             "grades" => $grades,
         ];
+    }
+
+    private function showDeferredKanji($id)
+    {
+        $userId = auth()->user()?->id;
+
+        $kanji = Kanji::find($id);
+
+        if (isset($userId)) {
+            $kanji->load([
+                "studies" => function ($query) use ($userId) {
+                    $query
+                        ->where("user_id", "=", $userId)
+                        ->orderBy("date", "desc");
+                },
+            ]);
+        }
+
+        return $kanji;
     }
 }

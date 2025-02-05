@@ -12,11 +12,10 @@ import { Skeleton } from "@/Components/ui/skeleton";
         >
             <Skeleton
                 class="bg-gradient-primary flex h-64 justify-center rounded-b-none rounded-t-md p-4 group-hover:via-primary-light group-hover:to-primary"
-            >
-            </Skeleton>
+            />
             <div class="flex h-full flex-col justify-between px-4 py-2">
-                <Skeleton class="mt-2 h-6 w-3/4"> </Skeleton>
-                <Skeleton class="mt-2 h-6 w-full"> </Skeleton>
+                <Skeleton class="mt-2 h-6 w-3/4" />
+                <Skeleton class="mt-2 h-6 w-full" />
             </div>
         </div>
     </div>
