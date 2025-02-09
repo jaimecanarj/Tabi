@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { Head, Link } from "@inertiajs/vue3";
-import moment from "moment/moment";
+import { DateTime } from "luxon";
 import {
     User as UserIcon,
     Calendar,
@@ -10,7 +10,7 @@ import {
     SquareSigma,
 } from "lucide-vue-next";
 import { Study, Kanji, User } from "@/types";
-import { kanjiLevels, momentLocale } from "@/lib/utils";
+import { kanjiLevels } from "@/lib/utils";
 import MainLayout from "@/Layouts/MainLayout.vue";
 
 const props = defineProps<{
@@ -18,8 +18,6 @@ const props = defineProps<{
     studyCount: number;
     studys: (Study & { kanji: Kanji })[];
 }>();
-
-momentLocale();
 
 const getKanjiLevel = (time: number) => {
     return kanjiLevels.find((levelData) => {
@@ -77,7 +75,9 @@ const studysWithLevel = computed(() => {
                         class="mb-2 ml-8 text-lg font-semibold sm:m-0 sm:ml-0 lg:text-xl"
                     >
                         {{
-                            moment(user.created_at).format("D [de] MMMM, YYYY")
+                            DateTime.fromISO(user.created_at)
+                                .setLocale("es")
+                                .toFormat("d 'de' MMMM, yyyy")
                         }}
                     </p>
                 </div>
@@ -109,7 +109,11 @@ const studysWithLevel = computed(() => {
                         v-if="studyCount > 0"
                         class="mb-2 ml-8 text-lg font-semibold sm:m-0 lg:text-xl"
                     >
-                        {{ moment(studys[0].date).format("D [de] MMMM, YYYY") }}
+                        {{
+                            DateTime.fromSQL(studys[0].date)
+                                .setLocale("es")
+                                .toFormat("d 'de' MMMM, yyyy")
+                        }}
                     </p>
                     <p
                         v-else

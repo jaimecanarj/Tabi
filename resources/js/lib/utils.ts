@@ -1,7 +1,6 @@
 import { Ref } from "vue";
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
-import moment from "moment/moment";
 import { Updater } from "@tanstack/vue-table";
 import {
     Clock1,
@@ -38,17 +37,6 @@ export function valueUpdater<T extends Updater<any>>(
             ? updaterOrValue(ref.value)
             : updaterOrValue;
 }
-
-export const momentLocale = () => {
-    moment.updateLocale("es", {
-        months: "Enero_Febrero_Marzo_Abril_Mayo_Junio_Julio_Agosto_Septiembre_Octubre_Noviembre_Diciembre".split(
-            "_",
-        ),
-        monthsShort: "Ene_Feb_Mar_Abr_May_Jun_Jul_Ago_Sep_Oct_Nov_Dic".split(
-            "_",
-        ),
-    });
-};
 
 export const kanjiLevels: KanjiLevel[] = [
     {

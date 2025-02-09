@@ -2,8 +2,7 @@
 import { watch } from "vue";
 import VueApexCharts from "vue3-apexcharts";
 import { useColorMode } from "@vueuse/core";
-import moment from "moment/moment";
-import "moment/locale/es";
+import { DateTime } from "luxon";
 import { Study, Kanji } from "@/types";
 import { kanjiLevels } from "@/lib/utils";
 
@@ -128,8 +127,10 @@ const chartOptions = {
     xaxis: {
         type: "datetime",
         labels: {
-            formatter: function (val: string) {
-                return moment(val).format("DD MMM");
+            formatter: function (val: number) {
+                return DateTime.fromMillis(val)
+                    .setLocale("es")
+                    .toFormat("dd MMM");
             },
             style: {
                 fontSize: "16px",

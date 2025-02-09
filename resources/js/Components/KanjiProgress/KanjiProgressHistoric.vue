@@ -1,13 +1,10 @@
 <script setup lang="ts">
-import moment from "moment/moment";
+import { DateTime } from "luxon";
 import { CircleCheck, CircleX } from "lucide-vue-next";
 import { Study } from "@/types";
-import { momentLocale } from "@/lib/utils";
 import { ScrollArea } from "@/Components/ui/scroll-area";
 
 defineProps<{ studies: Study[] }>();
-
-momentLocale();
 </script>
 
 <template>
@@ -29,10 +26,9 @@ momentLocale();
                     />
                     <CircleX v-else class="inline text-rose-500" />
                     {{
-                        moment
-                            .utc(study.date)
-                            .local()
-                            .format("DD MMM YYYY HH:mm")
+                        DateTime.fromSQL(study.date, { zone: "utc" })
+                            .toLocal()
+                            .toFormat("dd MMM yyyy HH:mm")
                     }}
                 </p>
             </div>

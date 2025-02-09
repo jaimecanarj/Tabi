@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { Head, usePage } from "@inertiajs/vue3";
 import { Study, Kanji } from "@/types";
-import { momentLocale } from "@/lib/utils";
 import MainLayout from "@/Layouts/MainLayout.vue";
 import HomeStudyCard from "@/Components/Home/HomeStudyCard.vue";
 import HomeLastStudy from "@/Components/Home/HomeLastStudy.vue";
@@ -10,8 +9,6 @@ import HomeProgress from "@/Components/Home/HomeProgress.vue";
 import HomeNextReview from "@/Components/Home/HomeNextReview.vue";
 
 const page = usePage();
-
-momentLocale();
 
 defineProps<{
     data: {

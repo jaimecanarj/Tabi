@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import moment from "moment/moment";
-import "moment/locale/es";
+import { DateTime } from "luxon";
 import { CalendarClock } from "lucide-vue-next";
 import { Study } from "@/types";
 import { hourIcons } from "@/lib/utils";
@@ -14,14 +13,18 @@ import {
 const props = defineProps<{ studies: Study[] }>();
 
 //Obtener próximos estudios de cada kanji
-let kanjisToStudy: moment.Moment[] = [];
+let kanjisToStudy: DateTime[] = [];
 props.studies.forEach((study) => {
-    kanjisToStudy.push(moment.utc(study.date).add(study.time, "hours").local());
+    kanjisToStudy.push(
+        DateTime.fromSQL(study.date, { zone: "utc" })
+            .plus({ hours: study.time })
+            .setLocale("es"),
+    );
 });
 
 //Ordenar por fecha
 kanjisToStudy.sort((a, b) => {
-    return a.isBefore(b) ? -1 : 1;
+    return a < b ? -1 : 1;
 });
 
 let dates: {
@@ -31,11 +34,13 @@ let dates: {
 }[] = [];
 
 kanjisToStudy.forEach((date) => {
-    const now = moment();
-    const dateString = date.isBefore(now)
-        ? now.format("D [de] MMMM")
-        : date.format("D [de] MMMM");
-    const hour = date.isBefore(now) ? now.format("HH") : date.format("HH");
+    const now = DateTime.now().setLocale("es");
+    const dateString =
+        date < DateTime.now()
+            ? now.toFormat("d 'de' MMMM")
+            : date.toFormat("d 'de' MMMM");
+    const hour =
+        date < DateTime.now() ? now.toFormat("HH") : date.toFormat("HH");
 
     let dateEntry = dates.find((entry) => dateString === entry.date);
 

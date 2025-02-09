@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { computed } from "vue";
-import moment from "moment/moment";
-import "moment/locale/es";
+import { DateTime } from "luxon";
 import {
     SquareSigma,
     SquareCheck,
@@ -17,10 +16,10 @@ const lastStudy = props.studies[0];
 
 //Fecha del próximo estudio
 const nextStudy = computed(() => {
-    let result = moment(lastStudy.date)
-        .add(lastStudy.time, "hours")
-        .from(moment());
-    return result.includes("hace") ? "disponible" : result;
+    let result = DateTime.fromSQL(lastStudy.date)
+        .plus({ hours: lastStudy.time })
+        .toRelative();
+    return result!.includes("hace") ? "disponible" : result;
 });
 
 const level = computed(() => {

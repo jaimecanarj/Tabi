@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { Head } from "@inertiajs/vue3";
-import moment from "moment/moment";
+import { DateTime } from "luxon";
 import * as ebisu from "ebisu-js";
 import { Kanji, Study, Answer, Radical } from "@/types";
 import EstudioLayout from "@/Layouts/StudyLayout.vue";
@@ -24,19 +24,19 @@ if (props.kanjis[0].study) {
                 kanjiA.study!.betaA,
                 kanjiA.study!.betaB,
             );
-            let kanjiATime = moment().diff(
-                moment(kanjiA.study!.date, "YYYY-MM-DD HH:mm:ss"),
+            let kanjiATime = DateTime.now().diff(
+                DateTime.fromSQL(kanjiA.study!.date),
                 "hours",
-            );
+            ).hours;
             let kanjiBModel = ebisu.defaultModel(
                 kanjiB.study!.time,
                 kanjiB.study!.betaA,
                 kanjiB.study!.betaB,
             );
-            let kanjiBTime = moment().diff(
-                moment(kanjiB.study!.date, "YYYY-MM-DD HH:mm:ss"),
+            let kanjiBTime = DateTime.now().diff(
+                DateTime.fromSQL(kanjiB.study!.date),
                 "hours",
-            );
+            ).hours;
             return (
                 ebisu.predictRecall(kanjiAModel, kanjiATime) -
                 ebisu.predictRecall(kanjiBModel, kanjiBTime)

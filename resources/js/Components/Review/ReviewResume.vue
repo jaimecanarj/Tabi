@@ -2,8 +2,7 @@
 import { computed, ref } from "vue";
 import { usePage } from "@inertiajs/vue3";
 import * as ebisu from "ebisu-js";
-import moment from "moment/moment";
-import "moment/locale/es";
+import { DateTime } from "luxon";
 import axios from "axios";
 import { Answer, Study, Kanji, KanjiLevel } from "@/types";
 import { kanjiLevels } from "@/lib/utils";
@@ -33,10 +32,10 @@ const createNewModel = (answer: Answer & { study?: Study }) => {
             answer.study.betaA,
             answer.study.betaB,
         );
-        let newTime = moment().diff(
-            moment(answer.study.date, "YYYY-MM-DD HH:mm:ss"),
+        let newTime = DateTime.now().diff(
+            DateTime.fromSQL(answer.study.date),
             "hours",
-        );
+        ).hours;
         model = ebisu.updateRecall(
             model,
             answer.answerResult ? 1 : 0,
@@ -95,7 +94,10 @@ props.answers.forEach((answer) => {
     if (answer.study) {
         newTime = createNewModel(answer)[2];
     }
-    let date = moment().add(newTime, "hours").from(moment());
+    let date = DateTime.now()
+        .plus({ hours: newTime })
+        .setLocale("es")
+        .toRelative();
     //Calcular niveles
     let oldLevel: KanjiLevel | undefined = undefined;
     if (answer.study) {

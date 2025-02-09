@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Link } from "@inertiajs/vue3";
-import moment from "moment/moment";
+import { DateTime } from "luxon";
 import { Clock } from "lucide-vue-next";
 import { Study, Kanji, KanjiLevel } from "@/types";
 import {
@@ -72,7 +72,11 @@ switch (props.type) {
                     </div>
                     <div class="mt-2 flex items-center gap-1">
                         <Clock :size="20" />
-                        {{ moment(study.date).format("DD [de] MMM, YYYY") }}
+                        {{
+                            DateTime.fromSQL(study.date)
+                                .setLocale("es")
+                                .toFormat("d 'de' MMM, yyyy")
+                        }}
                     </div>
                 </HoverCardContent>
             </HoverCard>
