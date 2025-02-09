@@ -62,7 +62,7 @@ const handleRound = (answer: Answer) => {
             });
         }
         kanji.value = kanjisToAnswer[0]; //Actualizar kanji
-        if (kanjisToAnswer.length + kanjisAnswered == 10) kanjisAnswered++; //Actualizar contador
+        if (kanjisToAnswer.length + kanjisAnswered === 10) kanjisAnswered++; //Actualizar contador
         showData.value = false;
     } else {
         if (!answer.answerResult && !kanji.value.study) {

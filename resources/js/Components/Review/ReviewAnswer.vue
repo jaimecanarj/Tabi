@@ -30,7 +30,7 @@ const checkAnswer = () => {
                 {
                     sensitivity: "base",
                 },
-            ) == 0;
+            ) === 0;
         emit("answer", answer.value);
         answer.value.answered = true;
     }
@@ -46,7 +46,7 @@ const checkAnswer = () => {
                 {
                     '!border-emerald-500 !bg-emerald-500': answer.answerResult,
                     '!border-destructive !bg-destructive':
-                        answer.answerResult == false,
+                        answer.answerResult === false,
                 },
                 'h-20 rounded-b-md rounded-t-none bg-card p-4 px-10 text-center text-3xl focus-visible:ring-0 focus-visible:ring-offset-0 sm:text-4xl lg:text-5xl',
             ]"
@@ -59,7 +59,7 @@ const checkAnswer = () => {
             />
         </button>
         <div
-            v-show="answer.answerResult == false"
+            v-show="answer.answerResult === false"
             class="absolute left-1/2 right-1/2 mt-2 flex animate-pulse justify-center"
         >
             <div

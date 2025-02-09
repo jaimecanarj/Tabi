@@ -18,10 +18,10 @@ const props = defineProps<{
 }>();
 
 const onyomiReadings = props.readings.filter(
-    (reading) => reading.type == "onyomi",
+    (reading) => reading.type === "onyomi",
 );
 const kunyomiReadings = props.readings.filter(
-    (reading) => reading.type == "kunyomi",
+    (reading) => reading.type === "kunyomi",
 );
 </script>
 

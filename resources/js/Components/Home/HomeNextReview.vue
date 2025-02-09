@@ -37,7 +37,7 @@ kanjisToStudy.forEach((date) => {
         : date.format("D [de] MMMM");
     const hour = date.isBefore(now) ? now.format("HH") : date.format("HH");
 
-    let dateEntry = dates.find((entry) => dateString == entry.date);
+    let dateEntry = dates.find((entry) => dateString === entry.date);
 
     if (!dateEntry) {
         // Crear nueva fecha si no existe

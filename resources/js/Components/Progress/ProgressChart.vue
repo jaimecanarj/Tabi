@@ -71,7 +71,7 @@ props.kanjis.forEach((kanji) => {
             }
             //Añadir fecha a todas las series
             kanjiLevels.forEach((level) => {
-                if (level.name == "Nuevos") return;
+                if (level.name === "Nuevos") return;
                 updateSeriesData(updatesByDay[level.name], date, 0);
             });
             // Actualizar nivel

@@ -9,7 +9,7 @@ let title: string;
 let subTitle: string;
 
 switch (true) {
-    case props.answersCorrect == 10:
+    case props.answersCorrect === 10:
         title = "¡Perfecto!";
         subTitle =
             "Los kanjis ya no tienen secretos para ti, al menos por hoy.";

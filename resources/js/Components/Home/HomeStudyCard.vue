@@ -12,7 +12,7 @@ const props = defineProps<{
     studies?: number;
 }>();
 
-const isStudy = props.type == "estudio";
+const isStudy = props.type === "estudio";
 
 let kanjisToStudy: number;
 

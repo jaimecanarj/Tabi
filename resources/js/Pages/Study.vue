@@ -13,17 +13,17 @@ let kanji = ref(props.kanjis[id]);
 
 const changeKanji = (change: string | number) => {
     //Cambiar según paginación
-    if (typeof change == "number") {
+    if (typeof change === "number") {
         id = change;
         kanji.value = props.kanjis[change];
     }
     //Cambiar según botón anterior y siguiente
-    else if (change == "next") {
-        if (id == props.kanjis.length - 1) return;
+    else if (change === "next") {
+        if (id === props.kanjis.length - 1) return;
         id++;
         kanji.value = props.kanjis[id];
-    } else if (change == "prev") {
-        if (id == 0) return;
+    } else if (change === "prev") {
+        if (id === 0) return;
         id--;
         kanji.value = props.kanjis[id];
     }
@@ -32,8 +32,8 @@ const changeKanji = (change: string | number) => {
 onMounted(() => {
     //Cambiar de kanji usando las flechas del teclado
     window.addEventListener("keydown", (event) => {
-        if (event.key == "ArrowLeft") changeKanji("prev");
-        else if (event.key == "ArrowRight") changeKanji("next");
+        if (event.key === "ArrowLeft") changeKanji("prev");
+        else if (event.key === "ArrowRight") changeKanji("next");
     });
 });
 </script>
@@ -55,7 +55,7 @@ onMounted(() => {
                 variant="secondary"
                 size="icon"
                 @click="changeKanji('prev')"
-                :disabled="id == 0"
+                :disabled="id === 0"
             >
                 <ChevronLeft />
             </Button>
@@ -64,7 +64,7 @@ onMounted(() => {
                 variant="secondary"
                 size="icon"
                 @click="changeKanji('next')"
-                :disabled="id == kanjis.length - 1"
+                :disabled="id === kanjis.length - 1"
             >
                 <ChevronRight />
             </Button>
@@ -80,7 +80,7 @@ onMounted(() => {
                     size="gradient"
                     @click="changeKanji(index)"
                     :class="{
-                        'bg-gradient-levels-educated text-light': id == index,
+                        'bg-gradient-levels-educated text-light': id === index,
                     }"
                 >
                     {{ kanjiIndex.literal }}

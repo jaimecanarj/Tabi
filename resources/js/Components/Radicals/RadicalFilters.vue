@@ -26,7 +26,7 @@ const filters = reactive({
 });
 
 const updateSort = () => {
-    filters.sortOrder = filters.sortOrder == "asc" ? "desc" : "asc";
+    filters.sortOrder = filters.sortOrder === "asc" ? "desc" : "asc";
 };
 
 watchDebounced(
@@ -34,14 +34,14 @@ watchDebounced(
     (newValue, oldValue) => {
         const filters = { ...newValue };
         //Resetea a la primera pag si el cambio lo produjo otro filtro
-        if (newValue.page == oldValue.page) {
+        if (newValue.page === oldValue.page) {
             filters.page = 1;
         }
-        if (newValue.strokes == "0") {
+        if (newValue.strokes === "0") {
             delete filters.strokes;
         }
         //Elimina search si está vacío
-        if (newValue.search == "") {
+        if (newValue.search === "") {
             delete filters.search;
         }
         emit("change", filters);
@@ -90,7 +90,7 @@ watchDebounced(
                 </SelectContent>
             </Select>
             <Button variant="outline" size="sm" @click="updateSort">
-                <ArrowDownWideNarrow v-if="filters.sortOrder == 'desc'" />
+                <ArrowDownWideNarrow v-if="filters.sortOrder === 'desc'" />
                 <ArrowUpNarrowWide v-else />
             </Button>
         </div>

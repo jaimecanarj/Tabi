@@ -22,7 +22,7 @@ let studyCorrect = props.data.userCorrectAnswers;
 let studyWrong = computed(() => studyAttempts - studyCorrect);
 
 let studyPercentage = computed(() => {
-    if (studyAttempts == 0) return 0;
+    if (studyAttempts === 0) return 0;
     return Math.round((studyCorrect / studyAttempts) * 100);
 });
 </script>
